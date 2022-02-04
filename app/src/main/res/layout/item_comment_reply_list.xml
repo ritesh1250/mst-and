@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="comment"
+            type="com.meest.videomvvmmodule.model.comment.Comment.Data.CommentsReplyData" />
+
+        <variable
+            name="comment_model"
+            type="com.meest.videomvvmmodule.model.comment.Comment.Data" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <LinearLayout
+                android:id="@+id/singleRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    app:cardElevation="0dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_2sdp"
+                        app:cardBackgroundColor="#F6F6F6"
+                        app:cardCornerRadius="@dimen/_5sdp"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/img_profile"
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:background="@drawable/ic_edit_profile_img"
+                            android:scaleType="centerCrop"
+                            app:profile_url="@{comment.userProfile}"
+                            tools:ignore="ContentDescription"
+                            tools:src="@drawable/ic_edit_profile_img" />
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="8dp">
+
+                <LinearLayout
+                    android:id="@+id/lout_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/popins_medium"
+                            android:text='@{comment.firstName}'
+                            android:textColor="@color/black"
+                            android:textSize="13sp"
+                            tools:text="parth_kotadiya" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginStart="3dp"
+                            android:padding="2dp"
+                            android:src="@drawable/ic_user_verified"
+                            android:visibility="gone"
+                            tools:ignore="ContentDescription" />
+                        <!--                        android:visibility="@{comment_model.isVerify ? View.VISIBLE : View.GONE}"-->
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/img_delete"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_delete"
+                        android:visibility="gone"
+                        app:tint="@color/color_text_light"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lout_username"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/popins_light"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sp"
+                    tools:text="gnjfjfdj" />
+
+                <LinearLayout
+                    android:id="@+id/ll_like"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_comment"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.like.LikeButton
+                        android:id="@+id/likebtn"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center"
+                        android:contentDescription="todo"
+                        android:paddingStart="@dimen/_8sdp"
+                        android:paddingEnd="@dimen/_8sdp"
+                        app:anim_scale_factor="2"
+                        app:circle_end_color="@color/colorTheme"
+                        app:circle_start_color="@color/colorPrimary"
+                        app:dots_primary_color="@color/white"
+                        app:dots_secondary_color="@color/Sanddtorm"
+                        app:fabSize="normal"
+                        app:icon_size="@dimen/_30sdp"
+                        app:icon_type="heart"
+                        app:like_drawable="@drawable/like_diamond_filled"
+                        app:srcCompat="@drawable/diamond"
+                        app:tint="@null"
+                        app:unlike_drawable="@drawable/diamond"
+                        tools:ignore="RtlHardcoded" />
+                    <!--                    app:liked="@{model.getVideoIsLiked}"-->
+
+                    <TextView
+                        android:id="@+id/tv_reply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/popins_medium"
+                        android:paddingLeft="@dimen/_3sdp"
+                        android:text='Reply'
+                        android:textColor="@color/color_text_light"
+                        android:textSize="11sp"
+                        tools:text="Reply" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/tv_comment"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

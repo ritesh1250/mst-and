@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr"
+    tools:context=".view.music.MusicFrameFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="onBackClick"
+            type="android.view.View.OnClickListener" />
+        <variable
+            name="viewModel"
+            type="com.meest.videomvvmmodule.view.music_bottomsheet.MusicSheetViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_bottom_sheet"
+        android:backgroundTint="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="130dp"
+            android:layout_height="4dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_white_round"
+            android:backgroundTint="@color/colorPrimary"
+            android:elevation="4dp"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/lout_search"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/line"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginVertical="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="@{onBackClick}"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:src="@drawable/back_arrow"
+                android:visibility="visible"
+                tools:ignore="ContentDescription" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="28dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_textedit"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:hint="@string/search"
+                android:imeOptions="actionSearch"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:paddingHorizontal="15dp"
+                android:singleLine="true"
+                android:textColor="@color/color_text_light"
+                android:textColorHint="@color/color_text_light"
+                android:textCursorDrawable="@xml/cursor"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/tv_cancel"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_width="@dimen/size_20dp"
+                android:layout_height="@dimen/size_20dp"
+                android:scaleType="fitXY"
+                android:visibility="gone"
+                android:background="@color/transparent"
+                android:src="@drawable/ic_close_edit_blue"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/lout_search"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_discover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@{viewModel.selectPosition == 0 ?@color/first_color : @color/unselectedFav}"
+                    android:text="@string/discover" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/first_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_line_color" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_favourite"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@{viewModel.selectPosition == 1 ?@color/first_color : @color/unselectedFav}"
+                    android:text="@string/favourite" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/first_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grey_line_color" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewPager"
+            android:layout_below="@+id/ll_scroll"/>
+    </RelativeLayout>
+</layout>

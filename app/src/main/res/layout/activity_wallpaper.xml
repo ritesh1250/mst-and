@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.meest.videomvvmmodule.utils.Global"/>
+
+        <variable
+            name="wallpaperViewModel"
+            type="com.meest.metme.viewmodels.WallpaperViewModel" />
+
+        <variable
+            name="wallpaperAdapter"
+            type="com.meest.metme.adapter.WallpaperAdapter" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/chat_head"
+        android:id="@+id/main_container"
+        tools:context=".metme.WallpaperActivity">
+
+        <LinearLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top">
+
+            <RelativeLayout
+                android:id="@+id/ll_UnContextualMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/btBack"
+                        android:foreground="?selectableItemBackground"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/backButton"
+                            android:layout_width="?android:attr/actionBarSize"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:padding="@dimen/dimen_18dp"
+                            android:src="@drawable/chat_back_arrow"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="@dimen/dimen_10dp"
+                        android:layout_weight="1"
+                        android:gravity="end">
+
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/lobster_two_regular"
+                            android:text="@string/wallpaper"
+                            app:setFont="@{wallpaperViewModel.fontName}"
+                            android:textColor="@color/white"
+                            android:textSize_bind='@{Global.size1}'
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white_top_folded_corner"
+                android:backgroundTint="@color/white">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/rel1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_20sdp"
+                            android:background="@color/grey"
+                            android:backgroundTint="@color/grey"
+                            app:cardCornerRadius="@dimen/_8sdp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_5sdp">
+
+                                <TextView
+                                    android:id="@+id/textview1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:fontFamily="@font/lobster_two_regular"
+                                    app:setFont="@{wallpaperViewModel.fontName}"
+                                    android:text="@string/themes"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"
+                                    android:textSize_bind='@{Global.size2}'/>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recycler_view"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/textview1"
+                                    android:layout_centerHorizontal="true"
+                                    android:adapter="@{wallpaperViewModel.wallpaperAdapter}"
+                                    android:orientation="horizontal"
+                                    android:nestedScrollingEnabled="false"
+                                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                    tools:listitem="@layout/wallpaper_grid_item">
+
+                                </androidx.recyclerview.widget.RecyclerView>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/rel2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rel1"
+                            android:layout_margin="@dimen/_20sdp"
+                            android:background="@color/grey"
+                            android:backgroundTint="@color/grey"
+                            app:cardCornerRadius="@dimen/_8sdp">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_5sdp">
+
+                                <TextView
+                                    android:id="@+id/textview"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="@string/color_and_gradient"
+                                    android:textColor="@color/black"
+                                    android:textSize_bind='@{Global.size2}'
+                                    app:setFont="@{wallpaperViewModel.fontName}"
+                                    android:fontFamily="@font/lobster_two_regular"
+                                    android:textStyle="bold">
+
+                                </TextView>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_centerHorizontal="true"
+                                    android:visibility="gone"
+                                    android:adapter="@{wallpaperAdapter}" />
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/gradient_theme_recycler"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    android:layout_below="@+id/textview"
+                                    android:adapter="@{wallpaperViewModel.gradientWallpaperAdapter}"
+                                    android:orientation="horizontal"
+                                    android:nestedScrollingEnabled="false"
+                                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                    tools:listitem="@layout/gradient_theme_layout" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </ScrollView>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

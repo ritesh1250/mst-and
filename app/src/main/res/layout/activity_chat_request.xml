@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="acceptRequestViewModel"
+            type="com.meest.metme.viewmodels.AcceptRequestViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/chat_head"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_1dp">
+
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_margin="@dimen/size_2dp"
+                android:padding="@dimen/dimen_16dp"
+                android:src="@drawable/chat_back_arrow"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/mainMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/size_2dp"
+                android:gravity="center_vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layout_images"
+                    android:layout_width="@dimen/size_50dp"
+                    android:layout_height="@dimen/size_50dp"
+                    android:background="@drawable/profile_image_bg"
+                    android:splitMotionEvents="false">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/size_10dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="2dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/size_10dp">
+
+                            <ImageView
+                                android:id="@+id/img_profile"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_edit_metme"
+                                tools:ignore="ContentDescription" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="1">
+                    <!--                    android:onClick="@{()->acceptRequestViewModel.onPersonalChatInfoClick()}">-->
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_50dp"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:fontFamily="@font/lobster_two_regular"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sp"
+                        android:textStyle="bold"
+                        tools:text="string/Usernamedhfsdfllsfhsldfh" />
+                </LinearLayout>
+                <!--                android:text="@{acceptRequestViewModel.name}"-->
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:layout_width="@dimen/size_50dp"
+                    android:layout_height="@dimen/size_50dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="17dp"
+                    android:src="@drawable/search_icon"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+                <!--                android:onClick="@{()->acceptRequestViewModel.onSearchClick()}"-->
+                <ImageView
+                    android:id="@+id/img_call"
+                    android:layout_width="@dimen/size_50dp"
+                    android:layout_height="@dimen/size_50dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_call"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+                <!--                android:onClick="@{()->acceptRequestViewModel.onCallClick()}"-->
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/infoIcon"
+                    android:layout_width="@dimen/size_50dp"
+                    android:layout_height="@dimen/size_50dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="13dp"
+                    android:src="@drawable/ic_request_info"
+                    tools:ignore="ContentDescription" />
+                <!--                android:onClick="@{()->acceptRequestViewModel.onInfoClick()}"-->
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.meest.RoundedView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appbar"
+            android:background="@drawable/chat_head"
+            app:topLeftCornerRadius="@dimen/dimen_15dp"
+            app:topRightCornerRadius="@dimen/dimen_15dp">
+
+
+            <LinearLayout
+                android:id="@+id/round_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f4f4f4"
+                android:orientation="vertical"
+                android:paddingVertical="10dp">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/layoutMain"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:id="@+id/mainLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="135dp"
+                                android:layout_height="135dp"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@drawable/profile_image_bg"
+                                android:splitMotionEvents="false">
+
+                                <com.meest.RoundedView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:bottomLeftCornerRadius="@dimen/size_10dp"
+                                    app:bottomRightCornerRadius="@dimen/size_10dp"
+                                    app:topLeftCornerRadius="@dimen/size_10dp"
+                                    app:topRightCornerRadius="@dimen/size_10dp">
+
+                                    <ImageView
+                                        android:id="@+id/image"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/ic_edit_metme"
+                                        tools:ignore="ContentDescription" />
+                                </com.meest.RoundedView>
+                            </RelativeLayout>
+
+                            <TextView
+                                android:id="@+id/name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/lobster_two_regular"
+                                android:text="Shivi Shukla"
+                                android:textColor="@color/first_color"
+                                android:textSize="@dimen/_18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/follower_Post"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/lobster_two_regular"
+                                android:text="139 follower 17 post"
+                                android:textColor="@color/first_color"
+                                android:textSize="@dimen/_14sp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/lobster_two_regular"
+                                android:text="You don't follow each other on meest"
+                                android:textColor="@color/first_color"
+                                android:textSize="@dimen/_12sp"
+                                android:textStyle="normal" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:background="@drawable/chat_request_bg"
+                                android:fontFamily="@font/lobster_two_regular"
+                                android:gravity="center_horizontal"
+                                android:onClick="@{()->acceptRequestViewModel.onViewProfileClick()}"
+                                android:padding="@dimen/_5sdp"
+                                android:text="@string/view_profile"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/dimen_16sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/message_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/bottomLayout"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:gravity="center"
+                            android:fontFamily="@font/lobster_two_regular"
+                            android:text="May 01,2021 at 09:00 AM"
+                            android:textColor="@color/md_teal_300"
+                            android:textSize="@dimen/_12sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/bottomLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RelativeLayout
+                                    android:id="@+id/layout_main"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_8sdp">
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_5sdp"
+                                        android:layout_marginLeft="@dimen/_5sdp">
+
+
+                                        <RelativeLayout
+                                            android:id="@+id/cardView3"
+                                            android:layout_width="44dp"
+                                            android:layout_height="44dp"
+                                            android:layout_marginTop="@dimen/_10sdp">
+
+                                            <RelativeLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content">
+
+                                                <com.meest.RoundedView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    app:bottomLeftCornerRadius="@dimen/dimen_10dp"
+                                                    app:bottomRightCornerRadius="@dimen/dimen_10dp"
+                                                    app:topLeftCornerRadius="@dimen/dimen_10dp"
+                                                    app:topRightCornerRadius="@dimen/dimen_10dp">
+
+                                                    <ImageView
+                                                        android:id="@+id/image2"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_alignParentStart="true"
+                                                        android:layout_alignParentLeft="true"
+                                                        android:scaleType="centerCrop"
+                                                        android:src="@drawable/profile_bg" />
+
+                                                    <!--                                                </androidx.cardview.widget.CardView>-->
+                                                </com.meest.RoundedView>
+
+                                            </RelativeLayout>
+
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_10sdp"
+                                            android:layout_toRightOf="@+id/cardView3">
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerVertical="true"
+                                                android:layout_marginLeft="@dimen/_8sdp"
+                                                android:layout_marginRight="@dimen/_2sp"
+                                                android:layout_marginBottom="5dp"
+                                                android:orientation="vertical">
+
+
+                                                <TextView
+                                                    android:id="@+id/name2"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:lines="1"
+                                                    android:fontFamily="@font/lobster_two_regular"
+                                                    android:text="Shivi Shukla"
+                                                    android:textColor="#151624"
+                                                    android:textSize="16sp"
+                                                    android:textStyle="bold" />
+
+                                                <androidx.recyclerview.widget.RecyclerView
+                                                    android:id="@+id/recyclerView"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content" />
+
+                                            </LinearLayout>
+
+                                        </RelativeLayout>
+                                    </RelativeLayout>
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/dimen_1dp"
+                                        android:layout_marginStart="@dimen/_20sdp"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:layout_marginEnd="@dimen/_20sdp"
+                                        android:visibility="gone"
+                                        android:background="@color/chat_line" />
+
+                                    <TextView
+                                        android:id="@+id/note"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginStart="@dimen/_5sdp"
+                                        android:layout_marginEnd="@dimen/_5sdp"
+                                        android:fontFamily="@font/lobster_two_regular"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="@string/if_you_reply_shivi_shukla_will_also_be_able_to_call_you_and_see_info_like_your_active_status_and_when_you_vr_read_messages"
+                                        android:textColor="@color/md_teal_300"
+                                        android:textSize="@dimen/_12sp"
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:layout_marginBottom="@dimen/_10sdp"
+                                        android:gravity="center"
+
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/delete"
+                                            android:layout_width="@dimen/size_0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginStart="@dimen/_10sdp"
+                                            android:layout_weight="5"
+                                            android:background="@drawable/chat_whitebg"
+                                            android:foreground="?selectableItemBackground"
+                                            android:gravity="center"
+                                            android:onClick="@{()->acceptRequestViewModel.onDeleteClick()}"
+                                            android:padding="@dimen/_3sdp"
+                                            android:text="@string/Delete"
+                                            android:fontFamily="@font/lobster_two_regular"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_14sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:id="@+id/block"
+                                            android:layout_width="@dimen/size_0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginStart="@dimen/_5sdp"
+                                            android:layout_marginEnd="@dimen/_10sdp"
+                                            android:layout_weight="5"
+                                            android:background="@drawable/chat_whitebg"
+                                            android:foreground="?selectableItemBackground"
+                                            android:gravity="center"
+                                            android:fontFamily="@font/lobster_two_regular"
+                                            android:onClick="@{()->acceptRequestViewModel.onBlockClick()}"
+                                            android:padding="@dimen/_3sdp"
+                                            android:text="@string/block"
+                                            android:textColor="@color/black"
+                                            android:textSize="@dimen/_14sp"
+                                            android:textStyle="bold" />
+                                    </LinearLayout>
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/root_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_5sp"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:paddingStart="@dimen/_10sdp"
+                                        android:paddingEnd="@dimen/_10sdp"
+                                        android:splitMotionEvents="false">
+
+                                        <androidx.appcompat.widget.LinearLayoutCompat
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <androidx.cardview.widget.CardView
+                                                android:visibility="gone"
+                                                android:layout_width="37dp"
+                                                android:layout_height="37dp"
+                                                android:layout_margin="5dp"
+                                                android:foreground="?selectableItemBackground"
+                                                app:cardCornerRadius="5dp"
+                                                app:cardElevation="2dp">
+
+                                                <ImageView
+                                                    android:id="@+id/fab_layout_camera"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="bottom"
+                                                    android:onClick="@{()->acceptRequestViewModel.onCameraClick()}"
+                                                    android:padding="@dimen/size_5dp"
+                                                    android:src="@drawable/ic_camera_btn"
+                                                    tools:ignore="ContentDescription" />
+
+                                            </androidx.cardview.widget.CardView>
+
+
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="5dp"
+                                                android:layout_weight="1"
+                                                app:cardBackgroundColor="@android:color/transparent"
+                                                app:cardCornerRadius="6dp"
+                                                app:cardElevation="2dp">
+
+                                                <EditText
+                                                    android:id="@+id/message_input"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_toRightOf="@+id/fab_layout_camera"
+                                                    android:layout_weight="1"
+                                                    android:afterTextChanged="@{acceptRequestViewModel.afterTextChanged}"
+                                                    android:background="@drawable/chat_edittext"
+                                                    android:hint="@string/type_here"
+                                                    android:importantForAutofill="no"
+                                                    android:inputType="textMultiLine"
+                                                    android:isScrollContainer="true"
+                                                    android:maxHeight="@dimen/_110sdp"
+                                                    android:maxLines="5"
+                                                    android:onTextChanged="@{acceptRequestViewModel.onTextChanged}"
+                                                    android:padding="@dimen/_5sdp"
+                                                    android:scrollbars="vertical"
+                                                    android:text="@={acceptRequestViewModel.enteredMsg}"
+                                                    android:textColor="@color/black"
+                                                    android:textColorHint="@color/tab_gray"
+                                                    android:textSize="@dimen/_12sdp"
+                                                    app:autoSizeTextType="uniform" />
+                                            </androidx.cardview.widget.CardView>
+
+
+                                            <!-- android:visibility="@{acceptRequestViewModel.micro_gallery? View.VISIBLE:View.GONE}"-->
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="37dp"
+                                                android:layout_height="37dp"
+                                                android:layout_margin="5dp"
+                                                android:foreground="?selectableItemBackground"
+                                               android:visibility="gone"
+                                                app:cardCornerRadius="5dp"
+                                                app:cardElevation="2dp">
+
+                                                <com.meest.utils.RecordButton
+                                                    android:id="@+id/micro"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="bottom"
+                                                    android:layout_toEndOf="@+id/message_input"
+                                                    android:padding="@dimen/size_5dp"
+                                                    android:src="@drawable/ic_record_btn"
+                                                    tools:ignore="ContentDescription" />
+
+                                            </androidx.cardview.widget.CardView>
+
+<!--
+                                            android:visibility="@{acceptRequestViewModel.micro_gallery? View.VISIBLE:View.GONE}"
+-->
+                                            <androidx.cardview.widget.CardView
+                                                android:visibility="gone"
+                                                android:layout_width="37dp"
+                                                android:layout_height="37dp"
+                                                android:layout_margin="5dp"
+                                                android:foreground="?selectableItemBackground"
+
+                                                app:cardCornerRadius="5dp"
+                                                app:cardElevation="2dp">
+
+                                                <ImageView
+                                                    android:id="@+id/gallery"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="bottom"
+                                                    android:layout_toEndOf="@+id/micro"
+                                                    android:onClick="@{()->acceptRequestViewModel.onGalleryClick()}"
+                                                    android:padding="@dimen/size_5dp"
+                                                    android:src="@drawable/ic_image"
+                                                    tools:ignore="ContentDescription" />
+                                            </androidx.cardview.widget.CardView>
+
+
+                                            <!-- android:visibility="@{acceptRequestViewModel.micro_gallery? View.GONE:View.VISIBLE}"-->
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="37dp"
+                                                android:layout_height="37dp"
+                                                android:layout_margin="5dp"
+                                                android:foreground="?selectableItemBackground"
+
+                                                app:cardCornerRadius="5dp"
+                                                app:cardElevation="2dp">
+
+                                                <ImageView
+                                                    android:id="@+id/send"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="center"
+                                                    android:onClick="@{()->acceptRequestViewModel.onSendClick()}"
+                                                    android:padding="@dimen/size_5dp"
+                                                    android:src="@drawable/ic_send"
+                                                    tools:ignore="ContentDescription" />
+                                            </androidx.cardview.widget.CardView>
+                                        </androidx.appcompat.widget.LinearLayoutCompat>
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </LinearLayout>
+        </com.meest.RoundedView>
+    </RelativeLayout>
+</layout>

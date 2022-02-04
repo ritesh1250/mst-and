@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:background="@drawable/bg_gradient">
+
+    <LinearLayout
+        android:id="@+id/privacy_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp">
+
+        <RelativeLayout
+            android:id="@+id/layout_allow_comments"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/image_back"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_allow_comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/allow_comments"
+                android:textColor="#B2151624"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_allow_comments"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:checked="true"
+                android:layout_alignParentEnd="true"
+                android:thumb="@drawable/thumb"
+                app:track="@drawable/track" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_allow_duet"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/layout_allow_comments"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_allow_duet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/allow_duet"
+                android:textColor="#B2151624"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_allow_duet"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:checked="true"
+                android:layout_alignParentEnd="true"
+                android:thumb="@drawable/thumb"
+                app:track="@drawable/track" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_allow_trio"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/layout_allow_duet"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_allow_trio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/allow_trio"
+                android:textColor="#B2151624"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_allow_trio"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:checked="true"
+                android:layout_alignParentEnd="true"
+                android:thumb="@drawable/thumb"
+                app:track="@drawable/track" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_allow_download"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/layout_allow_trio"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_allow_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/allow_download"
+                android:textColor="#B2151624"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_allow_download"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:checked="true"
+                android:layout_alignParentEnd="true"
+                android:thumb="@drawable/thumb"
+                app:track="@drawable/track" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

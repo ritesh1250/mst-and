@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputTextRL"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/okBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:foreground="?selectableItemBackground"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/chat_create_group_round_corner"
+            android:text="@string/yes"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginTop="8dp"
+            android:foreground="?selectableItemBackground"
+            android:background="@drawable/chat_create_group_round_corner"
+            android:text="@string/no"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/Feedback_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="19dp"
+            android:layout_marginTop="19dp"
+            android:layout_toEndOf="@+id/img_back_arrow_feedback"
+            android:text="@string/areSure"
+            android:textColor="#1E2432"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/inputTextRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Feedback_header"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="19dp"
+            android:text="@string/deleteStoryText"
+            android:textColor="#1E2432"
+            android:gravity="center"
+            android:textSize="19sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+</RelativeLayout>

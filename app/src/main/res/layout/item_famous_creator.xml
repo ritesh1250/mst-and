@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr">
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.meest.videomvvmmodule.model.videos.Video.Data" />
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="325dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:blur_image="@{model.postImage}"
+                    tools:ignore="ContentDescription" />
+
+
+                <com.google.android.exoplayer2.ui.PlayerView
+                    android:id="@+id/player_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    app:controller_layout_id="@layout/item_player_controler"
+                    app:show_timeout="1000"
+                    app:shutter_background_color="@color/transparent"
+                    app:surface_type="texture_view" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent_black_60" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginHorizontal="15dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        tools:ignore="UselessParent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/bg_gradient_round"
+                                android:padding="2dp"
+                                android:src="@drawable/placeholder"
+                                app:profile_url="@{model.userProfile}"
+
+                                tools:ignore="ContentDescription" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="-5dp"
+                                    android:ellipsize="end"
+                                    android:fontFamily="@font/popins_medium"
+                                    android:maxLines="1"
+                                    android:text="@{model.fullName}"
+                                    android:textColor="@color/light_white"
+                                    android:textSize="15sp"
+                                    tools:text="Samantha Smith" />
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    tools:ignore="UseCompoundDrawables">
+
+                                    <TextView
+                                        android:id="@+id/userName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/popins_light"
+                                        android:text='@{"@"+model.userName}'
+                                        android:textColor="@color/light_white"
+                                        android:textSize="12sp"
+
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_marginStart="5dp"
+                                        android:src="@drawable/ic_user_verified"
+                                        android:visibility="@{model.isVerified ? View.VISIBLE : View.GONE}"
+                                        tools:ignore="ContentDescription" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/poppins_regular"
+                            android:maxLines="1"
+                            android:text="@string/fans"
+                            android:textColor="@color/light_white"
+                            android:textSize="13sp"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_follow"
+                            android:layout_width="180dp"
+                            android:layout_height="42dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/bg_gradient"
+                            android:fontFamily="@font/popins_light"
+                            android:letterSpacing=".05"
+                            android:text="@string/follow"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</layout>

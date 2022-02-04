@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.meest.Fragments.HomeFragments"
+        tools:layout="@layout/home_fragment" >
+
+    </fragment>
+    <!--android:name="com.meest.social.socialViewModel.view.trending.TrendingFragment"-->
+
+<!--    -->
+    <fragment
+        android:id="@+id/navigation_trend"
+        android:name="com.meest.social.socialViewModel.view.trending.TrendingFragment"
+        tools:layout="@layout/trending_fragment_model" >
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/navigation_notification"
+        android:name="com.meest.social.socialViewModel.NotificationFragment"
+        tools:layout="@layout/notification_fragment" >
+
+    </fragment>
+
+    <!--android:name="com.meest.social.socialViewModel.view.myAccountFrag.MyAccountFrag"-->
+    <!--android:name="com.meest.Fragments.MyAccountFragment"-->
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.meest.social.socialViewModel.view.myAccountFrag.MyAccountFrag"
+        tools:layout="@layout/my_account_frag_model" >
+        </fragment>
+
+
+</navigation>
+
+
+
+
+    <!--        <action-->
+    <!--            android:id="@+id/action_navigation_trend_to_navigation_profile"-->
+    <!--            app:destination="@id/navigation_profile" />-->
+    <!--        <action-->
+    <!--            android:id="@+id/action_navigation_trend_to_navigation_notification"-->
+    <!--            app:destination="@id/navigation_notification" />-->
+    <!--        <action-->
+    <!--            android:id="@+id/action_navigation_trend_to_navigation_home"-->
+    <!--            app:destination="@id/navigation_home" />-->
+    <!--        <action-->
+    <!--            android:id="@+id/action_navigation_notification_to_navigation_trend"-->
+    <!--            app:destination="@id/navigation_trend" />-->
+    <!--        <action-->
+    <!--            android:id="@+id/action_navigation_notification_to_navigation_profile"-->
+    <!--            app:destination="@id/navigation_profile" />-->
+    <!--        <action-->
+    <!--            android:id="@+id/action_navigation_notification_to_navigation_home"-->
+    <!--            app:destination="@id/navigation_home" />-->
+
+    <!--        <action-->
+    <!--            android:id="@+id/action_navigation_profile_to_navigation_trend"-->
+    <!--            app:destination="@id/navigation_trend" />-->
+    <!--        <action-->
+    <!--            android:id="@+id/action_navigation_profile_to_navigation_notification"-->
+    <!--            app:destination="@id/navigation_notification" />-->
+    <!--        <action-->
+    <!--            android:id="@+id/action_navigation_profile_to_navigation_home"-->
+    <!--            app:destination="@id/navigation_home" />-->
+
+    <!--        <action-->
+    <!--            android:id="@+id/action_navigation_home_to_navigation_notification"-->
+    <!--            app:destination="@id/navigation_notification" />-->
+    <!--        <action-->
+    <!--            android:id="@+id/action_navigation_home_to_navigation_trend"-->
+    <!--            app:destination="@id/navigation_trend" />-->
+    <!--        <action-->
+    <!--            android:id="@+id/action_navigation_home_to_navigation_profile"-->
+    <!--            app:destination="@id/navigation_profile" />-->

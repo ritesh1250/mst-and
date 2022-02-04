@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.meest">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.PARTIAL_WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FULL_WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission
+        android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
+    <permission
+        android:name="android.permission.CAPTURE_AUDIO_OUTPUT"
+        android:protectionLevel="signature|privileged" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="androidc.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.FLASHLIGHT         " />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> -->
+    <uses-feature
+        android:glEsVersion="0x00030001"
+        android:required="true" />
+
+    <application
+        android:name=".Meeast"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:usesCleartextTraffic="true"
+        tools:node="merge"
+        tools:replace="android:theme"
+        tools:targetApi="q">
+        <activity
+            android:name=".videomvvmmodule.only_camera2.Camera2DuetActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".social.socialViewModel.view.login.ChangePassword" />
+        <activity android:name=".social.socialViewModel.view.otherUserAccount.OtherUserAccount" />
+        <activity android:name=".social.socialViewModel.view.searchLocation.SearchLocation" />
+        <activity android:name=".social.socialViewModel.view.postVisibilitySetting.PostVisibilitySetting" />
+        <activity android:name=".social.socialViewModel.view.feelingAndActivity.FeelingAndActivity" />
+        <activity android:name=".social.socialViewModel.view.createTextPost.CreateTextPost" />
+        <activity
+            android:name=".social.socialViewModel.view.home.navigation.MySetting"
+            android:exported="true" />
+        <activity android:name=".social.socialViewModel.view.home.navigation.MyBlockList" />
+        <activity
+            android:name=".videomvvmmodule.view.profile.ProfileActivity"
+            android:exported="true" />
+
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled"
+            android:value="true" />
+
+        <!--        <activity android:name=".Activities.FeelingActivityNew.FeelActActivity" />-->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled"
+            android:value="true" />
+
+        <activity
+            android:name=".Activities.ExceptionDisplay"
+            android:exported="true" />
+        <activity android:name=".videomvvmmodule.ViewSinglePostActivity" />
+
+        <service
+            android:name=".Services.GalUpload.StartAllService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Services.GalUpload.AudioRecord"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".metme.ForwardActivity" />
+        <activity android:name=".metme.WallpaperAppearance" />
+        <activity android:name=".metme.adapter.MediaImageFullPageActivity" />
+
+      <!--  <receiver
+            android:name=".utils.MyReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:showOnLockScreen="true">
+            <intent-filter>
+                <action android:name="android.intent.action.INCOMING_CALL" />
+            </intent-filter>
+        </receiver>-->
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".Activities.CommunityActivity" />
+        <activity
+            android:name=".metme.camera2.CameraActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".metme.ChatImageViewActivity" />
+        <activity android:name=".metme.ImageTextActivity" />
+        <!--
+  <service
+            android:name="com.meest.metme.service.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        -->
+        <activity
+            android:name=".metme.jitsi.IncomingCallActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="OPEN_ACTIVITY_1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".videomvvmmodule.view.home.ReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.camera2.photoEditor.EditImageActivity"
+            android:screenOrientation="portrait" /> <!-- <activity -->
+        <!-- android:name=".videomvvmmodule.view.home.ReportActivity" -->
+        <!-- android:screenOrientation="portrait"></activity> -->
+        <activity
+            android:name=".Language.New_Language_Activity"
+            android:label="@string/language"
+            android:screenOrientation="portrait" />
+        <!--
+  <uses-library
+              android:name="com.google.android.wearable"
+              android:required="true" />
+        -->
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+        -->
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
+        <activity
+            android:name=".Activities.fullscreenexoplayer.FullScreenExoPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".videomvvmmodule.view.recordvideo.DuoActivity" /> <!-- <activity android:name=".Activities.ChatPackage.ChatInfoImageActivity" /> -->
+        <!-- <activity android:name=".videomvvmmodule.view.recordvideo.DuoActivity" -->
+        <!-- android:screenOrientation="portrait"/> -->
+        <!-- <activity android:name=".Activities.ChatPackage.ChatInfoImageActivity" /> -->
+        <!-- <activity android:name=".Activities.ChatPackage.ChatInfoImageActivity" /> -->
+        <activity
+            android:name=".Activities.SearchGridActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".videomvvmmodule.view.music.MusicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.StoryComingSoonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.home.VideoChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ElasticSearchActivity"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".Services.NewPostUploadService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Services.StoryPostuploadService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".videomvvmmodule.view.preview.VideoUploadService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".Activities.PostListByHashTagActvity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meestcamera.MeestMainCameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meestbhart.view.notification.NotificationSocialFeedActivity"
+            android:screenOrientation="portrait" /> <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+        -->
+        <activity
+            android:name=".Activities.DeleteAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.CreateStoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.profile.SettingsVideoActivity"
+            android:screenOrientation="portrait" /> <!-- <uses-library -->
+        <!-- android:name="com.google.android.wearable" -->
+        <!-- android:required="false" /> -->
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+        -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.wearable.standalone" -->
+        <!-- android:value="true" /> &lt;!&ndash; <activity &ndash;&gt; -->
+        <!-- <activity -->
+        <!-- android:name=".meestcamera.MeestCameraActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".Activities.LikeDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".svs.activities.NotificationSvsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activities.FollowRequestActivity" />
+        <activity
+            android:name=".Activities.VideoPost.PreviewVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meestcamera.MeestCameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TopAndTrends.TopHashtagActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" /> <!-- <uses-library -->
+        <activity
+            android:name=".social.socialViewModel.view.SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/spalshTheme"
+            android:windowFullscreen="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+
+                <!-- below line is to set the action to our intent to view -->
+                <action android:name="android.intent.action.VIEW" />
+
+                <!-- on below line we are adding a default category to our intent -->
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- on below line we are adding a category to make our app browsable -->
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!--
+                    on below line we are specifying the host name and
+                    the scheme type from which we will be calling our app
+                -->
+                <data
+                    android:host="meest4bharat.page.link"
+                    android:scheme="https" />
+            </intent-filter>
+
+            <!-- below is the same filter as above just the scheme is changed to http -->
+            <!-- so we can open our app with the url starting with https and http as well -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="meest4bharat.page.link"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".videomvvmmodule.SplashScreenVideoActivity"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".svs.activities.MusicVideosActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".svs.activities.FollowListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.CreateAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.GenderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.AdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meestbhart.register.language.LangaugeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".Activities.WriteTextActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing">
+
+            <!-- <data android:mimeType="text/plain" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".Activities.StoryViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.CommentActivity"
+            android:screenOrientation="portrait" /> <!-- <activity -->
+        <!-- android:name=".Activities.VideoActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".Activities.FollowingAndFollowersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.InviteFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ManagmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".storyview.screen.StoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.AdsListingNoAdsCreatYet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.AdspreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.EditAdsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.CreateNewAdsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.SeeMoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.AdsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Activities.AddCardActivity" />
+        <activity
+            android:name=".Activities.AdsListingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.BoostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.CreateBoostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.AddPaymentMethod"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PaymentDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meestbhart.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".meestbhart.PrivacyPolicyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Faq.FaqActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".meestbhart.utilss.SmsBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".Activities.VideoPost.CameraActivity"
+            android:screenOrientation="portrait" />
+        <!--
+       <activity
+            android:name=".Activities.FeelingsActivity.EatingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.FeelingsActivity.ActivityDoingScreen"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activities.VideoPost.CameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.VoiceCallActivity"
+            android:screenOrientation="portrait" />
+
+       <activity
+            android:name=".Fragments.LiveFragment"
+            android:screenOrientation="portrait"
+            />
+        -->
+        <activity
+            android:name=".Activities.ColletionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mediapikcer.GalleryItemDisplayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.gallery.GalleryItemDisplayActivityMedley"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mediapikcer.GalleryFoldersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.gallery.GalleryFoldersActivityMedley"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.DiscoverPeopleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.preview.PreviewPhotoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/jpeg" />
+            </intent-filter>
+            -->
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".Activities.CampaignPrivewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.CreateNewCampaignActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Activities.SeeMoreCampaignActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.CampaignActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ObjectiveBoostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.CreateAPostActivityFinal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.DuplicateCampaignsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.NewPostActivity"
+            android:screenOrientation="portrait" /> <!-- <service -->
+        <!-- android:name=".Services.MyFirebaseMessagingService" -->
+        <!-- android:permission="com.google.android.c2dm.permission.SEND"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.MESSAGING_EVENT" /> -->
+        <!-- <action android:name="com.google.android.c2dm.intent.RECEIVE" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> -->
+        <activity
+            android:name=".Activities.BlockActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.VideoPost.VideoPostVisibilitySetting"
+            android:screenOrientation="portrait" />
+        <!--
+      <service
+                  android:name=".Services.MyFirebaseMessagingService"
+                  android:permission="com.google.android.c2dm.permission.SEND">
+                  <intent-filter>
+                      <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                      <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                  </intent-filter>
+              </service>
+        -->
+        <activity
+            android:name=".Activities.ConfirmVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.VideoPost.VideoPostPrivacySetting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.VideoPost.DuoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.PostVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.VideoPost.PostVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.VideoPost.TrioActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.HashtagProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.ActivityOption"
+            android:screenOrientation="portrait" />
+        <!-- <activity
+             android:name=".svs.activities.HashtagActivity"
+             android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".svs.activities.SVSVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.LikesListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".svs.activities.VideoOtherUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.CampaignPreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.CampaignRegisteredPeopleListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.CampaignViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activities.UpdateCampaignActivity"
+            android:screenOrientation="portrait" /> <!-- <meta-data -->
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_test_6G654J3cjf3RJa" /> <!-- <service -->
+        <service
+            android:name=".Services.MyFirebaseMessagingService"
+            android:directBootAware="true"
+            android:exported="false"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            tools:targetApi="n">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service android:name=".Services.GalUpload.ClickedPicUpload" />
+        <service android:name=".Services.GalUpload.GalUploadService" />
+        <service android:name=".Services.GalUpload.GelleryUpload" />
+        <service android:name=".utils.PushNotificationService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service> <!-- Video code activities and metadata -->
+        <activity android:name=".videomvvmmodule.view.home.VideoCommentReplyActivity" />
+        <activity android:name=".videomvvmmodule.view.home.VideoCommentActivity" />
+        <activity
+            android:name=".videomvvmmodule.view.video.PlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.video.NewPlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.web.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.share.ShareHandleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+
+            <!-- Branch URI Scheme -->
+            <intent-filter>
+                <data
+                    android:host="open"
+                    android:scheme="medley" />
+
+                <action android:name="android.intent.actioncom.dbm.meest4bharat.videomvvmmodule.view" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+            <!-- Branch App Links -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.actioncom.dbm.meest4bharat.videomvvmmodule.view" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="medley.app.link"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".videomvvmmodule.view.home.SoundVideosActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.preview.PreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.search.FetchUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.profile.FollowerFollowingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.search.HashTagActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.profile.MyQRActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.search.QRScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.search.SearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.profile.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.profile.VerificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.wallet.RedeemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.wallet.WalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.profile.SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.recordvideo.CameraActivity"
+            android:screenOrientation="portrait">
+            <intent-filter android:label="@string/appnamen">
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="video/mp4" />
+            </intent-filter>
+            <intent-filter android:label="@string/appnamen">
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="video/mkv" />
+            </intent-filter>
+            <intent-filter android:label="@string/appnamen">
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="video/mov" />
+            </intent-filter>
+            <intent-filter android:label="@string/appnamen">
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="video/3gp" />
+            </intent-filter>
+            <intent-filter android:label="@string/appnamen">
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="video/webm" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".videomvvmmodule.view.slider.SliderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.base.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.SplashActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videomvvmmodule.view.home.MainVideoActivity"
+            android:configChanges="orientation|screenSize|layoutDirection"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" /> <!-- Branch init -->
+        <meta-data
+            android:name="io.branch.sdk.BranchKey"
+            android:value="@string/branch_io_key" />
+        <meta-data
+            android:name="io.branch.sdk.BranchKey.test"
+            android:value="key_test_af2kzKDeMOmVySEivREt7laoCDgDg87q" /> <!-- Branch testing (TestMode "true" to simulate fresh installs on dev environment) -->
+        <meta-data
+            android:name="io.branch.sdk.TestMode"
+            android:value="false" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.actioncom.dbm.meest4bharat.videomvvmmodule.view" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="${applicationId}"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/icon_notification" /> <!-- =================================================video editing==================================================== -->
+        <!-- =================================================video editing==================================================== -->
+        <activity
+            android:name=".videoEditing.listvideoandmyvideo.ListVideoAndMyAlbumActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videoEditing.videocutter.VideoCutter"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_path" />
+        </provider>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.meest.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".videoEditing.fastmotionvideo.FastMotionVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videoEditing.audiovideomixer.AudioVideoMixer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videoEditing.SelectMusicActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videoEditing.videomute.VideoMuteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".videoEditing.videorotate.VideoRotateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".videoEditing.slowmotionvideo.SlowMotionVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videoEditing.VideoPlayer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videoEditing.videocrop.VideoCropActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videoEditing.videomirror.VideoMirrorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videoEditing.videojoiner.VideoJoinerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".videoEditing.videoreverse.VideoReverseActivity"
+            android:screenOrientation="portrait" /> <!-- added this Actvity for image cropper -->
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".social.socialViewModel.view.login.MedleyOrMeest"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".banuba.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".banuba.PreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".banuba.editing.GalleryActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.meest.banuba"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".metme.ChatRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.ChatBoatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.jitsi.JitsiCallActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.WallpaperActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.ChatUserContactActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.MetMeProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.TextAppearanceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.ChatMediaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.GalleryPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.MetMeGallery"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.camera2.preview.PreviewImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.camera2.preview.PreviewVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.camera2.gallery2.Camera2Gallery"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.camera2.gallery2.Camera2GalleryPhotoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.camera2.videoEditing.videocutter.VideoCutter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.camera2.videoEditing.fastmotionvideo.FastMotionVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.camera2.videoEditing.slowmotionvideo.SlowMotionVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.camera2.videoEditing.videocrop.VideoCropActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.camera2.videoEditing.RecordAudioActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.camera2.videoEditing.videorotate.VideoRotateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.camera2.videoEditing.videomirror.VideoMirrorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.camera2.videoEditing.videoreverse.VideoReverseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".metme.camera2.videoEditing.videomute.VideoMuteActivity"
+            android:screenOrientation="portrait" /> <!-- Jistsi meet -->
+        <activity
+            android:name=".jitsi.JitsiMeetActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize"
+            android:launchMode="singleTask"
+            android:resizeableActivity="true"
+            android:supportsPictureInPicture="true"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+
+        <service
+            android:name=".jitsi.ConnectionService"
+            android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE">
+            <intent-filter>
+                <action android:name="android.telecom.ConnectionService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".jitsi.JitsiMeetOngoingConferenceService"
+            android:foregroundServiceType="mediaProjection" />
+
+        <provider
+            android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:enabled="false"
+            tools:replace="android:authorities" /> <!-- New Social MVVM manifest -->
+        <!-- created by Deepak Gupta -->
+        <activity
+            android:name=".social.socialViewModel.view.splash.SplashScreenVideo"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".social.socialViewModel.view.login.LoginSignUp"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".social.socialViewModel.view.home.navigation.MyOption"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".social.socialViewModel.view.home.navigation.MyBookmarks"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".social.socialViewModel.view.login.ForgetPassword"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".social.socialViewModel.view.login.ForgetVerficationPassword"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".social.socialViewModel.view.login.ResetPassword"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".social.socialViewModel.view.login.InterestActivity"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".social.socialViewModel.view.login.VerificationCode"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".social.socialViewModel.view.home.main.HomeActivity"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" /> <!-- Custom Camera2 Views -->
+        <activity
+            android:name=".medley_camera2.camera2.view.activity.Camera2Gallery"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".medley_camera2.camera2.view.activity.Camera2GalleryPhotoActivity"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".medley_camera2.camera2.view.activity.CameraActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".medley_camera2.camera2.view.activity.MeestCameraActivity"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".medley_camera2.camera2.view.activity.PreviewImageActivity"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".medley_camera2.camera2.view.activity.PreviewVideoActivity"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+        <activity
+            android:name=".medley_camera2.camera2.view.activity.RecordAudioActivity"
+            android:screenOrientation="portrait"
+            android:windowFullscreen="true" />
+
+       <!-- <receiver
+            android:name=".metme.network.MyReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>-->
+
+        <activity
+            android:name=".Activities.NewPostUploadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".social.socialViewModel.view.NewPostUploadActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".social.socialViewModel.view.SearchActivityNew"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".social.socialViewModel.view.comment.VideoCommentActivityNew"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".social.socialViewModel.view.comment.VideoCommentReplyActivityNew"
+            android:screenOrientation="portrait" />
+
+        <!-- Incoming call  -->
+        <service android:name=".metme.service.HeadsUpNotificationService"/>
+        <receiver
+            android:name=".metme.service.CallNotificationActionReceiver"
+            android:enabled="true">
+            <intent-filter android:priority="999">
+                <action android:name="ConstantApp.CALL_RECEIVE_ACTION" />
+                <action android:name="ConstantApp.CALL_CANCEL_ACTION"/>
+            </intent-filter>
+        </receiver>
+
+
+    </application>
+
+</manifest>

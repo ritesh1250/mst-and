@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr">
+
+    <data>
+
+        <variable
+            name="soundData"
+            type="com.meest.videomvvmmodule.model.videos.Video.SoundData" />
+
+        <variable
+            name="viewmodel"
+            type="com.meest.videomvvmmodule.viewmodel.SoundActivityViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".view.home.SoundVideosActivity">
+
+        <RelativeLayout
+            android:id="@+id/lout_header"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_back"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:padding="18dp"
+                android:src="@drawable/ic_back_arrow"
+                tools:ignore="ContentDescription" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/img_back"
+                android:fontFamily="@font/popins_medium"
+                android:text="@string/soundvideo"
+                android:textColor="@color/searchTitleColorUnselected"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lout_sound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lout_header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessParent">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_gradient"
+                        android:padding="@dimen/dimen_3dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:scaleType="centerCrop"
+                            android:visibility="visible"
+                            app:image_url="@{soundData.soundImage}"
+                            tools:ignore="ContentDescription"
+                            tools:src="@drawable/thumb" />
+                    </RelativeLayout>
+
+                    <!--                    android:background="@drawable/bg_gradient_round"-->
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_play"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_centerInParent="true"
+
+                        android:elevation="4dp"
+                        android:padding="12dp"
+                        android:scaleType="centerCrop"
+                        android:src="@{viewmodel.isPlaying ? @drawable/ic_pause : @drawable/ic_play}"
+                        app:tint="@color/light_white"
+                        tools:ignore="ContentDescription" />
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_sound_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:fontFamily="@font/popins_medium"
+                        android:singleLine="true"
+                        android:text="@{soundData.soundTitle}"
+                        android:textColor="@color/searchTitleColorUnselected"
+                        android:textSize="18sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_video_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:fontFamily="@font/popins_medium"
+                        android:singleLine="true"
+                        android:text="@string/videoss"
+                        android:textColor="@color/searchTitleColorUnselected"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/lout_favourite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@{viewmodel.isFavourite ? @drawable/bg_grey_corner_5 : @drawable/bg_stroke}"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="15dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="17dp"
+                            android:layout_height="15dp"
+                            android:src="@{viewmodel.isFavourite ? @drawable/ic_sound_unfavourite : @drawable/ic_sound_favourite }"
+                            tools:ignore="ContentDescription" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/popins_medium"
+                            android:includeFontPadding="false"
+                            android:paddingTop="2dp"
+                            android:text='@{viewmodel.isFavourite ? @string/Unfavourite : @string/favourite }'
+                            android:textColor='@{viewmodel.isFavourite ? @color/white : @color/first_color }'
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refreshlout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lout_sound"
+            android:layout_marginHorizontal="5dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:adapter="@{viewmodel.adapter}"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3"
+                tools:listitem="@layout/item_sound_videos_list" />
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/lout_shoot"
+            android:layout_width="160dp"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/bg_stroke"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_music_icon_1"
+                app:tint="@color/first_color"
+                tools:ignore="@drawable/ic_video_camera,ContentDescription" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/popins_medium"
+                android:includeFontPadding="false"
+                android:text="@string/usethissound"
+                android:textColor="@color/first_color"
+                android:textSize="13sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/Fealling_ActivityFelling_header"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="@color/trending_grey"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:id="@+id/back_image"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="24dp"
+                android:src="@drawable/ic_full_back_arrow" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/feeling_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/back_image"
+            android:text="@string/create_post"
+            android:textColor="@color/unselectedFav"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_search_feeling"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/Fealling_ActivityFelling_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_search_box"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/search_feeling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/search_icon" />
+
+        <EditText
+            android:id="@+id/edt_search_feeling"
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="11.99dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/search_feeling"
+            android:background="@null"
+            android:ems="10"
+            android:hint="@string/Search"
+            android:inputType="textPersonName"
+            android:textColorHint="#BBBBBB"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/feeling_search_btn"
+            android:layout_toRightOf="@+id/edt_search_feeling"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/feeling_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_search_feeling"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="0dp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/_10sdp"
+        android:visibility="gone" />
+
+</RelativeLayout>

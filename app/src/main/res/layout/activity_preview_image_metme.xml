@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.meest.medley_camera2.camera2.viewmodels.PreviewImageViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_deep_dark"
+            android:orientation="vertical">
+
+            <!--        Top Layout-->
+            <RelativeLayout
+                android:id="@+id/header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/black">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_preview_close_btn"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/ripple_white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="18dp"
+                    android:src="@drawable/back_arrow"
+                    app:tint="@color/white"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+
+                    android:layout_marginEnd="@dimen/size_10dp"
+                    android:id="@+id/downloadMedia"
+                    android:layout_width="@dimen/size_30dp"
+                    android:layout_height="@dimen/size_30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/iv_image_preview_add_brush"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="18dp"
+                    android:background="@drawable/ic_baseline_arrow_circle_down_24"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_image_preview_add_brush"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_toLeftOf="@+id/iv_image_preview_add_text"
+                    android:background="@drawable/ripple_white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="18dp"
+                    android:src="@drawable/icon_brush"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_image_preview_add_text"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_toLeftOf="@+id/iv_image_preview_stickers"
+                    android:background="@drawable/ripple_white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="18dp"
+                    android:src="@drawable/ic_baseline_text_fields_24"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_image_preview_stickers"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_toLeftOf="@+id/iv_image_preview_adjust"
+                    android:background="@drawable/ripple_white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="18dp"
+                    android:src="@drawable/ic_stickers"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:visibility="gone"
+                    android:id="@+id/iv_image_preview_adjust"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ripple_white"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="18dp"
+                    android:src="@drawable/ic_baseline_crop_rotate_24"
+                    tools:ignore="ContentDescription" />
+
+
+            </RelativeLayout>
+
+            <!--  ImageVIew-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/gray_deep_dark">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_preview_set_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+
+            <!--        HandsFree Layout-->
+
+
+            <!--        Multi Capture-->
+            <LinearLayout
+                android:padding="@dimen/size_5dp"
+                android:orientation="horizontal"
+                android:id="@+id/multiSnapCaptureLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/multiCaptureImage01"
+
+                    />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/multiCaptureImage02"
+
+                    />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/multiCaptureImage03"
+
+                    />
+            </LinearLayout>
+
+            <!--        Bottom Layout-->
+
+
+
+        </LinearLayout>
+
+        <include layout="@layout/content_preview" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:visibility="gone"
+            android:id="@+id/nextButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="@dimen/size_50dp"
+            android:layout_height="@dimen/size_50dp"
+            android:src="@drawable/ic_next_create_grp"
+            android:layout_margin="@dimen/size_10dp" />
+    </RelativeLayout>
+</layout>
+

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="chatViewModel"
+            type="com.meest.metme.viewmodels.ChatRequestViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layoutDirection="ltr">
+
+        <RelativeLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:longClickable="true"
+            android:padding="@dimen/_8sdp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp">
+
+
+                <RelativeLayout
+                    android:id="@+id/cardView2"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true">
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="10dp">
+
+                            <ImageView
+                                android:id="@+id/img_profile"
+                                userImage="@{chatViewModel.image}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:background="@drawable/chat_user_placeholder"
+                                android:layout_alignParentLeft="true" />
+
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:padding="@dimen/size_10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/size_5dp"
+                    android:layout_toRightOf="@+id/cardView2"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txt_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lobster_two_regular"
+                        android:lines="1"
+                        android:text="@{chatViewModel.username}"
+                        android:textColor="#151624"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_20ssp"
+                        android:layout_marginRight="@dimen/_20ssp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_msg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="19dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/lobster_two_regular"
+                            android:singleLine="true"
+                            android:text="@{chatViewModel.msg}"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_marginRight="@dimen/_5sp"
+                    android:gravity="center|end"
+                    android:orientation="vertical">
+                    <!--  android:src="@{chatViewModel.isChecked? @drawable/ic_chat_request_select:@drawable/ic_chat_request_unselect}"-->
+                    <ImageView
+                        android:id="@+id/checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/ic_chat_request_select" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/layout_main"
+            android:layout_marginHorizontal="@dimen/size_30dp"
+            android:background="@color/chat_grey_line" />
+    </RelativeLayout>
+</layout>

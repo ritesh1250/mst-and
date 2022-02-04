@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.meest.videomvvmmodule.viewmodel.ReportViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/lout_header"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/popins_medium"
+                android:gravity="center_horizontal"
+                android:includeFontPadding="false"
+                android:text='@{viewmodel.reportType == 1 ? @string/Report_Post: @string/Report_User}'
+                android:textColor="#1E2432"
+                android:textSize="19sp" />
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_centerVertical="true"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="@dimen/_16sdp"
+                android:src="@drawable/ic_back_arrow"
+                tools:ignore="ContentDescription" />
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lout_header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/selectreason"
+                    android:textColor="@color/tab_unselected" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_white_corner_15"
+                    android:backgroundTint="@color/report_background">
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/report_text_color"
+                        android:entries="@array/report_reasons"
+                        android:paddingLeft="15dp" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/howithurtsyo"
+                    android:textColor="@color/tab_unselected" />
+
+                <EditText
+                    android:id="@+id/report_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="5dp"
+                    android:afterTextChanged="@{(editable)->viewmodel.afterUserNameTextChanged(editable)}"
+                    android:background="@drawable/bg_white_corner_15"
+                    android:backgroundTint="@color/report_background"
+                    android:gravity="top"
+                    android:hint="@string/explainbriefly"
+                    android:nestedScrollingEnabled="true"
+                    android:paddingHorizontal="15dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/report_text_color"
+                    android:textColorHint="@color/report_text_color"
+                    android:textCursorDrawable="@xml/cursor"
+                    android:textSize="16sp"
+                    tools:ignore="Autofill,TextFields" />
+
+
+<!--                android:digits="_,qwertzuiopasdfghjklyxcvbnm,QWERTYUIOPASDFGHJKLZXCVBNM,0123456789, "-->
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/contactdetails"
+                    android:textColor="@color/tab_unselected" />
+
+                <!--                android:afterTextChanged="@{(editable)->viewmodel.afterContactDetailsChanged(editable)}"-->
+                <EditText
+                    android:id="@+id/report_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_white_corner_15"
+                    android:backgroundTint="@color/report_background"
+                    android:enabled="false"
+                    android:hint="@string/mailormobile"
+                    android:paddingHorizontal="15dp"
+                    android:textColor="@color/report_text_color"
+                    android:textColorHint="@color/report_text_color"
+                    android:textCursorDrawable="@xml/cursor"
+                    android:textSize="16sp"
+                    tools:ignore="Autofill,TextFields" />
+
+                <Button
+                    android:id="@+id/btn_report"
+                    android:layout_width="120dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/bg_gradient"
+                    android:fontFamily="@font/poppins_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/report"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/popins_light"
+                    android:gravity="center"
+                    android:paddingHorizontal="8dp"
+                    android:text="@string/byclickingthissubmitbutton"
+                    android:textColor="@color/tab_unselected"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_term"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center"
+                    android:paddingHorizontal="48dp"
+                    android:text="@string/policy_center"
+                    android:textColor="@color/color_dark_grey"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

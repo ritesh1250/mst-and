@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+    android:gravity="center_horizontal"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/layout_main"
+        android:layout_width="187dp"
+        android:layout_height="240dp"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/overlay_bg_grid" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/video_profile_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/placeholder" />
+
+        <TextView
+            android:id="@+id/tv_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="17sp"
+            android:layout_toEndOf="@+id/video_profile_image"
+            android:maxEms="10"
+            android:maxLength="10"
+            android:text="Kingsom"
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/likes_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="14dp"
+            android:text="12K"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="4.83dp"
+            android:layout_marginBottom="17.5dp"
+            android:layout_toStartOf="@+id/likes_count"
+            android:src="@drawable/heart_icon" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+   <!-- Meest4Bharat email id-->
+    <string name="agora_app_id" translatable="false">1e119fa8e64948e3aeb9237d962e56f1</string>
+   <!-- Mousam email id-->
+   <!-- <string name="agora_app_id" translatable="false">1620f34b6f3943c9af4899681b023548</string>-->
+    <!--    <string name="agora_app_id" translatable="false">82fab50a59454758b284a772d6fc1cef</string>-->
+    <string name="agora_access_token" translatable="false"></string>
+
+    <string-array name="encryption_mode_values">
+        <item>AES-128-XTS</item>
+        <item>AES-256-XTS</item>
+    </string-array>
+
+    <string-array
+        name="string_array_resolutions">
+        <item>160x120</item> // 120P
+        <item>320x180</item> // 180P
+        <item>320x240</item> // 240P the default one
+        <item>640x360</item> // 360P
+        <item>640x480</item> // 480P
+        <item>1280x720</item> // 720P
+    </string-array>
+
+    <string-array
+        name="string_array_frame_rate">
+        <item>1</item>
+        <item>7</item>
+        <item>10</item>
+        <item>15</item> // the default one
+        <item>24</item>
+        <item>30</item>
+    </string-array>
+
+    <string name="legal_channel_name_characters">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&amp;()+,-:;&lt;=.>?@[]^_`{|}~</string>
+
+</resources>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr">
+
+    <data>
+
+        <import type="com.meest.videomvvmmodule.utils.Global" />
+
+        <variable
+            name="model"
+            type="com.meest.videomvvmmodule.model.videos.Video.Data" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="@dimen/_3sdp">
+
+        <!--android:background="@drawable/stroke_line"-->
+        <!--<androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            app:cardUseCompatPadding="true">-->
+        <com.meest.RoundedView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size_1dp"
+            app:bottomLeftCornerRadius="0dp"
+            app:bottomRightCornerRadius="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:topLeftCornerRadius="0dp"
+            app:topRightCornerRadius="0dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/video_loader_1"
+                app:hashtag_url="@{model.thumbnail_image}"
+                tools:ignore="ContentDescription" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/video_loader"
+                    tools:ignore="ContentDescription" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/bg_gradient_opicity" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:src="@drawable/ic_medley_like_primary"
+                        app:tint="@color/white"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_likeCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/popins_medium"
+                        android:textColor="@color/light_white"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="6dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/_5sp"
+                            app:cardElevation="0dp"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <com.meest.utils.RoundedView
+                                android:layout_width="@dimen/size_25dp"
+                                android:layout_height="@dimen/size_25dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/_2sp"
+                                app:bottomLeftCornerRadius="@dimen/_5sp"
+                                app:bottomRightCornerRadius="@dimen/_5sp"
+                                app:cardBackgroundColor="#F6F6F6"
+                                app:cardElevation="0dp"
+                                app:topLeftCornerRadius="@dimen/_5sp"
+                                app:topRightCornerRadius="@dimen/_5sp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:scaleType="centerCrop"
+                                        app:profile_url="@{model.userProfile}"
+                                        tools:ignore="ContentDescription,TooDeepLayout"
+                                        tools:src="@drawable/ic_edit_profile_img" />
+                                </LinearLayout>
+                            </com.meest.utils.RoundedView>
+                        </androidx.cardview.widget.CardView>
+
+                        <!--                        <View-->
+                        <!--                            android:layout_width="0dp"-->
+                        <!--                            android:layout_height="@dimen/dimen_1dp"-->
+                        <!--                            android:layout_weight="1" />-->
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/poppins_regular"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:text='@{"@"+model.userName}'
+                            android:textColor="@color/light_white"
+                            android:textSize="10sp"
+                            tools:text="username"
+                            tools:ignore="SmallSp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/popins_medium"
+                            android:maxLines="1"
+                            android:textColor="@color/light_white"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_descreption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/poppins_regular"
+                        android:maxLines="2"
+                        android:text="@{model.postDescription}"
+                        android:textColor="@color/light_white"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </com.meest.RoundedView>
+    </RelativeLayout>
+</layout>

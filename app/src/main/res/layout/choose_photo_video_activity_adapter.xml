@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_10sdp"
+       android:id="@+id/layut_1"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+       android:orientation="horizontal">
+
+
+       <ImageView
+           android:layout_width="0dp"
+           android:layout_height="@dimen/_150sdp"
+           android:layout_weight="1"
+           android:id="@+id/img_1"
+           android:scaleType="fitCenter"
+           android:src="@drawable/ic_profile_icons_avtar"
+           />
+
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_weight="2"
+           android:paddingLeft="@dimen/_10sdp"
+           android:layout_gravity="center_vertical"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text=""
+               android:textSize="28sp"
+               android:textStyle="bold"
+               android:id="@+id/txt_title"
+               android:layout_gravity="center_horizontal"
+               android:textColor="#fff"
+               />
+
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Watch, share and express yourself with creativity in  a world full interesting video content."
+               android:textSize="15sp"
+               android:id="@+id/layout_line1"
+               android:layout_centerHorizontal="true"
+               android:layout_marginTop="@dimen/_5sdp"
+               android:layout_gravity="center_horizontal"
+               android:textColor="#fff"
+               />
+
+
+       </LinearLayout>
+
+   </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:id="@+id/layut_2"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:paddingLeft="@dimen/_10sdp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Join and Create"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:id="@+id/txt_title_new"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#fff"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Watch, share and express yourself with creativity in  a world full interesting video content."
+                android:textSize="15sp"
+                android:id="@+id/layout_line1_new"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#fff"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_150sdp"
+            android:id="@+id/img_2"
+            android:scaleType="fitCenter"
+            android:layout_weight="1"
+            android:src="@drawable/ic_profile_icons_avtar"
+            />
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

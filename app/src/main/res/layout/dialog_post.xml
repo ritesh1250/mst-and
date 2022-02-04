@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/Report_Post"
+            android:textColor="#0A1F44"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txt_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/Delete"
+            android:textColor="#0A1F44"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txt_copyLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/Copy_Link"
+            android:textColor="#0A1F44"
+            android:textSize="17sp" />
+
+
+        <TextView
+            android:id="@+id/txt_shareTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/Share_to"
+            android:textColor="#0A1F44"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+</layout>

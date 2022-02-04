@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.meest.videomvvmmodule.utils.Global"/>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.meest.metme.viewmodels.ForwardViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".metme.WallpaperActivity">
+
+        <LinearLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_head"
+            android:gravity="top">
+
+            <RelativeLayout
+                android:id="@+id/ll_UnContextualMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/btBack"
+                        android:layout_width="wrap_content"
+                        android:foreground="?selectableItemBackground"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/backButton"
+                            android:layout_width="?android:attr/actionBarSize"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:padding="@dimen/dimen_18dp"
+                            android:src="@drawable/chat_back_arrow"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="@dimen/dimen_10dp"
+                        android:layout_weight="1"
+                        android:gravity="end">
+
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/lobster_two_regular"
+                            android:text="@string/forward_to"
+                            android:textColor="@color/white"
+                            android:textSize_bind='@{Global.size1}'
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appbar"
+            android:background="@drawable/chat_head">
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white_top_folded_corner"
+                android:backgroundTint="@color/white">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/forward_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical"
+                    android:adapter="@{viewModel.adapter}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/chat_follower_list_layout" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:padding="@dimen/size_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <Button
+                    android:id="@+id/forward"
+                    android:foreground="?selectableItemBackground"
+                    android:onClick="@{(view)->viewModel.forward(view)}"
+                    android:layout_width="120dp"
+                    android:visibility="@{viewModel.isSelected? View.VISIBLE:View.GONE}"
+                    android:layout_height="@dimen/size_40dp"
+                    android:background="@drawable/chat_create_group_round_corner"
+                    android:fontFamily="@font/lobster_two_regular"
+                    android:text="@string/forward"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</layout>

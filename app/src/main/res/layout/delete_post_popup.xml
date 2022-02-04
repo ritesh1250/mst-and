@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layoutDirection="ltr">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="34dp"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@color/text_grey"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:text="@string/Do_you_want_to_delete_this_post"/>
+
+
+    -<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_marginTop="47dp"
+    android:layout_marginEnd="29dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginBottom="80dp">
+
+    <Button
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:text="@string/yes"
+        android:layout_marginEnd="5dp"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        android:background="@drawable/chat_create_group_round_corner"
+        android:id="@+id/btYes"/>
+
+    <Button
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:text="@string/no"
+        android:layout_marginStart="5dp"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        android:background="@drawable/chat_create_group_round_corner"
+        android:id="@+id/btNo"/>
+
+</LinearLayout>
+
+</LinearLayout>

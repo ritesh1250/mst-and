@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </FrameLayout>-->
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_meest"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/meest_nav_graph" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav_meest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?android:attr/windowBackground"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@drawable/bottom_meest_color_selector"
+        app:itemIconSize="28dp"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/meest_bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/layout_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:elevation="50dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/centre_icon"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/bottom_nav_parent"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:layout_constraintStart_toStartOf="parent">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/layout_bottom_video"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_alignParentBottom="true"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:visibility="gone">-->
+
+    <!--            <com.abedalkareem.tabview.AMTabView-->
+    <!--                android:id="@+id/tabView"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="66dp"-->
+    <!--                android:visibility="gone" />-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_gravity="bottom"-->
+    <!--                android:background="@color/black"-->
+    <!--                android:baselineAligned="false"-->
+    <!--                android:orientation="horizontal"-->
+    <!--                android:visibility="visible">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:id="@+id/layout_home_video"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="56dp"-->
+    <!--                    android:layout_gravity="bottom"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:background="@color/black">-->
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/img_home_video"-->
+    <!--                        android:layout_width="24dp"-->
+    <!--                        android:layout_height="24dp"-->
+    <!--                        android:layout_centerHorizontal="true"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:src="@drawable/ic_action_tab1"-->
+    <!--                        tools:ignore="ContentDescription" />-->
+
+    <!--                </RelativeLayout>-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:id="@+id/layout_search_video"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="56dp"-->
+    <!--                    android:layout_gravity="bottom"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:background="@color/black">-->
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/img_search_video"-->
+    <!--                        android:layout_width="24dp"-->
+    <!--                        android:layout_height="24dp"-->
+    <!--                        android:layout_centerHorizontal="true"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:src="@drawable/ic_action_tab2"-->
+    <!--                        tools:ignore="ContentDescription" />-->
+
+    <!--                </RelativeLayout>-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:id="@+id/layout_post_video"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="56dp"-->
+    <!--                    android:layout_gravity="bottom"-->
+    <!--                    android:layout_weight="1">-->
+
+    <!--                    <RelativeLayout-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="56dp"-->
+    <!--                        android:layout_alignParentBottom="true"-->
+    <!--                        android:layout_gravity="bottom"-->
+    <!--                        android:background="@color/black" />-->
+
+    <!--                    <ImageView-->
+    <!--                        android:layout_width="wrap_content"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerHorizontal="true"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:src="@drawable/add"-->
+    <!--                        tools:ignore="ContentDescription" />-->
+
+    <!--                </RelativeLayout>-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:id="@+id/layout_notification_video"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="56dp"-->
+    <!--                    android:layout_gravity="bottom"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:background="@color/black">-->
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/img_notification_video"-->
+    <!--                        android:layout_width="24dp"-->
+    <!--                        android:layout_height="24dp"-->
+    <!--                        android:layout_centerHorizontal="true"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:src="@drawable/ic_action_tab3"-->
+    <!--                        tools:ignore="ContentDescription" />-->
+
+    <!--                </RelativeLayout>-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:id="@+id/layout_my_account_video"-->
+    <!--                    android:layout_width="0dp"-->
+    <!--                    android:layout_height="56dp"-->
+    <!--                    android:layout_gravity="bottom"-->
+    <!--                    android:layout_weight="1"-->
+    <!--                    android:background="@color/black">-->
+
+    <!--                    <de.hdodenhof.circleimageview.CircleImageView-->
+    <!--                        android:id="@+id/img_profile_video"-->
+    <!--                        android:layout_width="24dp"-->
+    <!--                        android:layout_height="24dp"-->
+    <!--                        android:layout_centerHorizontal="true"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:src="@drawable/ic_action_tab4" />-->
+
+    <!--                </RelativeLayout>-->
+
+    <!--            </LinearLayout>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="78dp">-->
+
+    <!--            <androidx.cardview.widget.CardView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_alignParentBottom="true"-->
+    <!--                android:elevation="0dp"-->
+    <!--                app:cardBackgroundColor="@color/white">-->
+
+    <!--                <LinearLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="?attr/actionBarSize"-->
+    <!--                    android:gravity="center_vertical"-->
+    <!--                    android:orientation="horizontal">-->
+
+    <!--                    <RelativeLayout-->
+    <!--                        android:id="@+id/layout_home"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:clickable="true"-->
+    <!--                        android:background="?attr/selectableItemBackgroundBorderless"-->
+    <!--                        android:focusable="true">-->
+
+    <!--                        <ImageView-->
+    <!--                            android:id="@+id/img_home"-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="match_parent"-->
+    <!--                            android:layout_centerInParent="true"-->
+    <!--                            android:padding="12dp"-->
+    <!--                            android:src="@drawable/selected_home"-->
+    <!--                            tools:ignore="ContentDescription" />-->
+
+    <!--                    </RelativeLayout>-->
+    <!--                    <RelativeLayout-->
+    <!--                        android:id="@+id/trdering"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:clickable="true"-->
+    <!--                        android:background="?attr/selectableItemBackgroundBorderless"-->
+    <!--                        android:focusable="true">-->
+
+    <!--                        <ImageView-->
+    <!--                            android:id="@+id/img_trending"-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="match_parent"-->
+    <!--                            android:layout_centerInParent="true"-->
+    <!--                            android:padding="12dp"-->
+    <!--                            android:src="@drawable/unselected_hashtag"-->
+    <!--                            tools:ignore="ContentDescription" />-->
+
+    <!--                    </RelativeLayout>-->
+    <!--&lt;!&ndash;                    <RelativeLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:id="@+id/layout_search"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:layout_width="0dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:layout_height="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:layout_weight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:clickable="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:background="?attr/selectableItemBackgroundBorderless"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:focusable="true">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;                        <ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:id="@+id/img_search"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:layout_height="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:layout_centerInParent="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:padding="12dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:src="@drawable/unselected_search"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            tools:ignore="ContentDescription" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;                    </RelativeLayout>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;                    <RelativeLayout&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:id="@+id/comingsoon"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:layout_width="0dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:layout_height="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:layout_weight="1"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:clickable="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:background="?attr/selectableItemBackgroundBorderless"&ndash;&gt;-->
+    <!--&lt;!&ndash;                        android:focusable="true">&ndash;&gt;-->
+
+    <!--&lt;!&ndash;                        <ImageView&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:id="@+id/img_coming_soon"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:layout_height="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:layout_centerInParent="true"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:padding="12dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            android:src="@drawable/unselected_coming_soon"&ndash;&gt;-->
+    <!--&lt;!&ndash;                            tools:ignore="ContentDescription" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;                    </RelativeLayout>&ndash;&gt;-->
+
+    <!--                    <View-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:layout_weight="1.5">-->
+
+    <!--                    </View>-->
+
+
+
+
+
+    <!--                    <RelativeLayout-->
+    <!--                        android:id="@+id/layout_notification"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:clickable="true"-->
+    <!--                        android:background="?attr/selectableItemBackgroundBorderless"-->
+    <!--                        android:focusable="true">-->
+
+
+    <!--                        &lt;!&ndash;                    <androidx.constraintlayout.widget.ConstraintLayout&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                        android:layout_height="match_parent"&ndash;&gt;-->
+    <!--                        &lt;!&ndash;                        android:layout_centerInParent="true">&ndash;&gt;-->
+
+    <!--                        &lt;!&ndash;                     &ndash;&gt;-->
+
+
+    <!--                        &lt;!&ndash;                    </androidx.constraintlayout.widget.ConstraintLayout>&ndash;&gt;-->
+
+    <!--                        <ImageView-->
+    <!--                            android:id="@+id/img_notification"-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="match_parent"-->
+    <!--                            android:layout_centerInParent="true"-->
+    <!--                            android:padding="12dp"-->
+    <!--                            android:src="@drawable/unselected_notification"-->
+    <!--                            tools:ignore="ContentDescription" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:id="@+id/tvNotificationCount"-->
+    <!--                            android:layout_width="@dimen/_16sdp"-->
+    <!--                            android:layout_height="@dimen/_16sdp"-->
+    <!--                            android:layout_alignParentEnd="true"-->
+    <!--                            android:layout_margin="3dp"-->
+    <!--                            android:background="@drawable/badge_circle"-->
+    <!--                            android:gravity="center"-->
+    <!--                            android:text=""-->
+    <!--                            android:textColor="#FFFFFF"-->
+    <!--                            android:textSize="10dp"-->
+    <!--                            android:textStyle="bold"-->
+    <!--                            android:visibility="invisible" />-->
+
+
+    <!--                    </RelativeLayout>-->
+
+
+    <!--                    <RelativeLayout-->
+    <!--                        android:id="@+id/layout_my_account"-->
+    <!--                        android:layout_width="0dp"-->
+    <!--                        android:layout_height="match_parent"-->
+    <!--                        android:layout_weight="1"-->
+    <!--                        android:clickable="true"-->
+    <!--                        android:background="?attr/selectableItemBackgroundBorderless"-->
+    <!--                        android:focusable="true">-->
+
+    <!--                        <ImageView-->
+    <!--                            android:id="@+id/ivUser"-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="match_parent"-->
+    <!--                            android:layout_centerInParent="true"-->
+    <!--                            android:padding="12dp"-->
+    <!--                            android:src="@drawable/unselected_profile"-->
+    <!--                            tools:ignore="ContentDescription" />-->
+
+    <!--                    </RelativeLayout>-->
+
+    <!--                </LinearLayout>-->
+
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--            <RelativeLayout-->
+    <!--                android:id="@+id/layout_post1"-->
+    <!--                android:layout_width="78dp"-->
+    <!--                android:layout_height="78dp"-->
+    <!--                android:layout_alignParentBottom="true"-->
+    <!--                android:layout_centerHorizontal="true"-->
+    <!--                android:background="?attr/selectableItemBackgroundBorderless"-->
+    <!--                android:elevation="3dp">-->
+
+    <!--                <ImageView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_centerInParent="true"-->
+    <!--                    android:src="@drawable/centre_icon"-->
+    <!--                    tools:ignore="ContentDescription" />-->
+    <!--            </RelativeLayout>-->
+
+    <!--        </RelativeLayout>-->
+
+
+    <!--    </RelativeLayout>-->

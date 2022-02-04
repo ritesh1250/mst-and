@@ -1,0 +1,323 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+android {
+    compileSdkVersion 30
+    buildToolsVersion '30.0.3'
+
+    defaultConfig {
+        applicationId "com.meest"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 30
+        versionName "1.0.9"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "APIKEY", '\"blog#2020\"'
+
+        /* ndk {
+             ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+         }*/
+    }
+
+//    bundle {
+//        abi {
+//            enableSplit = true
+//        }
+//    }
+
+    buildTypes {
+
+        debug {
+            //Local Server
+//            buildConfigField "String", "BASE_URL",  '\"http://192.168.100.118:3003/\"'
+//            buildConfigField "String", "BASE_URL_SOCKET",  '\"http://192.168.100.118:3004/\"'
+//            buildConfigField "String", "BASE_URL_MEDLEY",  '\"http://65.0.41.141/medley/api/\"'
+
+            buildConfigField "String", "BASE_URL",  '\"https://www.mist-one.com/\"'
+            buildConfigField "String", "BASE_URL_SOCKET",  '\"https://www.mist360online.com/\"'
+            buildConfigField "String", "BASE_URL_MEDLEY",  '\"https://themeestbharat.com/medley/api/\"'
+
+
+            //Staging Server
+//            buildConfigField "String", "BASE_URL",  '\"http://65.1.89.89:3003/\"'
+//            buildConfigField "String", "BASE_URL_SOCKET",  '\"http://65.1.201.63:3004/\"'
+//            buildConfigField "String", "BASE_URL_MEDLEY",  '\"http://65.0.41.141/medley/api/\"'
+
+            //Release Testing Server
+//            buildConfigField "String", "BASE_URL",  '\"http://socialmist.in:3003/\"'
+//            buildConfigField "String", "BASE_URL_SOCKET",  '\"http://meest-contest.com:3004/\"'
+//            buildConfigField "String", "BASE_URL_MEDLEY",  '\"https://themeestbharat.com/medley_live_test/api/\"'
+
+//            buildConfigField "String", "BASE_URL",  '\"https://www.mist-one.com/\"'
+//            buildConfigField "String", "BASE_URL_SOCKET",  '\"https://www.mist360online.com/\"'
+//            buildConfigField "String", "BASE_URL_MEDLEY",  '\"https://themeestbharat.com/medley/api/\"'
+
+            //SSL
+            buildConfigField "String", "MEEST_SSL", '\"sha256/MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA47tzrK3JjjOZyUyK1tcqGb+h/qW5gy5pZipYO2xgcWn9mL/Bq0JX1e1OMcO7xMN0+b78Me4tyiJkdaTQLULiDv0P0Hd7fRBDaDe/CfDueXllpeB/a59rTVv4sAKfzGNvaWnCkaiJdFt3DY9G8LgUybR970aEx18RO8vPvLFHpHJ/GXCpCN7GG7ZcKb8OQSZKVz4A59ar6cSGUN+sf/CZpPRgq/S+3ym9u3Jarkd3JyKOf9x4xAUaHRMWKS/4JTlcu+IEYuaALZWZcNF5WQ4Qj/diExl2x3wqmyLnQFfDpxo/BXKslFJzKeSvtj/ffrNGBBJEM6NCayWd7g6k93EH+wIDAQAB\"'
+            buildConfigField "String", "SOCKET_SSL", '\"sha256/MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq2PiXguOGtyPn84rvqA0f0vgzxHGkqXZvgn90BVPGzWG9NN07WAnmeTIp7bQygFpcn6Qb8TOKYpgkilbhctxkr122BaP2qYrJ2LDqLeHv+q0COlvpD7YzJ3z+/3umftVqaQ7ysboBpY+Fr7JaszBgl0PdxaKdGefFUgoLGUbphQm/rohvL8EzCL5l+YRsaT0vcqnBWDmRBvcC4wUg8igU3JRh/FVQFv6DZ4R6jpyp+IntPbtqBvC6Hpv96Je4mkMig1j1+BfumUJCx8VYlt3W/+FBxEodCPYpdRuTBMTWNPz/Pzsnkw0UDkz0wQFRAameQ4SoPYzrSSEPZl9pDr6+wIDAQAB\"'
+            buildConfigField "String", "MEDLEY_SSL", '\"sha256/MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzwHEGHHF1sEsM0+YvnJgC0ML1S8q6KZhHaSAp+8vocGTezo4LxnKo1VB1DyK5Y+auAGMqV5WEQK06v29g2zQQ7sQ53mEgt3wQBIDQ6dbqDao17Q8KtiPPr46YwWCBG9RldCUz+9WFmUTZvI1aKNN3J/ESNKiNhyyC7KZOR5eJhTu975nAue9Vr/YuUTo/EKmnBYY8pPH3dEynw4C8G25YGQ12P3AhsyX8H97K1/52a63e1f8b7LIe0930Aef1tuUzjtQMEkxQ39rwQThEoDaDLYULEj/xuGz/+E580R216AHUZ1QfIT8ffbvHx25CC/VAMVegkDvIUZogX5o1tXmCwIDAQAB\"'
+        }
+        release {
+            buildConfigField "String", "BASE_URL",  '\"https://www.mist-one.com/\"'
+            buildConfigField "String", "BASE_URL_SOCKET",  '\"https://www.mist360online.com/\"'
+            buildConfigField "String", "BASE_URL_MEDLEY",  '\"https://themeestbharat.com/medley/api/\"'
+
+            //SSL
+            buildConfigField "String", "MEEST_SSL", '\"sha256/MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA47tzrK3JjjOZyUyK1tcqGb+h/qW5gy5pZipYO2xgcWn9mL/Bq0JX1e1OMcO7xMN0+b78Me4tyiJkdaTQLULiDv0P0Hd7fRBDaDe/CfDueXllpeB/a59rTVv4sAKfzGNvaWnCkaiJdFt3DY9G8LgUybR970aEx18RO8vPvLFHpHJ/GXCpCN7GG7ZcKb8OQSZKVz4A59ar6cSGUN+sf/CZpPRgq/S+3ym9u3Jarkd3JyKOf9x4xAUaHRMWKS/4JTlcu+IEYuaALZWZcNF5WQ4Qj/diExl2x3wqmyLnQFfDpxo/BXKslFJzKeSvtj/ffrNGBBJEM6NCayWd7g6k93EH+wIDAQAB\"'
+            buildConfigField "String", "SOCKET_SSL", '\"sha256/MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq2PiXguOGtyPn84rvqA0f0vgzxHGkqXZvgn90BVPGzWG9NN07WAnmeTIp7bQygFpcn6Qb8TOKYpgkilbhctxkr122BaP2qYrJ2LDqLeHv+q0COlvpD7YzJ3z+/3umftVqaQ7ysboBpY+Fr7JaszBgl0PdxaKdGefFUgoLGUbphQm/rohvL8EzCL5l+YRsaT0vcqnBWDmRBvcC4wUg8igU3JRh/FVQFv6DZ4R6jpyp+IntPbtqBvC6Hpv96Je4mkMig1j1+BfumUJCx8VYlt3W/+FBxEodCPYpdRuTBMTWNPz/Pzsnkw0UDkz0wQFRAameQ4SoPYzrSSEPZl9pDr6+wIDAQAB\"'
+            buildConfigField "String", "MEDLEY_SSL", '\"sha256/MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzwHEGHHF1sEsM0+YvnJgC0ML1S8q6KZhHaSAp+8vocGTezo4LxnKo1VB1DyK5Y+auAGMqV5WEQK06v29g2zQQ7sQ53mEgt3wQBIDQ6dbqDao17Q8KtiPPr46YwWCBG9RldCUz+9WFmUTZvI1aKNN3J/ESNKiNhyyC7KZOR5eJhTu975nAue9Vr/YuUTo/EKmnBYY8pPH3dEynw4C8G25YGQ12P3AhsyX8H97K1/52a63e1f8b7LIe0930Aef1tuUzjtQMEkxQ39rwQThEoDaDLYULEj/xuGz/+E580R216AHUZ1QfIT8ffbvHx25CC/VAMVegkDvIUZogX5o1tXmCwIDAQAB\"'
+
+            minifyEnabled false
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        pickFirst '**/*.so'
+
+
+    }
+
+    android {
+
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+//    material design
+    implementation 'com.google.android.material:material:1.3.0'
+    //    for fragment navigation
+    implementation 'androidx.navigation:navigation-fragment:2.3.1'
+    implementation 'androidx.navigation:navigation-ui:2.3.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'com.xw.repo:bubbleseekbar:3.20'
+    implementation 'com.github.warkiz.tickseekbar:tickseekbar:0.1.4'
+    implementation 'androidx.wear:wear:1.0.0'
+//    implementation 'com.google.firebase:firebase-storage:19.2.1'
+//    implementation 'com.google.firebase:firebase-auth:20.0.2'
+    implementation 'com.google.firebase:firebase-dynamic-links:19.1.1'
+    implementation project(path: ':photoeditor')
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+//cookies http client
+    implementation 'com.loopj.android:android-async-http:1.4.11'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.chaos.view:pinview:1.3.2'
+    implementation 'com.google.firebase:firebase-analytics-ktx:17.4.1'
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.0'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    //ButterKnife
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+    //  Firebase Cloud Messaging libraries
+    implementation 'com.google.firebase:firebase-messaging:21.1.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:17.5.1'
+    implementation 'com.github.hani-momanii:SuperNova-Emoji:1.1'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.xw.repo:bubbleseekbar:3.20'
+    implementation 'com.github.MasayukiSuda:GPUVideo-android:v0.1.0'
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+    implementation 'com.github.nanjingboy:range-slider:1.0'
+
+    implementation 'com.razorpay:checkout:1.6.6'
+    implementation 'com.gsconrad:richcontentedittext:1.0.0'
+    implementation 'com.chauthai.overscroll:overscroll-bouncy:0.1.1'
+    implementation "com.github.lecho:hellocharts-library:1.5.8@aar"
+    implementation 'com.github.nanjingboy:range-slider:1.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    //noinspection GradleCompatible
+    implementation "com.android.support:support-v13:25.3.1"
+    implementation 'com.master.android:simpleadapter:3.2'
+    //delete for
+    implementation 'it.xabaras.android:recyclerview-swipedecorator:1.2.3'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.android.gms:play-services-safetynet:17.0.1'
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.google.android.libraries.places:places:2.4.0'
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+
+    implementation 'com.github.markusfisch:CameraView:1.8.4'
+    implementation 'com.github.google:cameraview:68947cc164'
+    implementation 'net.the4thdimension:audio-wife:1.0.3'
+    implementation 'com.thebluealliance:spectrum:0.7.1'
+    implementation 'jp.wasabeef:glide-transformations:4.0.0'
+    implementation 'org.slf4j:slf4j-api:1.7.21'
+    implementation 'com.github.tony19:logback-android-core:1.1.1-4'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation 'com.jayway.android.robotium:robotium-solo:5.6.3'
+    implementation 'com.google.firebase:firebase-firestore:22.1.0'
+    implementation 'com.google.firebase:firebase-database:19.6.0'
+
+    //likeButton
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.72'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
+//    // QR libraries
+    implementation 'com.google.zxing:core:3.3.3'
+    implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
+    //Swipe refresh
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-andx-11'
+    //Card Slider
+    implementation 'com.github.IslamKhSh:CardSlider:1.0.1'
+    // Loader
+    implementation 'com.agrawalsuneet.androidlibs:loaderspack:1.2.3'
+    //SpinKit
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    //PrDownloader
+    implementation 'com.mindorks.android:prdownloader:0.6.0'
+    //Mp4 Parser
+    implementation 'com.googlecode.mp4parser:isoparser:1.1.7'
+    //Transcoder
+    implementation 'com.otaliastudios:transcoder:0.9.1'
+    //Branch
+    implementation 'io.branch.sdk.android:library:5.0.1'
+    implementation 'com.google.firebase:firebase-messaging-directboot:20.2.3'
+    //Ads
+    implementation 'com.facebook.android:audience-network-sdk:5.10.0'
+    implementation 'com.google.android.gms:play-services-ads:19.2.0'
+    //in app purchase
+    implementation 'com.anjlab.android.iab.v3:library:1.0.45'
+    implementation 'com.danikula:videocache:2.7.0'
+    //circularmageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    // smoothprogressbar
+    implementation 'com.github.castorflex.smoothprogressbar:library-circular:1.3.0'
+    // To add ARGear library
+    implementation files('libs/argear_0.6.0.aar')
+    implementation "com.airbnb.android:lottie:3.3.0"
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation("com.squareup.retrofit2:retrofit:$RETROFIT_VERSION") {
+        exclude module: 'okhttp'
+    }
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.15'
+    implementation 'com.jakewharton.rxbinding3:rxbinding:3.0.0-alpha2'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.2.0'
+    //Camera
+    implementation "androidx.camera:camera-core:$camerax_version"
+    implementation "androidx.camera:camera-camera2:$camerax_version"
+    implementation "androidx.camera:camera-extensions:$camerax_ext_version"
+    //
+    implementation "android.arch.lifecycle:extensions:2.3.0"
+    implementation "android.arch.lifecycle:viewmodel:2.1.0"
+    //new PinView
+    implementation 'com.github.GoodieBag:Pinview:v1.4'
+
+//    chips
+    implementation 'com.beloo.widget:ChipsLayoutManager:0.3.7@aar'
+    implementation 'com.google.android.exoplayer:exoplayer:2.11.1'
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.11.1'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.11.1'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.11.1'
+    /Expandable Recyclerview/
+    implementation 'com.thoughtbot:expandablecheckrecyclerview:1.4'
+    implementation 'com.github.pankaj89:MasterExoPlayer:1.4.5'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    // Document chooser
+    implementation 'com.github.codekidX:storage-chooser:2.0.4.4'
+//    video editor
+    implementation 'com.xw.repo:bubbleseekbar:3.20'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.ogaclejapan.smarttablayout:library:1.7.0@aar'
+    implementation 'com.ogaclejapan.smarttablayout:utils-v4:1.7.0@aar'
+    implementation 'com.github.lawloretienne:discreteslider:0.0.9'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.hovans.dynamicgrid:dynamicgrid:1.0.0'
+    implementation 'com.github.yukuku:ambilwarna:2.0.1'
+    implementation 'com.github.iammert:ScalingLayout:1.2.1'
+    implementation 'com.eyalbira.loadingdots:loading-dots:1.0.2'
+    implementation 'com.arthenica:mobile-ffmpeg-full:4.4.LTS'
+    implementation 'com.arthenica:smart-exception-java:0.1.0'
+    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.13.2'
+    //Playstore update
+    implementation 'org.jsoup:jsoup:1.13.1'
+//    paytm implementation
+//    implementation "com.paytm.nativesdk:core-wr:1.2.0"
+    implementation 'com.paytm.appinvokesdk:appinvokesdk:1.5.4'
+    // image Cropper
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    implementation "com.google.android.libraries.places:places:2.4.0"
+    implementation 'com.github.shivpujan12:LocationPicker:2.0'
+    //Socket
+    implementation('io.socket:socket.io-client:0.8.3') {
+        exclude group: 'org.json', module: 'json'
+    }
+    implementation 'commons-io:commons-io:2.6'
+    implementation 'com.android.volley:volley:1.2.0'
+    implementation 'com.github.izjumovfs:SwipeToReply:1.0.1'
+    implementation files('libs/cashfreesdk-v1.7.8.aar')
+    //Cash free SDK
+    implementation 'com.android.volley:volley:1.2.0'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation files("libs/google-pay-client-api-1.0.0.aar")
+    implementation 'com.google.android.gms:play-services-tasks:17.2.1'
+
+    implementation 'androidx.browser:browser:1.3.0'
+    implementation 'com.google.android.material:material:1.5.0-alpha01'
+// facebook
+    implementation 'com.facebook.android:facebook-android-sdk:5.15.3'
+//    implementation('com.facebook.android:facebook-android-sdk:5.15.3') {
+//        exclude group: 'com.android.support'
+//    }
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+//    implementation ('org.jitsi.react:jitsi-meet-sdk:3.7.0') { transitive = true }
+//    implementation ('org.jitsi.react:jitsi-meet-sdk:+') { transitive = true }
+    implementation('org.jitsi.react:jitsi-meet-sdk:+') { transitive = true }
+
+}
+apply plugin: 'com.google.gms.google-services'

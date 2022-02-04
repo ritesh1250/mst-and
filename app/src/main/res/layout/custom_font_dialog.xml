@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:id="@+id/lr1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Please_Select_Font_Types"
+        android:textColor="@color/black"
+        android:fontFamily="@font/marko_one_regular"
+        android:layout_margin="10dp"
+        android:textSize="18dp"/>
+</LinearLayout>
+  <RadioGroup
+      android:id="@+id/rg_btn_font"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/lr1"
+      android:padding="20dp">
+      <RadioButton
+          android:id="@+id/rbtn_Regular"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/Regular"
+          android:fontFamily="@font/poppins_regular"
+          android:textColor="@color/black"
+          android:layout_margin="7dp"
+          android:textSize="14dp">
+      </RadioButton>
+      <RadioButton
+          android:id="@+id/rbtn_bold"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/Bold"
+          android:fontFamily="@font/poppins_bold"
+          android:textColor="@color/black"
+          android:layout_margin="7dp"
+          android:textSize="14dp">
+      </RadioButton>
+      <RadioButton
+          android:id="@+id/rbtn_italic"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/Italic"
+          android:fontFamily="@font/popins_semi_bold_italic"
+          android:textColor="@color/black"
+          android:layout_margin="7dp"
+          android:textSize="14dp">
+      </RadioButton>
+  </RadioGroup>
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:visibility="gone"
+     android:gravity="center">
+
+     <Button
+         android:id="@+id/btn_done"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Done"
+         android:textColor="#ffff"
+         android:textSize="14dp"/>
+ </LinearLayout>
+
+</RelativeLayout>

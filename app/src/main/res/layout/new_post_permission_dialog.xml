@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/red_border_line"
+    android:gravity="center"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/chooseLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_10sp"
+            android:text="@string/make_meest_more_secure"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_23sp"
+            android:textStyle="bold" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/img_user_meest"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/_10sp"-->
+<!--            android:background="@drawable/meest_reg"-->
+<!--            android:padding="@dimen/_10sp"-->
+<!--            tools:ignore="ContentDescription" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:padding="@dimen/_10sp"-->
+<!--            android:text="More SECURE"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/_23sp"-->
+<!--            android:textStyle="bold" />-->
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/location_permision_desc"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sp" />
+
+    <Button
+        android:id="@+id/enableLocation"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sp"
+        android:background="@drawable/button_back"
+        android:padding="@dimen/_10sp"
+        android:text="@string/ok"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+</LinearLayout>

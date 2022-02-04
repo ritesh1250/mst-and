@@ -1,0 +1,41 @@
+# Generated files
+bin/
+gen/
+out/
+# Gradle files
+.gradle/
+build/
+app/release
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+*.iml
+.gradle
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+build/
+# IntelliJ
+*.iml
+.idea
+# Local configuration file (sdk path, etc)
+local.properties
+.DS_Store
+# Android Studio captures folder
+captures/
+# External native build folder generated in Android Studio 2.2 and late
+.externalNativeBuild
+*.properties
+build
+*.iml
+*.iml
+*.properties
+*.iml
+.idea

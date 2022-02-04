@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:keepScreenOn="true"
+    android:layoutDirection="ltr">
+
+    <data
+        android:layout_width="9dp"
+        android:layout_height="7dp">
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="com.meest.videomvvmmodule.viewmodel.ForUViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/viewgroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.home.ForUFragment">
+
+        <!--        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout-->
+        <!--            android:id="@+id/refreshlout"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:visibility="@{viewmodel.isEmpty ? View.GONE : View.VISIBLE}">-->
+
+        <!--         -->
+
+        <!--            <com.scwang.smartrefresh.layout.footer.ClassicsFooter-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="0.01dp" />-->
+
+        <!--        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+        <!--        <com.facebook.shimmer.ShimmerFrameLayout-->
+        <!--            android:id="@+id/shimmer_view_container"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            app:shimmer_auto_start="true">-->
+
+        <!--            <include layout="@layout/item_video_list_shimmer" />-->
+
+        <!--        </com.facebook.shimmer.ShimmerFrameLayout>-->
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="@{viewmodel.isEmpty ? View.GONE : View.VISIBLE}"
+            tools:listitem="@layout/item_video_list" />
+
+        <LinearLayout
+            android:id="@+id/lout_popular"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+<!--            @{viewmodel.isEmpty &amp; viewmodel.isFollowingFragment ? View.VISIBLE : View.GONE}-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_coming_soon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="18dp"
+                android:gravity="center"
+                android:text="@string/you_haven_t_followed_anyone_yet"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/popins_medium"
+                android:text="@string/famouscreators"
+                android:textColor="@color/light_white"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_follow_some"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="60dp"
+                android:layout_marginBottom="48dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/follow_some_profile_to_see_their_nlatest_videos_here"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popular_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:adapter="@{viewmodel.famousAdapter}"
+                android:clipToPadding="true"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                android:paddingHorizontal="4dp"
+                app:cardSlider_otherPagesWidth="40dp"
+                app:cardSlider_smallScaleFactor="0.6"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_trending_user" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/done_button"
+                android:layout_width="96dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="96dp"
+                android:background="@drawable/bg_black_corner_5"
+                android:backgroundTint="@color/trending_background_white"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/done"
+                android:textColor="@color/new_action_color" />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</layout>

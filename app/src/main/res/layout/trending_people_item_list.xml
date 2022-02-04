@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/_5sdp"
+    android:layoutDirection="ltr"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/layout_main"
+        android:layout_alignParentTop="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/placeholder"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="23dp"
+            android:textSize="18sp"
+            android:textColor="#666666"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/img_profile"
+            android:gravity="top"
+            android:text="queenharley"
+            android:maxLength="15"
+            android:maxEms="15"/>
+
+        <TextView
+            android:id="@+id/name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/img_profile"
+            android:gravity="top"
+            android:text="queenharley"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            android:maxLength="15"
+            android:maxEms="15"/>
+
+        <TextView
+            android:id="@+id/tvFollowers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Followers"
+            android:visibility="gone"
+            android:layout_below="@id/name"
+            android:layout_toRightOf="@+id/name2"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            />
+
+
+        <TextView
+            android:id="@+id/tvCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9.5K"
+            android:layout_toRightOf="@+id/tvFollowers"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/name"
+            android:visibility="gone"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/follow"
+            android:layout_width="60.69dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="24.31dp"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:layout_marginRight="24dp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/edit_btn_round"
+            android:text="@string/Follow"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btn_remove"
+            android:layout_width="60.69dp"
+            android:layout_height="22dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="24.31dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/bg_btn_remove"
+            android:text="Remove"
+            android:visibility="gone"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:layout_marginTop="15dp"
+            android:textColor="#999999" />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

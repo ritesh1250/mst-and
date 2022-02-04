@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="ltr"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="explore"
+            type="com.meest.videomvvmmodule.model.Explore.Data" />
+
+        <variable
+            name="adapter"
+            type="com.meest.videomvvmmodule.adapter.HashTagNameAdapter" />
+    </data>
+
+    <!--    android:background="@drawable/edit_btn_round"-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp">
+
+            <RelativeLayout
+                android:id="@+id/hashTagBack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#DFDFDF"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/hash_tag_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:includeFontPadding="false"
+                    android:padding="@dimen/_5sdp"
+                    android:text='@{"#"+explore.hashTagName}'
+                    android:textColor="@color/textGrey"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

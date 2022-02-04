@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <import type="com.meest.utils.goLiveUtils.CommonUtils" />
+
+        <variable
+            name="mActivityadaptermodel"
+            type="com.meest.responses.UserActivityResponse.Row" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="visible"
+        app:cardBackgroundColor="#ffffff"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="@dimen/_2sdp"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_activity_item_bg"
+            android:padding="@dimen/_6sdp">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewProfile"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:elevation="0dp"
+                app:cardBackgroundColor="@color/gray"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder"
+                    app:profile_url='@{mActivityadaptermodel.type.equalsIgnoreCase("Story")? mActivityadaptermodel.getStorieDatas().getStory():mActivityadaptermodel.type.equalsIgnoreCase("Following")? mActivityadaptermodel.getFollowingData().getFollowingData().getDisplayPicture():mActivityadaptermodel.type.equalsIgnoreCase("Comment")? (mActivityadaptermodel.getPostDatas().getPosts().get(0).getVideo() != null &amp;&amp; mActivityadaptermodel.getPostDatas().getPosts().get(0).getVideo() == 1?mActivityadaptermodel.getPostDatas().getPosts().get(0).getThumbnail():mActivityadaptermodel.getPostDatas().getPosts().get(0).getPost()): mActivityadaptermodel.type.equalsIgnoreCase("postComment")?(mActivityadaptermodel.getPostDatas().getPosts().get(0).getVideo() != null &amp;&amp; mActivityadaptermodel.getPostDatas().getPosts().get(0).getVideo() == 1? mActivityadaptermodel.getPostDatas().getPosts().get(0).getThumbnail():mActivityadaptermodel.getPostDatas().getPosts().get(0).getPost()) :mActivityadaptermodel.type.equalsIgnoreCase("CommentofComment")?(mActivityadaptermodel.getPostDatas().getPosts().get(0).getVideo() != null &amp;&amp; mActivityadaptermodel.getPostDatas().getPosts().get(0).getVideo() == 1? mActivityadaptermodel.getPostDatas().getPosts().get(0).getThumbnail():mActivityadaptermodel.getPostDatas().getPosts().get(0).getPost()):mActivityadaptermodel.type.equalsIgnoreCase("SharePost")?(mActivityadaptermodel.getPostDatas().getPosts().get(0).getVideo() != null &amp;&amp; mActivityadaptermodel.getPostDatas().getPosts().get(0).getVideo() == 1?mActivityadaptermodel.getPostDatas().getPosts().get(0).getThumbnail():mActivityadaptermodel.getPostDatas().getPosts().get(0).getPost()) :mActivityadaptermodel.type.equalsIgnoreCase("like")?(mActivityadaptermodel.getPostDatas().getPosts().get(0).getVideo() != null &amp;&amp; mActivityadaptermodel.getPostDatas().getPosts().get(0).getVideo() == 1?mActivityadaptermodel.getPostDatas().getPosts().get(0).getThumbnail():mActivityadaptermodel.getPostDatas().getPosts().get(0).getPost()):mActivityadaptermodel.type.equalsIgnoreCase("post")?(mActivityadaptermodel.getPostDatas().getPosts().get(0).getVideo() != null &amp;&amp; mActivityadaptermodel.getPostDatas().getPosts().get(0).getVideo() == 1?mActivityadaptermodel.getPostDatas().getPosts().get(0).getThumbnail():mActivityadaptermodel.getPostDatas().getPosts().get(0).getPost()):mActivityadaptermodel.type.equalsIgnoreCase("bookmark")? (mActivityadaptermodel.getPostDatas().getPosts().get(0).getVideo() != null &amp;&amp; mActivityadaptermodel.getPostDatas().getPosts().get(0).getVideo() == 1?mActivityadaptermodel.getPostDatas().getPosts().get(0).getThumbnail():mActivityadaptermodel.getPostDatas().getPosts().get(0).getPost()): ""}' />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/like_diamond_filled"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/cardViewProfile"
+                app:layout_constraintEnd_toEndOf="@+id/cardViewProfile"
+                app:layout_constraintStart_toStartOf="@+id/cardViewProfile"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewProfile" />
+
+            <LinearLayout
+                android:id="@+id/litextItem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/cardView4"
+                app:layout_constraintStart_toEndOf="@+id/cardViewProfile"
+                app:layout_constraintTop_toTopOf="@+id/cardViewProfile">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/cardViewProfile"
+                    android:gravity="top"
+                    android:text='@{mActivityadaptermodel.type.equalsIgnoreCase("Story")? @string/You_posted_a_story :mActivityadaptermodel.type.equalsIgnoreCase("bookmark")? @string/You_created_bookmark:mActivityadaptermodel.type.equalsIgnoreCase("post")? @string/You_created_a_post:mActivityadaptermodel.type.equalsIgnoreCase("postComment")? @string/You_post_comment:mActivityadaptermodel.type.equalsIgnoreCase("CommentofComment")? @string/You_reply_post_comment: mActivityadaptermodel.type.equalsIgnoreCase("SharePost")? @string/You_share_posted:mActivityadaptermodel.type.equalsIgnoreCase("Following")? @string/You_stated_follrowing + " " + mActivityadaptermodel.getFollowingData().getFollowingData().getUserName():mActivityadaptermodel.type.equalsIgnoreCase("Comment")? @string/comment+ " "+  CommonUtils.decodeEmoji(mActivityadaptermodel.getPostcomments().getComment()): mActivityadaptermodel.type.equalsIgnoreCase("like")? @string/You_liked_a_post : mActivityadaptermodel.type.equalsIgnoreCase("post")? @string/You_liked_a_post : mActivityadaptermodel.type.equalsIgnoreCase("bookmark")? @string/You_bookmarked_a_post:""}'
+                    android:textColor="#666666"
+                    android:textSize="@dimen/_14sp"
+                    tools:layout_editor_absoluteX="141dp"
+                    tools:layout_editor_absoluteY="63dp" />
+
+                <TextView
+                    android:id="@+id/name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_toEndOf="@+id/cardViewProfile"
+                    android:gravity="top"
+                    android:text="@{mActivityadaptermodel.createdAt}"
+                    android:textColor="#AAAAAA"
+                    android:textSize="@dimen/_12sp" />
+
+
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:elevation="0dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/gray"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_post"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:scaleType="centerCrop" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

@@ -1,0 +1,60 @@
+[1mdiff --git a/app/src/main/java/com/meest/metme/ChatBoatActivity.java b/app/src/main/java/com/meest/metme/ChatBoatActivity.java[m
+[1mindex 1ff93cc77..d48461224 100644[m
+[1m--- a/app/src/main/java/com/meest/metme/ChatBoatActivity.java[m
+[1m+++ b/app/src/main/java/com/meest/metme/ChatBoatActivity.java[m
+[36m@@ -510,7 +510,7 @@[m [mpublic class ChatBoatActivity extends RecordingBaseActivity {[m
+                                 String replyChats = userList.get(i).get("replyChats");[m
+                                 String thumbnailURL = userList.get(i).get("thumbnail");[m
+                                 String sendTime = userList.get(i).get("sendTime");[m
+[31m-                                addMessageNoScroll(0, "1", msg, read, created, attachment, fileurl, id, status, attachmentype, jsonData, replyChats, thumbnailURL,sendTime.split(" ")[0]);[m
+[32m+[m[32m                                addMessageNoScroll(0, "1", msg, read, created, attachment, fileurl, id, status, attachmentype, jsonData, replyChats, thumbnailURL, sendTime.split(" ")[0]);[m
+                             } else {[m
+                                 String msg = userList.get(i).get("msg");[m
+                                 String read = userList.get(i).get("read");[m
+[36m@@ -1108,13 +1108,10 @@[m [mpublic class ChatBoatActivity extends RecordingBaseActivity {[m
+                 if (visiblePosition > -1) {[m
+                     if (firstCompletelyVisiblePosition > -1) {[m
+                         Log.e(TAG, "onScrollStateChanged: 2" + mMessages.get(firstCompletelyVisiblePosition).getmAttachmentType());[m
+[31m-                       // if (mMessages.get(firstCompletelyVisiblePosition).getmAttachmentType().equals("Date")) {[m
+[31m-                            if(mMessages.get(firstCompletelyVisiblePosition).getMessageDate()!=null && !mMessages.get(firstCompletelyVisiblePosition).getMessageDate().equals("null")){[m
+[31m-                                activityChatBoatBinding.chatDate.setVisibility(View.VISIBLE);[m
+[31m-                                activityChatBoatBinding.chatDate.setText(mMessages.get(firstCompletelyVisiblePosition).getMessageDate());[m
+[31m-                            }else[m
+[31m-                                activityChatBoatBinding.chatDate.setVisibility(View.GONE);[m
+[31m-                      //  }[m
+[32m+[m[32m                        if (mMessages.get(firstCompletelyVisiblePosition).getMessageDate() != null && !mMessages.get(firstCompletelyVisiblePosition).getMessageDate().equals("null")) {[m
+[32m+[m[32m                            activityChatBoatBinding.chatDate.setVisibility(View.VISIBLE);[m
+[32m+[m[32m                            activityChatBoatBinding.chatDate.setText(mMessages.get(firstCompletelyVisiblePosition).getMessageDate());[m
+[32m+[m[32m                        }[m
+                     }[m
+                 }[m
+ //                if (!activityChatBoatBinding.mMessagesView.canScrollVertically(RecyclerView.FOCUS_DOWN)) {[m
+[36m@@ -1348,8 +1345,8 @@[m [mpublic class ChatBoatActivity extends RecordingBaseActivity {[m
+ [m
+     private void addMessageNoScroll(int index, String username, String message, String[m
+             read, String created, String attachment, String fileurl, String messageid,[m
+[31m-            String messagestatus, String atachmentType, String jsondata, String replyChats,[m
+[31m-            String thumbnailURL, String sendTime) {[m
+[32m+[m[32m                                    String messagestatus, String atachmentType, String jsondata, String replyChats,[m
+[32m+[m[32m                                    String thumbnailURL, String sendTime) {[m
+         try {[m
+             fileurl = AESHelper.msgDecrypt(fileurl, newChatListResponse.getChatHeadId());[m
+             message = AESHelper.msgDecrypt(message, newChatListResponse.getChatHeadId());[m
+[36m@@ -1422,7 +1419,7 @@[m [mpublic class ChatBoatActivity extends RecordingBaseActivity {[m
+                             "", "Date",[m
+                             "",[m
+                             "",[m
+[31m-                            "",sendTime);[m
+[32m+[m[32m                            "", sendTime);[m
+                 }[m
+                 addMessage(user, msgData.getString("msg"), msgData.getString("read"),[m
+                         msgData.getString("createdAt"), msgData.getString("attachment"),[m
+[36m@@ -1443,7 +1440,7 @@[m [mpublic class ChatBoatActivity extends RecordingBaseActivity {[m
+     private void addMessage(String username, String message, String read, String[m
+             created, String attachment, String fileurl, String messageid, String messagestatus, String[m
+                                     atachmentType, String jsondata, String oldMsg[m
+[31m-            , String thumbnailURL,String sendTime) {[m
+[32m+[m[32m            , String thumbnailURL, String sendTime) {[m
+         try {[m
+             Log.e("addMessage", "added");[m
+             if (!atachmentType.equals("Date")) {[m

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context=".Activities.AdsActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/AdsActivity_header"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/img_back_arrow_Ads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_full_back_arrow"
+            android:layout_marginStart="24dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/ads"
+            android:layout_toRightOf="@+id/img_back_arrow_Ads"
+            android:layout_marginStart="42dp"
+            android:textColor="#1E2432"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/if_you_spend_rs200_we_estimate_2400_3000_people_will_see_your_ads"
+        android:layout_below="@+id/AdsActivity_header"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="39dp"
+        android:textAlignment="center"
+        android:textSize="14sp"/>
+    
+    
+    <RelativeLayout
+        android:id="@+id/layout_AccountOverview"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="48dp"
+        android:layout_below="@+id/txt_ads">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:text="@string/account_overview"
+            android:textColor="#CC151624"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/arrow_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_down"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#CCAAAAAA"
+            android:text="@string/lifetime"
+            android:textSize="15sp"
+            android:layout_toLeftOf="@+id/arrow_down"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="14dp"/>
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:id="@+id/layout_spent_peopleaReched"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/layout_AccountOverview">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/txt_spent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/spent"
+                android:textColor="#9A9CA4"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rs 3000"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/txt_spent"
+                android:textColor="#3F4041"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/txt_peopleReached"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/people_reached"
+                android:textColor="#9A9CA4"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2,50,152"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/txt_peopleReached"
+                android:textColor="#3F4041"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_see_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_btn_bg"
+        android:layout_marginTop="43dp"
+        android:textAllCaps="false"
+        android:layout_below="@id/layout_spent_peopleaReched"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="21dp"
+        android:text="@string/see_more"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+    
+    <RelativeLayout
+        android:id="@+id/layout_ads_listing"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_below="@+id/btn_see_more"
+        android:layout_marginTop="44dp">
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1A000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#999999"
+            android:text="@string/ads_listing"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_smoll_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="25dp"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/layout_create_new_ads"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_below="@+id/layout_ads_listing"
+        android:layout_marginTop="2dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1A000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#999999"
+            android:text="@string/create_new_ads"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right_smoll_arrow"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="25dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

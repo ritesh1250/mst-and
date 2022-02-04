@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="12.866dp"
+    android:height="15.292dp"
+    android:viewportWidth="12.866"
+    android:viewportHeight="15.292">
+  <path
+      android:pathData="M7.7631,2.678h-6.036a0.873,0.873 0,0 0,-1 1q0,4.941 0,9.882a0.874,0.874 0,0 0,1 1q3.729,0 7.456,0a0.874,0.874 0,0 0,1 -1q0,-3.426 0,-6.851c0,-0.08 0,-0.161 0,-0.242 0.008,-0.239 0.126,-0.392 0.369,-0.387s0.354,0.164 0.358,0.4c0,0.061 0,0.121 0,0.182q0,3.441 0,6.881a1.59,1.59 0,0 1,-1.748 1.746L1.743,15.2889a1.59,1.59 0,0 1,-1.74 -1.754q0,-4.926 0,-9.851a1.585,1.585 0,0 1,1.727 -1.736q3.168,0 6.335,0a2.774,2.774 0,0 1,2.83 2.434c0.09,0.573 -0.031,0.718 -0.6,0.718 -0.333,0 -0.667,0.008 -1,0a1.57,1.57 0,0 1,-1.53 -1.536C7.7581,3.283 7.7631,3.001 7.7631,2.678ZM8.5111,2.744c-0.164,1.5 0.342,1.766 1.609,1.589A1.931,1.931 0,0 0,8.511 2.744Z"
+      android:fillType="evenOdd">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:startY="8.620229"
+          android:endY="8.620229"
+          android:startX="-0.031257294"
+          android:endX="10.985001"
+          android:type="linear">
+        <item android:offset="0.015" android:color="#FFA019A2"/>
+        <item android:offset="0.149" android:color="#FF9919A5"/>
+        <item android:offset="0.338" android:color="#FF861AB0"/>
+        <item android:offset="0.517" android:color="#FF6F1CBF"/>
+        <item android:offset="0.766" android:color="#FF581DCC"/>
+        <item android:offset="1" android:color="#FF3F20DB"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+  <path
+      android:pathData="M12.8561,7.803v4.971c0,0.09 0.031,0.21 -0.014,0.266 -0.1,0.12 -0.237,0.287 -0.356,0.285s-0.256,-0.172 -0.345,-0.3c-0.048,-0.069 -0.012,-0.2 -0.012,-0.3v-9.728a2.075,2.075 0,0 0,-2.257 -2.264h-6.122c-0.1,0 -0.233,0.033 -0.3,-0.017 -0.12,-0.095 -0.269,-0.236 -0.276,-0.365 -0.005,-0.107 0.163,-0.242 0.279,-0.33 0.059,-0.045 0.176,-0.015 0.266,-0.015q3.093,0 6.184,0a2.792,2.792 0,0 1,2.949 2.944Q12.858,5.383 12.8561,7.803Z"
+      android:fillType="evenOdd">
+  </path>
+</vector>

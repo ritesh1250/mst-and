@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr">
+
+    <data>
+
+        <import type="com.meest.videomvvmmodule.utils.Global" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="user"
+            type="com.meest.videomvvmmodule.model.user.SearchUser.User" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/lout_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_3sdp">
+
+            <!--  <androidx.cardview.widget.CardView-->
+            <!--  android:layout_width="match_parent"-->
+            <!--  android:layout_height="wrap_content"-->
+            <!--  android:layout_margin="@dimen/_2sdp"-->
+            <!--  android:orientation="vertical"-->
+            <!--  app:cardBackgroundColor="#ECECEC"-->
+            <!--  app:cardCornerRadius="@dimen/_10sdp">-->
+
+            <LinearLayout
+                android:id="@+id/user_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:id="@+id/singleRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_3sdp"
+                        app:cardBackgroundColor="@color/userBgColor"
+                        app:cardCornerRadius="@dimen/_13sdp"
+                        app:cardElevation="0dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_margin="@dimen/_2sdp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/_13sdp"
+                            app:cardElevation="0dp">
+
+                            <ImageView
+                                android:id="@+id/img_hash"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_card_placeholder" />
+                            <!--app:image_url="@{user.userProfile}"-->
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:id="@+id/ll_nametag"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|left"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_hashtag"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_weight="1.5"
+                                    android:gravity="left"
+                                    android:maxLines="1"
+                                    android:text='@{user.first_name+" "+user.last_name}'
+                                    android:textColor="#191919"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:textStyle="bold"
+                                    tools:text="Saloni" />
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginStart="5dp"
+                                    android:src="@drawable/ic_user_verified"
+                                    android:visibility="gone"
+                                    tools:ignore="ContentDescription" />
+                                <!--                                android:visibility="@{user.isVerify ? View.VISIBLE : View.GONE}"-->
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tv_hashVid_count"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="8dp"
+                                    android:ellipsize="end"
+                                    android:gravity="left"
+                                    android:maxLines="1"
+                                    android:text='@{"@"+user.userName}'
+                                    android:textColor="#818181"
+                                    android:textSize="@dimen/size_10dp"
+                                    tools:text="user_name" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginStart="8dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text='@{""+user.userFollowerCount}'
+                                        android:textColor="#414141"
+                                        android:textSize="@dimen/size_10dp"
+                                        android:textStyle="bold"
+                                        tools:text="10" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/_2sdp"
+                                        android:text='@{user.userFollowerCount>1?"Followers":"Follower"}'
+                                        android:textColor="#414141"
+                                        android:textSize="@dimen/size_10dp"
+                                        tools:text="@string/follower" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="right"
+                                    android:visibility="gone">
+
+                                    <Button
+                                        android:id="@+id/btn_follwPeople"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="@dimen/_10sdp"
+                                        android:background="@drawable/card"
+                                        android:backgroundTint="@color/purple_500"
+                                        android:gravity="center|center_vertical"
+                                        android:paddingLeft="@dimen/_8sdp"
+                                        android:paddingRight="@dimen/_8sdp"
+                                        android:text="Follow"
+                                        android:textColor="#ffffff"
+                                        android:textSize="@dimen/_10sdp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll_nametag"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_8sdp"
+                                android:layout_marginLeft="@dimen/_8sdp"
+                                android:text="@{user.my_post_likes}"
+                                android:textColor="#414141"
+                                android:textSize="@dimen/_10sdp"
+                                android:textStyle="bold"
+                                tools:text="10" />
+
+                            <ImageView
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_marginStart="@dimen/_4sdp"
+                                android:layout_marginLeft="@dimen/_8sdp"
+                                android:src="@drawable/diamond" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="96dp"
+                            android:layout_height="24dp"
+                            android:layout_marginHorizontal="@dimen/size_10dp"
+                            android:gravity="end"
+                            android:visibility='visible'>
+                            <!--                            android:visibility='@{user.friend_or_not.equals("same")? View.GONE:View.VISIBLE}'>-->
+                            <TextView
+                                android:id="@+id/waiting"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:background="@drawable/bttn_unfollow"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="@string/waiting"
+                                android:textAlignment="center"
+                                android:textAllCaps="false"
+                                android:textColor="@color/Button_Red"
+                                android:textSize="@dimen/_10sp"
+                                android:visibility='@{user.friend_or_not.equals("waiting")? View.VISIBLE:View.GONE}' />
+
+                            <TextView
+                                android:id="@+id/follow"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:background="@drawable/edit_btn_round"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="@string/follow"
+                                android:textAlignment="center"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sp"
+                                android:visibility='@{user.friend_or_not.equals("notfriend")? View.VISIBLE:View.GONE}' />
+
+                            <TextView
+                                android:id="@+id/unFollow"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentEnd="true"
+                                android:background="@drawable/bttn_unfollow"
+                                android:gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="@string/unfollow"
+                                android:textAlignment="center"
+                                android:textAllCaps="false"
+                                android:textColor="@color/new_action_color"
+                                android:textSize="@dimen/_10sp"
+                                android:visibility='@{user.friend_or_not.equals("friend")? View.VISIBLE:View.GONE}' />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/user_details"
+                android:layout_marginHorizontal="@dimen/size_10dp"
+                android:background="#E3E3E3" />
+            <!--            </androidx.cardview.widget.CardView>-->
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="ltr"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="comment"
+            type="com.meest.videomvvmmodule.model.comment.VideoSubCommentResponse.Datum" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="0dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    app:cardBackgroundColor="#F6F6F6"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/img_profile"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/ic_dummy_profile"
+                        android:scaleType="fitXY"
+                        app:profile_url="@{comment.user.displayPicture}"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/ic_dummy_profile" />
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/lout_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/popins_medium"
+                            android:maxLines="1"
+                            android:text='@{comment.user.username}'
+                            android:textColor="@color/color_text_light"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            tools:text="parth_kotadiya" />
+
+                        <TextView
+                            android:id="@+id/tv_comment_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/popins_medium"
+                            android:gravity="end"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            android:paddingLeft="@dimen/_3sdp"
+                            android:paddingEnd="@dimen/_3sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:text='@{comment.createdAt}'
+                            android:textColor="@color/color_text_light"
+                            android:textSize="13sp"
+                            tools:text="parth_kotadiya" />
+                        <!-- <ImageView
+                             android:layout_width="15dp"
+                             android:layout_height="15dp"
+                             android:layout_marginStart="3dp"
+                             android:padding="2dp"
+                             android:src="@drawable/ic_user_verified"
+                             android:visibility="@{comment.isVerify ? View.VISIBLE : View.GONE}"
+                             tools:ignore="ContentDescription" />-->
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/img_delete"
+                        android:layout_width="19dp"
+                        android:layout_height="19dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_delete"
+                        app:tint="@color/color_text_light"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lout_username"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/popins_light"
+                    android:text="@{comment.comment}"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    tools:text="sfdmf" />
+
+                <LinearLayout
+                    android:id="@+id/like_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_comment"
+                    android:orientation="horizontal">
+
+                    <!--    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text='@{comment.liked ? "Unlike":"Like"}'
+                            android:paddingStart="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_5sdp"
+                            android:textSize="13sp"
+                            android:id="@+id/txt_like"
+                            android:textColor='@{comment.liked ? @color/colorTheme2:@color/color_text_light}'/>-->
+
+                    <TextView
+                        android:id="@+id/txt_reply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:text="Reply"
+                        android:textColor="#858595"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txt_report"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:text="@string/Report"
+                        android:textColor="#858595"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/txt_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:text="@string/Delete"
+                        android:textColor="#858595"
+                        android:textSize="13sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/like_layout"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/grey" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

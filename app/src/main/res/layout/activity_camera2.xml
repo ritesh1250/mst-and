@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:airbnb="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <!--    Bottom Layout-->
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/gallery"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:background="@null"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_centerHorizontal="true">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                airbnb:lottie_fileName="glow_animation.json"
+                airbnb:lottie_loop="true" />
+
+            <ImageView
+                android:id="@+id/video"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_create"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_create"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <!--    Photo & Video Layout-->
+    <LinearLayout
+        android:id="@+id/photoVideoToggleParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/size_20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/captureImageSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_5dp"
+            android:text="Photo"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/recordVideoSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:padding="@dimen/size_5dp"
+            android:text="Video"
+            android:textAlignment="center"
+            android:textColor="@color/light_grey"
+            android:visibility="visible" />
+
+        <RadioGroup
+            android:id="@+id/toggle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_25dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="@dimen/size_5dp"
+            android:background="@drawable/pink_out_line"
+            android:checkedButton="@+id/search"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/search"
+                android:layout_width="@dimen/size_60dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_widget_background"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Photo"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/offer"
+                android:layout_width="@dimen/size_60dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_widget_background"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Video"
+                android:textColor="@color/white" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <!--    Top Layout-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/camera_close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:background="@null"
+            android:src="@drawable/close_icon" />
+
+        <ImageView
+            android:id="@+id/switch_camera"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_toStartOf="@+id/switch_flash"
+            android:background="@null"
+            android:src="@drawable/ic_flip_camera" />
+
+        <ImageView
+            android:id="@+id/switch_flash"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_flash_off"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:background="@null"
+            android:src="@drawable/setting_switch"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!--  Options-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/size_25dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/gridLineParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:animateLayoutChanges="true"
+            android:padding="1dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/gridButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_grid_on_24"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/gridTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:background="@null"
+                android:text="Grid"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/gidParentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:animateLayoutChanges="true"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/gridLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:src="@drawable/gridlayout" />
+
+            <TextView
+                android:id="@+id/layoutsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:background="@null"
+                android:text="Layout"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/multiSnapParentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:animateLayoutChanges="true"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/multiSnapButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_gallery" />
+
+            <TextView
+                android:id="@+id/multiSnapTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:background="@null"
+                android:text="Multi-capture"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aspectRatioParentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:animateLayoutChanges="true"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/aspect_ratio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_aspect_ratio_icon" />
+
+            <ImageView
+                android:id="@+id/aspectRatio1_1"
+                android:layout_width="@dimen/size_25dp"
+                android:layout_height="@dimen/size_25dp"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:src="@drawable/ic_1_1"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/aspectRatio4_3"
+                android:layout_width="@dimen/size_25dp"
+                android:layout_height="@dimen/size_25dp"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:src="@drawable/ic_4_3"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/aspectRatio16_9"
+                android:layout_width="@dimen/size_25dp"
+                android:layout_height="@dimen/size_25dp"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:src="@drawable/ic_16_9"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/aspectRatioFullScreen"
+                android:layout_width="@dimen/size_25dp"
+                android:layout_height="@dimen/size_25dp"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:src="@drawable/ic_full_ratio"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/aspectRatioTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:background="@null"
+                android:text="Aspect-ratio"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/superZoomParentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:animateLayoutChanges="true"
+            android:padding="1dp"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:id="@+id/superZoomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/superzoom" />
+
+            <TextView
+                android:id="@+id/superZoomTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:background="@null"
+                android:text="Super Zoom"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/timerParentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:animateLayoutChanges="true"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:id="@+id/timerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_timer_cross" />
+
+            <ImageView
+                android:id="@+id/timerButton3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:background="@drawable/ic_timer"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/timerButton10"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:background="@drawable/ic_timer_10"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/timerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:background="@null"
+                android:text="Timer"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/focusParentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:animateLayoutChanges="true"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/focusButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_focus" />
+
+            <TextView
+                android:id="@+id/focusTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:background="@null"
+                android:text="Focus"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/handsFreeParentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:animateLayoutChanges="true"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/handsFreeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/handsfree" />
+
+            <TextView
+                android:id="@+id/handsFreeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:background="@null"
+                android:text="Hands-free"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/speedParentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:animateLayoutChanges="true"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/speedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_speed_24" />
+
+            <TextView
+                android:id="@+id/speedTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:background="@null"
+                android:text="Speed"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/showOptionsParentLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:animateLayoutChanges="true"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/showAnHideOptionsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_down_arrow" />
+
+            <TextView
+                android:id="@+id/closeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:background="@null"
+                android:text="@string/close"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--    Collage Grid All Layout-->
+    <RelativeLayout
+        android:id="@+id/gridLayoutChild"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/gridCaptureLayout"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="70dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/cameraClick"
+                android:layout_width="@dimen/size_60dp"
+                android:layout_height="@dimen/size_60dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_create" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:progressBarStyleHorizontal"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:progressDrawable="@drawable/circle"
+                android:rotation="270" />
+
+            <ImageView
+                android:id="@+id/checkImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_outline_add_24" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/gridLayoutList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="150dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/twoGridLayout"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:src="@drawable/two_grid" />
+
+            <ImageView
+                android:id="@+id/threeGridLayout"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:src="@drawable/three_grid" />
+
+            <ImageView
+                android:id="@+id/fourGridLayout"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:src="@drawable/four_grid" />
+
+            <ImageView
+                android:id="@+id/sixGridLayout"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:src="@drawable/six_grid" />
+
+            <ImageView
+                android:id="@+id/twoGridLayoutHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:src="@drawable/two_grid_horizontal" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--    GridView-->
+    <RelativeLayout
+        android:id="@+id/gridLines"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include
+            layout="@layout/grid_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/balanceImage"
+            android:layout_width="@dimen/size_80dp"
+            android:layout_height="@dimen/size_80dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_fullscreen_open" />
+    </RelativeLayout>
+
+    <!--    Super Zoom Layout-->
+    <RelativeLayout
+        android:id="@+id/superZoomChildLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/superZoomRecord"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_create" />
+
+    </RelativeLayout>
+
+    <!--    HandsFree Layout-->
+    <RelativeLayout
+        android:id="@+id/handsFreeChildLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="90dp"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/handsFreeImageView"
+            layout="@layout/handfree_image_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_30dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/handsFreeImageView"
+            android:layout_centerHorizontal="true">
+
+            <ProgressBar
+                android:id="@+id/timer_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true"
+                android:max="500"
+                android:progress="0"
+                android:progressDrawable="@drawable/progress_circle"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/handsFreeRecord"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_create"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--    Multi-snap Layout-->
+    <RelativeLayout
+        android:id="@+id/multiSnapChildLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="90dp"
+        android:visibility="gone">
+
+        <include
+            android:id="@+id/multiCaptureImageView"
+            layout="@layout/multi_capture_image_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/multiSnapCapture"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/multiCaptureImageView"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_create"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/multiCaptureNextButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/multiCaptureImageView"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_baseline_navigate_next_24"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <!--    Timer View-->
+    <RelativeLayout
+        android:id="@+id/timerChildLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        android:padding="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/timerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/white"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/cameraWithTimer"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_create"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+    <!--    Video Speed Options-->
+
+    <LinearLayout
+        android:id="@+id/childSpeedLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/size_20dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/slowSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:background="@drawable/round_corner_gradient"
+            android:text="Slow"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/normalSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:background="@drawable/round_corner_gradient"
+            android:text="Normal"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/fastSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:background="@drawable/round_corner_gradient"
+            android:text="Fast"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+
+    <!--    Timer-->
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="200dp"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>
+
+
+
+

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_20ssp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/_8ssp"
+        android:layout_marginRight="@dimen/_8ssp"
+        app:cardBackgroundColor="#ECECEC">
+
+        <LinearLayout
+            android:id="@+id/rl_hashtag_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ECECEC"
+            android:paddingRight="@dimen/_10ssp"
+            android:paddingLeft="@dimen/_10ssp"
+            android:paddingBottom="@dimen/_10ssp"
+            android:paddingTop="@dimen/_20ssp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ECECEC"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_60ssp"
+                    android:layout_height="@dimen/_60ssp"
+                    android:paddingLeft="@dimen/_4ssp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/placeholder" />
+                <!--  <ImageView
+                      android:layout_width="60dp"
+                      android:layout_height="60dp"
+                      android:layout_marginRight="10dp"
+                      android:src="@drawable/img" />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_hashtag_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/thePartybash"
+                        android:textColor="#5B5C5E"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_videos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/less_than_20_posts"
+                        android:textColor="#5B5C5E"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:scrollbars="none"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10ssp" >
+                    <ImageView
+                        android:layout_width="145dp"
+                        android:layout_height="145dp"
+                        android:layout_margin="@dimen/_10ssp"
+                        android:src="@drawable/placeholder" />
+                    <ImageView
+                        android:layout_width="145dp"
+                        android:layout_height="145dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/placeholder" />
+                    <ImageView
+                        android:layout_width="145dp"
+                        android:layout_height="145dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/placeholder" />
+                    <ImageView
+                        android:layout_width="145dp"
+                        android:layout_height="145dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/placeholder" />
+                    <ImageView
+                        android:layout_width="145dp"
+                        android:layout_height="145dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/placeholder" />
+                    <ImageView
+                        android:layout_width="145dp"
+                        android:layout_height="145dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/placeholder" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10ssp"
+                android:layout_gravity="right|center|bottom"
+                android:background="#ECECEC"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/_25ssp"
+                    android:layout_margin="10sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/View_all"
+                    android:textColor="#5B5C5E"
+                    android:textSize="@dimen/_14ssp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

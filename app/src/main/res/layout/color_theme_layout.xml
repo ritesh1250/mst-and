@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.graphics.Color" />
+
+        <variable
+            name="row"
+            type="com.meest.metme.model.SolidColor.Row" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/select_theme"
+            android:layout_width="110dp"
+            android:layout_height="@dimen/size_50dp"
+            android:layout_margin="@dimen/dimen_3dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="2dp">
+
+                <RelativeLayout
+                    android:id="@+id/chat_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dummy_chat_bg"
+                    android:backgroundTint="@{Color.parseColor(row.bgColor)}"
+                    android:orientation="vertical"
+                    android:padding="@dimen/size_5dp">
+
+                    <ImageView
+                        android:id="@+id/receiver_color"
+                        android:layout_width="@dimen/size_50dp"
+                        android:layout_height="@dimen/dimen_10dp"
+                        android:background="@drawable/dummy_chat_bg"
+                        android:backgroundTint="@{Color.parseColor(row.recievercolor)}" />
+
+                    <ImageView
+                        android:id="@+id/sender_color"
+                        android:layout_width="@dimen/size_50dp"
+                        android:layout_height="@dimen/dimen_10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/dummy_chat_bg"
+                        android:backgroundTint="@{Color.parseColor(row.sendercolor)}" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+    </RelativeLayout>
+</layout>

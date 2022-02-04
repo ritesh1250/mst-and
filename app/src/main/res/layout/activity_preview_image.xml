@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+   >
+
+    <!--    <data>-->
+
+    <!--        <variable-->
+    <!--            name="onBackClick"-->
+    <!--            type="android.view.View.OnClickListener" />-->
+
+    <!--        <variable-->
+    <!--            name="onUploadClick"-->
+    <!--            type="android.view.View.OnClickListener" />-->
+
+    <!--        <variable-->
+    <!--            name="viewModel"-->
+    <!--            type="com.meest.videomvvmmodule.viewmodel.PreviewViewModel" />-->
+    <!--    </data>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_deep_dark"
+        android:orientation="vertical">
+
+        <!--        Top Layout-->
+        <RelativeLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black">
+
+            <ImageView
+                android:id="@+id/image_preview_close_btn"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/ripple_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="18dp"
+                android:src="@drawable/back_arrow"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+
+                android:layout_marginEnd="@dimen/size_10dp"
+                android:id="@+id/downloadMedia"
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/iv_image_preview_add_brush"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="18dp"
+                android:background="@drawable/ic_baseline_arrow_circle_down_24"
+                android:visibility="gone"
+                tools:ignore="ContentDescription" />
+
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_image_preview_add_brush"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_toLeftOf="@+id/iv_image_preview_add_text"
+                android:background="@drawable/ripple_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="18dp"
+                android:src="@drawable/icon_brush"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_image_preview_add_text"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_toLeftOf="@+id/iv_image_preview_stickers"
+                android:background="@drawable/ripple_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="18dp"
+                android:src="@drawable/ic_baseline_text_fields_24"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_image_preview_stickers"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_toLeftOf="@+id/iv_image_preview_adjust"
+                android:background="@drawable/ripple_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="18dp"
+                android:src="@drawable/ic_stickers"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_image_preview_adjust"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ripple_white"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="18dp"
+                android:src="@drawable/ic_baseline_crop_rotate_24"
+                tools:ignore="ContentDescription" />
+
+
+        </RelativeLayout>
+
+        <!--  ImageVIew-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/gray_deep_dark">
+            <ImageView
+                android:id="@+id/image_preview_set_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <!--        HandsFree Layout-->
+
+
+        <!--        Multi Capture-->
+        <LinearLayout
+            android:padding="@dimen/size_5dp"
+            android:orientation="horizontal"
+            android:id="@+id/multiSnapCaptureLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/multiCaptureImage01"
+
+                />
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/multiCaptureImage02"
+
+                />
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/multiCaptureImage03"
+
+                />
+        </LinearLayout>
+
+        <!--        Bottom Layout-->
+
+
+
+    </LinearLayout>
+    <include layout="@layout/content_preview" />
+
+    <ImageView
+        android:id="@+id/nextButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/size_50dp"
+        android:layout_height="@dimen/size_50dp"
+        android:src="@drawable/ic_check_icon"
+        android:layout_margin="@dimen/size_10dp"
+        />
+</RelativeLayout>

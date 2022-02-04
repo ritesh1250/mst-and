@@ -1,0 +1,2029 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/Create_new_Campaign_header"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/img_back_CreateNewCampaign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="24dp"
+            android:src="@drawable/ic_full_back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/main_title"
+            android:layout_marginStart="42dp"
+            android:layout_toRightOf="@+id/img_back_CreateNewCampaign"
+            android:text="Create Ad"
+            android:textColor="#1E2432"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/campaighnscroll"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Create_new_Campaign_header"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="24dp"
+                android:text="Ad Title"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/relText"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="23dp"
+            android:background="@drawable/bg_creat_post"
+            android:layout_below="@+id/tv_txt"
+          >
+
+            <EditText
+                android:id="@+id/ed_txt"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp"
+                android:background="@null"
+                android:hint="Enter name for your ad"
+                android:textSize="14sp"
+                android:paddingStart="16dp"
+                android:inputType="textMultiLine"
+                android:focusableInTouchMode="true"
+                android:textColorHint="#CCCCCC"
+                android:maxLength="50"
+              />
+
+        </RelativeLayout>
+            <TextView
+                android:id="@+id/tvEdChar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="max 50 characters"
+                android:textSize="13sp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/relText"/>
+
+            <TextView
+                android:id="@+id/tv_media_manage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="24dp"
+                android:text="Media Management"
+                android:textStyle="bold"
+                android:textColor="#999999"
+                android:layout_below="@+id/tvEdChar"
+                android:textSize="16sp" />
+
+
+            <RelativeLayout
+                android:id="@+id/relMediaManageOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_media_manage">
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_upload_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_uploadphoto">
+
+                    <ImageView
+                        android:id="@+id/ivCamera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_camera_icon"
+                        android:elevation="2dp"/>
+                    <ImageView
+                        android:id="@+id/imv_uploadImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:elevation="2dp"/>
+
+                    <TextView
+                        android:id="@+id/tvSelectImgVid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add image/\nvideo"
+                        android:gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/ivCamera"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textSize="12sp"/>
+
+
+                    <VideoView
+                        android:id="@+id/vidViewOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:layout_centerInParent="true"
+                        android:elevation="2dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:background="@color/gray"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvEdCharOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Standard image size 100KB to 5MB\nVideo limit minimum 10sec maximum 1minute"
+                    android:textSize="13sp"
+                    android:textColor="#2C2E35"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/layout_upload_img"/>
+
+                <TextView
+                    android:id="@+id/txtButtonType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select the button type"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/tvEdCharOne"/>
+
+                <Spinner
+                    android:id="@+id/spinFirst"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/txtButtonType"
+                    />
+
+                <TextView
+                    android:id="@+id/txtBtType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Heading"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/spinFirst"/>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/relHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_below="@+id/txtBtType">
+
+                    <EditText
+                        android:id="@+id/edHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@null"
+                        android:hint="Enter ads heading"
+                        android:maxLength="45"
+                        android:textSize="14sp"
+                        android:focusableInTouchMode="true"
+                        android:textColorHint="#CCCCCC" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/edheadLimit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="max 45 characters"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/relHeading"/>
+
+                <TextView
+                    android:id="@+id/txtSubBtType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sub Heading"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/edheadLimit"/>
+
+                <RelativeLayout
+                    android:id="@+id/relSubHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_below="@+id/txtSubBtType"
+                    >
+
+                    <EditText
+                        android:id="@+id/edSubHead"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@null"
+                        android:hint="Enter ads Sub heading"
+                        android:maxLength="70"
+                        android:textSize="14sp"
+                        android:focusableInTouchMode="true"
+                        android:textColorHint="#CCCCCC" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/edSubheadLimit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="max 70 characters"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/relSubHeading"/>
+
+                <TextView
+                    android:id="@+id/txtlinkBtType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Website Link"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/edSubheadLimit"/>
+
+
+
+
+                <RelativeLayout
+                    android:id="@+id/relUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_below="@+id/txtlinkBtType"
+                    >
+
+                    <EditText
+                        android:id="@+id/edUrl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@null"
+                        android:hint="Enter Website link"
+                        android:focusableInTouchMode="true"
+                        android:textSize="14sp"
+                        android:textColorHint="#CCCCCC" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relMediaManageTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relMediaManageOne"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/layout_upload_imgTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_uploadphoto">
+
+                    <ImageView
+                        android:id="@+id/imv_uploadImgTwo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_camera_icon"
+                        android:elevation="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add image/\nvideo"
+                        android:gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/imv_uploadImgTwo"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textSize="12sp"/>
+                    <VideoView
+                        android:id="@+id/vidViewTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:elevation="2dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray"
+                        android:visibility="gone"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/exo_icon_pause"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        />
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tvEdCharTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Standard image size 100KB to 5MB\nVideo limit minimum 10sec maximum 1minute"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/layout_upload_imgTwo"/>
+
+                <TextView
+                    android:id="@+id/txtButtonTypeTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select the button type"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/tvEdCharTwo"/>
+
+                <Spinner
+                    android:id="@+id/spinTwo"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/txtButtonTypeTwo"
+                    />
+
+
+                <TextView
+                    android:id="@+id/txtBtTypeTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Heading"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/spinTwo"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/relHeadingTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_below="@+id/txtBtTypeTwo">
+
+                    <EditText
+                        android:id="@+id/edHeadTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@null"
+                        android:hint="Enter ads heading"
+                        android:maxLength="45"
+                        android:textSize="14sp"
+                        android:focusableInTouchMode="true"
+                        android:textColorHint="#CCCCCC" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/edheadLimitTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="max 45 characters"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/relHeadingTwo"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sub Heading"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/edheadLimitTwo"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/relSubHeadingTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_below="@+id/edheadLimitTwo"
+                    >
+
+                    <EditText
+                        android:id="@+id/edSubHeadTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@null"
+                        android:hint="Enter ads Sub heading"
+                        android:maxLength="70"
+                        android:textSize="14sp"
+                        android:focusableInTouchMode="true"
+                        android:textColorHint="#CCCCCC" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/edSubheadLimitTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="max 70 characters"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/relSubHeadingTwo"/>
+
+
+                <TextView
+                    android:id="@+id/txtlinkBtTypeTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Website Link"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/edSubheadLimitTwo"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/relUrlTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_below="@+id/txtlinkBtTypeTwo"
+                    >
+
+                    <EditText
+                        android:id="@+id/edUrlTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@null"
+                        android:hint="Enter Website Link"
+                        android:focusableInTouchMode="true"
+                        android:textSize="14sp"
+                        android:textColorHint="#CCCCCC" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relMediaManageThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relMediaManageTwo"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/layout_upload_imgThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_uploadphoto">
+
+                    <ImageView
+                        android:id="@+id/imv_uploadImgThree"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_camera_icon"
+                        android:elevation="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add image/\nvideo"
+                        android:gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/imv_uploadImgThree"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textSize="12sp"/>
+
+                    <VideoView
+                        android:id="@+id/vidViewThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:elevation="2dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray"
+                        android:visibility="gone"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/exo_icon_pause"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvEdCharThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Standard image size 100KB to 5MB\nVideo limit minimum 10sec maximum 1minute"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/layout_upload_imgThree"/>
+
+
+                <TextView
+                    android:id="@+id/txtButtonTypeThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select the button type"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/tvEdCharThree"/>
+
+                <Spinner
+                    android:id="@+id/spinThree"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/txtButtonTypeThree"
+                    />
+
+                <TextView
+                    android:id="@+id/txtBtTypeThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Heading"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/spinThree"/>
+
+                <RelativeLayout
+                    android:id="@+id/relHeadingThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_below="@+id/txtBtTypeThree"
+                    >
+
+                    <EditText
+                        android:id="@+id/edHeadThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@null"
+                        android:hint="Enter ads heading"
+                        android:maxLength="45"
+                        android:textSize="14sp"
+                        android:focusableInTouchMode="true"
+                        android:textColorHint="#CCCCCC" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/edheadLimitThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="max 45 characters"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/relHeadingThree"/>
+
+
+                <TextView
+                    android:id="@+id/txtSubBtTypeThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sub Heading"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/edheadLimitThree"/>
+
+                <RelativeLayout
+                    android:id="@+id/relSubHeadingThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_below="@+id/txtSubBtTypeThree"
+                    >
+
+                    <EditText
+                        android:id="@+id/edSubHeadThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@null"
+                        android:hint="Enter ads Sub heading"
+                        android:maxLength="70"
+                        android:textSize="14sp"
+                        android:focusableInTouchMode="true"
+                        android:textColorHint="#CCCCCC" />
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/edSubheadLimitThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="max 70 characters"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/relSubHeadingThree"/>
+
+                <TextView
+                    android:id="@+id/txtlinkBtTypeThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Website Link"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/edSubheadLimitThree"/>
+
+                <RelativeLayout
+                    android:id="@+id/relUrlThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_below="@+id/txtlinkBtTypeThree"
+                    >
+
+                    <EditText
+                        android:id="@+id/edUrlThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@null"
+                        android:hint="Enter Website Link"
+                        android:textSize="14sp"
+                        android:focusableInTouchMode="true"
+                        android:textColorHint="#CCCCCC" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relMediaManageFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relMediaManageThree"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/layout_upload_imgFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_uploadphoto">
+
+                    <ImageView
+                        android:id="@+id/imv_uploadImgFour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_camera_icon"
+                        android:elevation="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add image/\nvideo"
+                        android:gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/imv_uploadImgFour"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textSize="12sp"/>
+
+                    <VideoView
+                        android:id="@+id/vidViewFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:elevation="2dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray"
+                        android:visibility="gone"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/exo_icon_pause"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvEdCharOneFour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Standard image size 100KB to 5MB\nVideo limit minimum 10sec maximum 1minute"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/layout_upload_imgFour"/>
+
+                <TextView
+                    android:id="@+id/txtButtonTypeFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select the button type"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/tvEdCharOneFour"/>
+
+                <Spinner
+                    android:id="@+id/spinFour"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/txtButtonTypeFour"
+                    />
+
+
+                <TextView
+                    android:id="@+id/txtBtTypeFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Heading"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/spinFour"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/relHeadingFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_below="@+id/txtBtTypeFour"
+                    >
+
+                    <EditText
+                        android:id="@+id/edHeadFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@null"
+                        android:hint="Enter ads heading"
+                        android:maxLength="45"
+                        android:textSize="14sp"
+                        android:focusableInTouchMode="true"
+                        android:textColorHint="#CCCCCC" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/edheadLimitFour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="max 45 characters"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/relHeadingFour"/>
+
+                <TextView
+                    android:id="@+id/txtSubBtTypeFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sub Heading"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/edheadLimitFour"/>
+
+
+
+                <RelativeLayout
+                    android:id="@+id/relSubHeadingFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_below="@+id/txtSubBtTypeFour"
+                    >
+
+                    <EditText
+                        android:id="@+id/edSubHeadFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@null"
+                        android:hint="Enter ads Sub heading"
+                        android:maxLength="70"
+                        android:textSize="14sp"
+                        android:focusableInTouchMode="true"
+                        android:textColorHint="#CCCCCC" />
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/edSubheadLimitFour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="max 70 characters"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/relSubHeadingFour"/>
+
+
+                <TextView
+                    android:id="@+id/txtlinkBtTypeFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Website Link"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/edSubheadLimitFour"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/relUrlFour"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_below="@+id/txtlinkBtTypeFour"
+                    >
+
+                    <EditText
+                        android:id="@+id/edUrlFour"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@null"
+                        android:hint="Enter Website Link"
+                        android:textSize="14sp"
+                        android:focusableInTouchMode="true"
+                        android:textColorHint="#CCCCCC" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relMediaManageFive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relMediaManageFour"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/layout_upload_imgFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_uploadphoto">
+
+                    <ImageView
+                        android:id="@+id/imv_uploadImgFive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_camera_icon"
+                        android:elevation="2dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add image/\nvideo"
+                        android:gravity="center_horizontal"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/imv_uploadImgFive"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:textSize="12sp"/>
+
+                    <VideoView
+                        android:id="@+id/vidViewFive"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:elevation="2dp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/gray"
+                        android:visibility="gone"/>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/exo_icon_pause"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"
+                        />
+
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tvEdCharFive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Standard image size 100KB to 5MB\nVideo limit minimum 10sec maximum 1minute"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/layout_upload_imgFive"/>
+
+
+                <TextView
+                    android:id="@+id/txtButtonTypeFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select the button type"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/tvEdCharFive"/>
+
+                <Spinner
+                    android:id="@+id/spinFive"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="44dp"
+                    android:layout_below="@+id/txtButtonTypeFive"
+                    />
+
+
+
+                <TextView
+                    android:id="@+id/txtBtTypeFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Heading"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/spinFive"/>
+
+                <RelativeLayout
+                    android:id="@+id/relHeadingFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_below="@+id/txtBtTypeFive"
+                    >
+
+                    <EditText
+                        android:id="@+id/edHeadFive"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@null"
+                        android:hint="Enter ads heading"
+                        android:maxLength="45"
+                        android:textSize="14sp"
+                        android:focusableInTouchMode="true"
+                        android:textColorHint="#CCCCCC" />
+
+                </RelativeLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/edheadLimitFive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="max 45 characters"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/relHeadingFive"/>
+
+
+                <TextView
+                    android:id="@+id/txtSubBtTypeFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sub Heading"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/edheadLimitFive"/>
+
+                <RelativeLayout
+                    android:id="@+id/relSubHeadingFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_below="@+id/txtSubBtTypeFive"
+                    >
+
+                    <EditText
+                        android:id="@+id/edSubHeadFive"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@null"
+                        android:hint="Enter ads Sub heading"
+                        android:maxLength="70"
+                        android:textSize="14sp"
+                        android:focusableInTouchMode="true"
+                        android:textColorHint="#CCCCCC" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/edSubheadLimitFive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="max 70 characters"
+                    android:textSize="13sp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/relSubHeadingFive"/>
+
+
+                <TextView
+                    android:id="@+id/txtlinkBtTypeFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Website Link"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/edSubheadLimitFive"/>
+
+                <RelativeLayout
+                    android:id="@+id/relUrlFive"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="23dp"
+                    android:background="@drawable/bg_creat_post"
+                    android:layout_below="@+id/txtlinkBtTypeFive"
+                    >
+
+                    <EditText
+                        android:id="@+id/edUrlFive"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@null"
+                        android:hint="Enter Website Link"
+                        android:textSize="14sp"
+                        android:focusableInTouchMode="true"
+                        android:textColorHint="#CCCCCC" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/addOtherMedia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/relMediaManageFive"
+                android:paddingTop="@dimen/_5sdp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="20dp"
+                android:padding="5dp"
+                android:paddingLeft="@dimen/_10sdp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_plus_icon"
+                    android:layout_marginTop="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_30sdp"
+                    android:text="Add another media"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:textColor="@color/edit_line_red"
+                    android:layout_marginStart="5dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_124sdp"
+                android:layout_below="@id/relMediaManageFive"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/bg_uploadphoto"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/rel_uploadImgSec"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_uploadphoto"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_camera_icon"
+                        android:elevation="2dp"
+                        />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="2dp"
+                        />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="4dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"/>
+
+                <RelativeLayout
+                    android:id="@+id/rel_uploadImgThird"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_uploadphoto"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_camera_icon"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_Heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="35dp"
+                android:text="Heading"
+                android:textColor="#999999"
+                android:textSize="16sp"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/layout_enter_ads"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/txt_Heading"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/bg_creat_post"
+                android:visibility="gone">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@null"
+                    android:focusableInTouchMode="true"
+                    android:textColorHint="#CCCCCC" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_enter_ads"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="35dp"
+                android:inputType="text"
+                android:text="Text"
+                android:textColor="#999999"
+                android:textSize="16sp"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/layout_text"
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                android:layout_below="@+id/txt_Text"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/bg_creat_post"
+                android:visibility="gone">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="13dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:gravity="top|start"
+                    android:hint="Enter ads details"
+                    android:inputType="textMultiLine"
+                    android:textColorHint="#CCCCCC" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_website_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_text"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="35dp"
+                android:text="Website link"
+                android:textColor="#999999"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/layout_website_link"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/txt_website_link"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/bg_creat_post"
+                android:visibility="gone">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@null"
+                    android:hint="Enter Website link"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:textColorHint="#CCCCCC" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_CalltoAction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_website_link"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="35dp"
+                android:text="Call to Action"
+                android:textColor="#999999"
+                android:textSize="16sp"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/layout_CalltoAction"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/txt_CalltoAction"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/bg_creat_post"
+                android:visibility="gone">
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:popupBackground="@android:color/white"
+                    android:scrollbars="none"
+                    android:spinnerMode="dropdown" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_Select_Gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addOtherMedia"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="15dp"
+                android:text="Select Your Target Audience"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+
+            <RelativeLayout
+                android:id="@+id/layout_select_gender"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/txt_Select_Gender"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/bg_creat_post">
+
+                <!--                <Spinner-->
+                <!--                    android:id="@+id/spinGender"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="44dp"-->
+                <!--                    android:gravity="center"-->
+                <!--                    android:paddingLeft="@dimen/_10sdp"-->
+                <!--                    android:popupBackground="@android:color/white"-->
+                <!--                    android:scrollbars="none"-->
+                <!--                    android:spinnerMode="dropdown" />-->
+
+                <TextView
+                    android:id="@+id/tvTargetAudience"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                    android:paddingRight="10dp"
+                    android:hint="Select Target Audience"
+                    android:textColorHint="#CCCCCC"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="left"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="15sp"
+                    android:layout_alignParentLeft="true"
+                    />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewTargetAudience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/layout_select_gender"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/txt_Select_age_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recyclerViewTargetAudience"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="35dp"
+                android:text="Select Age Group"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvSelectGen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select age range to display your Ad."
+                android:layout_below="@+id/txt_Select_age_group"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="2sp"
+                android:textSize="13sp"
+                />
+
+            <RelativeLayout
+                android:id="@+id/select_rangeSeekbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_below="@+id/tvSelectGen"
+                android:layout_marginTop="5dp">
+
+
+                <me.tom.range.slider.RangeSliderView
+                    android:id="@+id/range_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="20dp"
+                    app:displayTextFontSize="@dimen/displayTextFontSize"
+                    app:thumbOutlineSize="@dimen/thumbOutlineSize"
+                    app:thumbRadius="10dp"
+                    app:trackHeight="@dimen/trackHeight"
+                    app:trackHighlightTintColor="@color/blue"
+                    app:trackTintColor="@color/trackTintColor" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_Select_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/select_rangeSeekbar"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="30dp"
+                android:text="Select Location"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/layout_select_location"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/txt_Select_location"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/bg_creat_post">
+
+                <!--                <TextView-->
+                <!--                    android:id="@+id/txt_multipleLocation"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:text="Type multiple locations"-->
+                <!--                    android:textColor="#CCCCCC"-->
+                <!--                    android:layout_marginStart="16dp"-->
+                <!--                    android:layout_centerVertical="true"/>-->
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:textSize="15sp"
+                    android:hint="You can add multiple locations "
+                    android:textColorHint="#CCCCCC">
+
+                </AutoCompleteTextView>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/loc"
+                android:layout_below="@+id/layout_select_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerLocation"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_reachAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/loc"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="35dp"
+                android:text="Reach people with Address"
+                android:textColor="#999999"
+                android:textSize="16sp"
+               />
+
+            <Switch
+                android:id="@+id/switch_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="22dp"
+                android:layout_below="@+id/loc"
+                android:checked="true"
+                android:layout_toRightOf="@+id/txt_reachAddress"
+
+                />
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/map_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/switch_map"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="23dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_Select_Interest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_reachAddress"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="35dp"
+                android:text="Select Interests"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+            <RelativeLayout
+                android:id="@+id/layout_select_interest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_Select_Interest"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/bg_creat_post">
+
+                <Spinner
+                    android:id="@+id/spinInterest"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:popupBackground="@android:color/white"
+                    android:scrollbars="none"
+                    android:spinnerMode="dropdown"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tvInterest"
+                    android:padding="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ic_arrow_drop_down"
+                    android:paddingRight="10dp"
+                    android:hint="You can add multiple interests"
+                    android:textColorHint="#CCCCCC"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="15sp"
+                    android:layout_alignParentLeft="true"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvTextSelectInterest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selected interests"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:layout_below="@+id/layout_select_interest"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:visibility="gone"
+               />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewInterest"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginTop="2dp"
+                android:layout_below="@+id/tvTextSelectInterest"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/txtTotalBudget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recyclerViewInterest"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="30dp"
+                android:text="Total Budget"
+                android:textColor="#999999"
+                android:textSize="16sp"
+                />
+
+            <RelativeLayout
+                android:id="@+id/txt_totalBudget"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/txtTotalBudget"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/bg_creat_post">
+
+                <EditText
+                    android:id="@+id/edTotalBudget"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@null"
+                    android:hint="Total Budget"
+                    android:inputType="number"
+                    android:textSize="15sp"
+                    android:focusableInTouchMode="true"
+                    android:textColorHint="#CCCCCC" />
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/txt_Select_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_totalBudget"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="35dp"
+                android:text="How many days add will run ?"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+
+            <RelativeLayout
+                android:id="@+id/layout_select_days"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_below="@+id/txt_Select_days"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/bg_creat_post"
+                >
+
+                <TextView
+                    android:id="@+id/txt_date_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:text="dd-mm-yy  -  dd-mm-yy"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/ic_calendar_icon" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_per_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_select_days"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="7dp"
+                android:text="Per day ads min price is Rs 200/- only"
+                android:textColor="#999999"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_Daily_budget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_per_day"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="28dp"
+                android:text="Daily budget"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+
+            <RelativeLayout
+                android:id="@+id/relDailyBudget"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/txt_Daily_budget"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="23dp"
+                android:background="@drawable/bg_creat_post"
+                >
+
+                <SeekBar
+                    android:id="@+id/DailyBudget_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="20dp"
+                    android:max="200"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/DailyBudget_seekbar"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/blue"
+                    android:visibility="gone"/>
+
+                <!--                <TextView-->
+                <!--                   -->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_centerHorizontal="true"-->
+                <!--                    android:textSize="18sp"-->
+                <!--                    android:layout_marginEnd="12dp"-->
+                <!--                    android:hint="Daily Budget"-->
+                <!--                   -->
+                <!--                    android:imeOptions="actionDone"-->
+                <!--                    android:singleLine="true"-->
+                <!--                    android:textColorHint="#CCCCCC" />-->
+                <!--                -->
+
+                <TextView
+                    android:id="@+id/edt_dailyBudget"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:layout_marginEnd="12dp"
+                    android:hint="Daily Budget"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="#3B5998"
+                    android:textColorHint="#CCCCCC"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_Total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relDailyBudget"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="30dp"
+                android:text="Total Amount to be paid."
+                android:textColor="#999999"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/txt_rs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_Total_amount"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="15dp"
+                android:text=""
+                android:textColor="#3B5998"
+                android:textSize="26sp"
+                android:paddingStart="10sp"
+               />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_rs"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="47dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="28dp">
+
+<!--                                <Button-->
+<!--                                    android:id="@+id/btn_pay"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:layout_margin="3dp"-->
+<!--                                    android:layout_weight="1"-->
+<!--                                    android:background="@drawable/main_btn_bg"-->
+<!--                                    android:text="Pay Now"-->
+<!--                                    android:textColor="#FFFFFF"-->
+<!--                                    android:textSize="18sp"-->
+<!--                                    android:textAllCaps="false"-->
+<!--                                    />-->
+
+
+<!--                                <Button-->
+<!--                                    android:id="@+id/btn_privew_campaign"-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="match_parent"-->
+<!--                                    android:layout_margin="3dp"-->
+<!--                                    android:layout_weight="1"-->
+<!--                                    android:background="@drawable/ic_bg_btn_learnmore"-->
+<!--                                    android:text="Preview Ad"-->
+<!--                                    android:textColor="#FFFFFF"-->
+<!--                                    android:textSize="18sp"-->
+<!--                                    android:textAllCaps="false"-->
+
+<!--                                    />-->
+
+                <Button
+                    android:id="@+id/btn_privew_campaign"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/main_btn_bg"
+                    android:text="Preview Ad"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_height="@dimen/_100sdp" />
+
+
+</RelativeLayout>

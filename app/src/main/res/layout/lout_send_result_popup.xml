@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="success"
+            type="Boolean" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white_corner_15"
+        android:backgroundTint="@color/white"
+        android:gravity="center_horizontal"
+        android:minWidth="300dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_send_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text='@{success ? @string/Sent_Successfull :  @string/Insufficient_Diamonds}'
+            android:textColor="@color/textGrey"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="@string/Insufficient_Diamonds" />
+        <!--        android:text='@{success ? @string/like : @string/comment}'-->
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@{success ? @drawable/ic_add_diamond : @drawable/ic_no_diamond_graphic}"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/ic_no_diamond_graphic"
+            />
+<!--    android:text='@{success ? @string/Diamonds_sent_to_the_creatornsuccessfully :  @string/Add_some_diamonds_toyour_wallet}'-->
+        <TextView
+            android:id="@+id/tv_send_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/Add_some_diamonds_toyour_wallet"
+            android:textColor="@color/textGrey"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/lout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/lout_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/sendagain_elipse_btn"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingEnd="20dp"
+                android:visibility="@{success ? View.VISIBLE : View.INVISIBLE}"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_round_check"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/popins_medium"
+                    android:text="@string/ok"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lout_purchase"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/sendagain_elipse_btn"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="15dp"
+                android:paddingEnd="20dp"
+                android:visibility="@{success ? View.INVISIBLE : View.VISIBLE}"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/filled_diamond_icon"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/popins_medium"
+                    android:text="@string/add_now"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.meest.videomvvmmodule.utils.Global" />
+
+        <variable
+            name="chatTextViewModel"
+            type="com.meest.metme.viewmodels.ChatTextViewModel" />
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rl_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility='@{chatTextViewModel.isDateVisible?View.VISIBLE:View.GONE}'>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/chat_date_bg"
+            android:padding="@dimen/size_5dp">
+
+            <TextView
+                android:id="@+id/chat_date"
+                app:setFont="@{chatTextViewModel.fontName}"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:includeFontPadding="false"
+                android:text="@{chatTextViewModel.date}"
+                android:textColor="@color/white"
+                android:textSize_bind='@{Global.size4}'
+                android:textStyle="bold"
+                tools:text="21:00:2021(wednesday)" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

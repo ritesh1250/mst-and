@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_back"
+        android:layout_width="wrap_content"
+        android:layout_height="59dp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:src="@drawable/ic_full_back_arrow" />
+
+    <RelativeLayout
+        android:id="@+id/layout_allow_comments"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/image_back"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_height="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:text="@string/allow_comments"
+            android:textColor="#B2151624"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/switch_allow_comments"
+            android:layout_marginEnd="49dp"
+            android:thumb="@drawable/thumb"
+            app:track="@drawable/track"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_allow_duet"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/layout_allow_comments"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_height="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:text="@string/allow_duet"
+            android:textColor="#B2151624"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/switch_allow_duet"
+            android:layout_marginEnd="49dp"
+            android:thumb="@drawable/thumb"
+            app:track="@drawable/track"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_allow_trio"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/layout_allow_duet"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_height="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:text="@string/allow_trio"
+            android:textColor="#B2151624"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/switch_allow_trio"
+            android:layout_marginEnd="49dp"
+            android:thumb="@drawable/thumb"
+            app:track="@drawable/track"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/layout_allow_trio"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_height="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:text="@string/allow_download"
+            android:textColor="#B2151624"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/switch_allow_download"
+            android:layout_marginEnd="49dp"
+            android:thumb="@drawable/thumb"
+            app:track="@drawable/track"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

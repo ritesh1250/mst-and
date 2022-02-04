@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/trending_grey"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/_5sdp"
+    android:foreground="?selectableItemBackground"
+    app:cardElevation="0dp"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:id="@+id/feeling_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/trending_grey">
+
+        <ImageView
+            android:id="@+id/emoji_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:src="@drawable/feeling" />
+
+        <TextView
+            android:id="@+id/emoji_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emoji_iv"
+            android:layout_centerHorizontal="true"
+            android:text="@string/laughing"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="9sp" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

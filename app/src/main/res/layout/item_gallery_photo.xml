@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="galleryPhotoViewModel"
+            type="com.meest.metme.viewmodels.GalleryPhotoViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <androidx.cardview.widget.CardView
+            android:onClick="@{()->galleryPhotoViewModel.onImageClick()}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_10sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageview"
+                    bindGalleryPhoto="@{galleryPhotoViewModel.image}"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/gray" />
+
+                <ImageView
+                    android:id="@+id/videos_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_play_arrow"
+                    android:visibility="@{galleryPhotoViewModel.isVideo?View.VISIBLE:View.GONE}" />
+
+                <ImageView
+                    android:id="@+id/checkbox"
+                    android:layout_width="@dimen/dimen_20dp"
+                    android:layout_height="@dimen/dimen_20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:onClick="@{()->galleryPhotoViewModel.onImageClick()}"
+                    android:gravity="center" />
+
+             <!--   <CheckBox
+                    android:id="@+id/checkbox"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+
+                    android:clickable="@{galleryPhotoViewModel.isClickable}"
+                    android:onClick="@{()->galleryPhotoViewModel.onCheckedChange()}"
+                    android:visibility="@{galleryPhotoViewModel.isClickable?View.VISIBLE:View.GONE}" />-->
+                <!-- android:onCheckedChanged="@{(compoundButton, checked) ->galleryPhotoViewModel.onCheckedChange(compoundButton, checked)}"-->
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</layout>

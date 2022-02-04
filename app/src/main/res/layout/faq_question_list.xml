@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvFaqQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How do i use Credit card to pay?"
+        android:drawableRight="@drawable/right_small_arrow"
+        android:layout_marginStart="35dp"
+        android:padding="10dp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:textSize="18dp"
+        android:drawableTint="@color/black"
+        android:drawablePadding="@dimen/_10sdp"
+        />
+
+</LinearLayout>

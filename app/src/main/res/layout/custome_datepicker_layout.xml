@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:layout_marginTop="@dimen/_10sdp">
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:datePickerMode="spinner"
+        android:layout_centerHorizontal="true"
+        android:calendarViewShown="false"
+        android:layout_marginBottom="@dimen/_10sdp" />
+
+    <TextView
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:background="@drawable/login_btn"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txt_pick"
+        android:text="@string/continuee"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:layout_below="@+id/datePicker"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_above="@+id/img_bottom_line_black"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_centerVertical="true"
+    android:layoutDirection="ltr"
+    android:padding="@dimen/_30sdp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/thanks_you_re_all_set"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textAlignment="center"
+        android:text="@string/we_got_your_reply_thank_you_for_your_interest_in_our_business_set_up_package_one_of_your_team_members_will_be_in_touch_with_you_via_phone_and_or_email_within_24_business_hours"/>
+
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:background="@drawable/main_btn_bg"
+        android:text="@string/close"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+
+</LinearLayout>

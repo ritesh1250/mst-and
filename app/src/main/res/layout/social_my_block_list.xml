@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.meest.social.socialViewModel.view.home.navigation.MyBlockList"
+    android:layoutDirection="ltr">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="socialMyBLockListBinding"
+            type="com.meest.social.socialViewModel.viewModel.navigationViewModel.MyBlockListviewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/block_account_header"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/img_back_arrow_block_Account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="24dp"
+                android:src="@drawable/ic_full_back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="25dp"
+                android:layout_toEndOf="@+id/img_back_arrow_block_Account"
+                android:text="@string/blocked_accounts"
+                android:textColor="#1E2432"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_alignParentBottom="true"
+                android:background="#33AAAAAA" />
+
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/blockUserLayout">
+            <ImageView
+                android:id="@+id/iv_block_user"
+                android:layout_width="237dp"
+                android:layout_height="237dp"
+                android:src="@drawable/ic_blocked_user"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="@{socialMyBLockListBinding.noRecord?View.VISIBLE:View.GONE}"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+<!--        android:adapter="@{socialMyBLockListBinding.myBlockListAdapter}"-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_block_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{socialMyBLockListBinding.isEmpty?View.GONE:View.VISIBLE}"
+            android:layout_below="@+id/block_account_header" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loading"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="@{socialMyBLockListBinding.isLoading?View.VISIBLE:View.GONE}"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_height="@dimen/_100sdp" />
+
+    </RelativeLayout>
+</layout>

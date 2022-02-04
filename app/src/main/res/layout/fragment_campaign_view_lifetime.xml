@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context="com.meest.Fragments.CampaignViewLifetimeFragment"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+<LinearLayout
+    android:id="@+id/llDate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginTop="20dp">
+    <TextView
+        android:id="@+id/txt_startDateNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aug 20,2018"
+        android:textSize="18dp"
+        android:textStyle="bold"
+
+       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/_5sdp"/>
+        <TextView
+            android:id="@+id/txt_endDateNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aug 22,2018"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/_5sdp"
+            />
+</LinearLayout>
+
+        <TextView
+        android:id="@+id/txt_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="22"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/llDate"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/txt_engage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post Engagement"
+        android:layout_marginTop="5dp"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/txt_num"
+        android:layout_centerHorizontal="true"/>
+
+
+        <ProgressBar
+            android:id="@+id/pBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="400dp"
+            android:max="100"
+            android:layout_marginStart="@dimen/_22sdp"
+            android:layout_marginEnd="@dimen/_22sdp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/txt_engage"
+            android:indeterminate="false"
+            android:progress="70" />
+
+
+    <TextView
+        android:id="@+id/tv_rs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs 1.51 spent"
+        android:layout_below="@+id/pBar"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="10dp"
+
+        />
+    <TextView
+        android:id="@+id/tv_rs_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rs 80"
+        android:layout_below="@+id/pBar"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+    </RelativeLayout>
+</LinearLayout>

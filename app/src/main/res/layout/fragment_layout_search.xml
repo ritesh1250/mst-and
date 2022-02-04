@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:text="@string/search_location"
+        android:id="@+id/dialog_title" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:padding="12dp"
+        android:layout_height="40dp"
+        android:id="@+id/dialog_back"
+        android:src="@drawable/ic_back"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/tvAutoComplete"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/dialog_title"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="22dp"
+        android:background="@null"
+        android:drawableRight="@drawable/search_icon"
+        android:ems="10"
+        android:hint="@string/search_here"
+        android:textColorHint="#CCCCCC" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_below="@id/tvAutoComplete"
+        android:id="@+id/dialog_recycler" />
+
+</RelativeLayout>

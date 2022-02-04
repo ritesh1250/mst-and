@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:keepScreenOn="true"
+    android:layoutDirection="ltr"
+    tools:context=".view.recordvideo.CameraActivity">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="onClickFlash"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="viewModel"
+            type="com.meest.videomvvmmodule.viewmodel.DuoViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/textGrey">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_300dp"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextureView
+                android:id="@+id/viewFinder"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:scaleType="fitXY">
+
+                <VideoView
+                    android:id="@+id/videoView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/videoView_thumbnail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:scaleType="fitXY" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rtl1"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:background="@drawable/ic_record_start_"
+            android:padding="@dimen/_4sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_capture"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:contentDescription="@string/record"
+                android:src="@{viewModel.isRecording ? @drawable/ic_record_start:@drawable/ic_record_stop_}"
+                tools:src="@drawable/ic_record_stop" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/image"
+                android:elevation="50dp"
+                app:tint="@color/colorTheme" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/recording_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/card"
+            android:layout_marginHorizontal="10dp"
+            android:fontFamily="@font/popins_medium"
+            android:gravity="right"
+            android:onClick="@{()->viewModel.setOnItemClick(1)}"
+            android:singleLine="true"
+            android:textColor="@color/light_white"
+            android:textSize="14sp"
+            android:visibility="@{viewModel.isRecording ? View.VISIBLE : View.GONE}"
+            tools:text="00:00"
+            tools:visibility="visible"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_above="@id/rtl1"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:elevation="2dp"
+            app:cardCornerRadius="3dp">
+
+            <com.meest.videomvvmmodule.customview.progressbar.SegmentedProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/lnr1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp"
+            tools:ignore="UseCompoundDrawables">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_flash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:background="@{viewModel.isFlashOn ? @drawable/ic_flash : @drawable/ic_flash_off}"
+                    android:contentDescription="@string/flash"
+                    android:onClick="@{()->viewModel.onClickFlash()}"
+                    android:padding="@dimen/_5sdp"
+                    tools:src="@drawable/ic_flash_off" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btn_flip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_25sdp"
+                    android:background="@drawable/ic_rotate_camera"
+                    android:contentDescription="@string/flip"
+                    android:padding="@dimen/_10sdp"
+                    android:visibility="@{viewModel.isRecording ? View.GONE : View.VISIBLE}" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_close"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_gravity="center_vertical|end"
+                android:contentDescription="@string/close"
+                android:src="@drawable/ic_close_"
+                android:visibility="@{viewModel.isRecording ? View.INVISIBLE : View.VISIBLE}"
+                app:tint="@color/white" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="@dimen/_60sdp"
+            android:background="@drawable/ic_done"
+            android:visibility="@{viewModel.isRecording ? View.GONE : viewModel.isFirstTime ? View.GONE: View.VISIBLE}"
+            tools:ignore="ContentDescription" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/tv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="@dimen/_60sdp"
+            android:gravity="center"
+            android:src="@drawable/ic_gallery_medley"
+            android:visibility="@{viewModel.isRecording ? View.GONE :(viewModel.isStartRecording ? View.GONE : View.VISIBLE)}"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+</layout>

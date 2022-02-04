@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/tools">
+
+    <data>
+        <import
+            type="com.meest.videomvvmmodule.utils.Global" />
+
+        <variable
+            name="galleryFolderAdapter"
+            type="com.meest.metme.adapter.PictureFolderAdapter" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/chat_head"
+        android:layoutDirection="ltr"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/btBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:foreground="?selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/backButton"
+                        android:layout_width="@dimen/size_50dp"
+                        android:layout_height="@dimen/size_50dp"
+                        android:padding="@dimen/dimen_16dp"
+                        android:src="@drawable/chat_back_arrow"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/titleHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/size_10dp"
+                    android:fontFamily="@font/lobster_two_regular"
+                    android:gravity="center_vertical"
+                    android:text="@string/gallery"
+                    android:textColor="@color/white"
+                    android:textSize_bind='@{Global.size1}'
+                    android:textStyle="bold"
+                    app:setFont="@{galleryFolderAdapter.fontName}" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/folderRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/head"
+            android:layout_centerHorizontal="true"
+            android:adapter="@{galleryFolderAdapter}"
+            android:background="@drawable/chat_bg"
+            android:padding="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Empty"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textSize_bind='@{Global.size1}'/>
+    </RelativeLayout>
+</layout>

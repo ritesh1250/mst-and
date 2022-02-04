@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txt_account_will_be_shown_as"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:text="@string/account_will_be_shown_as"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:textColor="#143988"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_account_will_be_shown_as"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_btn_private"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="39dp"
+            android:layout_weight="1"
+            android:textSize="17sp"
+            android:textColor="#0A1F44"
+            android:paddingStart="40dp"
+            android:text="@string/Private" />
+
+        <RadioButton
+            android:id="@+id/radio_btn_public"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            android:textSize="17sp"
+            android:textColor="#0A1F44"
+            android:layout_weight="1"
+            android:paddingStart="40dp"
+            android:text="@string/Public" />
+
+
+    </RadioGroup>
+
+
+</RelativeLayout>

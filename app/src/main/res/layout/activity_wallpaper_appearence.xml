@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.meest.videomvvmmodule.utils.Global" />
+
+        <variable
+            name="viewModel"
+            type="com.meest.metme.viewmodels.WallpaperAppearanceViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/chat_head"
+        tools:context=".metme.WallpaperActivity">
+
+        <LinearLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top">
+
+            <RelativeLayout
+                android:id="@+id/ll_UnContextualMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/btBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:foreground="?selectableItemBackground">
+
+                        <ImageView
+                            android:id="@+id/backButton"
+                            android:layout_width="?android:attr/actionBarSize"
+                            android:layout_height="?android:attr/actionBarSize"
+                            android:padding="@dimen/dimen_18dp"
+                            android:src="@drawable/chat_back_arrow"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="@dimen/dimen_10dp"
+                        android:layout_weight="1"
+                        android:gravity="end">
+
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/lobster_two_regular"
+                            android:text="@string/wallpaper_appearance"
+                            android:textColor="@color/white"
+                            android:textSize_bind='@{Global.size1}'
+                            android:textStyle="bold"
+                            app:setFont="@{viewModel.fontName}" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white_top_folded_corner"
+                android:backgroundTint="@color/white"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:layout_marginHorizontal="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="4dp">
+
+                    <RelativeLayout
+                        android:id="@+id/dummy_chat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/chat_head"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/appbar_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="top">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/size_45dp"
+                                            android:layout_height="@dimen/size_45dp"
+                                            android:padding="@dimen/dimen_12dp"
+                                            android:src="@drawable/chat_back_arrow"
+                                            android:visibility="visible" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="end|center_vertical"
+                                        android:layout_marginEnd="@dimen/dimen_10dp"
+                                        android:layout_weight="1"
+                                        android:gravity="end">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:fontFamily="@font/lobster_two_regular"
+                                            android:text="@string/Username"
+                                            android:textColor="@color/white"
+                                            android:textSize_bind='@{Global.size1}'
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/appbar_1">
+
+                            <com.meest.RoundedView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/bg_white_top_folded_corner"
+                                android:orientation="vertical"
+                                app:topLeftCornerRadius="@dimen/dimen_15dp"
+                                app:topRightCornerRadius="@dimen/dimen_15dp">
+
+                                <LinearLayout
+                                    android:id="@+id/dummy_main_ll"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/chat_time"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_margin="5dp"
+                                        android:fontFamily="@font/lobster_two_regular"
+                                        android:text="@string/saturday_01_05_2021"
+                                        android:textColor="@color/black"
+                                        android:textSize_bind='@{Global.size5}' />
+
+                                    <RelativeLayout
+                                        android:id="@+id/temp_ll_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_below="@id/chat_time"
+                                        android:layout_marginTop="@dimen/size_2dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical"
+                                        android:padding="@dimen/size_2dp">
+
+                                        <LinearLayout
+                                            android:id="@+id/temp_chat_1"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginVertical="@dimen/size_2dp"
+                                            android:layout_marginStart="@dimen/size_20dp"
+                                            android:background="@drawable/dummy_chat_bg"
+                                            android:orientation="horizontal"
+                                            android:padding="@dimen/dimen_4dp">
+
+                                            <TextView
+                                                android:id="@+id/tvUserChat_1"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:fontFamily="@font/lobster_two_regular"
+                                                android:text="@string/hi"
+                                                android:textColor="@color/black"
+                                                android:textSize_bind='@{Global.size4}' />
+
+                                            <TextView
+                                                android:id="@+id/tvUserChatTime_1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="end|bottom"
+                                                android:layout_marginLeft="@dimen/size_20dp"
+                                                android:fontFamily="@font/lobster_two_regular"
+                                                android:text="@string/_06_00_am"
+                                                android:textColor="@color/black"
+                                                android:textSize_bind='@{Global.size5}' />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/temp_ll_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_below="@id/temp_ll_1"
+                                        android:layout_marginTop="@dimen/size_2dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical"
+                                        android:padding="@dimen/size_2dp">
+
+                                        <LinearLayout
+                                            android:id="@+id/temp_chat_2"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_marginVertical="@dimen/size_2dp"
+                                            android:layout_marginEnd="@dimen/size_20dp"
+                                            android:background="@drawable/dummy_chat_bg_outgoing"
+                                            android:orientation="horizontal"
+                                            android:padding="@dimen/dimen_4dp">
+
+                                            <TextView
+                                                android:id="@+id/tvUserChat_2"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:fontFamily="@font/lobster_two_regular"
+                                                android:text="Hiii..."
+                                                android:textColor="@color/white"
+                                                android:textSize_bind='@{Global.size4}' />
+
+                                            <TextView
+                                                android:id="@+id/tvUserChatTime_2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="end|bottom"
+                                                android:layout_marginLeft="@dimen/size_20dp"
+                                                android:fontFamily="@font/lobster_two_regular"
+                                                android:text="06:01 am"
+                                                android:textColor="@color/white"
+                                                android:textSize_bind='@{Global.size5}' />
+
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/temp_ll_3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_below="@id/temp_ll_2"
+                                        android:layout_marginTop="@dimen/size_2dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical"
+                                        android:padding="@dimen/size_2dp">
+
+                                        <LinearLayout
+                                            android:id="@+id/temp_chat_3"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginVertical="@dimen/size_2dp"
+                                            android:layout_marginStart="@dimen/size_20dp"
+                                            android:background="@drawable/dummy_chat_bg"
+                                            android:orientation="horizontal"
+                                            android:padding="@dimen/dimen_4dp">
+
+                                            <TextView
+                                                android:id="@+id/tvUserChat_3"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:fontFamily="@font/lobster_two_regular"
+                                                android:text="How are you?..."
+                                                android:textColor="@color/black"
+                                                android:textSize_bind='@{Global.size4}' />
+
+                                            <TextView
+                                                android:id="@+id/tvUserChatTime_3"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="end|bottom"
+                                                android:layout_marginLeft="@dimen/size_20dp"
+                                                android:fontFamily="@font/lobster_two_regular"
+                                                android:text="09:00 am"
+                                                android:textColor="@color/black"
+                                                android:textSize_bind='@{Global.size5}' />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/temp_ll_4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_below="@id/temp_ll_3"
+                                        android:layout_marginTop="@dimen/size_2dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical"
+                                        android:padding="@dimen/size_2dp">
+
+                                        <LinearLayout
+                                            android:id="@+id/temp_chat_4"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_marginVertical="@dimen/size_2dp"
+                                            android:layout_marginEnd="@dimen/size_20dp"
+                                            android:background="@drawable/dummy_chat_bg_outgoing"
+
+                                            android:orientation="horizontal"
+                                            android:padding="@dimen/dimen_4dp">
+
+                                            <TextView
+                                                android:id="@+id/tvUserChat_4"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"
+                                                android:fontFamily="@font/lobster_two_regular"
+                                                android:text="I am fine."
+                                                android:textColor="@color/white"
+                                                android:textSize_bind='@{Global.size4}' />
+
+                                            <TextView
+                                                android:id="@+id/tvUserChatTime_4"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="end|bottom"
+                                                android:layout_marginLeft="@dimen/size_20dp"
+                                                android:fontFamily="@font/lobster_two_regular"
+                                                android:text="10:00 am"
+                                                android:textColor="@color/white"
+                                                android:textSize_bind='@{Global.size5}' />
+                                        </LinearLayout>
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/root_view"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/temp_ll_5"
+                                        android:layout_marginVertical="@dimen/dimen_10dp"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal"
+                                        android:splitMotionEvents="false">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="@dimen/size_30dp"
+                                                android:layout_height="@dimen/size_30dp"
+                                                android:layout_margin="5dp"
+                                                app:cardCornerRadius="5dp"
+                                                app:cardElevation="2dp">
+
+                                                <ImageView
+                                                    android:id="@+id/fab_layout_camera"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="bottom"
+                                                    android:padding="@dimen/size_5dp"
+                                                    android:src="@drawable/ic_camera_btn"
+                                                    tools:ignore="ContentDescription" />
+                                            </androidx.cardview.widget.CardView>
+
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_margin="5dp"
+                                                android:layout_weight="1"
+                                                app:cardCornerRadius="7dp"
+                                                app:cardElevation="2dp">
+
+                                                <EditText
+                                                    android:id="@+id/message_input"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="@drawable/chat_edittext"
+                                                    android:enabled="false"
+                                                    android:fontFamily="@font/lobster_two_regular"
+                                                    android:hint="@string/type_here"
+                                                    android:importantForAutofill="no"
+                                                    android:inputType="textMultiLine"
+                                                    android:isScrollContainer="true"
+                                                    android:maxHeight="@dimen/_110sdp"
+                                                    android:maxLines="5"
+                                                    android:padding="@dimen/_5sdp"
+                                                    android:scrollbars="vertical"
+                                                    android:textColor="@color/black"
+                                                    android:textColorHint="@color/tab_gray"
+                                                    android:textSize_bind='@{Global.size4}'
+                                                    app:autoSizeTextType="uniform" />
+                                            </androidx.cardview.widget.CardView>
+
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="@dimen/size_30dp"
+                                                android:layout_height="@dimen/size_30dp"
+                                                android:layout_margin="5dp"
+                                                app:cardCornerRadius="5dp"
+                                                app:cardElevation="2dp">
+
+                                                <ImageView
+                                                    android:id="@+id/micro"
+                                                    android:layout_width="@dimen/size_30dp"
+                                                    android:layout_height="@dimen/size_30dp"
+                                                    android:layout_gravity="bottom"
+                                                    android:layout_marginEnd="@dimen/_5sdp"
+                                                    android:layout_toEndOf="@+id/message_input"
+                                                    android:padding="@dimen/size_5dp"
+                                                    android:src="@drawable/ic_record_btn"
+                                                    tools:ignore="ContentDescription" />
+                                            </androidx.cardview.widget.CardView>
+
+                                            <androidx.cardview.widget.CardView
+                                                android:layout_width="@dimen/size_30dp"
+                                                android:layout_height="@dimen/size_30dp"
+                                                android:layout_margin="5dp"
+                                                app:cardCornerRadius="5dp"
+                                                app:cardElevation="2dp">
+
+                                                <ImageView
+                                                    android:id="@+id/gallery"
+                                                    android:layout_width="@dimen/size_30dp"
+                                                    android:layout_height="@dimen/size_30dp"
+                                                    android:layout_gravity="bottom"
+                                                    android:layout_toEndOf="@+id/micro"
+                                                    android:padding="@dimen/size_5dp"
+                                                    android:src="@drawable/ic_image"
+                                                    tools:ignore="ContentDescription" />
+                                            </androidx.cardview.widget.CardView>
+
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+                            </com.meest.RoundedView>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/submitWallpaper"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dimen_50dp"
+                    android:background="@drawable/metme_btn"
+                    android:foreground="?selectableItemBackground"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:fontFamily="@font/lobster_two_regular"
+                        android:gravity="center"
+                        android:text="@string/save"
+                        android:textColor="@color/white"
+                        android:textSize_bind='@{Global.size3}'
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

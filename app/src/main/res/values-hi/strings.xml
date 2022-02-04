@@ -1,0 +1,1950 @@
+<resources>
+    <string name="app_name">मिस्ट</string>
+    <string name="app_name_metme">मेट मी</string>
+    <string name="m">M</string>
+    <string name="d">D</string>
+    <string name="e2">E</string>
+    <string name="i1">I</string>
+    <string name="f">F</string>
+    <string name="i">I</string>
+    <string name="t">T</string>
+    <string name="s">S</string>
+    <string name="e1">E</string>
+    <string name="e">E</string>
+    <string name="todo">टूडू</string>
+    <string name="Travel">#ट्रैवल</string>
+    <string name="Movie">#मूवी</string>
+    <string name="Food">#फूड</string>
+    <string name="Arts">#आर्ट</string>
+    <string name="request">अनुरोध किया</string>
+    <string name="Photography">#फोटोग्राफी</string>
+    <string name="thePartybash">#दीपार्टीबैश</string>
+    <string name="View_all">यहाँ सब देखें</string>
+    <string name="less_than_20_posts">20 से कम पोस्ट्स</string>
+    <string name="SignUpto">सभी सुविधाओं का उपयोग करने के लिए साइन अप करें</string>
+    <string name="SignUpto_1"> मिस्ट ऐप में.</string>
+    <string name="whatsyourname">आपका नाम क्या है?</string>
+    <string name="continuee">जारी रखें</string>
+    <string name="whatsyourdob">आपका जन्मदिन कब है?</string>
+    <string name="whenbirth">अपना जन्मदिन शेयर करें</string>
+    <string name="whenbirth_1">ताकि हम सब एक साथ मना सकें</string>
+    <string name="setpass">अपना पासवर्ड सेट करें</string>
+    <string name="setpass1">आपका पासवर्ड कम से कम 8-12 अंक या अक्षर या दोनों का होना चाहिए.</string>
+    <string name="selectgender">जेंडर चुनें</string>
+    <string name="notgender">गुप्त रखना चाहते हैं</string>
+    <string name="female">महिला</string>
+    <string name="otpverify">कोड वेरीफाई करें</string>
+    <string name="send_again">पुनः प्राप्त करें</string>
+    <string name="otptxt">अपने मोबाइल नंबर या ई-मेल आईडी पर प्राप्त हुवे चार अंकों का कोड दर्ज़ करें.</string>
+    <string name="skip">स्किप करें</string>
+    <string name="upload">अपलोड करें</string>
+    <string name="interest">अपनी रुचि चुनें</string>
+    <string name="interest_txt">अपने पसंदीदा विषयों का चयन करें</string>
+    <string name="interest_txt_1">ताकि आप ट्रेंड्स को फॉलो कर सकें</string>
+    <string name="JoinandCreate">जुड़े और वीडियो बनाएं</string>
+    <string name="JoinandCreatetxt">दिलचस्प वीडियो कंटेंट से भरी दुनिया में रचनात्मकता के साथ बनी वीडियो देखें व अपनी वीडियो बनाएं और शेयर करें.</string>
+    <string name="JoinandConnect">अनलिमिटेड चैट और कॉल का आनंद लेते हुवे अपने दोस्तों के समूह बनाएं व स्वयं को सोशल और ट्रेंड्स से जोड़े.</string>
+    <string name="JoinandConnecttxt">जुड़ें अपने दोस्तों से</string>
+    <string name="welcomeback">आपका पुनः स्वागत है!</string>
+    <string name="EnterPass">अपना पासवर्ड दर्ज़ करें</string>
+    <string name="forgpass"><u>पासवर्ड भूल गए?</u></string>
+    <string name="forgpassd">पासवर्ड भूल गए?</string>
+    <string name="forgpass1">अकाउंट वेरिफिकेशन के लिए अपने  मौजूदा इ-मेल आईडी या मोबाइल नंबर पर चार अंको का कोड प्राप्त करें, तत्पश्चात अपना नया पासवर्ड बनाएं.</string>
+    <string name="login_to_your_existing_account_to_access_nall_the_features_in_meest_app">मिस्ट ऐप में सभी सुविधाओं का उपयोग करने के लिए<br />अपने मौजूदा अकाउंट में लॉगिन करें.</string>
+    <string name="verification_code">कोड वेरीफाई करें</string>
+    <string name="forgetPassotp">अपने मोबाइल नंबर या इ-मेल आईडी पर प्राप्त हुवे चार अंकों के कोड को दर्ज़ करें और अपना नया पासवर्ड बनाएं.</string>
+    <string name="enter_email_or_mobile_number">अपनी ई-मेल आईडी या मोबाइल नंबर टाइप करें</string>
+    <string name="upload_your_profile_picture">अपनी प्रोफाइल फोटो अपलोड करें</string>
+    <string name="bysignupyouagree">साइन अप करते हुवे आप हमारे नियम और शर्तों से सहमत हैं.</string>
+    <string name="comingsoon">जल्द आ रहा है</string>
+    <string name="default_theme">डिफॉल्ट थीम</string>
+    <string name="dark">डार्क थीम</string>
+    <string name="discover">डिस्कवर करें</string>
+    <string name="host">cutomerdemo.in/</string>
+    <string name="action_send">भेजें</string>
+    <string name="navigation_drawer_open">नेविगेशन ड्रॉअर खोलें</string>
+    <string name="navigation_drawer_close">नेविगेशन ड्रॉअर बंद करें</string>
+    <string name="app_record">वीडियो रिकॉर्ड करें</string>
+    <string-array name="InterestValue">
+        <item>Games,Books</item>
+    </string-array>
+    <string name="dots">...</string>
+    <string name="success_unblocked">सफलतापूर्वक अनब्लॉक किया गया</string>
+    <string name="you_hav_reached_">आप अधिकतम कनेक्शन सीमा तक पहुँच चुके हैं</string>
+    <string name="sendFeedback">प्रतिक्रिया भेजें</string>
+    <string name="blockedList">अवरुद्ध सूची</string>
+    <string name="privacy">गोपनीयता और सुरक्षा सहायता</string>
+    <string name="faq">सामान्य प्रश्न</string>
+    <string name="submit">सबमिट</string>
+    <string name="enter_feedback">कृपया प्रतिक्रिया दर्ज करें.</string>
+    <string name="feedback_uploaded">प्रतिक्रिया सफलतापूर्वक भेजें.</string>
+    <string name="about_us">हमारे बारे में</string>
+    <string name="privacy_policy"><u>गोपनीयता नीति</u></string>
+    <string name="following">निम्नलिखित</string>
+    <string name="share_using">शेयर रेफरल कोड</string>
+    <string name="share_subject">मिस्ट ऐप</string>
+    <string name="referral_msg">"कृपया रेफ़रल कोड का उपयोग करके मेरे साथ मिस्ट में शामिल हों : "</string>
+    <string name="male">पुरुष</string>
+    <string name="google_maps_key">AIzaSyDfcsomOyYAs3BXBUD58CpE0WulwtSz8Ms</string>
+    <string name="deleteStory">डिलीट स्टोरी</string>
+    <string name="areSure">क्या आपको यकीन है?</string>
+    <string name="deleteStoryText">क्या आप वास्तव में इस कहानी को हटाना चाहते हैं</string>
+    <string name="no">नहीं</string>
+    <string name="yes">हाँ</string>
+    <string name="story_deleted_success">कहानी सफलतापूर्वक हटा दी गई</string>
+    <string name="title_activity_r_t_c_audio_call_join">आरटीसी ऑडियो कॉल जॉइन करें</string>
+    <string name="selected_count">%d चुन लिया</string>
+    <string name="your" translatable="false"><font fgcolor="#000000">your</font></string>
+    <string name="label_send">भेजें</string>
+    <string name="msg_say_something">आप कुछ बोलो…</string>
+    <string name="msg_connection_error">कनेक्शन त्रुटि, कृपया नेटवर्क सेटिंग्स जांचें या सुनिश्चित करें कि चैनल का नाम / एक्सेस टोकन मान्य है</string>
+    <string name="bit_rate_value_with_unit">%d kbps</string>
+    <string name="frame_rate_value_with_unit">%d fps</string>
+    <string name="start_broadcast_title">लाइव स्ट्रीमिंग शुरू करें</string>
+    <string name="topic_edit_hint">एक चैनल का नाम दर्ज करें</string>
+    <string name="powered_by_agora" translatable="false">Agora.io द्वारा संचालित</string>
+    <string name="need_necessary_permissions">आवश्यक अनुमतियों का अधिग्रहण किया गया</string>
+    <string name="setting_title">सेटिंग्स</string>
+    <string name="setting_resolution_title">संकल्प</string>
+    <string name="setting_stats_title">वीडियो आँकड़े दिखाएँ</string>
+    <string name="setting_mirror_local_title">स्थानीय वीडियो पूर्वावलोकन दर्पण मोड</string>
+    <string name="setting_mirror_remote_title">रिमोट वीडियो मिरर मोड प्रस्तुत करता है</string>
+    <string name="setting_mirror_encode_title">स्थानीय वीडियो मिरर मोड को एनकोड करता है</string>
+    <string name="fake_user_name" translatable="false">शेक्सपियर</string>
+    <string name="select_role_title">कृपया अपनी भूमिका चुनें</string>
+    <string name="select_role_broadcaster">ब्रॉडकास्टर</string>
+    <string name="select_role_audience">दर्शक</string>
+    <string name="select_role_broadcaster_hint">ब्रॉडकास्टर के रूप में शामिल हों</string>
+    <string name="select_role_audience_hint">दर्शकों के रूप में शामिल हों</string>
+    <string name="error_msg">कुछ गलत हो गया!!</string>
+    <string name="uploadvideo">विडियो को अपलोड करें</string>
+    <string name="describe">वर्णन</string>
+    <string name="awesomecaption">बहुत बढ़िया कैप्शन..</string>
+    <string name="postsettings">पोस्ट सेटिंग्स</string>
+    <string name="allowsavetophone">फ़ोन पर सहेजें की अनुमति दें</string>
+    <string name="allowduet">युगल की अनुमति दें</string>
+    <string name="searchmusic">संगीत खोजें</string>
+    <string name="sendcoin">डायमंड भेजो</string>
+    <string name="creatorwillbenotified">आपके द्वारा उपहार में दिए गए हीरों के बारे में निर्माता को सूचित किया जाएगा</string>
+    <string name="cancelss">रद्द करना</string>
+    <string name="bethefirsttocommentnandknownbythecreator">निर्माता द्वारा ज्ञात टिप्पणी करने वाले पहले व्यक्ति बनें</string>
+    <string name="famouscreators">प्रसिद्ध रचनाकार</string>
+    <string name="shop">शॉप</string>
+    <string name="selectreason">कारण चुनें</string>
+    <string name="howithurtsyo">यह आपको कैसे प्रभावित करता है</string>
+    <string name="contactdetails">संपर्क विवरण</string>
+    <string name="mailormobile">मेल या मोबाइल</string>
+    <string name="report">रिपोर्ट</string>
+    <string name="sharethisvideo">इस वीडियो को साझा करे</string>
+    <string name="reportpost">रिपोर्ट पोस्ट</string>
+    <string name="fans">5.0m प्रशंसक</string>
+    <string name="follow">फॉलो</string>
+    <string name="byclickingthissubmitbutton">इस सबमिट बटन पर क्लिक करके, आप सहमत हैं कि \nआप सभी \n की सब जिम्मेदारियाँ ले रहे हैं प्रक्रिया जो हमारे या कन्टैंट \n uploader द्वारा की जा सकती है। उस बारे में जानने के लिए नीचे दिए गए लिंक पर क्लिक करें.</string>
+    <string name="explainbriefly">संक्षेप में बताएं</string>
+    <string name="oops">उफ़ !</string>
+    <string name="nothingtoshow">दिखाने के लिए कुछ भी नहीं...</string>
+    <string name="choosecategory">श्रेणी का चयन करें</string>
+    <string name="notifications">सूचनाएं</string>
+    <string name="typeyourcommenthere">अपनी टिप्पणी यहां टाइप करें..</string>
+    <string name="loading">लोडिंग...</string>
+    <string name="helppolicy">सहायता / नीति केंद्र</string>
+    <string name="requestredeem">रिडीम का अनुरोध करें</string>
+    <string name="wheneveryouuploadvideo">जब भी आप वीडियो अपलोड करते हैं</string>
+    <string name="purchasedddjjd">हर 10 मिनट ऐप में बिताते हैं</string>
+    <string name="rewardingactions">कर्मों का प्रतिफल</string>
+    <string name="purchased">खरीदी</string>
+    <string name="fromyourfans">अपने प्रशंसकों से</string>
+    <string name="videoupload">वीडियो अपलोड</string>
+    <string name="dailycheckin">दैनिक चेक-इन</string>
+    <string name="timespentinapp">ऐप में समय बिताया</string>
+    <string name="coin">कॉइन</string>
+    <string name="passbook">पासबुक</string>
+    <string name="totalspending">कुल खर्च</string>
+    <string name="totalearning">कुल कमाई</string>
+    <string name="addcoins">ऐड कॉइंस</string>
+    <string name="zero">00</string>
+    <string name="wallet">वॉलेट</string>
+    <string name="usethissound">इस ध्वनि का उपयोग करें</string>
+    <string name="videoss">0 वीडियो</string>
+    <string name="soundvideo">ध्वनि वीडियो</string>
+    <string name="logout">लॉग आउट</string>
+    <string name="privacypolicy">गोपनीयता नीति</string>
+    <string name="termsofuse">उपयोग की शर्तें</string>
+    <string name="general">जनरल</string>
+    <string name="requestverification">सत्यापन का अनुरोध करें</string>
+    <string name="meestwallet">मिस्ट वॉलेट</string>
+    <string name="myqrcode">मेरा क्यूआर कोड</string>
+    <string name="shareprofile">शेयर प्रोफ़ाइल</string>
+    <string name="notifiyme">मुझे सूचित करें</string>
+    <string name="setting">सेटिंग्स</string>
+    <string name="users">उपयोगकर्ताओं</string>
+    <string name="video">वीडियो</string>
+    <string name="termspolicy">शर्तें नीति</string>
+    <string name="redeemprocessmaytake">रिडीम प्रक्रिया में 10 दिन लग सकते हैं और यह सुनिश्चित करें कि योर अकाउंट हमारे \nterms और पॉलिसी का अनुपालन करता है। आप और नीचे देख सकते हैं.</string>
+    <string name="redeem">रिडीम</string>
+    <string name="mailmobile">मेल / मोबाइल</string>
+    <string name="account">अकाउंट</string>
+    <string name="selectmethod">विधि का चयन करें</string>
+    <string name="coinyouhave">कॉइन आपके पास है</string>
+    <string name="redeembubbles">रिडीम कॉइन</string>
+    <string name="scanorcodetoseeprofile">प्रोफ़ाइल देखने के लिए क्यूआर कोड स्कैन करें</string>
+    <string name="orscan">क्यूआर स्कैन</string>
+    <string name="preview">पूर्वावलोकन</string>
+    <string name="sharecode">शेयर कोड</string>
+    <string name="savecode">सेव  कोड</string>
+    <string name="scantofollowme">मेरा अनुसरण करने के लिए स्कैन करें</string>
+    <string name="mycode">मेरा कोड</string>
+    <string name="youtube">यूट्यूब</string>
+    <string name="instagram">इंस्टाग्राम</string>
+    <string name="socialurl">सोशल (URL)</string>
+    <string name="presentyourself">अपने आप को प्रस्तुत करो</string>
+    <string name="biochars">Bio (80 chars)</string>
+    <string name="for_you">फॉर यू</string>
+    <string name="skip_ads">विज्ञापन छोड़ें</string>
+    <string name="download">डाउनलोड</string>
+    <string name="more">अधिक</string>
+    <string name="less">कम</string>
+    <string name="ads">विज्ञापन</string>
+    <string name="no_internet_connection">कोई इंटरनेट कनेक्शन नहीं</string>
+    <string name="back_online">ऑनलाइन वापस</string>
+    <string name="facebook">फेसबुक</string>
+    <string name="or">और</string>
+    <string name="google">गूगल</string>
+    <string name="facebook_app_id">1104643359931911</string>
+    <string name="record">रिकॉर्ड</string>
+    <string name="favourite">पसंदीदा</string>
+    <string name="search_music">संगीत खोजें</string>
+    <string name="banner">बैनर</string>
+    <string name="search">सर्च</string>
+    <string name="dummy_ad_text">यह उत्पाद सभी उत्पादों पर अद्भुत \n 30% की छूट है और प्रियंका चोपड़ा से मिलने के लिए \n मौका है</string>
+    <string name="imagePickerEmpty">कोई चित्र नहीं मिला</string>
+    <declare-styleable name="ExpandableTextView">
+        <attr name="animation_duration" format="integer" />
+    </declare-styleable>
+    <string-array name="payment">
+        <item>पेपल</item>
+        <item>पेटीएम</item>
+    </string-array>
+    <string-array name="redeemPlan">
+        <item>4000</item>
+        <item>8000</item>
+        <item>10000</item>
+        <item>20000</item>
+        <item>50000</item>
+        <item>100000</item>
+    </string-array>
+    <string-array name="redeemPlanPrice">
+        <item>150</item>
+        <item>399</item>
+        <item>499</item>
+        <item>899</item>
+        <item>1999</item>
+        <item>3999</item>
+    </string-array>
+    <string-array name="report_reasons">
+        <item>हिंसा</item>
+        <item>नग्नता</item>
+        <item>उत्पीड़न</item>
+        <item>आतंक</item>
+        <item>सत्त्वाधिकार उल्लंघन</item>
+        <item>झूठी खबर</item>
+    </string-array>
+    <string name="close">बंद करे</string>
+    <string name="flash">फ़्लैश</string>
+    <string name="flip">फ्लिप</string>
+    <string name="music">म्यूजिक</string>
+    <string name="capture">कैप्चर</string>
+    <string name="photo_of_id_clear_photo">आईडी की फोटो (स्पष्ट फोटो)</string>
+    <string name="attach">जोड़ना</string>
+    <string name="id_number">आईडी नंबर</string>
+    <string name="xxx_xx_xxxxxx_xx">XXX-XX-XXXXXX-XX</string>
+    <string name="name_on_id">आईडी पर नाम</string>
+    <string name="full_address">पूरा पता</string>
+    <string name="same_as_id">आईडी के रूप में भी</string>
+    <string name="request_verification">सत्यापन का अनुरोध करें</string>
+    <string name="your_photo_holding_your_id_card">आपकी तस्वीर (अपना आईडी कार्ड पकड़े हुए)</string>
+    <string name="image">इमेज</string>
+    <string name="type_your_comment_here">अपनी टिप्पणी यहां टाइप करें..</string>
+    <string name="_15s">15s</string>
+    <string name="_30s">30s</string>
+    <string name="_45s">45s</string>
+    <string name="_60s">60s</string>
+    <string name="followers">फोल्लोवेर्स</string>
+    <string name="ad">विज्ञापन</string>
+    <string name="agree">एग्री</string>
+    <string name="please_agree_our_term_amp_conditions_and_privacy_policy"><![CDATA[कृपया हमारे उपयोग की अवधि और गोपनीयता नीति से सहमत हों...!]]></string>
+    <string name="term_of_use">उपयोग की शर्त</string>
+    <string name="by_continuing_you_agree_to_bubbletok_s_terms_of_use_nand_confirm_that_you_have_read_our_privacy_policy">जारी रखते हुए, आप मिस्टवीडियो की उपयोग की शर्तों से सहमत होते हैं \n और पुष्टि करें कि आपने हमारी गोपनीयता नीति पढ़ ली है.</string>
+    <string name="sign_up_for_bubble_tok">मिस्टवीडियो के लिए साइन अप करें</string>
+    <string name="create_a_profile_follow_other_creators_nbuild_your_fan_following_by_creating_nyour_own_videos_and_earn_money">एक प्रोफ़ाइल बनाएँ, अन्य रचनाकारों का पालन करें \n अपने वीडियो बनाने और पैसे कमाने के द्वारा अपने प्रशंसक का पालन करें !</string>
+    <string name="with_facebook">फेसबुक के साथ</string>
+    <string name="with_google">Google के साथ</string>
+    <string name="policy_center">पॉलिसी केंद्र</string>
+    <string name="by_continuing_you_agree_to_bubbletok_s_terms_of_use_nand_confirm_that_you_have_read_our_privacy_polic">जारी रखते हुए, आप मिस्टवीडियो की उपयोग की शर्तों से सहमत होते हैं \n और पुष्टि करें कि आपने हमारी गोपनीयता पॉलिसी पढ़ ली है.</string>
+    <string name="publish">पब्लिश</string>
+    <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admobe_native_ad_id">ca-app-pub-3940256099942544/1044960115</string>
+    <string name="branch_io_key">key_live_od0nAIEeMGpGyIzaqNreiobavDiCg0Yd</string>
+    <string name="Search_Contact">सर्च</string>
+    <string name="Followers">फोल्लोवेर्स</string>
+    <string name="be_the_first_to_reply_nand_known_by_the_creator">निर्माता द्वारा ज्ञात उत्तर देने वाले पहले व्यक्ति बनें</string>
+    <string name="live">लाइव</string>
+    <string name="Group_name">ग्रुप नाम</string>
+    <string name="Mute_notification">म्यूट नोटिफिकेशन</string>
+    <string name="Add_participants">प्रतिभागियों को जोड़ें</string>
+    <string name="Exit_Group">ग्रुप से बाहर निकलें</string>
+    <string name="today">टुडे</string>
+    <string name="tomorrow">टुमारो</string>
+    <string name="upcoming">अपकमिंग</string>
+    <string name="title_activity_add_task">टास्क गतिविधि जोड़ें</string>
+    <string name="your_story">तुम्हारी कहानी</string>
+    <string name="view_comments">टिप्पणियाँ देखें</string>
+    <string name="usersss">यूजर</string>
+    <string name="test">टेस्ट</string>
+    <string name="userhash">#यूजर</string>
+    <string name="rupeesSymbol">₹</string>
+    <string name="enter_e_mail_or_mobile_number">ई-मेल या मोबाइल नंबर दर्ज करें</string>
+    <string name="confirm_new_password">नए पासवर्ड की पुष्टि करें</string>
+    <string name="create_your_password">अपना पासवर्ड बनाएं</string>
+    <string name="Select_Contact">संपर्क चुनें</string>
+    <string name="no_notification">कोई अधिसूचना नहीं</string>
+    <string name="we_will_notify_you_when_something_arrives">कुछ आने पर हम आपको सूचित करेंगे</string>
+    <string name="title_notification">नोटिफिकेशन</string>
+    <string name="accept">स्वीकार करना</string>
+    <string name="delete">डिलीट</string>
+    <string name="follow_requests">अनुरोधों का पालन करें</string>
+    <string name="_50">50</string>
+    <string name="minutes_ago">कुछ देर पहले</string>
+    <string name="hours_ago">घंटो पहले</string>
+    <string name="yesterday_at">यस्टरडे अत</string>
+    <string name="today_at">टुडे अत</string>
+    <string name="days_ago">दिन पहले</string>
+    <string name="just_now">अभी</string>
+    <string name="yesterday">यस्टरडे</string>
+    <string name="now">अब</string>
+    <string name="at">पर</string>
+    <string name="photo">फोटो</string>
+    <string name="voice_message">वॉइस मैसेज</string>
+    <string name="audio">ऑडियो</string>
+    <string name="location">लोकेशन</string>
+    <string name="file">फ़ाइल</string>
+    <string name="email">ईमेल</string>
+    <string name="feedback">फीडबैक</string>
+    <string name="choose_email_app">ईमेल ऐप चुनें</string>
+    <string name="mark_as_read">पढ़े हुए का चिह्न</string>
+    <string name="playing_audio">ऑडियो बजाना</string>
+    <string name="missed_call_notification">से छूटी हुई कॉल:</string>
+    <string name="video_call">वीडियो कॉल</string>
+    <string name="voice_call">वॉइस कॉल</string>
+    <string name="you">यू</string>
+    <string name="are_now_an_admin">अब एक व्यवस्थापक हैं</string>
+    <string name="is_now_an_admin">अब एक व्यवस्थापक है</string>
+    <string name="are_no_longer_an_admin">अब एक व्यवस्थापक नहीं हैं</string>
+    <string name="is_no_longer_an_admin">अब कोई व्यवस्थापक नहीं है</string>
+    <string name="you_added">यू एडेड</string>
+    <string name="you_left">यू लेफ्ट</string>
+    <string name="left_group">लेफ्ट ग्रुप</string>
+    <string name="added">एडेड</string>
+    <string name="you_removed">यू रीमूव्ड</string>
+    <string name="removed">रीमूव्ड</string>
+    <string name="you_created_this_group">आपने यह ग्रुप बनाया</string>
+    <string name="you_changed_group_preferences">आपने ग्रुप प्राथमिकताएँ बदल दी हैं</string>
+    <string name="changed_group_preferences">चेंज्ड ग्रुप प्रेफरेन्सेस</string>
+    <string name="created_this_group">इस ग्रुप को बनाया</string>
+    <string name="joined_via_invite_link">जॉइन्ड वाया इन्वाइट लिंक</string>
+    <string name="app_folder_name"> "मिस्ट"</string>
+    <string name="media_player_error">फ़ाइल नहीं मिली या अनुमतियाँ गायब हैं</string>
+    <string name="hangup">हैंगअप</string>
+    <string name="answer">उत्तर</string>
+    <string name="decline">डिक्लाइन</string>
+    <string name="incoming_video_call">इनकमिंग वीडियो कॉल</string>
+    <string name="incoming_voice_call">इनकमिंग वॉयस कॉल</string>
+    <string name="there_is_active_call_currently">पहले से ही एक सक्रिय कॉल है</string>
+    <string name="missing_permissions">मिसिंग पर्मिशन्स</string>
+    <string name="voice_call_confirmation">क्या आप वाकई वॉइस कॉल करना चाहते हैं?</string>
+    <string name="video_call_confirmation">क्या आप वाकई वीडियो कॉल करना चाहते हैं?</string>
+    <string name="connecting">कनेक्टिंग</string>
+    <string name="meeastapp_voice_call">वॉइस कॉल</string>
+    <string name="meeastapp_video_call">वीडियो कॉल</string>
+    <string name="initiating">इनिशीऐटिंग</string>
+    <string name="waiting_for_answer">वेटिंग फॉर आंसर</string>
+    <string name="failed">फेल्ड</string>
+    <string name="reconnecting">पुन: कनेक्ट</string>
+    <string name="answered">उत्तर दिए</string>
+    <string name="meestapp_conference_video_call">%s ग्रुप वीडियो कॉल</string>
+    <string name="select_redeem_plan">सेलेक्ट रिडीम प्लान</string>
+    <string name="enter_old_password">पुराना पासवर्ड डालें</string>
+    <string name="create_new_password">नया पासवर्ड बनाएं</string>
+    <string name="post">पोस्ट</string>
+    <string name="liked_by">द्वारा पसंद किया गया</string>
+    <string name="comments">द्वारा कमैंट्स किया गया </string>
+    <string name="shares">शेयर्स</string>
+    <string name="comment2">कमेंट</string>
+    <string name="share2">शेयर</string>
+    <string name="view_previous_replies">पिछला उत्तर देखें</string>
+    <string name="view_more_comments">अधिक टिप्पणियां देखें</string>
+    <string name="do_not_show_again">इस संदेश को फिर ना दिखाना</string>
+    <string name="ignore_battery_dialog_message">यह सुनिश्चित करने के लिए कि सभी संदेशों को सही ढंग से वितरित किया गया है, आपको बैटरी ऑप्टिमाइज़ेशन को अक्षम करना होगा। \n इसके बाद ठीक क्लिक करने पर चुनें और डॉन टी ऑप्टिमाइज़ पर क्लिक करें</string>
+    <string name="ignore_battery_summary">यह सुनिश्चित करने के लिए कि सभी संदेशों को सही ढंग से वितरित किया गया है, आपको बैटरी ऑप्टिमाइज़ेशन को अक्षम करना होगा</string>
+    <string name="ignore_battery_dialog_title">बैटरी ऑप्टिमाइज़ेशन को अनदेखा करें</string>
+    <string name="confirmation">कन्फर्मेशन</string>
+    <string name="delete_calls_confirmation">चयनित कॉल हटाएं?</string>
+    <string name="file_is_too_big">फ़ाइल बहुत बड़ी है</string>
+    <string name="type_not_supported">टाइप नॉट सपोर्टेड!</string>
+    <string-array name="autodownload_cellular_defaults">
+        <item>0</item>
+    </string-array>
+    <array name="autodownload_roaming_defaults" />
+    <string-array name="autodownload_wifi_defaults">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string name="InterstitialAd">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="MainFolderName">वीडियोएडिटर</string>
+    <string name="VideoCutter">वीडियोकटर</string>
+    <string name="VideoJoiner">वीडियोजॉइनर</string>
+    <string name="qr_error_msg">उपयोगकर्ता कोड मौजूद नहीं है, नए कोड को स्कैन करने के लिए क्यूआर स्कैन क्षेत्र को दबाएं</string>
+    <string name="new_post">नई पोस्ट</string>
+    <string name="write_a_caption">एक शीर्षक लिखो...</string>
+    <string name="tag_people">टैग पीपल</string>
+    <string name="add_location">ऐड लोकेशन</string>
+    <string name="who_can_view_this_post">इस पोस्ट को कौन देख सकता है</string>
+    <string name="public_text">पब्लिक</string>
+    <string name="privacy_settings">प्राइवेसी सेटिंग्स</string>
+    <string name="allow_comments">अलाउ कमैंट्स</string>
+    <string name="share_location">शेयर लोकेशन</string>
+    <string name="create_post">क्रिएट पोस्ट</string>
+    <string name="location_permision_desc">स्थान की अनुमति की अनुमति हमें उपयोगकर्ता के पदों के संदर्भ में उपयोगकर्ता की निष्ठा के बारे में सुनिश्चित करने में सक्षम बनाती है। यह आगे हमारे सबसे बड़े समुदाय को अधिक सुरक्षित और पूरी तरह से सुरक्षित मंच बनाने में हमारी मदद करता है.</string>
+    <string name="make_the_most_of_meest">पूर्णता से</string>
+    <string name="enhance_your_user_experience_by_providing_camera_storage_microphone_amp_location_permission_this_permission_access_allows_user_to_create_share_connect_and_explore_with_the_most_relevant_audience_and_get_a_better_reach_allowing_location_permission_in_the_background_enables_us_to_be_sure_of_user_fidelity_in_terms_of_content_a_user_posts_this_further_helps_us_in_making_our_meest_community_a_more_safe_and_perfectly_secure_platform">प्रदान करके अपने उपयोगकर्ता अनुभव को बढ़ाएं <font color="#ffeeaa"><b><i>कैमरा, स्टोरेज, माइक्रोफोन और लोकेशन</i></b></font>अनुमति। यह अनुमति पहुंच उपयोगकर्ता को सबसे अधिक प्रासंगिक दर्शकों के साथ बनाने, साझा करने, कनेक्ट करने और पता लगाने और बेहतर पहुंच प्रदान करने की अनुमति देती है। </string>
+    <string name="allowing_location_permission_enables_us_to_be_sure_of_user_fidelity_in_terms_of_content_a_user_posts_this_further_helps_us_in_making_our_meest_community_a_more_safe_and_perfectly_secure_platform">की अनुमति दे<font color="#abcdef"><b><i> स्थान की अनुमति</i></b></font> हमें सुनिश्चित करने में सक्षम बनाता है <font color="#abcdef"><b><i>उपयोगकर्ता की निष्ठा</i></b></font> एक उपयोगकर्ता पोस्ट की सामग्री के संदर्भ में। यह आगे हमारे बनाने में मदद करता है <font color="#abcdef"><b><i>MEEST समुदाय</i></b></font>एक अधिक सुरक्षित और पूरी तरह से <font color="#abcdef"><b><i>सुरक्षित</i></b></font> मंच.</string>
+    <string name="coming_soon">कमिंग सून</string>
+    <string name="sensitive_content">सेंसिटिव कंटेंट?</string>
+    <string name="sensitive_content2">सेंसिटिव कंटेंट</string>
+    <string name="no_record_found">कोई रिकॉर्ड नहीं मिला.</string>
+    <string name="nothing_found">नथिंग फाउंड</string>
+    <string name="this_post_may_contain_graphic_or_violent_content">इस पोस्ट में ग्राफिक या हिंसक सामग्री हो सकती है</string>
+    <string name="see_post">पोस्ट देखें</string>
+    <string name="BannerAd" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="nativead" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="ad_attribution" translatable="false">ऐड</string>
+    <string name="AudioCompressor">ऑडियोकंप्रेसर</string>
+    <string name="AudioCutter">ऑडियोकटर</string>
+    <string name="AudioJoiner">ऑडियोजॉइनर</string>
+    <string name="AudioVideoMixer">ऑडियोवीडियोमिक्सर</string>
+    <string name="FastMotionVideo">फास्टमोशनवीडियो</string>
+    <string name="SlowMotionVideo">स्लोमोशनवीडियो</string>
+    <string name="VideoCollage">वीडियोकॉलज</string>
+    <string name="VideoCompressor">वीडियोकंप्रेसर</string>
+    <string name="VideoConverter">वीडियोकनवर्टर</string>
+    <string name="VideoCroper">वीडियोक्रोपेर</string>
+    <string name="VideoMirror">वीडियोमिरर</string>
+    <string name="VideoMute">वीडियोम्यूट</string>
+    <string name="VideoReverse">वीडियोरिवर्स</string>
+    <string name="VideoRotate">वीडियोरोटेट</string>
+    <string name="VideoSplitter">वीडियोस्प्लिटर</string>
+    <string name="VideoToMP3">वीडियोटूMP3</string>
+    <string name="VideoWatermark">वीडियोवॉटरमार्क</string>
+    <string name="alert_ok_button">ओके</string>
+    <string name="alert_title_failure">एरर</string>
+    <string name="app_folder_name2">वीडियोकॉलज</string>
+    <string name="no_sdcard">क्षमा करें, तब तक नहीं चल सकता जब तक कि आपके पास एसडी कार्ड न हो.</string>
+    <string name="sdcard_readonly">क्षमा करें, SD कार्ड केवल-पढ़ने के लिए माउंट किया गया है.</string>
+    <string name="sdcard_shared">क्षमा करें, आपके हैंडसेट को USB डिवाइस के रूप में माउंट किए जाने पर नहीं चल सकता.</string>
+    <string name="shipped_ffmpeg_version">n2.4.2</string>
+    <string name="start_marker">स्टार्ट मार्कर</string>
+    <string name="stop">स्टॉप</string>
+    <string name="too_small_error">एक फ़ाइल को छोटा नहीं बचा सकता है, इसे लंबा करने का प्रयास करें.</string>
+    <string name="write_error">फ़ाइल लिखने में त्रुटि</string>
+    <string name="go_back_title">वापस जाना चाहता हूँ?</string>
+    <string name="sure_close_app">ऐप को बंद करना चाहते हैं?</string>
+    <string name="discard_media">मीडिया को त्यागें?</string>
+    <string name="discard">रद्द करें</string>
+    <string name="keep">रखना</string>
+    <string name="do_you_want_to_save_changes">क्या आप परिवर्तनों को सेव करना चाहते हैं?</string>
+    <string name="horizontal">हॉरिजॉन्टल</string>
+    <string name="chatIntro">मेट मी पर स्विच करें और हमारी मुफ्त चैट और कॉल इंटरफ़ेस का पता लगाएं.</string>
+    <string name="sharePost">अपने फ़ीड पर एक पाठ, चित्र या वीडियो पोस्ट साझा करें.</string>
+    <string name="comingSoon">कमिंग सून!</string>
+    <string name="homeIntro">होमपेज पर जाये</string>
+    <string name="searchIntro">अपने दोस्तों और दूसरों को खोजें.</string>
+    <string name="videoIntro">मेडली पर जाएं और हमारे शॉर्ट वीडियो साझाकरण इंटरफ़ेस का पता लगाएं.</string>
+    <string name="trendingIntro">देखें कि क्या मिस्ट पर ट्रेंड कर रहा है.</string>
+    <string name="notificationIntro">चेक नोटिफिकेशन.</string>
+    <string name="profileIntro">आपकी प्रोफ़ाइल.</string>
+    <string name="createVideoIntro">एक शॉर्ट वीडियो बनाएं और साझा करें.</string>
+    <string name="socialIntro">सामाजिक साझाकरण इंटरफ़ेस पर वापस लौटें और मिस्ट पर अपना फ़ीड देखें.</string>
+    <string name="giftIntro">अपने पसंदीदा रचनाकारों को या उन उपयोगकर्ताओं को उपहार हीरे जिनके वीडियो आपको वास्तव में पसंद हैं.</string>
+    <string name="spinButtonIntro">जो वीडियो आप देख रहे हैं, उसे लाइक करें, कमेंट करें, शेयर करें या रिपोर्ट करें.</string>
+    <string name="qrIntro">उनका अनुसरण करने के लिए अन्य उपयोगकर्ता के क्यूआर कोड को स्कैन करें.</string>
+    <string name="sequels">सीक्वेल्स</string>
+    <string name="Codeexpiresin">में कोड समाप्त हो रहा है</string>
+    <string name="Age_should_be_greater_than_13">आयु 13 से अधिक होनी चाहिए </string>
+    <string name="Join">जॉइन</string>
+    <string name="as">अस</string>
+    <string name="you_on_the_app">आप एप्लिकेशन पर.</string>
+    <string name="Username_is_how_friends_remember">उपयोगकर्ता नाम कैसे दोस्तों को याद है</string>
+    <string name="Username">यूजरनाम</string>
+    <string name="Available_Username">उपयोगकर्ता नाम उपलब्ध है</string>
+    <string name="Create_your_password">अपना पासवर्ड बनाएं</string>
+    <string name="Confirm_Password">पासवर्ड की पुष्टि कीजिये</string>
+    <string name="You_will_receive_a_confirmation_code">आपको एक पुष्टिकरण कोड प्राप्त होगा</string>
+    <string name="in_the_next_few_seconds">अगले कुछ सेकंड में </string>
+    <string name="Enter_Email_or_Mobile_Number">ई-मेल या मोबाइल नंबर दर्ज करें</string>
+    <string name="Code_epires_in">में कोड समाप्त हो रहा है</string>
+    <string name="Click_to_upload_profile_picture_or_Skip">प्रोफाइल पिक्चर अपलोड करने या स्किप करने के लिए क्लिक करें</string>
+    <string name="New_Picture">न्यू पिक्चर</string>
+    <string name="From_your_Camera">अपने कैमरे से</string>
+    <string name="Failed">फेल्ड</string>
+    <string name="Server_Error"> सर्वर एरर </string>
+    <string name="SOME_ERROR"> सम एरर </string>
+    <string name="Coming_Soon"> कमिंग सून </string>
+    <string name="Enter_valid_Email_Mobile_Number">मान्य ईमेल/मोबाइल नंबर दर्ज करें</string>
+    <string name="Mobile_Number_doesn_t_exist">मोबाइल नंबर मौजूद नहीं है</string>
+    <!--    interest next    -->
+    <string name="Please_select_three_or_more_interests">कृपया तीन या अधिक रुचियों का चयन करें</string>
+    <string name="Up">अप</string>
+    <string name="Your_Life">आपका जीवन !</string>
+    <string name="Can_not_Back">वापस नहीं कर सकते </string>
+    <string name="Share_what_makes_you_meestified">साझा करें जो आपको मेस्टिफाइड बनाता है!</string>
+    <!--    Chose Photo next    -->
+    <string name="My_activity">माय एक्टिविटी</string>
+    <string name="My_Bookmarks">माय बुकमार्क्स</string>
+    <string name="Insights">इनसाइट्स</string>
+    <string name="Settings">सेटिंग्स</string>
+    <string name="Invite_friends">इनवाइट फ्रेंड्स</string>
+    <string name="Ad_Manager">विज्ञापन प्रबंधक</string>
+    <string name="Help">हेल्प</string>
+    <string name="Logout">लॉगआउट</string>
+    <string name="Change_Language">भाषा बदलें</string>
+    <string name="English">इंग्लिश</string>
+    <string name="Change_Password">पासवर्ड बदलें</string>
+    <string name="Notification">नोटिफिकेशन</string>
+    <string name="Media_Autodownload">मीडिया ऑटोडाउनलोड</string>
+    <string name="Block_List">ब्लॉक सूची</string>
+    <string name="Theme_Change">थीम बदलें</string>
+    <string name="Something_went_wrong">कुछ गलत हो गया!</string>
+    <string name="Something_went_wrong_please_try_again_later">कुछ गलत हो गया है। कृपया बाद में दोबारा प्रयास करें</string>
+    <string name="Please_enable_location_services_first">कृपया पहले स्थान सेवाओं को सक्षम करें</string>
+    <string name="Permission_Denied_Goto_settings_and_allow_permission">अनुमति नहीं मिली! गोटो सेटिंग्स और अनुमति देते हैं!</string>
+    <string name="Permission_Denied">अनुमति नहीं मिली</string>
+    <string name="Your_GPS_seems_to_be_disabled_do_you_want_to_enable_it">आपका GPS अक्षम होने लगता है, क्या आप इसे सक्षम करना चाहते हैं?</string>
+    <string name="Varies_with_device">उपकरण के साथ बदलता रहता है</string>
+    <string name="Update">अपडेट</string>
+    <string name="New_Version_of_the_Meest_App_is_available_please_update">मिस्ट एप्प का नया संस्करण उपलब्ध है, कृपया अपडेट करें</string>
+    <string name="Caption_This">इसका शीर्षक दें...!!!</string>
+    <string name="Comments">कमैंट्स</string>
+    <string name="Shares">शेयर्स</string>
+    <string name="Like">पसंद</string>
+    <string name="Comment">कमेंट</string>
+    <string name="min_ago">18 मिनट पहले</string>
+    <string name="Share_link">लिंक शेयर करें</string>
+    <string name="user2345">user2345</string>
+    <string name="I_love_this_place_to_visit_again">मुझे यह जगह फिर से आने के लिए पसंद है</string>
+    <string name="Unmute">अनम्यूट</string>
+    <string name="Mute">म्यूट</string>
+    <string name="Turn_Off_Post_Notifications">पोस्ट नोटिफिकेशन बंद करें</string>
+    <string name="Turn_On_Post_Notifications">पोस्ट नोटिफिकेशन चालू करें</string>
+    <string name="Link_copied">लिंक कॉपीड</string>
+    <string name="Checkout_this_awesome_app">इस कमाल एप्लिकेशन को चेकआउट करें</string>
+    <string name="others">अन्य</string>
+    <string name="Share_Post">शेयर पोस्ट</string>
+    <string name="Report">रिपोर्ट</string>
+    <string name="Copy_Link">कॉपी लिंक</string>
+    <string name="Share_to">शेयर तो...</string>
+    <string name="Unfollow">अनफ़ॉलो</string>
+    <string name="Chat">चैट</string>
+    <string name="Liked">पसंद किया</string>
+    <string name="Post_notification_turned">पोस्ट नोटिफिकेशन हो गया</string>
+    <string name="off">ऑफ</string>
+    <string name="on">ऑन</string>
+    <string name="Edit_Profile">प्रोफ़ाइल संपादित करें</string>
+    <string name="Edit_Cover_Photo">कवर फ़ोटो संपादित करें</string>
+    <string name="Edit">एडिट</string>
+    <string name="First_Name">प्रथम नाम</string>
+    <string name="Last_Name">अंतिम नाम</string>
+    <string name="Bio">बायो</string>
+    <string name="Email_Address">ईमेल पता</string>
+    <string name="Phone_Number">फ़ोन नंबर</string>
+    <string name="Enter_Mobile">मोबाइल दर्ज करें</string>
+    <string name="Save_Changes">परिवर्तनों को सुरक्षित करें</string>
+    <string name="ok">ठीक है</string>
+    <string name="loading_json">loading.json</string>
+    <string name="Account_Verification_request_sent_successfully">खाता सत्यापन अनुरोध सफलतापूर्वक भेजा गया</string>
+    <string name="Updated_Successfully">सफलतापूर्वक अपडेट किया गया!</string>
+    <string name="na">"N/A"</string>
+    <string name="please_enter_minimum_3_character">कृपया न्यूनतम 3 वर्ण दर्ज करें</string>
+    <string name="Bio_cant_be_greater_than_50_characters">जैव 50 से अधिक वर्ण नहीं हो सकते</string>
+    <string name="Profile">प्रोफ़ाइल</string>
+    <string name="Posts">पोस्ट्स</string>
+    <string name="follower">फ़ॉलोर</string>
+    <string name="No_record_Found">कोई रिकॉर्ड नहीं मिला.</string>
+    <string name="no_internet">बिना इंटरनेट के</string>
+    <string name="No_more_data">और कोई डेटा नहीं </string>
+    <string name="Waiting">वेटिंग</string>
+    <string name="Follow">फॉलो</string>
+    <string name="Thinking">विचारधारा...</string>
+    <string name="Search">सर्च</string>
+    <string name="Trending">ट्रेंडिंग</string>
+    <string name="Top">टॉप</string>
+    <string name="No_Active_internet_connection">कोई सक्रिय इंटरनेट कनेक्शन नहीं</string>
+    <string name="Retry">पुन: प्रयास करें</string>
+    <string name="Exit">एग्जिट</string>
+    <string name="No_Data_Found">डाटा प्राप्त नहीं हुआ</string>
+    <string name="Data_not_found">डेटा नहीं मिला</string>
+    <string name="Video_not_found">वीडियो नहीं मिला</string>
+    <string name="Hashtag_not_found">हैशटैग नहीं मिला</string>
+    <string name="Report_Post">रिपोर्ट पोस्ट</string>
+    <string name="Report_Video">रिपोर्ट वीडियो</string>
+    <string name="Delete">डिलीट</string>
+    <string name="Do_you_want_to_delete_this_post">क्या आप इस पोस्ट को हटाना चाहते हैं ?</string>
+    <string name="Users">यूज़र्स</string>
+    <string name="Hashtag">हैशटैग</string>
+    <string name="media">मीडिया</string>
+    <string name="docs">डॉक्स</string>
+    <string name="links">लिंक्स</string>
+    <string name="typing">टाइपिंग...</string>
+    <string name="what_you_like_to_do">आपको क्या करना पसन्द है?</string>
+    <string name="write_a_post">एक पोस्ट लिखें</string>
+    <string name="photos">फोटोस</string>
+    <string name="videos">वीडियोस</string>
+    <string name="feeling_activity">फीलिंग/एक्टिविटी</string>
+    <string name="tag_location">टैग लोकेशन</string>
+    <string name="go_live">गो लाइव</string>
+    <string name="my_activity">माय एक्टिविटी</string>
+    <string name="no_activity_found">कोई गतिविधि नहीं मिली</string>
+    <string name="manage">मैनेज</string>
+    <string name="manage_ads">मैनेज एड्स</string>
+    <string name="manage_campaign">मैनेज कैंपेन</string>
+    <string name="i_love_this_place_to_visit_again">मुझे यह जगह फिर से आने के लिए पसंद है</string>
+    <string name="like">लाइक</string>
+    <string name="comment">कमेंट</string>
+    <string name="share">शेयर</string>
+    <string name="view_insights">व्यू इनसाइट्स</string>
+    <string name="boost_post">पोस्ट को बढ़ावा दें</string>
+    <string name="and">एंड</string>
+    <string name="ad_manager">विज्ञापन प्रबंधक</string>
+    <string name="account_overview">अकाउंट ओवरव्यू</string>
+    <string name="total_spent">टोटल स्पेंट</string>
+    <string name="total_leads">टोटल लीडस्</string>
+    <string name="rs">Rs.</string>
+    <string name="home_feed">होम फ़ीड</string>
+    <string name="video_feed">वीडियो फ़ीड</string>
+    <string name="ads_listing">विज्ञापन सूचीकरण</string>
+    <string name="completed">कम्प्लीटड</string>
+    <string name="running">रनिंग</string>
+    <string name="draft">ड्राफ्ट</string>
+    <string name="no_ad_completed">कोई विज्ञापन पूरा नहीं हुआ</string>
+    <string name="no_ad_running">कोई विज्ञापन नहीं चल रहा है</string>
+    <string name="my_bookmarks">माय बुकमार्क्स</string>
+    <string name="no_collection_found">नो कलेक्शन फाउंड</string>
+    <string name="content">कंटेंट</string>
+    <string name="Activity">गतिविधि</string>
+    <string name="type_your_feedback">अपनी फीडबैक लिखें......</string>
+    <string name="john_do">जॉन डू</string>
+    <string name="reply">रिप्लाई</string>
+    <string name="unfollow">अनफ़ॉलो</string>
+    <string name="waiting">वेटिंग</string>
+    <string name="follow_back">फॉलो बैक</string>
+    <string name="qr_saved">क्यूआर सफलतापूर्वक फ़ोन पर सहेजा गया</string>
+    <string name="how_are_you_feeling">तुम कैसा महसूस कर रहे हो</string>
+    <string name="tag_a_location">टैग अ लोकेशन</string>
+    <string name="write_a_text_here">यहां एक टेक्स्ट लिखें:</string>
+    <string name="choose_background">चूज़ बैकग्राउंड</string>
+    <string name="font_colour">फ़ॉन्ट रंग</string>
+    <string name="Public">पब्लिक</string>
+    <string name="Private">प्राइवेट</string>
+    <string name="friends">फ्रेंड्स</string>
+    <string name="anybody_can_view">(कोई भी देख सकता है)</string>
+    <string name="only_friends_can_view">(केवल फ्रेंड्स ही देख सकते हैं)</string>
+    <string name="only_you_can_view">(केवल आप देख सकते हैं)</string>
+    <string name="please_enter_text">कृपया टेक्स्ट दर्ज करें</string>
+    <string name="Posted_successfully">सफलतापूर्वक पोस्ट किया गया</string>
+    <string name="comming_soon">कमिंग सून</string>
+    <string name="writetext">राइटटेक्स्ट</string>
+    <string name="feelingpost">फीलिंगपोस्ट</string>
+    <string name="addtask">ऐड टास्क</string>
+    <string name="edittask">एडिट टास्क</string>
+    <string name="task">टास्क</string>
+    <string name="please_enter_title">कृपया टाइटल दर्ज करें</string>
+    <string name="please_enter_task">कृपया टास्क दर्ज करें</string>
+    <string name="please_select_time">कृपया समय का चयन करें</string>
+    <string name="please_choose_future_date_time"><![CDATA[कृपया भविष्य की तारीख और समय चुनें]]></string>
+    <string name="pm">pm</string>
+    <string name="am">am</string>
+    <string name="add_task">ऐड टास्क</string>
+    <string name="add_a_title">ऐड अ टाइटल</string>
+    <string name="add_a_task">ऐड अ टास्क</string>
+    <string name="date">डेट</string>
+    <string name="time">टाइम</string>
+    <string name="select_particapent">प्रतिभागियों का चयन करें</string>
+    <string name="could_not_open_Battery_Optimization_setting">बैटरी ऑप्टिमाइज़ेशन सेटिंग नहीं खोल सका</string>
+    <string name="groups">ग्रुप्स</string>
+    <string name="calls">कॉल्स</string>
+    <string name="reminder">रिमाइंडर</string>
+    <string name="settings">सेटिंग्स</string>
+    <string name="me">में</string>
+    <string name="chats_calls_groups">चैट, कॉल, ग्रुप्स</string>
+    <string name="help">हेल्प</string>
+    <string name="faq_contact_us_privacy_policy_app_info">सामान्य प्रश्न, हमसे संपर्क करें, गोपनीयता नीति, ऐप जानकारी</string>
+    <string name="invite_a_friend">इनवाइट अ फ्रेंड</string>
+    <string name="name">नाम</string>
+    <string name="your_name">तुम्हारा नाम</string>
+    <string name="phone_number">फ़ोन नंबर</string>
+    <string name="about">अबाउट</string>
+    <string name="write_something_here">यहाँ कुछ लिखो</string>
+    <string name="update">अपडेट</string>
+    <string name="profile">प्रोफाइल</string>
+    <string name="language">लैंग्वेज</string>
+    <string name="backup">बैकअप</string>
+    <string name="notification">नोटिफिकेशन</string>
+    <string name="help_center">सहायता केंद्र</string>
+    <string name="contact_us">संपर्क करें</string>
+    <string name="terms_and_privacy_policy">शर्तें और गोपनीयता नीति</string>
+    <string name="licences">लाइसेंस</string>
+    <string name="invite_friends">इनवाइट फ्रेंड्स</string>
+    <string name="Item_1_selected">आइटम 1 सिलेक्टेड</string>
+    <string name="Item_2_selected">आइटम 2 सिलेक्टेड</string>
+    <string name="Item_3_selected">आइटम 3 सिलेक्टेड</string>
+    <string name="last_seen_today">आज अंतिम बार देखा</string>
+    <string name="UnMute_Notification">अनम्यूट नोटिफिकेशन</string>
+    <string name="Unreport">अनरपोर्ट</string>
+    <string name="clear_chat_sucessfull">चैट को सफलतापूर्वक साफ़ करें!</string>
+    <string name="please_select">कृपया चुने!</string>
+    <string name="unblock">अनब्लॉक</string>
+    <string name="block">ब्लॉक</string>
+    <string name="you_really_want_to_block_nthis_person">आप वास्तव में इस व्यक्ति को ब्लॉक करना चाहते हैं ?</string>
+    <string name="cancel">कैंसिल</string>
+    <string name="block_sucessfully">सफलतापूर्वक ब्लॉक करें!</string>
+    <string name="copy">कॉपी</string>
+    <string name="copied_to_clipboard">क्लिपबोर्ड पर नकल</string>
+    <string name="hold_and_long_press_to_record">रिकॉर्ड रखने के लिए लंबे समय तक दबाए रखें</string>
+    <string name="phone_is_locked">फोन बंद है</string>
+    <string name="Enter_Message">संदेश दर्ज करें</string>
+    <string name="comming_soomn">\" कमिंग सून \"</string>
+    <string name="message">संदेश</string>
+    <string name="you_deleted_this_message">आपने यह संदेश हटा दिया</string>
+    <string name="this_message_was_deleted">यह संदेश हटा दिया गया था</string>
+    <string name="add_to_contacts">संपर्क के खाते में जोड़ दे</string>
+    <string name="you_delete_this_message">आपने यह संदेश हटा दिया</string>
+    <string name="particapent_list">\"प्रतिभागियों: \"</string>
+    <string name="enter_group_name_here">यहां ग्रुप का नाम दर्ज करें</string>
+    <string name="Group_created">ग्रुप क्रीएटिड</string>
+    <string name="type_group_subject_here">यहां ग्रुप सब्जेक्ट टाइप करें...</string>
+    <string name="participants">प्रतिभागियों:</string>
+    <string name="create_group">ग्रुप बनाएँ</string>
+    <string name="new_group">नया ग्रुप</string>
+    <string name="Response_error_404">रिस्पांस एरर 404</string>
+    <string name="Chat_cleared_successfully">चैट सफलतापूर्वक साफ़ हो गई</string>
+    <string name="you_really_want_to_unblock_nthis_person">आप वास्तव में इस व्यक्ति को अनलॉक करना चाहते हैं ?</string>
+    <string name="you_really_want_to_delete_nthis_chat">आप वास्तव में इस चैट को हटाना चाहते हैं ?</string>
+    <string name="confirm">पुष्टि करें</string>
+    <string name="delete_for_everyone">सबके लिए डिलीट</string>
+    <string name="delete_for_me">मेरे लिए हटाएँ</string>
+    <string name="open_conversation">ओपन कन्वर्सेशन</string>
+    <string name="snooze_conversation">स्नूज़ कन्वर्सेशन</string>
+    <string name="mark_as_priority">प्राथमिकता के रूप में चिह्नित करें</string>
+    <string name="share_conversation">शेयर बातचीत</string>
+    <string name="add_a_member">ऐड अ मेंबर</string>
+    <string name="tab_here_for_group_info">ग्रुप जानकारी के लिए यहां टैब करें</string>
+    <string name="you_can_t_send_messages_to_this_group_because_you_re_no_longer_a_participant">आप इस समूह को संदेश नहीं भेज सकते क्योंकि आप भागीदार नहीं हैं.</string>
+    <string name="enter_message">संदेश दर्ज करें</string>
+    <string name="no_wallpaper">कोई वॉलपेपर नहीं</string>
+    <string name="solid_color">सॉलिड कलर</string>
+    <string name="clear_chat">क्लियर चैट</string>
+    <string name="export_chat">एक्सपोर्ट चैट</string>
+    <string name="add_shortcut">ऐड शॉर्टकट</string>
+    <string name="are_you_sure_you_want_to_clear_nmessages_in_this_chat">क्या आप वाकई इस चैट में संदेश साफ़ करना चाहते हैं?</string>
+    <string name="delete_media_in_this_chat">इस चैट में मीडिया को हटा दें</string>
+    <string name="clear">क्लियर</string>
+    <string name="sent">सेंत </string>
+    <string name="Start_call">कॉल शुरू करें</string>
+    <string name="Conference_voice_call">कॉन्फ्रेंस वॉयस कॉल</string>
+    <string name="with">विद</string>
+    <string name="person">पर्सन</string>
+    <string name="Calling_">कॉलिंग... </string>
+    <string name="select_multiple_contact">एकाधिक संपर्क का चयन करें</string>
+    <string name="media_links_and_docs">मीडिया, लिंक और डॉक्स</string>
+    <string name="wallpaper">वॉलपेपर</string>
+    <string name="browse_other_docs">अन्य डॉक्स ब्राउज़ करें...</string>
+    <string name="what_are_you_doing">क्या कर रहे हो?</string>
+    <string name="what_are_you_eating">आप क्या खा रहे हैं?</string>
+    <string name="where_are_you_going">तुम कहाँ जा रहे हो?</string>
+    <string name="a_birthday">अ बर्थडे</string>
+    <string name="what_are_you_watching">आप क्या देख रहे हैं??</string>
+    <string name="final_destination">फाइनल डेस्टिनेशन</string>
+    <string name="movie">(मूवी)</string>
+    <string name="unable_to_find_current_location">वर्तमान स्थान खोजने में असमर्थ</string>
+    <string name="Story_posted_successfully">कहानी सफलतापूर्वक पोस्ट की गई</string>
+    <string name="current_location">करंट लोकेशन</string>
+    <string name="search_location">सर्च लोकेशन</string>
+    <string name="next">नेक्स्ट</string>
+    <string name="Deleted_Successfully">डिलीटड सक्सेस्स्फुल्ली</string>
+    <string name="Exit_Successful">एग्जिट सक्सेसफुल</string>
+    <string name="Remove_successfully">रिमूव सक्सेस्स्फुल्ली</string>
+    <string name="you_really_want_to_delete_nthis_comment">आप वास्तव में \n टिप्पणी हटाना चाहते हैं ?</string>
+    <string name="Delete_group">डिलीट ग्रुप</string>
+    <string name="Group_delete_Successful">ग्रुप डिलीट सक्सेसफुल</string>
+    <!-- New Text-->
+    <string name="aadhar_verification">आधार सत्यापन</string>
+    <string name="aadhar_number">आधार संख्या</string>
+    <string name="upload_aadhar_front_side_image">आधार फ्रंट साइड इमेज अपलोड करें</string>
+    <string name="upload_aadhar_back_side_image">आधार बैक साइड इमेज अपलोड करें</string>
+    <string name="verify">सत्यापित करें</string>
+    <string name="your_account_verified_nsuccesfully">आपका खाता सत्यापित \n सफलतापूर्वक</string>
+    <string name="okay">अच्छा जी</string>
+    <string name="if_you_spend_rs200_we_estimate_2400_3000_people_will_see_your_ads">यदि आप रु .200 खर्च करते हैं, तो हमारा अनुमान है कि 2400 - 3000 लोग आपके विज्ञापन देखेंगे</string>
+    <string name="lifetime">जीवन काल</string>
+    <string name="spent">खर्च की</string>
+    <string name="people_reached">लोग पहुंच गए</string>
+    <string name="see_more">और देखें</string>
+    <string name="no_ads_created_yet">अभी तक कोई विज्ञापन नहीं बनाया गया</string>
+    <string name="create_a_new_ads_to_reach_more_people">अधिक लोगों तक पहुंचने के लिए एक नया विज्ञापन बनाएं</string>
+    <string name="create_new_ads">नए विज्ञापन बनाएँ</string>
+    <string name="ads_preview">विज्ञापन पूर्वावलोकन</string>
+    <string name="learn_more">और अधिक जानें</string>
+    <string name="pay_amount">राशि का भुगतान करें</string>
+    <string name="sticker">नाम-पत्र</string>
+    <string name="you_are_video_calling_with">आप के साथ वीडियो कॉलिंग कर रहे हैं</string>
+    <string name="blocked_accounts">अवरुद्ध खाते</string>
+    <string name="no_blocked_accounts">कोई अवरुद्ध खाते नहीं</string>
+    <string name="ad_preview">विज्ञापन पूर्वावलोकन</string>
+    <string name="lincence">लाइसेंस</string>
+    <string name="qr_code">क्यूआर कोड</string>
+    <string name="scan">स्कैन</string>
+    <string name="terms_n_condition">शर्तें एन हालत</string>
+    <string name="describe_your_video">अपने वीडियो का वर्णन करें</string>
+    <string name="insights">इनसाइट्स</string>
+    <string name="engagement">सगाई</string>
+    <string name="post_engagement">बाद में सगाई</string>
+    <string name="view">दर्शन करना</string>
+    <string name="post_share">पोस्ट शेयर</string>
+    <string name="post_comments">टिप्पणियां भेजें</string>
+    <string name="create_ad">विज्ञापन बनाना</string>
+    <string name="upload_video">विडियो को अॅॅपलोड करें</string>
+    <string name="video_limit_minimum_10sec_maximum_1minute">वीडियो की सीमा न्यूनतम 10 सेकंड अधिकतम 1 मिनट</string>
+    <string name="select_the_button_type">बटन प्रकार का चयन करें</string>
+    <string name="heading">शीर्षक</string>
+    <string name="enter_ads_heading">विज्ञापन शीर्षक दर्ज करें</string>
+    <string name="sub_heading">सब हेडिंग</string>
+    <string name="enter_ads_sub_heading">विज्ञापन दर्ज करें उप शीर्षक</string>
+    <string name="delete_my_account">मेरा एकाउंट हटा दो</string>
+    <string name="deleting_your_account_will_delete_your_account_info_profile_photo_groups_message_history">आपका खाता हटाने से आपकी खाता जानकारी, प्रोफ़ाइल फ़ोटो, समूह, संदेश इतिहास हट जाएगा।</string>
+    <string name="enter_your_mobile_number">अपना मोबाइल नंबर दर्ज करें</string>
+    <string name="website_link">वेबसाइट की लिंक</string>
+    <string name="feeling">अनुभूति</string>
+    <string name="edit_profile">प्रोफ़ाइल संपादित करें</string>
+    <string name="edit_cover_photo">कवर फ़ोटो संपादित करें</string>
+    <string name="edit">संपादित करें</string>
+    <string name="bio">जैव</string>
+    <string name="e_mail_address">ईमेल पता</string>
+    <string name="gender">लिंग</string>
+    <string name="birthday">जन्मदिन</string>
+    <string name="save_changes">परिवर्तनों को सुरक्षित करें</string>
+    <string name="duration_0">समयांतराल : 0</string>
+    <string name="top_questions">शीर्ष प्रश्न</string>
+    <string name="followings">निम्नलिखित</string>
+    <string name="select_media">मीडिया का चयन करें</string>
+    <string name="_5_followers_active_now">5 अनुयायी अब सक्रिय हैं</string>
+    <string name="start">शुरू</string>
+    <string name="filters">फिल्टर</string>
+    <string name="see_a_few_top_posts_each_week">प्रत्येक सप्ताह कुछ शीर्ष पोस्ट देखें</string>
+    <string name="you_are_voice_calling_with">आप के साथ आवाज कर रहे हैं</string>
+    <string name="like_details">विवरण की तरह</string>
+    <string name="calling">बुला</string>
+    <string name="welcome_to_second_activity">दूसरी गतिविधि में आपका स्वागत है</string>
+    <string name="chart_view">चार्ट दृश्य</string>
+    <string name="list_view">लिस्ट व्यू</string>
+    <string name="accounts">हिसाब किताब</string>
+    <string name="last_seen">अंतिम बार देखा गया</string>
+    <string name="everyone">सब लोग</string>
+    <string name="profile_photo">खाते की फोटो</string>
+    <string name="contact">संपर्क करें</string>
+    <string name="status">स्थिति</string>
+    <string name="contacts">संपर्क</string>
+    <string name="pay_amp_publish"><![CDATA[Pay & Publish]]></string>
+    <string name="trending">रुझान</string>
+    <string name="create_campaign">अभियान बनाएँ</string>
+    <string name="type_some_text_here">कुछ पाठ यहाँ टाइप करें ...</string>
+    <string name="media_management">मीडिया प्रबंधन</string>
+    <string name="select_button_type">बटन प्रकार चुनें</string>
+    <string name="add_another_media">एक और मीडिया जोड़ें</string>
+    <string name="mute_notification">मूक अधिसूचना</string>
+    <string name="block_this_user">इस उपयोगकर्ता को ब्लॉक करें</string>
+    <string name="report_contact">संपर्क रिपोर्ट</string>
+    <string name="card_number">कार्ड नंबर</string>
+    <string name="enter_card_number">कार्ड नंबर दर्ज करें</string>
+    <string name="expiration_date">समाप्ति तिथि</string>
+    <string name="security_code">सुरक्षा कोड</string>
+    <string name="card_holder">कार्ड धारक</string>
+    <string name="add_card">कार्ड जोड़ें</string>
+    <string name="add_payment_method">भुगतान विधि जोड़ें</string>
+    <string name="debit_card">डेबिट कार्ड</string>
+    <string name="credit_card">क्रेडिट कार्ड</string>
+    <string name="upi">यू पी आई</string>
+    <string name="paypal">पे पाल</string>
+    <string name="boost">बढ़ावा</string>
+    <string name="post_boost_paymet_details">पोस्ट भुगतान विवरण</string>
+    <string name="add_new_payment_method">नई भुगतान विधि जोड़ें</string>
+    <string name="payment_method">भुगतान का तरीका</string>
+    <string name="if_you_spend_10_we_estimate_2400_5000_people_nwill_see_your_pofile_or_post">यदि आप $ 10 खर्च करते हैं, तो हमारा अनुमान है कि 2400 - 5000 लोग \n आपकी प्रोफ़ाइल या पोस्ट देखेंगे</string>
+    <string name="boost_your_post">अपनी पोस्ट को बढ़ाएँ</string>
+    <string name="remove_this_notification">यह अधिसूचना निकालें</string>
+    <string name="thanks_you_re_all_set">Thanks you</string>
+    <string name="we_got_your_reply_thank_you_for_your_interest_in_our_business_set_up_package_one_of_your_team_members_will_be_in_touch_with_you_via_phone_and_or_email_within_24_business_hours">हमें आपका जवाब मिल गया! हमारे व्यवसाय सेट अप पैकेज में आपकी रुचि के लिए धन्यवाद। आपकी टीम के सदस्य आपके व्यवसाय के घंटे के भीतर फोन और / या ईमेल के माध्यम से आपसे संपर्क करेंगे।</string>
+    <string name="you_really_want_to_delete_nthis_ad">आप वास्तव में इस विज्ञापन को हटाना चाहते हैं?</string>
+    <string name="appnamen">मेडले</string>
+    <string name="byclikingthis">इस रिपोर्ट बटन पर क्लिक करके, आप इस बात से सहमत होते हैं कि आप हमारे द्वारा या सामग्री अपलोडर द्वारा की जा सकने वाली सभी प्रक्रिया के सभी उत्तरदायित्व ले रहे हैं।</string>
+    <string name="ad_title">विज्ञापन शीर्षक</string>
+    <string name="mobile">मोबाइल</string>
+    <string name="registered_leads">रजिस्टर्ड लीड्स</string>
+    <string name="ad_details">विज्ञापन विवरण</string>
+    <string name="change_password">पासवर्ड बदलें</string>
+    <string name="set_your_new_password_for_your_account_so">अपने खाते के लिए अपना नया पासवर्ड सेट करें</string>
+    <string name="you_can_login_and_access_all_the_features">आप सभी सुविधाओं को लॉगिन और एक्सेस कर सकते हैं</string>
+    <string name="that_meest_app_have">कि मिलो अनुप्रयोग है।</string>
+    <string name="select_contact">संपर्क चुनें</string>
+    <string name="documents">दस्तावेज़</string>
+    <string name="live_location">लाइव लोकेशन</string>
+    <string name="you_really_want_to_clear_n_chat_this_person">आप वास्तव में इस व्यक्ति को साफ़ करना चाहते हैं?</string>
+    <string name="create_story">कहानी बनाएँ</string>
+    <string name="text">टेक्स्ट</string>
+    <string name="successfully_unblocked">सफलतापूर्वक अनब्लॉक किया गया</string>
+    <string name="send_feedback">प्रतिक्रिया भेजें</string>
+    <string name="report_spam_or_abuse">अप्रासंगिक अथवा दुष्प्रयोग सन्देश के लिए प्रतिवेदन करें</string>
+    <string name="account_will_be_shown_as">खाते के रूप में दिखाया जाएगा?</string>
+    <string name="you_really_want_to_block_nthis_person_">आप वास्तव में इस व्यक्ति को ब्लॉक करना चाहते हैं?</string>
+    <string name="show_newly_downloaded_media_nfrom_this_chat_in_your_phone_s_ngallery">अपने फ़ोन की \n गैलरी में इस चैट से नए डाउनलोड किए गए मीडिया दिखाएँ?</string>
+    <string name="default_yes">डिफ़ॉल्ट (हाँ)</string>
+    <string name="remove_notification">अधिसूचना निकालें</string>
+    <string name="creato_nsuccessfully">सफलत पूर्वक निर्माता को भेजे गए सिक्के!</string>
+    <string name="you_want_to_unfollow">आप अनफॉलो करना चाहते हैं</string>
+    <string name="allow_duet">युगल की अनुमति दें</string>
+    <string name="allow_trio">तीनों को अनुमति दें</string>
+    <string name="allow_download">डाउनलोड करने दें</string>
+    <string name="preparing">तैयार कर रहे हैं...</string>
+    <string name="you_really_want_to_delete_this_notification">क्या आप वास्तव में इस सूचना को हटाना चाहते हैं?</string>
+    <string name="report_video">रिपोर्ट वीडियो</string>
+    <string name="select">चुनते हैं</string>
+    <string name="prefer_not_n_to_disclose">खुलासा करने के लिए \n को प्राथमिकता दें</string>
+    <string name="save">सहेजें</string>
+    <string name="add_participants">प्रतिभागियों को जोड़ें</string>
+    <string name="battery_info">यह सुनिश्चित करने के लिए कि सभी संदेशों को सही ढंग से वितरित किया गया है, आपको बैटरी ऑप्टिमाइज़ेशन को अक्षम करना होगा। ठीक क्लिक करने के बाद, चुनें और न ही अनुकूलन पर क्लिक करें</string>
+    <string name="group_icon">समूह चिह्न</string>
+    <string name="leave_group">समूह छोड़ दें</string>
+    <string name="are_you_sure_you_want_to_remove_this_user">क्या आप वाकई इस उपयोगकर्ता को निकालना चाहते हैं?</string>
+    <string name="your_valuable_feedback">आपकी बहुमूल्य प्रतिक्रिया</string>
+    <string name="send">संदेश</string>
+    <string name="how_are_you_feeling_">तुम्हे कैसा लग रहा है?</string>
+    <string name="for_chatting_you_need_to_follow_someone_and_make_sure_they_follow_you_back">चैटिंग के लिए आपको किसी का अनुसरण करने की आवश्यकता होती है। और सुनिश्चित करें कि वे आपके पीछे आते हैं।</string>
+    <string name="search_followers">खोज अनुयायी</string>
+    <string name="search_following">खोज के बाद</string>
+    <string name="campaign_purpose">अभियान: उद्देश्य</string>
+    <string name="nothing_to_show">दिखाने के लिए कुछ भी नहीं</string>
+    <string name="post_insights">पोस्ट इनसाइट्स</string>
+    <string name="discovery">खोज</string>
+    <string name="account_reached">खाता पहुंच गया</string>
+    <string name="search_here">यहां तलाश करो...</string>
+    <string name="no_data_available">कोई डेटा उपलब्ध नहीं है</string>
+    <string name="last_week">पिछले सप्ताह</string>
+    <string name="last_month">पिछले महीने</string>
+    <string name="all_photos">सभी तस्वीरें</string>
+    <string name="music_tracks">म्यूजिक ट्रैक्स</string>
+    <string name="dream">सपना</string>
+    <string name="delete_post">पोस्ट को हटाएं</string>
+    <string name="block_user">खंड उपयोगकर्ता</string>
+    <string name="remove">हटाना</string>
+    <string name="set_a_password">एक पासवर्ड सेट करें</string>
+    <string name="your_password_should_be_at_least_8">आपका पासवर्ड कम से कम 8 होना चाहिए</string>
+    <string name="characters_long">लंबे पात्रों</string>
+    <string name="show_newly_downloaded_media_nfrom_this_chat_in_your_phone_s_n_gallery">अपनी फ़ोन गैलरी में इस चैट से नए डाउनलोड किए गए मीडिया \n दिखाएं?</string>
+    <string name="change_image">चित्र को बदलें</string>
+    <string name="group_name">समूह नाम</string>
+    <string name="description">विवरण</string>
+    <string name="group_description">समूह विवरण</string>
+    <string name="view_participants">प्रतिभागियों को देखें</string>
+    <string name="fun_with_friends_and_explore_nnew_places">मित्रों के साथ मौज-मस्ती करें और \n नई जगहें देखें</string>
+    <string name="_46_following">निम्नलिखित</string>
+    <string name="ad_name">विज्ञापन का नाम</string>
+    <string name="activate">सक्रिय</string>
+    <string name="are_you_sure_you_want_to_leave_this_group">क्या आप वाकई इस समूह को छोड़ना चाहते हैं?</string>
+    <string name="sub_title">उप शीर्षक</string>
+    <string name="_1_min_ago">1 मिनट पहले</string>
+    <string name="confirm_your_account">अपने खाते की पुष्टि करें</string>
+    <string name="password">कुंजिका</string>
+    <string name="enter_your_password">अपना पासवर्ड डालें</string>
+    <string name="terms_and_conditions">नियम और शर्तें</string>
+    <string name="preparing_video">वीडियो तैयार कर रहा है</string>
+    <string name="welcome_back">वापसी पर स्वागत है</string>
+    <string name="login_to_your_existing_accounts_to_access_n_all_the_features_in_meest_app">Meest App में सभी सुविधाओं तक पहुँचने के लिए अपने मौजूदा खातों में लॉगिन करें।</string>
+    <string name="location_enable">स्थान सक्षम करें</string>
+    <string name="send_sucessfull">सफलतापूर्वक भेजें!</string>
+    <string name="Sent_Successfull">सफलतापूर्वक भेज दिया..</string>
+    <string name="Insufficient_Balance">अपर्याप्त शेषराशि !</string>
+    <string name="Diamonds_sent_to_the_creator_successfully">सफलतापूर्वक निर्माता को भेजे गए हीरे!</string>
+    <string name="Diamonds_sent_to_the_creatornsuccessfully">सफलतापूर्वक निर्माता को भेजे गए हीरे!</string>
+    <string name="Add_some_diamonds_toyour_wallet">सफलतापूर्वक निर्माता को भेजे गए हीरे ।।</string>
+    <string name="add_now">अभी जोड़ें</string>
+    <string name="header_name">हैडर का नाम</string>
+    <string name="enter_filename">फ़ाइल नाम दर्ज करें</string>
+    <string name="post_to_other_apps">अन्य ऐप्स पर पोस्ट करें</string>
+    <string name="archive">पुरालेख</string>
+    <string name="copy_link">प्रतिरूप जोड़ना</string>
+    <string name="share_to">साझा...</string>
+    <string name="turn_off_commenting">टिप्पणी करना बंद करें</string>
+    <string name="select_time">समय का चयन करें</string>
+    <string name="apply_filter">फिल्टर लागू करें</string>
+    <string name="make_meest_more_secure">मेस्ट को और अधिक सुरक्षित बनाएं</string>
+    <string name="no_calls">एकभी कॊल नही</string>
+    <string name="you_didn_t_made_any_conversation_yet_nplease_select_username">आपने अभी तक कोई वार्तालाप नही किया है। \n कृपया उपयोगकर्ता नाम चुनें।</string>
+    <string name="no_conversation">कोई बातचीत नहीं</string>
+    <string name="you_didn_t_made_any_conversation_yetplease_select_username">आपने अभी तक कोई वार्तालाप नही किया है। \n कृपया उपयोगकर्ता नाम चुनें।</string>
+    <string name="you_didn_t_made_any_conversationyetplease_select_username">आपने अभी तक कोई वार्तालाप नही किया है। \ _ कृपया उपयोगकर्ता नाम चुनें।</string>
+    <string name="no_task">न पूछें</string>
+    <string name="you_didn_t_made_any_conversation_yetselect_username">आपने अभी तक कोई वार्तालाप नही किया है। \n कृपया उपयोगकर्ता नाम चुनें।</string>
+    <string name="if_you_spend_10_we_estimate_2400_5000_people_nwill_seeyour_pofile_or_post">यदि आप $ 10 खर्च करते हैं, तो हम 2400 - 5000 लोगों का अनुमान लगाते हैं और आपकी प्रोफ़ाइल या पोस्ट देखेंगे</string>
+    <string name="objective">उद्देश्य</string>
+    <string name="select_your_objective">अपने उद्देश्य का चयन करें</string>
+    <string name="duration">समयांतराल</string>
+    <string name="select_date">तारीख़ चुनें</string>
+    <string name="daily_budget">दैनिक बजट</string>
+    <string name="select_audience">ऑडियंस का चयन करें</string>
+    <string name="total_amount">कुल राशि</string>
+    <string name="create_amazing_story">अद्भुत कहानी बनाएँ</string>
+    <string name="photo_to_video">फोटो से वीडियो</string>
+    <string name="go">जाओ</string>
+    <string name="who_can_view_this_video">इस वीडियो को कौन देख सकता है</string>
+    <string name="discover_people">लोग खोजते हैं</string>
+    <string name="all_suggestions">सभी सुझाव</string>
+    <string name="select_music">संगीत का चयन करें</string>
+    <string name="addetails">विज्ञापन विवरण</string>
+    <string name="visit">यात्रा</string>
+    <string name="in_this_post">इस पोस्ट में</string>
+    <string name="add_sound">ध्वनि जोड़ें</string>
+    <string name="speed_noff">गति \n बंद</string>
+    <string name="enter_id">आईडी दर्ज करें</string>
+    <string name="enter_pass">पास दर्ज करें</string>
+    <string name="forgot_password">पासवर्ड भूल गए</string>
+    <string name="log_in">लॉग इन करें</string>
+    <string name="new_user_register_here">नया उपयोगकर्ता? यहां रजिस्टर करें</string>
+    <string name="successfully">सफलतापूर्वक</string>
+    <string name="send_password">पासवर्ड भेजें</string>
+    <string name="theme_change">थीम बदलें</string>
+    <string name="peoples">लोग</string>
+    <string name="hashtags"># हैशटैग</string>
+    <string name="original">मूल</string>
+    <string name="fit">फ़िट</string>
+    <string name="select_file_formate">फ़ाइल प्रारूप का चयन करें:</string>
+    <string name="split_video_into_parts">भागों में विभाजित वीडियो:</string>
+    <string name="unknown">अनजान</string>
+    <string name="music_format">संगीत प्रारूप</string>
+    <string name="bit_rates">बिट दर</string>
+    <string name="text_opacity">पाठ अपारदर्शिता:</string>
+    <string name="background_color">पीछे का रंग</string>
+    <string name="background_opacity">पृष्ठभूमि की अस्पष्टता:</string>
+    <string name="text_shadow">पाठ की छाया</string>
+    <string name="type_here">यहा लिखो...</string>
+    <string name="join_golive">गोलिव से जुड़ें</string>
+    <string name="audio_call">ऑडियो कॉल</string>
+    <string name="no_nwellpaper">नियॉन वॉलपेपर</string>
+    <string name="start_typing">टाइपिंग शुरू करें</string>
+    <string name="Done">समाज-सम्मत</string>
+    <string name="Username_not_available_please_check_suggestion">उपयोगकर्ता नाम उपलब्ध नही है कृपया सुझाव की जाँच करें</string>
+    <string name="Username_should_be_minimum_6_characters">उपयोगकर्ता नाम न्यूनतम 6 वर्ण होना चाहिए।</string>
+    <string name="Enter_Username">उपयोगकर्ता नाम दर्ज करें</string>
+    <string name="group_details_update">समूह विवरण सफलतापूर्वक अद्यतन</string>
+    <string name="tap_to_add_status_update">स्थिति अद्यतन जोड़ने के लिए टैप करें</string>
+    <string name="viewed_by_0">द्वारा देखा गया</string>
+    <string name="slect_another_file">किसी अन्य फ़ाइल का चयन करें</string>
+    <string name="enter_otp">ओटीपी दर्ज करें</string>
+    <string name="new_version_update"><![CDATA[<b>प्रिय उपयोगकर्ता</b>, Meest App का नया संस्करण उपलब्ध है, कृपया अपडेट करें]]></string>
+    <string name="camera">कैमरा</string>
+    <string name="gallery">गेलरी</string>
+    <string name="reset_password">पासवर्ड रीसेट</string>
+    <string name="to_login_and_enjoy_all_the_features">लॉगिन और सभी सुविधाओं का आनंद लें।</string>
+    <string name="are_you_sure">इस वीडियो को छोड़ दें?</string>
+    <string name="discard_changes">परिवर्तनों को निरस्त करें</string>
+    <string name="Please_enter_caption">कृपया कैप्शन दर्ज करें</string>
+    <string name="Select_Friends_to_tag_them">उन्हें टैग करने के लिए मित्र चुनें</string>
+    <string name="Incoming">आने वाली</string>
+    <string name="outgoing">बाहर जाने वाला</string>
+    <string name="Chat_deleted_Successfully">चैट को सफलतापूर्वक हटा दिया गया</string>
+    <string name="Sequels">अगली कड़ियों</string>
+    <string name="Creating_room">कमरा बनाना</string>
+    <string name="Please_enter_comment_text">कृपया टिप्पणी पाठ दर्ज करें</string>
+    <string name="Like_success">सफलता की तरह</string>
+    <string name="Unlike">भिन्न</string>
+    <string name="Comment_added_successfully">टिप्पणी सफलतापूर्वक जोड़ी गई</string>
+    <string name="User_joined_success">उपयोगकर्ता सफलता में शामिल हो गए</string>
+    <string name="Unlike_success">सफलता के विपरीत</string>
+    <string name="Flash_is_not_available_in_your_device">आपके डिवाइस में फ्लैश उपलब्ध नही है </string>
+    <string name="Some_error_occurred_while_changing_flash_status_please_try_again_later">फ़्लैश स्थिति बदलते समय कुछ त्रुटि हुई, कृपया बाद में पुनः प्रयास करें</string>
+    <string name="Some_error_occurred_while_changing_camera_please_try_again_later">कैमरा बदलते समय कुछ त्रुटि हुई, कृपया बाद में पुनः प्रयास करें</string>
+    <string name="Something_went_wrong_while_processing_your_request_please_try_again_late">आपके अनुरोध को संसाधित करते समय कुछ गलत हुआ, कृपया देर से फिर से प्रयास करें</string>
+    <string name="Sticker_applied">स्टीकर लगाया</string>
+    <string name="The_file_has_been_saved_to_your_Gallery">फ़ाइल को आपकी गैलरी में सहेजा गया है।</string>
+    <string name="Discard_current_sound_and_recording_progress">वर्तमान ध्वनि और रिकॉर्डिंग प्रगति को छोड़ दें?</string>
+    <string name="Add_sound">ध्वनि जोड़ें</string>
+    <string name="Permissions_required_for_creating_video">वीडियो बनाने के लिए अनुमतियां आवश्यक हैं</string>
+    <string name="started_recording">रिकॉर्डिंग शुरू कर दी।</string>
+    <string name="Please_Wait">कृपया प्रतीक्षा करें</string>
+    <string name="Video_added_to_draft_successfully">ड्राफ्ट सफलतापूर्वक जोड़ा गया</string>
+    <string name="Video_posted_successfully">वीडियो सफलतापूर्वक पोस्ट किया गया</string>
+    <string name="Save_as_a_draft_successfully">ड्राफ्ट के रूप में सफलतापूर्वक सहेजें!</string>
+    <string name="Error_in_payment">भुगतान में त्रुटि: </string>
+    <string name="Payment_successfully_done">भुगतान सफलतापूर्वक किया गया!</string>
+    <string name="Please_enter_old_password">कृपया पुराना पासवर्ड डालें।</string>
+    <string name="Password_should_8_to_15_characters">पासवर्ड में 8 से 15 अक्षर होने चाहिए।</string>
+    <string name="Password_mismatched">पासवर्ड बेमेल!।</string>
+    <string name="Password_Updated_Successfully">पासवर्ड सफलतापूर्वक अपडेट किया गया।</string>
+    <string name="Bio_can_be_greater_than_50_characters">जैव 50 से अधिक वर्ण नही हो सकते</string>
+    <string name="error_connect">त्रुटि कनेक्ट करें</string>
+    <string name="Wallpaper_selected">वॉलपेपर चुना गया</string>
+    <string name="Select_a_File_to_Upload">अपलोड करने के लिए एक फ़ाइल का चयन करें</string>
+    <string name="Please_install_a_File_Manager">कृपया एक फ़ाइल प्रबंधक स्थापित करें।</string>
+    <string name="Filter_applied">फ़िल्टर लागू किया गया</string>
+    <string name="Can_play_this_audio_try_another_one">यह ऑडियो नही चलाया जा सकता, एक और प्रयास करें</string>
+    <string name="User_unblocked_successfully">उपयोगकर्ता अनब्लॉक सफलतापूर्वक!</string>
+    <string name="User_Blocked">उपयोगकर्ता को अवरोधित किया गया</string>
+    <string name="enter_pin">पिन दर्ज करें</string>
+    <string name="Resent_OTP">ओटीपी पुनः भेजें</string>
+    <string name="Email_address_does_not_exists">ईमेल पता मौजूद नहीं है</string>
+    <string name="Invalid_OTP">अमान्य ओटीपी</string>
+    <string name="Request_Accepted">अनुरोध स्वीकार</string>
+    <string name="Request_Rejected">रिक्वेस्ट रिजेक्ट</string>
+    <string name="Group_members_not_found">समूह के सदस्य नहीं मिले !!</string>
+    <string name="Reported_successfully">सफलतापूर्वक रिपोर्ट की गई</string>
+    <string name="is_video_calling_you">वीडियो कॉलिंग है</string>
+    <string name="is_audio_calling_you">ऑडियो आपको बुला रहा है</string>
+    <string name="No_image_found">कोई छवि नहीं मिली</string>
+    <string name="No_videos_found">कोई वीडियो नहीं मिले</string>
+    <string name="Report_Ad">रिपोर्ट विज्ञापन</string>
+    <string name="Hide_Ad">विज्ञापन छिपाएं</string>
+    <string name="there_is_no_Hashtag">हैशटैग नहीं है</string>
+    <string name="replies">जवाब</string>
+    <string name="Already_In_Call">पहले से ही कॉल में</string>
+    <string name="Call_now">अब कॉल करें</string>
+    <string name="Select_Video">वीडियो का चयन करें</string>
+    <string name="Diamond_Added_To_Your_Wallet_Successfully">डायमंड आपके बटुए को सफलतापूर्वक जोड़ा गया ।।</string>
+    <string name="Sec">सेकंड</string>
+    <string name="My_Audio">मेरा ऑडियो</string>
+    <string name="Audio_Player_Not_Supproting">ऑडियो प्लेयर सपोर्टिंग नहीं</string>
+    <string name="delete_Ringtone">रिंगटोन हटाएं</string>
+    <string name="My_Video">मेरा विडियो</string>
+    <string name="Video_Player_Not_Supproting">वीडियो प्लेयर सपोर्टिंग नहीं</string>
+    <string name="Are_you_sure_you_want_to_delete_this_file">क्या आप द्वारा इस फाइल को हटाया जाना सुनिश्चित है ?</string>
+    <string name="Please_Enter_Something">कृपया कुछ दर्ज करें !!</string>
+    <string name="Please_Enter_Password">कृपया कुछ दर्ज करें !!</string>
+    <string name="Invalid_password">अवैध पासवर्ड</string>
+    <string name="Comments_are_not_allowed">टिप्पणियों की अनुमति नहीं है</string>
+    <string name="Password_Invalid">पासवर्ड अमान्य!</string>
+    <string name="Report_User">उपयोगकर्ता को रिपोर्ट करें</string>
+    <string name="could_not_open_Battery_Optimization_Settings">बैटरी ऑप्टिमाइज़ेशन सेटिंग नहीं खोल सका</string>
+    <string name="No_post_available">कोई पोस्ट उपलब्ध नहीं है</string>
+    <string name="Please_grant_required_permissions">कृपया आवश्यक अनुमति प्रदान करें।</string>
+    <string name="Error_Creating_Video">वीडियो बनाने में त्रुटि</string>
+    <string name="Video_not_support">वीडियो का समर्थन नहीं</string>
+    <string name="Speaker_On">स्पीकर ऑन</string>
+    <string name="Speaker_OFF">स्पीकर ऑफ</string>
+    <string name="Ringging">बज रहा है ...।</string>
+    <string name="endPoint">अंत बिंदु</string>
+    <string name="Mute_OFF">म्यूट ऑफ</string>
+    <string name="Mute_on">पर म्यूट करें</string>
+    <string name="You_cant_follow_yourself">आप स्वयं का अनुसरण नहीं कर सकते</string>
+    <string name="Report_on_own_post_not_allowed">स्वयं पोस्ट पर रिपोर्ट की अनुमति नहीं है</string>
+    <string name="Please_select_background_image">कृपया पृष्ठभूमि छवि का चयन करें</string>
+    <string name="Please_accept_permission">कृपया अनुमति स्वीकार करें</string>
+    <string name="nPlease_Fill_Videos_or_Images">कृपया वीडियो या चित्र भरें ...</string>
+    <string name="Musi_Allowed_to_Video_Collage_Only">संगीत वीडियो कॉलेज को अनुमति केवल ...</string>
+    <string name="Collage_Created_Successfully">कोलाज सफलतापूर्वक बनाया गया !!!</string>
+    <string name="Video_Collage_Maker">वीडियो कोलाज़ निर्माता</string>
+    <string name="Make_sure_video_is_longer_than_5s">सुनिश्चित करें कि वीडियो 5s से अधिक लंबा है ...!</string>
+    <string name="Do_you_really_wan_to_go_back">क्या आप वास्तव में वापस जाना चाहते हैं?</string>
+    <string name="Please_add_Video_or_Image">कृपया वीडियो या छवि जोड़ें ...</string>
+    <string name="you_can_only_select_30_peoples">आप केवल 30 लोगों का चयन कर सकते हैं</string>
+    <string name="video_uploaded">वीडियो सफलतापूर्वक अपलोड किया गया</string>
+    <string name="myaccountfragmentvideo">मेरा खाता विखंडन वीडियो</string>
+    <string name="Notifications_Turned_On">सूचनाएं चालू हुईं</string>
+    <string name="Notifications_Turned_off">सूचनाएं बंद हो गईं</string>
+    <string name="You_have_to_login_first">आप पहले तो लॉग इन करें</string>
+    <string name="Device_not_supported">उपकरण समर्थित नहीं</string>
+    <string name="FFmpeg_is_not_supported_on_your_device">आपके डिवाइस पर समर्थित नहीं है</string>
+    <string name="Select_Sound">ध्वनि का चयन करें</string>
+    <string name="Hey_There_Check_This_Meest_Profile">अरे वहाँ, यह मिलो प्रोफ़ाइल की जाँच करें</string>
+    <string name="sharing">बंटवारे</string>
+    <string name="Content_launch">सामग्री लॉन्च</string>
+    <string name="This_Profile_Is_Amazing_On_Meest_App">सामग्री लॉन्च</string>
+    <string name="Video_Uploaded_Successfully">वीडियो सफलतापूर्वक अपलोड किया गया</string>
+    <string name="started_following_you">आपको फॉलो करना शुरू किया</string>
+    <string name="Liked_your_post">आपकी पोस्ट पसंद आई</string>
+    <string name="commented_on_your_post">आपकी पोस्ट पर टिप्पणी की!</string>
+    <string name="liked_your_comment">आपकी टिप्पणी पसंद आई!</string>
+    <string name="replied_to_your_Comment">आपकी टिप्पणी का जवाब दिया!</string>
+    <string name="Tagged_you_in_a_post">आपको एक पोस्ट में टैग किया गया है!</string>
+    <string name="Liked_Your_Video_Post">आपका वीडियो पोस्ट पसंद आया!</string>
+    <string name="is_live_now"> अब जीना है!</string>
+    <string name="messaged_you">तुम्हें मैसेज किया</string>
+    <string name="commented_on_your_Comment">आपकी टिप्पणी पर टिप्पणी की!</string>
+    <string name="Uploading">अपलोडिंग...</string>
+    <string name="Enter_Mobile_Number_or_Email_Address">मोबाइल नंबर या ईमेल पता दर्ज करें</string>
+    <string name="Enter_Valid_Phone_Number">मान्य फोन नंबर दर्ज करें</string>
+    <string name="Mobile_does_not_exist">मान्य फोन नंबर दर्ज करें</string>
+    <string name="Incoming_video_call">इनकमिंग वीडियो कॉल</string>
+    <string name="Downloading">डाउनलोड</string>
+    <string name="Call_Notifications">सूचनाएं बुलाएं</string>
+    <string name="my_profile">प्रोफ़ाइल</string>
+    <string name="no_location_data_provided">कोई स्थान डेटा प्रदान नहीं किया गया</string>
+    <string name="service_not_available">सेवाएं उपलब्ध नहीं हैं</string>
+    <string name="invalid_lat_long_used">अमान्य अक्षांश देशांतर का उपयोग किया जाता है</string>
+    <string name="no_address_found">कोई पता नहीं मिला</string>
+    <string name="choose_nearest_location">निकटतम स्थान चुनें</string>
+    <string name="set_your_location">अपना स्थान तय करे</string>
+    <string name="please_wait">कृपया प्रतीक्षा करें...</string>
+    <string name="location_not_available">स्थान उपलब्ध नहीं है</string>
+    <string name="device_not_supported">आपकी डिवाइस समर्थित नहीं है</string>
+    <string name="unable_to_create_map">नक्शा बनाने में असमर्थ</string>
+    <string name="location_not_found">स्थान नहीं मिला, अपना डिवाइस स्थान चालू करें (GPS)</string>
+    <string name="retry">पुन: प्रयास</string>
+    <string name="please_check_your_internet_connection">अपने इंटरनेट कनेक्शन की जाँच करें और पुन: प्रयास करें।</string>
+    <string name="sorry">माफ़ करना</string>
+    <string name="write_a_comment">टिप्पणी लिखें</string>
+    <string name="Please_enter_correct_mobile_number_or_email_address">कृपया सही मोबाइल नंबर या ईमेल पता दर्ज करें</string>
+    <string name="Please_enter_correct_email_address">कृपया सही ईमेल पता दर्ज करें</string>
+    <string name="invalid_mobile_number">अमान्य मोबाइल नंबर</string>
+    <string name="Email_address_exists">ईमेल पता मौजूद है</string>
+    <string name="Mobile_number_exists">मोबाइल नंबर मौजूद है</string>
+    <string name="Enter_Confirm_Password">पासवर्ड की पुष्टि करें</string>
+    <string name="Password_must_contain_at_least_Characters">पासवर्ड में कम से कम 8-15 \ वर्ण होने चाहिए</string>
+    <string name="Password_doesn_t_match">पासवर्ड मेल नहीं खाता</string>
+    <string name="Please_Enable_Location">कृपया स्थान सक्षम करें</string>
+    <string name="enter_post_caption">कृपया कैप्शन दर्ज करें।...</string>
+    <string name="post_shared_wall">सफलतापूर्वक दीवार पर साझा किया गया।</string>
+    <string name="post_uploaded">प्रतिक्रिया सफलतापूर्वक भेजें।</string>
+    <string name="privacy_only">एकांत</string>
+    <string name="meestapp_conference_voice_call"> ग्रुप वॉयस कॉल</string>
+    <string name="declines">गिरावट आती है</string>
+    <string name="search_hint">खोज...</string>
+    <string name="Replies">जवाब</string>
+    <string name="de">de</string>
+    <string name="new_password">नया पासवर्ड</string>
+    <string name="share_post_to_wall">दीवार पर पोस्ट साझा करें</string>
+    <string name="user_fragment">Home Fragment</string>
+    <string name="group_fragment">Sport Fragment</string>
+    <string name="calling_fragment">Movie Fragment</string>
+    <string name="api_key">AIzaSyDfcsomOyYAs3BXBUD58CpE0WulwtSz8Ms</string>
+    <string name="login">लॉग इन करें</string>
+    <string name="signup">साइन अप करें</string>
+    <string name="learnhowwe">जानें कैसे हम</string>
+    <string name="processyourdatainour">हमारे में अपने डेटा को संसाधित करें</string>
+    <string name="welcome">स्वागत हे</string>
+    <string name="to">तक</string>
+    <string name="chooseyourlanguage">अपनी भाषा चुनिए</string>
+    <string name="continues">जारी रखें</string>
+    <string name="express">अपने वीडियो में पसंदीदा संगीत जोड़ें ...</string>
+    <string name="add">अपने वीडियो में पसंदीदा संगीत जोड़ें</string>
+    <string name="chat">अपने दोस्तों के साथ चैट और वीडियो कॉल करें</string>
+    <string-array name="post_type">
+        <item>सार्वजनिक</item>
+        <item>मामूली सिपाही</item>
+    </string-array>
+
+    <string-array name="Countries">
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Antigua and Barbuda</item>
+        <item>Argentina</item>
+        <item>Armenia</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Azerbaijan</item>
+        <item>Bahamas</item>
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Barbados</item>
+        <item>Belarus</item>
+        <item>Belgium</item>
+        <item>Belize</item>
+        <item>Benin</item>
+        <item>Bhutan</item>
+        <item>Bolivia</item>
+        <item>Bosnia and Herzegovina</item>
+        <item>Botswana</item>
+        <item>Brazil</item>
+        <item>Brunei</item>
+        <item>Bulgaria</item>
+        <item>Burkina Faso</item>
+        <item>Burundi</item>
+        <item>Cabo Verde</item>
+        <item>Cambodia</item>
+        <item>Cameroon</item>
+        <item>Canada</item>
+        <item>Central African Republic</item>
+        <item>Chad</item>
+        <item>Chile</item>
+        <item>China</item>
+        <item>Colombia</item>
+        <item>Comoros</item>
+        <item>Congo</item>
+        <item>Costa Rica</item>
+        <item>Cote d\'Ivoire</item>
+        <item>Croatia</item>
+        <item>Cuba</item>
+        <item>Cyprus</item>
+        <item>Czech Republic</item>
+        <item>Denmark</item>
+        <item>Djibouti</item>
+        <item>Dominica</item>
+        <item>Dominican Republic</item>
+        <item>Ecuador</item>
+        <item>Egypt</item>
+        <item>El Salvador</item>
+        <item>Equatorial Guinea</item>
+        <item>Eritrea</item>
+        <item>Estonia</item>
+        <item>Ethiopia</item>
+        <item>Fiji</item>
+        <item>Finland</item>
+        <item>France</item>
+        <item>Gabon</item>
+        <item>Gambia</item>
+        <item>Georgia</item>
+        <item>Germany</item>
+        <item>Ghana</item>
+        <item>Greece</item>
+        <item>Grenada</item>
+        <item>Guatemala</item>
+        <item>Guinea</item>
+        <item>Guinea-Bissau</item>
+        <item>Guyana</item>
+        <item>Haiti</item>
+        <item>Honduras</item>
+        <item>Hungary</item>
+        <item>Iceland</item>
+        <item>India</item>
+        <item>Indonesia</item>
+        <item>Iran</item>
+        <item>Iraq</item>
+        <item>Ireland</item>
+        <item>Israel</item>
+        <item>Italy</item>
+        <item>Jamaica</item>
+        <item>Japan</item>
+        <item>Jordan</item>
+        <item>Kazakhstan</item>
+        <item>Kenya</item>
+        <item>Kiribati</item>
+        <item>Kosovo</item>
+        <item>Kuwait</item>
+        <item>Kyrgyzstan</item>
+        <item>Laos</item>
+        <item>Latvia</item>
+        <item>Lebanon</item>
+        <item>Lesotho</item>
+        <item>Liberia</item>
+        <item>Libya</item>
+        <item>Liechtenstein</item>
+        <item>Lithuania</item>
+        <item>Luxembourg</item>
+        <item>Macedonia</item>
+        <item>Madagascar</item>
+        <item>Malawi</item>
+        <item>Malaysia</item>
+        <item>Maldives</item>
+        <item>Mali</item>
+        <item>Malta</item>
+        <item>Marshall Islands</item>
+        <item>Mauritania</item>
+        <item>Mauritius</item>
+        <item>Mexico</item>
+        <item>Micronesia</item>
+        <item>Moldova</item>
+        <item>Monaco</item>
+        <item>Mongolia</item>
+        <item>Montenegro</item>
+        <item>Morocco</item>
+        <item>Mozambique</item>
+        <item>Myanmar</item>
+        <item>Namibia</item>
+        <item>Nauru</item>
+        <item>Nepal</item>
+        <item>Netherlands</item>
+        <item>New Zealand</item>
+        <item>Nicaragua</item>
+        <item>Niger</item>
+        <item>Nigeria</item>
+        <item>North Korea</item>
+        <item>Norway</item>
+        <item>Oman</item>
+        <item>Pakistan</item>
+        <item>Palau</item>
+        <item>Palestine</item>
+        <item>Panama</item>
+        <item>Papua New Guinea</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Philippines</item>
+        <item>Poland</item>
+        <item>Portugal</item>
+        <item>Qatar</item>
+        <item>Romania</item>
+        <item>Russia</item>
+        <item>Rwanda</item>
+        <item>Saint Kitts and Nevis</item>
+        <item>Saint Lucia</item>
+        <item>Saint Vincent and the Grenadines</item>
+        <item>Samoa</item>
+        <item>San Marino</item>
+        <item>Sao Tome and Principe</item>
+        <item>Saudi Arabia</item>
+        <item>Senegal</item>
+        <item>Serbia</item>
+        <item>Seychelles</item>
+        <item>Sierra Leone</item>
+        <item>Singapore</item>
+        <item>Slovakia</item>
+        <item>Slovenia</item>
+        <item>Solomon Islands</item>
+        <item>Somalia</item>
+        <item>South Africa</item>
+        <item>South Korea</item>
+        <item>South Sudan</item>
+        <item>Spain</item>
+        <item>Sri Lanka</item>
+        <item>Sudan</item>
+        <item>Suriname</item>
+        <item>Swaziland</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>Syria</item>
+        <item>Taiwan</item>
+        <item>Tajikistan</item>
+        <item>Tanzania</item>
+        <item>Thailand</item>
+        <item>Timor-Leste</item>
+        <item>Togo</item>
+        <item>Tonga</item>
+        <item>Trinidad and Tobago</item>
+        <item>Tunisia</item>
+        <item>Turkey</item>
+        <item>Turkmenistan</item>
+        <item>Tuvalu</item>
+        <item>Uganda</item>
+        <item>Ukraine</item>
+        <item>United Arab Emirates</item>
+        <item>United Kingdom</item>
+        <item>United States of America</item>
+        <item>Uruguay</item>
+        <item>Uzbekistan</item>
+        <item>Vanuatu</item>
+        <item>Vatican City</item>
+        <item>Venezuela</item>
+        <item>Vietnam</item>
+        <item>Yemen</item>
+        <item>Zambia</item>
+        <item>Zimbabwe</item>
+    </string-array>
+    <string name="settings_name" translatable="false">Settings</string>
+    <string name="start_description">Click the button below to initiate a WebRTC video call.</string>
+    <string name="join_description">Go to https://appr.tc/ to join the room just created during the step above, using its random room ID displayed in this app.</string>
+    <string name="disconnect_call">कॉल डिस्कनेक्ट करें</string>
+    <string name="favorites">पसंदीदा</string>
+    <string name="no_favorites">कोई पसंदीदा नहीं</string>
+    <string name="invalid_url_title">असामान्य यूआरएल</string>
+    <string name="invalid_url_text">Tवह यूआरएल या आपके द्वारा दर्ज किए गए कमरे के नाम के परिणामस्वरूप एक अमान्य यूआरएल</string>
+    <string name="channel_error_title">संपर्क त्रुटि</string>
+    <string name="connecting_to">कनेक्ट करने के लिए</string>
+    <string name="missing_url">घातक त्रुटि: कनेक्ट करने के लिए लापता यूआरएल।</string>
+    <string name="camera2_texture_only_error">Camera2 केवल बनावट को कैप्चर करने का समर्थन करता है। या तो Camera2 को अक्षम करें या विकल्पों में बनावट को कैप्चर करने में सक्षम हों।</string>
+    <string name="switch_camera">फ्रंट / बैक कैमरा स्विच करें</string>
+    <string name="capture_format_change_text">कैप्चर फॉर्मेट बदलने के लिए स्लाइड</string>
+    <string name="muted">मंदित</string>
+    <string name="toggle_debug">टॉगल डिबग दृश्य</string>
+    <string name="toggle_mic">टॉगल माइक्रोफोन पर/बंद</string>
+    <string name="action_settings">सेटिंग्स</string>
+    <string name="action_loopback">लूपबैक कनेक्शन</string>
+    <string name="connect_description">कमरे से कनेक्ट करें</string>
+    <string name="add_favorite_description">पसंदीदा जोड़ें</string>
+    <string name="format_description">%1$dx%2$d @ %3$d fps</string>
+    <!-- Settings strings. -->
+    <string name="pref_room_key">room_preference</string>
+    <string name="pref_room_list_key">room_list_preference</string>
+    <string name="pref_videosettings_key">video_settings_key</string>
+    <string name="pref_videosettings_title">WebRTC video settings.</string>
+    <string name="pref_videocall_key">videocall_preference</string>
+    <string name="pref_videocall_title">Video call.</string>
+    <string name="pref_videocall_dlg">Enable video in a call.</string>
+    <string name="pref_videocall_default">true</string>
+    <string name="pref_screencapture_key">screencapture_preference</string>
+    <string name="pref_screencapture_title">Use screencapture.</string>
+    <string name="pref_screencapture_default">false</string>
+    <string name="pref_camera2_key">camera2_preference</string>
+    <string name="pref_camera2_title">Use Camera2.</string>
+    <string name="pref_camera2_default">true</string>
+    <string name="pref_camera2_not_supported">Not supported on this device.</string>
+    <string name="pref_resolution_key">resolution_preference</string>
+    <string name="pref_resolution_title">Video resolution.</string>
+    <string name="pref_resolution_dlg">Enter AppRTC local video resolution.</string>
+    <string name="pref_resolution_default">Default</string>
+    <string name="pref_fps_key">fps_preference</string>
+    <string name="pref_fps_title">Camera fps.</string>
+    <string name="pref_fps_dlg">Enter local camera fps.</string>
+    <string name="pref_fps_default">Default</string>
+    <string name="pref_capturequalityslider_key">capturequalityslider_preference</string>
+    <string name="pref_capturequalityslider_title">Capture quality slider.</string>
+    <string name="pref_capturequalityslider_dlg">Enable slider for changing capture quality.</string>
+    <string name="pref_capturequalityslider_default">false</string>
+    <string name="pref_maxvideobitrate_key">maxvideobitrate_preference</string>
+    <string name="pref_maxvideobitrate_title">Maximum video bitrate setting.</string>
+    <string name="pref_maxvideobitrate_dlg">Maximum video bitrate setting.</string>
+    <string name="pref_maxvideobitrate_default">Default</string>
+    <string name="pref_maxvideobitratevalue_key">maxvideobitratevalue_preference</string>
+    <string name="pref_maxvideobitratevalue_title">Video encoder maximum bitrate.</string>
+    <string name="pref_maxvideobitratevalue_dlg">Enter video encoder maximum bitrate in kbps.</string>
+    <string name="pref_maxvideobitratevalue_default">1700</string>
+    <string name="pref_videocodec_key">videocodec_preference</string>
+    <string name="pref_videocodec_title">Default video codec.</string>
+    <string name="pref_videocodec_dlg">Select default video codec.</string>
+    <string name="pref_videocodec_default">VP8</string>
+    <string name="pref_hwcodec_key">hwcodec_preference</string>
+    <string name="pref_hwcodec_title">Video codec hardware acceleration.</string>
+    <string name="pref_hwcodec_dlg">Use hardware accelerated video codec (if available).</string>
+    <string name="pref_hwcodec_default">true</string>
+    <string name="pref_capturetotexture_key">capturetotexture_preference</string>
+    <string name="pref_capturetotexture_title">Video capture to surface texture.</string>
+    <string name="pref_capturetotexture_dlg">Capture video to textures (if available).</string>
+    <string name="pref_capturetotexture_default">true</string>
+    <string name="pref_flexfec_key">flexfec_preference</string>
+    <string name="pref_flexfec_title">Codec-agnostic Flexible FEC.</string>
+    <string name="pref_flexfec_dlg">Enable FlexFEC.</string>
+    <string name="pref_flexfec_default">false</string>
+    <string name="pref_value_enabled">Enabled</string>
+    <string name="pref_value_disabled">Disabled</string>
+    <string name="pref_audiosettings_key">audio_settings_key</string>
+    <string name="pref_audiosettings_title">WebRTC audio settings.</string>
+    <string name="pref_startaudiobitrate_key">startaudiobitrate_preference</string>
+    <string name="pref_startaudiobitrate_title">Audio bitrate setting.</string>
+    <string name="pref_startaudiobitrate_dlg">Audio bitrate setting.</string>
+    <string name="pref_startaudiobitrate_default">Default</string>
+    <string name="pref_startaudiobitratevalue_key">startaudiobitratevalue_preference</string>
+    <string name="pref_startaudiobitratevalue_title">Audio codec bitrate.</string>
+    <string name="pref_startaudiobitratevalue_dlg">Enter audio codec bitrate in kbps.</string>
+    <string name="pref_startaudiobitratevalue_default">32</string>
+    <string name="pref_audiocodec_key">audiocodec_preference</string>
+    <string name="pref_audiocodec_title">Default audio codec.</string>
+    <string name="pref_audiocodec_dlg">Select default audio codec.</string>
+    <string name="pref_audiocodec_default">OPUS</string>
+    <string name="pref_noaudioprocessing_key">audioprocessing_preference</string>
+    <string name="pref_noaudioprocessing_title">Disable audio processing.</string>
+    <string name="pref_noaudioprocessing_dlg">Disable audio processing pipeline.</string>
+    <string name="pref_noaudioprocessing_default">false</string>
+    <string name="pref_aecdump_key">aecdump_preference</string>
+    <string name="pref_aecdump_title">Create aecdump.</string>
+    <string name="pref_aecdump_dlg">Enable diagnostic audio recordings.</string>
+    <string name="pref_aecdump_default">false</string>
+    <string name="pref_opensles_key">opensles_preference</string>
+    <string name="pref_opensles_title">Use OpenSL ES for audio playback.</string>
+    <string name="pref_opensles_dlg">Use OpenSL ES for audio playback.</string>
+    <string name="pref_opensles_default">false</string>
+    <string name="pref_disable_built_in_aec_key">disable_built_in_aec_preference</string>
+    <string name="pref_disable_built_in_aec_title">Disable hardware AEC.</string>
+    <string name="pref_disable_built_in_aec_dlg">Disable hardware AEC.</string>
+    <string name="pref_disable_built_in_aec_default">false</string>
+    <string name="pref_built_in_aec_not_available">Hardware AEC is not available</string>
+    <string name="pref_disable_built_in_agc_key">disable_built_in_agc_preference</string>
+    <string name="pref_disable_built_in_agc_title">Disable hardware AGC.</string>
+    <string name="pref_disable_built_in_agc_dlg">Disable hardware AGC.</string>
+    <string name="pref_disable_built_in_agc_default">false</string>
+    <string name="pref_built_in_agc_not_available">Hardware AGC is not available</string>
+    <string name="pref_disable_built_in_ns_key">disable_built_in_ns_preference</string>
+    <string name="pref_disable_built_in_ns_title">Disable hardware NS.</string>
+    <string name="pref_disable_built_in_ns_dlg">Disable hardware NS.</string>
+    <string name="pref_disable_built_in_ns_default">false</string>
+    <string name="pref_built_in_ns_not_available">Hardware NS is not available</string>
+    <string name="pref_enable_level_control_key">enable_level_control_preference</string>
+    <string name="pref_enable_level_control_title">Enable level control.</string>
+    <string name="pref_enable_level_control_default">false</string>
+    <string name="pref_disable_webrtc_agc_and_hpf_key">disable_webrtc_agc_and_hpf_preference</string>
+    <string name="pref_disable_webrtc_agc_and_hpf_title">Disable WebRTC AGC and HPF.</string>
+    <string name="pref_disable_webrtc_agc_default">false</string>
+    <string name="pref_speakerphone_key">speakerphone_preference</string>
+    <string name="pref_speakerphone_title">Speakerphone.</string>
+    <string name="pref_speakerphone_dlg">Speakerphone.</string>
+    <string name="pref_speakerphone_default">auto</string>
+    <string name="pref_datasettings_key">data_settings_key</string>
+    <string name="pref_datasettings_title">WebRTC data channel settings.</string>
+    <string name="pref_enable_datachannel_key">enable_datachannel_preference</string>
+    <string name="pref_enable_datachannel_title">Enable datachannel.</string>
+    <string name="pref_enable_datachannel_default" translatable="false">true</string>
+    <string name="pref_ordered_key">ordered_preference</string>
+    <string name="pref_ordered_title">Order messages.</string>
+    <string name="pref_ordered_default" translatable="false">true</string>
+    <string name="pref_data_protocol_key">Subprotocol</string>
+    <string name="pref_data_protocol_title">Subprotocol.</string>
+    <string name="pref_data_protocol_dlg">Enter subprotocol.</string>
+    <string name="pref_data_protocol_default" translatable="false"></string>
+    <string name="pref_negotiated_key">negotiated_preference</string>
+    <string name="pref_negotiated_title">Negotiated.</string>
+    <string name="pref_negotiated_default" translatable="false">false</string>
+    <string name="pref_max_retransmit_time_ms_key">max_retransmit_time_ms_preference</string>
+    <string name="pref_max_retransmit_time_ms_title">Max delay to retransmit.</string>
+    <string name="pref_max_retransmit_time_ms_dlg">Enter max delay to retransmit (in ms).</string>
+    <string name="pref_max_retransmit_time_ms_default" translatable="false">-1</string>
+    <string name="pref_max_retransmits_key">max_retransmits_preference</string>
+    <string name="pref_max_retransmits_title">Max attempts to retransmit.</string>
+    <string name="pref_max_retransmits_dlg">Enter max attempts to retransmit.</string>
+    <string name="pref_max_retransmits_default" translatable="false">-1</string>
+    <string name="pref_data_id_key">data_id_preference</string>
+    <string name="pref_data_id_title">Data id.</string>
+    <string name="pref_data_id_dlg">Enter data channel id.</string>
+    <string name="pref_data_id_default" translatable="false">-1</string>
+    <string name="pref_miscsettings_key">misc_settings_key</string>
+    <string name="pref_miscsettings_title">Miscellaneous settings.</string>
+    <string name="pref_room_server_url_key">room_server_url_preference</string>
+    <string name="pref_room_server_url_title">Room server URL.</string>
+    <string name="pref_room_server_url_dlg">Enter a room server URL.</string>
+    <string name="pref_room_server_url_default" translatable="false">https://appr.tc</string>
+    <string name="pref_displayhud_key">displayhud_preference</string>
+    <string name="pref_displayhud_title">Display call statistics.</string>
+    <string name="pref_displayhud_dlg">Display call statistics.</string>
+    <string name="pref_displayhud_default" translatable="false">false</string>
+    <string name="pref_tracing_key">tracing_preference</string>
+    <string name="pref_tracing_title">Debug performance tracing.</string>
+    <string name="pref_tracing_dlg">Debug performance tracing.</string>
+    <string name="room_id_caption">ROOM ID:</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="GenderValue">
+        <item>सब</item>
+        <item>पुरुष</item>
+        <item>मादा</item>
+        <item>दूसरा</item>
+    </string-array>
+    <string-array name="language">
+        <item>अंग्रेज़ी</item>
+        <item>हिंदी</item>
+        <item>उर्दू</item>
+    </string-array>
+    <string name="hyperlink">एंड्रॉइड ऐप विकास के बारे में अधिक जानें\n<a href="https://learntodroid.com">LearnToDroid.com</a></string>
+    <string name="is_now_following_you">अब आपका अनुसरण कर रहे हैं</string>
+    <string name="sent_your_a_request">अपना अनुरोध भेजा</string>
+    <string name="like_your_post">आपकी पोस्ट पसंद आई</string>
+    <string name="Comment_on_your_post">आपकी पोस्ट पर टिप्पणी की</string>
+    <string name="reply_on_your_comment">आपकी टिप्पणी पर जवाब दिया</string>
+    <string name="pending">विचाराधीन</string>
+    <string name="approve_or_disapprove">स्वीकृत या अस्वीकृत करना</string>
+    <string name="following_request">निम्नलिखित अनुरोध:</string>
+    <string name="You_have">आपके पास</string>
+    <string name="Deactivate_Account">खाता निष्क्रिय करें</string>
+    <string name="All_your_data_will_be_deleted">आपका सारा डेटा डिलीट हो जाएगा।</string>
+    <string name="Following">निम्नलिखित</string>
+    <string name="title_activity_new__language_">नई भाषा गतिविधि</string>
+    <string name="hello_world">हैलो स्क्वायर वर्ल्ड!</string>
+    <string name="Explore">अन्वेषण करना</string>
+    <string name="Start_date">आरंभ तिथि</string>
+    <string name="End_date">समाप्ति तिथि</string>
+    <string name="Follower">फ़ॉलोअर्स_</string>
+    <string name="You_bookmarked_a_post">आपने एक पोस्ट बुकमार्क किया है।</string>
+    <string name="You_created_a_post">आपने एक पोस्ट बनाई।</string>
+    <string name="You_posted_a_story">आपने एक कहानी पोस्ट की।</string>
+    <string name="You_stated_follrowing">आपने अनुसरण करना शुरू कर दियाा</string>
+    <string name="You_liked_a_post">आपको एक पोस्ट पसंद आई।</string>
+    <!--04-05-2021-->
+    <string name="You_can_redeem_minimum_10000_Diamonds">आप न्यूनतम 10000 हीरे भुना सकते हैं</string>
+    <string name="Payment_error_please_try_again">भुगतान त्रुटि कृपया पुनः प्रयास करें</string>
+    <string name="Share_Profile">शेयर प्रोफ़ाइल</string>
+    <string name="Error_Creating_Link">लिंक बनाने में त्रुटि</string>
+    <string name="Enter_Heading">शीर्षक दर्ज करें!</string>
+    <string name="Enter_Sub_Heading">उप शीर्षक दर्ज करें!</string>
+    <string name="Please_select_a_media">कृपया एक मीडिया का चयन करें!</string>
+    <string name="Enter_a_URL">एक URL दर्ज करें</string>
+    <string name="Failed_to_load_native_ad">देशी विज्ञापन लोड करने में विफल: </string>
+    <string name="Music_Not_Selected">संगीत चयनित नहीं है</string>
+    <string name="edittext_hint">पता संपादित करने के लिए यहां क्लिक करें</string>
+    <string name="create">सृजन करना</string>
+    <string name="Aa">आ</string>
+    <string name="Story">कहानी</string>
+    <string name="No_Images_Available">कोई चित्र उपलब्ध नहीं है</string>
+    <string name="my_status">मेरी स्थिति</string>
+    <string name="Default_App">डिफ़ॉल्ट अनुप्रयोग</string>
+    <string name="Notifications_Turned_Off">सूचनाएं बंद हो गईं</string>
+    <string name="Press_Again_To_Exit">फिर से बाहर निकलने के लिए दबाएँ</string>
+    <string name="please_select_any_option">किसी भी विकल्प का चयन करें!</string>
+    <string name="Out_of_Memory">स्मृति से बाहर!......</string>
+    <string name="please_select_Quality">गुणवत्ता का चयन करें</string>
+    <string name="Default_App_changed_to_Medley">डिफ़ॉल्ट ऐप मेडले में बदल गया!</string>
+    <string name="Select_Maximum_two_Videos">अधिकतम दो वीडियो का चयन करें</string>
+    <string name="Default_App_changed_to_Meest">डिफ़ॉल्ट ऐप मेस्ट में बदल गया!</string>
+    <string name="Please_Enter_Details">कृपया विवरण दर्ज करें</string>
+    <string name="Report_this_post">इस पोस्ट की रिपोर्ट करें</string>
+    <string name="Are_you_sure_you_want_to_report_this_post">क्या आप सुनिश्चित हैं कि आप इस पोस्ट की रिपोर्ट करना चाहते हैं?</string>
+    <string name="Yes_Report">हां, रिपोर्ट</string>
+    <string name="Log_out">लॉग आउट करें</string>
+    <string name="Do_you_really_want_to_log_out">क्या आप वास्तव में लॉग आउट करना चाहते हैं</string>
+    <string name="Too_long_videos_size">बहुत लंबा वीडियो आकार</string>
+    <string name="Select_another">दूसरे का चयन करें</string>
+    <string name="This_videos_size_is_greater_than_200Mb_Please_select_another">यह वीडियो आकार 200Mb से अधिक है कृपया एक और चुनें..</string>
+    <string name="reset_qr_code">क्यूआर कोड रीसेट करें</string>
+    <string name="privacy_security_delete_account">गोपनीयता, सुरक्षा, खाता हटाएं</string>
+    <string name="theme_wallpaper_chat_history_language">थीम, वॉलपेपर, चैट इतिहास, भाषा</string>
+    <string name="dark_theme">डार्क थीम</string>
+    <string name="archive_all_chats">पुरालेख सभी चैट</string>
+    <string name="clear_all_chats">सभी चैट साफ़ करें</string>
+    <string name="delete_all_chats">सभी चैट हटाएं</string>
+    <string name="security">सुरक्षा</string>
+    <string name="two_step_verification">दो-चरणीय सत्यापन</string>
+    <string name="change_number">अंक बदलो</string>
+    <string name="chats">चैट</string>
+    <string name="Default_meest">डिफ़ॉल्ट अधिकांश</string>
+    <string name="Default_medly">डिफ़ॉल्ट रूप से</string>
+    <string name="Enter_Mobile_Number">मोबाइल नंबर दर्ज करें</string>
+    <string name="Choose_Text_Color">टेक्स्ट कलर चुनेंं</string>
+    <string name="No_views_yet">अभी तक कोई विचार नहीं</string>
+    <string name="Follow_Successfully">सफलतापूर्वक पालन करें</string>
+    <string name="Unfollow_Successfully">सफलतापूर्वक अनफॉलो करें</string>
+    <string name="Caption">अनुशीर्षक</string>
+    <string name="Share_now">अब साझा करें</string>
+    <string name="Video_Downloading">वीडियो डाउनलोडिंग...</string>
+    <string name="Reported_Successfully">सफलतापूर्वक रिपोर्ट</string>
+    <string name="Please_fill_all_the_details">कृपया सभी विवरण भरें।.</string>
+    <string name="Videos">वीडियो</string>
+    <string name="Delete_my_account">मेरा खाता हटाएं</string>
+    <string name="Do_you_want_to_block_this_user">क्या आप इस उपयोगकर्ता को ब्लॉक करना चाहते हैं?</string>
+    <string name="Block_Account">ब्लॉक खाता</string>
+    <string name="NoFriend">कोई मित्र नहीं</string>
+    <string name="Profile_Updated_Successfully">प्रोफाइल को सफलतापूर्वक अपडेट किया गया</string>
+    <string name="First_name_Last_name_Gender_and_DOB_are_compulsory">पहला नाम, अंतिम नाम, लिंग और जन्म तिथि अनिवार्य है</string>
+    <string name="Please_Enter_Only_Number">कृपया केवल नंबर दर्ज करें</string>
+    <string name="Mobile_digit_less_than_10_digit">मोबाइल डिजिट 10 अंकों से कम</string>
+    <string name="All_Fields_are_required">सभी फ़ील्ड आवश्यक हैं।</string>
+    <string name="Please_select_only_one">कृपया केवल एक का चयन करें</string>
+    <string name="Max_Selection_17_Images">अधिकतम चयन 14 छवियाँ</string>
+    <string name="Max_Selection_4_Images">अधिकतम चयन 4 छवियाँ</string>
+    <string name="POST_">पद</string>
+    <string name="PEOPLE_">लोग</string>
+    <string name="TAGS_">#टैग</string>
+    <string name="IMAGES_">छवि</string>
+    <string name="VIDEOS_">वीडियो</string>
+    <string name="Listening">सुनना...</string>
+    <string name="Unmark_as_prioity">प्राथमिकता के तौर पर अनमार्क करें</string>
+    <string name="Last_call">आखिरी कॉल</string>
+    <string name="ago">पूर्व</string>
+    <string name="Please_select_three">कृपया तीन का चयन करें</string>
+    <string name="Contact">संपर्क</string>
+    <string name="Do_you_want_to_Send_Contact">क्या आप संपर्क भेजना चाहते हैं?</string>
+    <string name="Contact_Send">संपर्क भेजें </string>
+    <string name="Do_you_really_want_to_delete_this_post">क्या आप वास्तव में इस पोस्ट को हटाना चाहते हैं?</string>
+    <string name="Enter_New_Password">नया पासवर्ड दर्ज करें</string>
+    <string name="Please_Enter_new_Password">कृपया नया पासवर्ड दर्ज करें</string>
+    <string name="Please_Enter_confirm_Password">कृपया पुष्टि पासवर्ड दर्ज करें</string>
+    <string name="Enter_password_between_8_to_15_character">8 से 15 वर्ण के बीच पासवर्ड दर्ज करें</string>
+    <string name="Password_and_Confirm_Password_does_not_match">पासवर्ड और पुष्टि पासवर्ड मेल नहीं खाता है</string>
+    <string name="Password_successfully_changed">पासवर्ड सफलतापूर्वक बदल गया</string>
+    <string name="Tap_to_Speak">बोलने के लिए टैप करें</string>
+    <string name="Diamonds">हीरे</string>
+    <string name="Please_enter_your_account_ID">कृपया अपनी खाता आईडी डालें</string>
+    <string name="Request_Submitted_Successfully">सफलतापूर्वक प्रस्तुत अनुरोध</string>
+    <string name="Copied_Clipboard_To_Successfully">सफलतापूर्वक कॉपी क्लिपबोर्ड</string>
+    <string name="Download_is_disabled_by_the_creator">डाउनलोड निर्माता द्वारा अक्षम है</string>
+
+    <string name="meest_new_title">Meest एक मल्टी-फेज इंटरफेस और एक अभिनव ऐप समाधान है जो उपयोगकर्ताओं को मूड चार्जिंग कार्यक्षमता प्रदान करते हुए Meestfied प्राप्त करने के लिए आमंत्रित करता है। Meest आपको अपने मैसेजिंग इंटरफेस मेट मी (आइकन) पर कनेक्टिविटी और स्थिरता लाता है, जो चैट करने के लिए सभी उन्नत सुविधाओं से भरा हुआ है, बहुत अधिक कॉल करता है।</string>
+    <string name="medley_title">कलाकार होने के नाते अब आसान कार्य है, रचनात्मक होने के नाते अब प्रशंसनीय लगता है । मेडली, yout प्रतिभा की धुन की भविष्यवाणी और दुनिया के लिए अपने भीतर की रचनात्मकता को व्यक्त करने के लिए एक वीडियो साझा मंच में शामिल हों।</string>
+    <string name="unsuccessful">भुगतान असफल!</string>
+    <string name="successful">भुगतान सफल!</string>
+    <string name="diamonds">हीरे</string>
+    <string name="Nobody">कोई नहीं</string>
+    <string name="duet">जुगलबंदी</string>
+    <string name="contact_details_sec">संपर्क विवरण</string>
+    <string name="policy_center_sec">नीति केंद्र</string>
+    <string name="download_video">डाउनलोड</string>
+    <string name="Unfavourite">अउनदूरी</string>
+    <string name="diamond_Added">हीरा सफलतापूर्वक जोड़ा गया</string>
+    <string name="transaction_cancel">लेन-देन रद्द...</string>
+    <string name="you_can_t_send_messages_to_this_block">आप इस संपर्क में संदेश नहीं भेज सकते हैं। चैटिंग शुरू करने के लिए अनब्लॉक करें।</string>
+    <string name="Select_Profile">पप्रोफ़ाइल छवि का चयन करें</string>
+    <string name="Make_sure_video_is_longer_than_15s">सुनिश्चित करें कि वीडियो 15s से अधिक लंबा है ...!</string>
+    <string name="Holiday_going_on">छुट्टी चल रही है...</string>
+    <string name="Contact_Info">संपर्क जानकारी</string>
+
+    <string name="front_camera">सामने का कैमरा</string>
+    <string name="back_camera">पृष्ठ कैमरा</string>
+    <string name="phote_mode">फोटो मोड</string>
+    <string name="video_mode">वीडियो मोड</string>
+    <string name="frame_logger_enabled">frame logger enabled</string>
+    <string name="frame_logger_on">frame logger on</string>
+    <string name="frame_logger_off">frame logger off</string>
+    <string name="frame_logger_disabled">frame logger disabled</string>
+    <string name="fixed_fps_on">fixed_fps_on</string>
+    <string name="fixed_fps_off">fixed_fps_off</string>
+
+    <string name="posts">पदों</string>
+    <string name="Video_Too_Short">वीडियो बहुत छोटा</string>
+    <string name="This_video_is_shorter_than_5_seconds_Please_select_another">यह वीडियो 5 सेकंड से छोटा है। कृपया कोई दूसरा वीडियो चुनें..</string>
+    <string name="Video_Too_Long">वीडियो बहुत लंबा</string>
+    <string name="This_video_is_longer_than_1_min_Please_select_another">यह वीडियो 1 मिनट से अधिक लंबा है। कृपया कोई अन्य वीडियो चुनें..</string>
+    <string name="Too_long_video_s_size">बहुत लंबा वीडियो आकार</string>
+    <string name="This_video_s_size_is_greater_than_500MbPlease_select_another">इस वीडियो का आकार 500Mb से बड़ा है। कृपया कोई दूसरा चुनें।.</string>
+    <string name="Make_sure_video_is_longer_than_10s">सुनिश्चित करें कि वीडियो 10s से अधिक लंबा है...!</string>
+    <string name="Make_sure_video_is_longer_than_20s">सुनिश्चित करें कि वीडियो 20s . से अधिक लंबा है...</string>
+    <string name="data">डेटा</string>
+    <string name="Call_to_Action">कार्यवाई के लिए बुलावा</string>
+    <string name="Select_Target_Audience">लक्षित दर्शकों का चयन करें</string>
+    <string name="Select_Age_Group">आयु समूह का चयन करें</string>
+    <string name="Select_Location">स्थान चुनें</string>
+    <string name="Reach_people_with_Address">पते वाले लोगों तक पहुंचें</string>
+    <string name="Preview">पूर्वावलोकन</string>
+    <string name="Select_Music">पूर्वावलोकन</string>
+    <string name="Sound_Library">ध्वनि पुस्तकालय</string>
+    <string name="crop_video">फसल वीडियो</string>
+    <string name="Add_Music">संगीत जोड़ें</string>
+    <string name="Enter_Valid_Email_Address">मान्य ईमेल पता दर्ज करें</string>
+    <string name="Share_Video">वीडियो शेयर करें</string>
+    <string name="Watch_more_of_such">ऐसे और मनोरंजक वीडियो केवल MEEST पर देखें। मीस्ट में शामिल हों और इस तरह के अद्भुत वीडियो साझा करें और भारत के सबसे बड़े स्टार निर्माता बनें🌟 और हर दिन पैसा कमाएं! देखें और इस पूरी तरह से भारतीय ऐप के लिए अपने प्यार का इजहार करें अभी शामिल होने के लिए लिंक पर टैप करें:</string>
+
+    <string name="purchase">खरीदा</string>
+    <string name="near_by">पास ही</string>
+    <string name="User_not_Found">उपयोगकर्ता नहीं मिला</string>
+    <string name="Please_Select_mp4_format_video">कृपया mp4, 3gp, mkv, mov या webm प्रारूप वीडियो का चयन करें</string>
+    <string name="Fewer_than">से कम</string>
+    <string name="Already_Followed">पहले से फ़ॉलो कर रहे हैं</string>
+    <string name="Insufficient_Diamonds">अपर्याप्त हीरे!</string>
+    <string name="your_account_have_been_credited_with_200_diamonds">आपके खाते में 200 डायमंड क्रेडिट कर दिए गए हैं</string>
+    <string name="video_download">वीडियो डाउनलोड सफलतापूर्वक</string>
+    <string name="error">त्रुटि</string>
+
+    <string name="congratulation_your_video_crossed">बधाई!! आपका वीडियो पार</string>
+    <string name="views">विचारों</string>
+    <string name="liked_your_comment_medley">अपनी पोस्ट पर एक टिप्पणी पसंद आया।</string>
+    <string name="replied_to_your_Comment_medley">अपनी पोस्ट पर कमेंट का जवाब दिया।</string>
+    <string name="HASHTAGS">#हैशटैग</string>
+    <string name="This_Account_is_blocked">यह खाता अवरुद्ध है</string>
+    <string name="Unblock_this_account_to_see_their_photos_or_videos">उनकी फ़ोटो या वीडियो देखने के लिए इस खाते को अनब्लॉक करें</string>
+    <string name="Turn_Off_Post_Notification">पोस्ट अधिसूचना बंद करें</string>
+    <string name="Turn_On_Post_Notification">पोस्ट अधिसूचना चालू करें</string>
+    <string name="appearance">दिखावट</string>
+    <string name="their_chat_is_now_in_your_message_requests_so_they_won_t_see_when_you_re_online_or_when_you_ve_read_their_messages_you_can_unrestrict_them_from_their_profile">उनके चैट, अपने संदेश अनुरोध में है तो वे ऑनलाइन होने पर या जब आप उनके संदेशों को पढ़ा है नहीं देख सकेंगे। आप उनकी प्रोफ़ाइल से अप्रतिबंधित कर सकते हैं।</string>
+    <string name="help_us_understand_the_problem">हमें इस समस्या को समझने में मदद करें</string>
+    <string name="it_s_spam">यह स्पैम है</string>
+    <string name="it_s_inappropriate">यह अनुचित है</string>
+    <string name="block_messages_and_video_call">ब्लॉक संदेश और वीडियो कॉल</string>
+    <string name="your_meest_account_won_t_receive_cross_app_messages_or_call_from_meest_account_vinamra_aeran">आपका meest खाता meest खाते से पार एप्लिकेशन ऐसे संदेश या कॉल प्राप्त नहीं होगी</string>
+    <string name="restricted">प्रतिबंधित</string>
+    <string name="mute_messages">म्यूट संदेशों</string>
+    <string name="text_appearance">पाठ सूरत</string>
+    <string name="color_theme">रंग थीम</string>
+    <string name="color_themes">रंग विषय-वस्तु</string>
+    <string name="gradient_themes">ढाल विषय-वस्तु</string>
+    <string name="font_style">लिपि शैली</string>
+    <string name="view_profile_on_meest">प्रोफ़ाइल देखें पर MEEST</string>
+    <string name="view_profile">प्रोफ़ाइल देखें</string>
+    <string name="request_permission">अनुमति का अनुरोध करें</string>
+    <string name="label_text">लेबल पाठ</string>
+    <string name="msg_save_image_to_share">संदेश साझा करने के लिए छवि को बचाने के</string>
+    <string name="msg_share_image">संदेश शेयर छवि</string>
+    <string name="label_brush">लेबल करें ब्रश</string>
+    <string name="label_emoji">लेबल करें Emozi</string>
+    <string name="label_sticker">लेबल करें स्टीकर</string>
+    <string name="msg_save_image">छवि सहेजें</string>
+    <string name="label_eraser_mode">मिटाएं मोड</string>
+    <string name="label_filter">फ़िल्टर</string>
+    <string name="double_click_input_text">डबल क्लिक करें इनपुट पाठ</string>
+    <string name="over_text_limit">अधिक पाठ सीमा</string>
+    <string name="camera_error">कैमरा त्रुटि</string>
+    <string name="forward_to">आगे प्रेषित..</string>
+    <string name="wallpaper_appearance">वॉलपेपर सूरत</string>
+    <string name="send_message">मेसेज भेजें</string>
+    <string name="selectAll">सभी का चयन करे</string>
+    <string name="restrict">रोकना</string>
+    <string name="message_copied">संदेश की नकल की</string>
+    <string name="chat_settings">चैट सेटिंग्स</string>
+    <string name="select_all">सभी का चयन करे</string>
+    <string name="unselect_all">सभी को अचयनित करें</string>
+    <string name="themes">विषयों</string>
+    <string name="color_and_gradient">रंग और ढाल</string>
+    <string name="this_account_is_private">यह खाता निजी है</string>
+    <string name="follow_this_account_to_see_their_photos_or_videos">उनकी फ़ोटो या वीडियो देखने के लिए इस खाते का अनुसरण करें</string>
+    <string name="user_profile">उपयोगकर्ता प्रोफ़ाइल</string>
+    <string name="duet_is_disabled_by_the_creator">युगल गीत निर्माता द्वारा अक्षम किया गया है</string>
+    <string name="community_guidelines">समुदाय दिशानिर्देश</string>
+    <string name="font">फ़ॉन्ट</string>
+    <string name="You_have_already_blocked_him_her">आपने उसे पहले ही ब्लॉक कर दिया है</string>
+    <string name="Please_Select_Font_Types">कृपया फ़ॉन्ट प्रकार चुनें </string>
+    <string name="msg_deleted_success"> संदेश सफलतापूर्वक हटाया गया</string>
+    <string name="Regular"> नियमित </string>
+    <string name="Bold"> साहसिक </string>
+    <string name="Italic"> तिरछा </string>
+    <string name="video_only">वीडियो</string>
+    <string name="tags">टैग</string>
+    <string name="meest_share_content"><![CDATA[Watch and share entertaining content 🤩 on MEEST. Post &amp; edit your pictures using variety of filters and share what you prefer. Join Meest and cover your social circle 👩‍👩‍👦‍👦 with giggles. Watch and express your love ❤️ for this completely Indian App 🇮🇳. Tap the link to join now :]]></string>
+    <string name="Share_post">शेयर पोस्ट</string>
+    <string name="enter_gender">लिंग दर्ज करें</string>
+    <string name="enter_dob">अपने जन्मदिन दिनांक दर्ज करें</string>
+    <string name="birthday_formate">0000-00-00</string>
+    <string name="enter_gendr">लिंग दर्ज करें</string>
+    <string name="date_formate">dd/mm/yyyy</string>
+    <string name="Private_account">निजी खाता</string>
+    <string name="unblock_account">अनब्लॉक खाता</string>
+    <string name="do_you_want_to_unblock_this_user">आप इस उपयोगकर्ता अनब्लॉक करना चाहते हैं?</string>
+    <string name="title_post">पद</string>
+    <string name="title_follower">अनुगामी</string>
+    <string name="unblock_accountmsg">अनब्लॉक खाता</string>
+    <string name="do_you_want_to_unblock_this_usermsg">आप इस उपयोगकर्ता अनब्लॉक करना चाहते हैं?</string>
+    <string name="block_by_admin">ब्लॉक द्वारा व्यवस्थापक</string>
+    <string name="done">किया हुआ</string>
+    <string name="you_haven_t_followed_anyone_yet">आपने अभी तक किसी का पालन नहीं किया है।</string>
+    <string name="follow_some_profile_to_see_their_nlatest_videos_here">कुछ प्रोफ़ाइल का पालन करें यहाँ उनके \n नवीनतम वीडियो देखने के लिए।</string>
+    <string name="you_blocked_this_account">आप इस खाते अवरोधित</string>
+    <string name="requests">अनुरोध</string>
+    <string name="mute_call_notifications">म्यूट कॉल अधिसूचनाएं</string>
+    <string name="slow_down">गति कम करो</string>
+    <string name="enable_audio">ऑडियो सक्षम करें</string>
+    <string name="slow_speed_upto">धीमी गति तक</string>
+    <string name="new_">नया</string>
+    <string name="select_audio">ऑडियो का चयन करें</string>
+    <!--    new String 13-08-2021-->
+    <string name="trending_post">रुझान</string>
+    <string name="hi">नमस्ते....</string>
+    <string name="_06_00_am">सुबह के 6 बजे</string>
+    <string name="saturday_01_05_2021">शनिवार (01.05.2021)</string>
+    <string name="success">सफलता</string>
+    <string name="block_other_user_account">आप इस संपर्क में संदेश नहीं भेज सकते हैं क्योंकि आप अवरुद्ध हैं</string>
+    <string name="font_color">लिपि का रंग</string>
+    <string name="laughing">हस रहा</string>
+    <string name="celebrating">मनाना</string>
+    <string name="feeling_">भावना</string>
+    <string name="interest__">रुचि</string>
+    <string name="select_language">भाषा का चयन करें</string>
+    <string name="choose_interest">ब्याज चुनें</string>
+    <string name="background">पृष्ठभूमि</string>
+    <string name="People">लोग</string>
+    <string name="Images">इमेजिस</string>
+    <string name="are_you_want_to_delete">क्या आप आश्वस्त है कि आपको डिलीट करना है?</string>
+    <string name="allow_over_lay_permission">अन्य ऐप्स पर प्रदर्शन की अनुमति दें</string>
+    <string name="allow_over_lay_permission_msg">इस ऐप को अन्य ऐप्स के शीर्ष पर प्रदर्शित करने दें जिन्हें आप उपयोग कर रहे हैं। यह उन ऐप्स के आपके उपयोग में हस्तक्षेप कर सकता है या जिस तरह से वे प्रकट होते हैं या व्यवहार करते हैं, उसे बदल सकते हैं।</string>
+    <string name="are_you_want_to_delete_this_request">क्या आप वाकई अनुरोधों को हटाना चाहते हैं?</string>
+    <string name="incoming_audio_call">आने वाली ऑडियो कॉल</string>
+    <string name="request_you">आपके साथ चैट करना चाहता है</string>
+    <string name="chat_setting">चैट सेटिंग</string>
+    <string name="if_you_reply_shivi_shukla_will_also_be_able_to_call_you_and_see_info_like_your_active_status_and_when_you_vr_read_messages">यदि आप उत्तर देते हैं, तो शिव शुक्ला आपको कॉल करने और आपकी सक्रिय स्थिति की तरह जानकारी देखने में सक्षम होंगे और जब आप संदेश पढ़ते हैं।</string>
+    <string name="type_hint">अपने संदेश टाइप करें</string>
+    <string name="forward">आगे</string>
+    <string name="unrestricted">अप्रतिबंधित</string>
+    <string name="restricted_Successfully">सफलतापूर्वक प्रतिबंधित</string>
+    <string name="unrestricted_Successfully">अप्रतिबंधित</string>
+    <string name="not_now">Not now</string>
+    <string name="to_capture_photos_and_videos">To capture photos and videos, allow Medley access to your camera.</string>
+    <string name="to_capture_storage">To capture photos and videos, allow Medley access to your device\'s photos, media, and files.</string>
+    <string name="to_capture_storage_denied"><![CDATA[To capture photos and videos, allow Medley access to your device\'s photos, media, and files. Tap Settings > Permissions, and turn \"Files and media\" on.]]></string>
+    <string name="to_scan_qr_code">To add a contact via QR code, allow Medley access to your camera.</string>
+    <string name="post_not_found">Post Unavailable</string>
+    <string name="share_storage">To share videos, allow Medley access to your device\'s photos, media, and files.</string>
+    <string name="share_storage_denied"><![CDATA[To share videos, allow Medley access to your device\'s photos, media, and files. Tap Settings > Permissions, and turn \"Files and media\" on.]]></string>
+    <string name="minimum_two_char_fname">Minimum two characters required for First Name</string>
+    <string name="minimum_two_char_lname">Minimum two characters required for Last Name</string>
+    <string name="the_qr_code_you_are_trying_to_scan_is_invalid">The QR Code you are trying to scan is invalid.</string>
+    <string name="invalid_qr_code">Invalid QR Code</string>
+    <string name="successfully_added">Successfully Added</string>
+    <string name="do_you_comment">Do you really want to delete this comment?</string>
+</resources>

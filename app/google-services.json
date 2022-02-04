@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "295064628629",
+    "firebase_url": "https://meest-bestone-default-rtdb.firebaseio.com",
+    "project_id": "meest-bestone",
+    "storage_bucket": "meest-bestone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295064628629:android:f0c3bbe0c682e6d02c9a9c",
+        "android_client_info": {
+          "package_name": "com.meest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "117543398620467809608",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoewDYXJyx7BDFz_mJIm8ahyhketUYMNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "117543398620467809608",
+              "client_type": 3
+            },
+            {
+              "client_id": "295064628629-69ofkgqvkmit8m3pkulgb8532ioh54ho.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.meestApp10"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

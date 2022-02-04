@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.meest.videomvvmmodule.utils.Global" />
+
+        <variable
+            name="viewmodel"
+            type="com.meest.videomvvmmodule.viewmodel.OptionViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bg_bottom_sheet"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:paddingTop="@dimen/_10sdp">
+
+        <LinearLayout
+            android:id="@+id/ll_report"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:visibility='@{viewmodel.userId.equals(Global.userId)?View.GONE:View.VISIBLE}'
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/report"
+                app:tint="@color/new_action_color"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_Report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/popins_medium"
+                android:includeFontPadding="false"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:text="@string/report"
+                android:textColor="@color/new_action_color"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_duet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:visibility="gone"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_duet_medley"
+                app:tint="@color/new_action_color"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_duet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/popins_medium"
+                android:includeFontPadding="false"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:text="@string/duet"
+                android:textColor="@color/new_action_color"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:paddingHorizontal="2dp"
+                android:src="@drawable/ic_download_video"
+                app:tint="@color/new_action_color"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/popins_medium"
+                android:includeFontPadding="false"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:text="@string/download_video"
+                android:textColor="@color/new_action_color"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_8sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:visibility="gone"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_delete_post"
+                app:tint="@color/new_action_color"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/popins_medium"
+                android:includeFontPadding="false"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:text="@string/delete"
+                android:textColor="@color/new_action_color"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layoutDirection="ltr"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/ActivityPostOption_header"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentTop="true">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/img_back_arrow_what_r_u_doing"-->
+<!--            android:layout_width="@dimen/_15sdp"-->
+<!--            android:layout_height="@dimen/_35sdp"-->
+<!--            android:src="@drawable/ic_full_back_arrow"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:layout_centerVertical="true"/>-->
+
+        <ImageView
+            android:id="@+id/img_back_arrow_what_r_u_doing"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="@dimen/_15sdp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/create_post"
+            android:layout_toRightOf="@+id/img_back_arrow_what_r_u_doing"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_centerInParent="true"
+            android:textColor="#1E2432"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#DDDDDD"/>
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/activity_recycler"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ActivityPostOption_header"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:padding="@dimen/_10sdp"
+        android:layout_height="@dimen/_100sdp" />
+
+</RelativeLayout>

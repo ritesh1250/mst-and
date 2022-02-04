@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_musicTrack"
+    android:layoutDirection="ltr"
+    android:background="@drawable/music_track_background">
+
+    <ImageView
+        android:id="@+id/back_arrow_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_arrow"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="26.36dp"/>
+
+    <TextView
+        android:id="@+id/txt_music_track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/music_tracks"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_15sdp"/>
+
+    <EditText
+        android:id="@+id/edtxt_Dream"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:drawableLeft="@drawable/ic_ic_search_track"
+        android:hint="@string/dream"
+        android:background="@drawable/imv_background"
+        android:layout_below="@+id/txt_music_track"
+        android:drawablePadding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_music_track"
+        android:layout_below="@+id/edtxt_Dream"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_height="@dimen/_100sdp" />
+
+</RelativeLayout>

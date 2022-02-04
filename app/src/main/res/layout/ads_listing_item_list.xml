@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@null"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layoutDirection="ltr"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardCornerRadius="8dp"
+        android:layout_marginTop="12dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/layout_ads_listing_txt_img"
+                android:layout_width="match_parent"
+                android:layout_marginTop="11dp"
+                android:layout_height="69dp">
+
+                <ImageView
+                    android:id="@+id/pro_img_adslisting"
+                    android:layout_width="69dp"
+                    android:layout_height="69dp"
+                    android:src="@drawable/placeholder"
+                    android:layout_marginStart="9dp"/>
+
+                <TextView
+                    android:id="@+id/txt_ads_listing_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Learn latest programing language\nhere "
+                    android:layout_toRightOf="@+id/pro_img_adslisting"
+                    android:layout_marginStart="12dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/txt_ads_listing_name"
+                    android:layout_toRightOf="@id/pro_img_adslisting"
+                    android:layout_marginStart="12dp">
+
+                    <Button
+                        android:id="@+id/btn_complated"
+                        android:layout_width="70dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/bg_btn_green"
+                        android:layout_centerVertical="true"
+                        android:text="@string/completed"
+                        android:textColor="#FFFFFF"
+                        android:textSize="10sp"
+                        android:textAllCaps="false"/>
+
+                    <Button
+                        android:layout_width="70dp"
+                        android:layout_height="15dp"
+                        android:background="@drawable/ic_bg_btn_learnmore"
+                        android:layout_centerVertical="true"
+                        android:text="@string/start"
+                        android:textColor="#FFFFFF"
+                        android:layout_toRightOf="@id/btn_complated"
+                        android:layout_marginStart="8dp"
+                        android:textSize="10sp"
+                        android:textAllCaps="false"/>
+
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="12dp"
+                android:layout_below="@+id/layout_ads_listing_txt_img">
+
+                <TextView
+                    android:id="@+id/txt_date1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/start"
+                    android:textSize="10sp"
+                    android:textColor="#999999"/>
+
+
+                <TextView
+                    android:id="@+id/txt_startdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13-08-2020"
+                    android:textSize="10sp"
+                    android:layout_toRightOf="@+id/txt_date1"
+                    android:textColor="#999999"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amount Paid :- "
+                    android:textSize="10sp"
+                    android:layout_toLeftOf="@+id/txt_amount_paid"
+                    android:textColor="#999999"/>
+
+
+
+                <TextView
+                    android:id="@+id/txt_amount_paid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000/-"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="10sp"
+                    android:textColor="#999999"/>
+
+                <TextView
+                    android:id="@+id/txt_date2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End date :- "
+                    android:layout_below="@id/txt_startdate"
+                    android:layout_alignParentStart="true"
+                    android:textSize="10sp"
+                    android:textColor="#999999"/>
+                <TextView
+                    android:id="@+id/txt_enddate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/txt_date2"
+                    android:text="18-08-2020"
+                    android:layout_below="@id/txt_startdate"
+                    android:textSize="10sp"
+                    android:textColor="#999999"/>
+
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

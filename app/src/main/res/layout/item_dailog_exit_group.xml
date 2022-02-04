@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_20sdp"
+    android:layoutDirection="ltr"
+    app:cardElevation="@dimen/_1sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/leave_group"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textColor="#000000"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            android:layout_marginTop="34dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/are_you_sure_you_want_to_leave_this_group"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textColor="#000000"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_marginBottom="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginEnd="29dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_confirm_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/ic_rectangle_chat_cancel"
+                android:text="@string/yes"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+
+            <Button
+                android:id="@+id/bt_cancel_datete_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/ic_rectangle_chat_cancel"
+                android:text="@string/no"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

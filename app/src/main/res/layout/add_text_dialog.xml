@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/add_text_done_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:text="Done"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/add_text_color_picker_relative_layout"
+        android:layout_below="@+id/add_text_done_tv">
+
+        <EditText
+            android:id="@+id/add_text_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:inputType="textMultiLine|textVisiblePassword"
+            android:minWidth="30dp"
+            android:textSize="30sp"
+            tools:ignore="Autofill,LabelFor" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/add_text_color_picker_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/glow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="add or remove glow" />
+
+        <Button
+            android:id="@+id/blackAndWhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="add Black and White" />
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:max="100"
+            android:progress="30" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/add_text_color_picker_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/color_picker_item_list" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/coda"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="@font/coda"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:onClick="coda"
+                    android:padding="12dp"
+                    android:text="Aa"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/dancingScript"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="@font/dancingscript"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:padding="12dp"
+                    android:text="Aa"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/josefin"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="@font/josefinsansregular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:padding="12dp"
+                    android:text="Aa"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/lobster"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="@font/lobsterregular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:padding="12dp"
+                    android:text="Aa"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/notoSerif"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="@font/notoserifregular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:padding="12dp"
+                    android:text="Aa"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/sourceCode"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="@font/sourcecodeproregular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:padding="12dp"
+                    android:text="Aa"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="@font/coda"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:onClick="coda"
+                    android:padding="12dp"
+                    android:text="Aa"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="@font/dancingscript"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:onClick="dancingScript"
+                    android:padding="12dp"
+                    android:text="Aa"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="@font/josefinsansregular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:onClick="josefin"
+                    android:padding="12dp"
+                    android:text="Aa"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="@font/lobsterregular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:onClick="lobster"
+                    android:padding="12dp"
+                    android:text="Aa"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="@font/notoserifregular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:onClick="notoSerif"
+                    android:padding="12dp"
+                    android:text="Aa"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:fontFamily="@font/sourcecodeproregular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:onClick="sourceCode"
+                    android:padding="12dp"
+                    android:text="Aa"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

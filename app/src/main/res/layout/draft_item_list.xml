@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layoutDirection="ltr">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="107dp"
+        android:background="#29C4C4C4"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/img_draft_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:id="@+id/txt_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/post"
+            android:textColor="#B2000000"
+            android:textSize="17sp"
+            android:layout_toRightOf="@id/img_draft_profile"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="7dp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/txt_postname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&quot;World Cancer Day&quot;"
+            android:textColor="#B2000000"
+            android:textSize="17sp"
+            android:layout_toRightOf="@id/txt_post"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="7dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_post"
+            android:text="Goal 5000 Engagement"
+            android:layout_toRightOf="@id/img_draft_profile"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="7dp"/>
+
+
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt2"
+            android:text="Rs 1.51 per Post Engagement"
+            android:layout_toRightOf="@id/img_draft_profile"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="3dp"/>
+
+        <TextView
+            android:id="@+id/txt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt3"
+            android:text="Scheduled :7days Left"
+            android:layout_toRightOf="@id/img_draft_profile"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="3dp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

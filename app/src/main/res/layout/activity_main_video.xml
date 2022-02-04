@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.meest.videomvvmmodule.viewmodel.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:clipChildren="false"
+        android:keepScreenOn="true">
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:keepScreenOn="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tvUser"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_22sdp"
+                        android:gravity="center"
+                        android:text="nfdnkf"
+                        android:textColor="@color/ablack"
+                        android:textSize="@dimen/_17sdp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <com.meest.videomvvmmodule.customview.CustomViewPager
+                        android:id="@+id/view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/bottom_nav" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_above="@id/bottom_nav"
+                        android:visibility="@{viewModel.loadingVisibility}">
+
+                        <com.agrawalsuneet.loaderspack.loaders.MultipleRippleLoader
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            app:multipleripple_animDuration="1500"
+                            app:multipleripple_circleColor="@color/white"
+                            app:multipleripple_circleInitialRadius="110dp"
+                            app:multipleripple_fromAlpha="0.8"
+                            app:multipleripple_interpolator="@android:anim/decelerate_interpolator"
+                            app:multipleripple_noOfRipples="2"
+                            app:multipleripple_toAplha="0.1" />
+                    </RelativeLayout>
+
+                    <!--        <com.google.android.material.tabs.TabLayout
+                                android:id="@+id/tabLout"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/black"
+                                app:tabIconTint="@color/white"
+                                app:tabIndicatorColor="@color/colorTheme"
+                                android:layout_centerInParent="true"
+                                app:tabIndicatorFullWidth="false" />-->
+
+                    <include
+                        layout="@layout/layout_progress"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <!--        <com.google.android.material.tabs.TabLayout-->
+        <!--            android:id="@+id/tabLout"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="?android:attr/actionBarSize"-->
+        <!--            android:layout_alignParentBottom="true"-->
+        <!--            android:background="@color/black"-->
+        <!--            app:tabIconTint="@color/white"-->
+        <!--            app:tabIndicatorColor="@color/transparent"-->
+        <!--            android:layout_centerInParent="true"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:tabIndicatorFullWidth="false" />-->
+
+        <!--<com.abedalkareem.tabview.AMTabView
+            android:id="@+id/tabLout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>-->
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:itemBackground="@color/white"
+            app:itemIconSize="28dp"
+            app:labelVisibilityMode="unlabeled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/medley_bottom_nav_menu" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/layout_flip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:elevation="50dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/centre_icon"
+                    tools:ignore="ContentDescription" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--<include
+            android:id="@+id/include"
+            layout="@layout/layout_no_internet"
+            tools:layout_editor_absoluteY="711dp" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

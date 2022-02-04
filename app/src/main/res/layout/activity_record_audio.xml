@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:airbnb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:keepScreenOn="true" />
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/size_10dp"
+        android:layout_marginStart="@dimen/size_10dp"
+        android:padding="@dimen/size_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/closeIcon"
+            android:layout_width="@dimen/size_30dp"
+            android:layout_height="@dimen/size_30dp"
+            android:src="@drawable/ic_close"
+            />
+
+        <ImageView
+
+            android:layout_alignParentEnd="true"
+            android:id="@+id/checkIcon"
+            android:layout_width="@dimen/size_40dp"
+            android:layout_height="@dimen/size_40dp"
+            android:src="@drawable/ic_check_white_18dp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/recordLayout"
+        android:layout_marginBottom="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            airbnb:lottie_fileName="glow_animation.json"
+            airbnb:lottie_loop="true" />
+
+        <ImageView
+            android:id="@+id/startRecord"
+            android:layout_width="@dimen/createButton"
+            android:layout_height="@dimen/createButton"
+            android:layout_centerInParent="true"
+            android:src="@drawable/record_end_mic"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

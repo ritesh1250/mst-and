@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/Trending_header"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/img_back_arrow_trending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_full_back_arrow"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tvTrending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@+id/img_back_arrow_trending"
+            android:text="@string/trending"
+            android:textColor="#1E2432"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/tvDropTrending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trending"
+            android:background="@drawable/ic_bg_trending"
+            android:drawableRight="@drawable/ic_arrow_drop_down"
+            android:padding="5dp"
+            android:paddingStart="7dp"
+            android:textSize="16dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvTrending"
+            android:layout_marginStart="@dimen/_50sdp"
+            />
+
+        <ImageView
+            android:id="@+id/ivFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:src="@drawable/ic_filter"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tvDropTrending"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentRight="true"
+            />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Trending_header"
+        android:layout_above="@+id/txtToday"
+        android:layout_marginTop="10dp"
+        >
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayoutTrend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:tabGravity="center"/>
+
+        <TextView
+            android:id="@+id/txtToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today"
+            android:layout_below="@+id/tabLayoutTrend"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="20dp"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:id="@+id/viewPagerTrend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtToday"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            tools:layout_editor_absoluteX="8dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

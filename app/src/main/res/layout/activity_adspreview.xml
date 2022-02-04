@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="#ffffff"
+    android:layoutDirection="ltr"
+    android:layout_height="match_parent"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/AdsPreview_header"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentTop="true"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/img_back_arrow_AdsPreview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_full_back_arrow"
+            android:layout_marginStart="24dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/ads_preview"
+            android:layout_toRightOf="@+id/img_back_arrow_AdsPreview"
+            android:layout_marginStart="42dp"
+            android:textColor="#1E2432"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/AdsPreview_header"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_AdsPrivew"
+        android:layout_width="match_parent"
+        android:layout_height="356.32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="#FFFFFF"
+        app:cardCornerRadius="20dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/layout_privew_header"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_alignParentTop="true">
+                <ImageView
+                    android:id="@+id/img_profile_privew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/profile_ads_privew"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"/>
+
+                <RelativeLayout
+                    android:layout_toLeftOf="@+id/adsPrivew_downArrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_toRightOf="@+id/img_profile_privew">
+
+                    <TextView
+                        android:id="@+id/txt_adsPrivew_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="avarice"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_adsPrivew_name"
+                        android:text="12 April 2019 at 10:47 AM"
+                        android:textColor="#9597A1"
+                        android:textSize="12sp" />
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/adsPrivew_downArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_down"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="22dp"/>
+
+            </RelativeLayout>
+
+<ImageView
+    android:id="@+id/img_adsPrivew_full"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/layout_privew_header"/>
+
+            <RelativeLayout
+                android:id="@+id/adsPrivew_discount_header"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_below="@+id/img_adsPrivew_full"
+                android:background="#F1F1F1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50% sale at girls fashion"
+                    android:textColor="#444444"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="17dp"
+                    android:textStyle="bold"/>
+
+                <Button
+                    android:layout_width="82dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/ic_bg_btn_learnmore"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="6dp"
+                    android:text="@string/learn_more"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/adsPrivew_discount_header"
+                android:text="Hurry !!!  \n50% sale on girls fashhion for limited time"
+                android:textColor="#444444"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"/>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_btn_bg"
+        android:layout_below="@+id/cardview_AdsPrivew"
+        android:layout_marginTop="142dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/pay_amount"
+        android:textAllCaps="false"
+        android:id="@+id/txt_payment"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="148dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="16dp"/>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

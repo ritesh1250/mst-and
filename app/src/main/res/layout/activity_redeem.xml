@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.meest.videomvvmmodule.viewmodel.RedeemViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".view.wallet.RedeemActivity">
+
+        <RelativeLayout
+            android:id="@+id/lout_header"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/popins_medium"
+                android:includeFontPadding="false"
+                android:text="@string/redeembubbles"
+                android:textColor="@color/textGrey"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="?actionBarSize"
+                android:layout_height="?actionBarSize"
+                android:layout_centerVertical="true"
+                android:background="?selectableItemBackground"
+                android:onClick="backClick"
+                android:padding="16dp"
+                android:src="@drawable/ic_back"
+                app:tint="@color/textGrey"
+                tools:ignore="ContentDescription" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimary"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lout_header"
+            android:layout_marginHorizontal="15dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/tv_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/bg_white_round"
+                        android:backgroundTint="@color/coinBg"
+                        android:fontFamily="@font/gilroy_medium"
+                        android:gravity="center"
+                        android:padding="30dp"
+                        android:paddingBottom="8dp"
+                        android:text="9909k"
+                        android:textColor="@color/new_action_color"
+                        android:textSize="38sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="130dp"
+                        android:background="@drawable/bg_gradient_round"
+                        android:fontFamily="@font/popins_medium"
+                        android:paddingHorizontal="15dp"
+                        android:paddingTop="7dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/coinyouhave"
+                        android:textColor="@color/light_white"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{"1000 Diamonds = "+viewmodel.coinRate+" INR" }'
+                android:textColor="@color/color_text_light"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/select_redeem_plan"
+                android:textColor="@color/textGrey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/linear_bg">
+
+                <Spinner
+                    android:id="@+id/redeem_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:entries="@array/redeemPlan" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/redeem_plan_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/textGrey" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/selectmethod"
+                android:textColor="@color/textGrey" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/linear_bg">
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:entries="@array/payment" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/account"
+                android:textColor="@color/textGrey" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:afterTextChanged="@{(editable)->viewmodel.afterPaymentAccountChanged(editable)}"
+                android:background="@drawable/linear_bg"
+                android:hint="@string/mailmobile"
+                android:paddingHorizontal="15dp"
+                android:maxLength="10"
+                android:textColor="@color/color_text_light"
+                android:textColorHint="@color/color_text_light"
+                android:textCursorDrawable="@xml/cursor"
+                android:textSize="16sp"
+                android:inputType="phone"
+                tools:ignore="Autofill" />
+
+            <Button
+                android:id="@+id/btn_redeem"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/bg_gradient"
+                android:backgroundTint="@color/new_action_color"
+                android:fontFamily="@font/popins_medium"
+                android:text="@string/redeem"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/redeemprocessmaytake"
+                android:textColor="@color/color_text_light"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/term_and_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/termspolicy"
+                android:textColor="@color/new_action_color"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

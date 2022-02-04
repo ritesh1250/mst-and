@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_container"
+        android:layout_above="@+id/layout_data"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_data"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="GALLERY"
+            android:textSize="12sp"
+            android:visibility="gone"
+            android:id="@+id/txt_gallery"
+            android:textAlignment="center"
+            android:textColor="@color/menu_blue"
+            android:padding="@dimen/_10sdp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/photo"
+            android:textSize="12sp"
+            android:id="@+id/txt_photo"
+            android:textAlignment="center"
+            android:textColor="@color/menu_gray"
+            android:padding="@dimen/_10sdp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/video"
+            android:visibility="gone"
+            android:id="@+id/txt_video"
+            android:textSize="12sp"
+            android:textAlignment="center"
+            android:textColor="@color/menu_gray"
+            android:padding="@dimen/_10sdp"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/live"
+            android:textSize="12sp"
+
+            android:id="@+id/txt_live"
+            android:textAlignment="center"
+            android:textColor="@color/menu_gray"
+            android:padding="@dimen/_10sdp"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

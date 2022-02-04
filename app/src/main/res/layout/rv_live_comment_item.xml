@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="ltr"
+    android:padding="@dimen/_10sdp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_images">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="45dp"
+            android:id="@+id/ivUserAvatar"
+            app:riv_corner_radius="@dimen/_30sdp"
+            android:layout_height="45dp"
+            android:src="@drawable/user_pro_chat"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toLeftOf="@+id/time"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/layout_names"
+        android:layout_toRightOf="@+id/layout_images">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dianna Smiley"
+            android:id="@+id/tvUserName"
+            android:textSize="16sp"
+            android:textColor="#151624"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tvComment"
+            android:layout_height="wrap_content"
+            android:text="You missed 3 voice call"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

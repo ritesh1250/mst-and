@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/Feedback_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="19dp"
+            android:layout_toEndOf="@+id/img_back_arrow_feedback"
+            android:text="@string/No_Active_internet_connection"
+            android:textColor="#1E2432"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Feedback_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/okBtn"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_btn_round"
+            android:includeFontPadding="false"
+            android:text="@string/Retry"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="@dimen/_16sdp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_btn_round"
+            android:includeFontPadding="false"
+            android:text="@string/Exit"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+
+</RelativeLayout>

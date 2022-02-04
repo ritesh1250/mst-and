@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RecordButton">
+        <attr name="mic_icon" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="CustomProgressiveStoryView">
+        <attr name="progressCount" format="integer|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PinViewTheme">
+        <attr name="pinViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PinView">
+        <attr name="itemCount" format="integer" />
+        <attr name="itemWidth" format="dimension" />
+        <attr name="itemHeight" format="dimension" />
+        <attr name="itemRadius" format="dimension" />
+        <attr name="itemSpacing" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="lineColor" format="reference|color" />
+        <attr name="viewType" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="line" value="1" />
+            <enum name="none" value="2" />
+        </attr>
+        <attr name="android:cursorVisible" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="reference|color" />
+        <attr name="android:itemBackground" />
+        <attr name="hideLineWhenFilled" format="boolean" />
+    </declare-styleable>
+
+    <attr name="halfVisibleItemCount" format="integer" />
+    <attr name="itemTextSize" format="dimension" />
+    <attr name="itemMaximumWidthText" format="string" />
+    <attr name="itemTextColor" format="color" />
+    <attr name="textGradual" format="boolean" />
+    <attr name="selectedTextColor" format="color" />
+    <attr name="selectedTextSize" format="dimension" />
+    <attr name="currentItemPosition" format="integer" />
+    <attr name="itemWidthSpace" format="dimension" />
+    <attr name="itemHeightSpace" format="dimension" />
+    <attr name="zoomInSelectedItem" format="boolean" />
+    <attr name="wheelCyclic" format="boolean" />
+    <attr name="wheelCurtain" format="boolean" />
+    <attr name="wheelCurtainColor" format="color" />
+    <attr name="wheelCurtainBorder" format="boolean" />
+    <attr name="wheelCurtainBorderColor" format="color" />
+    <attr name="indicatorText" format="string" />
+    <attr name="indicatorTextSize" format="dimension" />
+    <attr name="indicatorTextColor" format="color" />
+    <declare-styleable name="WheelPicker">
+        <attr name="halfVisibleItemCount" />
+        <attr name="itemTextSize" />
+        <attr name="itemMaximumWidthText" />
+        <attr name="itemTextColor" />
+        <attr name="textGradual" />
+        <attr name="selectedTextColor" />
+        <attr name="selectedTextSize" />
+        <attr name="currentItemPosition" />
+        <attr name="itemWidthSpace" />
+        <attr name="itemHeightSpace" />
+        <attr name="zoomInSelectedItem" />
+        <attr name="wheelCyclic" />
+        <attr name="wheelCurtain" />
+        <attr name="wheelCurtainColor" />
+        <attr name="wheelCurtainBorder" />
+        <attr name="wheelCurtainBorderColor" />
+        <attr name="indicatorText" />
+        <attr name="indicatorTextSize" />
+        <attr name="indicatorTextColor" />
+    </declare-styleable>
+    <declare-styleable name="YearPicker">
+        <attr name="startYear" format="integer" />
+        <attr name="endYear" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="MonthPicker"></declare-styleable>
+    <declare-styleable name="DatePicker">
+        <attr name="halfVisibleItemCount" />
+        <attr name="itemTextSize" />
+        <attr name="itemTextColor" />
+        <attr name="textGradual" />
+        <attr name="selectedTextColor" />
+        <attr name="selectedTextSize" />
+        <attr name="itemWidthSpace" />
+        <attr name="itemHeightSpace" />
+        <attr name="zoomInSelectedItem" />
+        <attr name="wheelCyclic" />
+        <attr name="wheelCurtain" />
+        <attr name="wheelCurtainColor" />
+        <attr name="wheelCurtainBorder" />
+        <attr name="wheelCurtainBorderColor" />
+    </declare-styleable>
+    <declare-styleable name="HourAndMinutePicker">
+        <attr name="halfVisibleItemCount" />
+        <attr name="itemTextSize" />
+        <attr name="itemTextColor" />
+        <attr name="textGradual" />
+        <attr name="selectedTextColor" />
+        <attr name="selectedTextSize" />
+        <attr name="itemWidthSpace" />
+        <attr name="itemHeightSpace" />
+        <attr name="zoomInSelectedItem" />
+        <attr name="wheelCyclic" />
+        <attr name="wheelCurtain" />
+        <attr name="wheelCurtainColor" />
+        <attr name="wheelCurtainBorder" />
+        <attr name="wheelCurtainBorderColor" />
+    </declare-styleable>
+
+
+    <declare-styleable name="AMTabView">
+        <attr name="tabColor" format="color" />
+        <attr name="ballColor" format="color" />
+        <attr name="selectedTabTintColor" format="color" />
+        <attr name="unSelectedTabTintColor" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundedView">
+        <attr name="topLeftCornerRadius" format="dimension" />
+        <attr name="topRightCornerRadius" format="dimension" />
+        <attr name="bottomLeftCornerRadius" format="dimension" />
+        <attr name="bottomRightCornerRadius" format="dimension" />
+    </declare-styleable>
+
+    <!--video attrs-->
+
+    <declare-styleable name="LoadingView">
+        <attr name="loading_view_size" format="dimension" />
+        <attr name="android:color" />
+    </declare-styleable>
+
+    <attr name="LoadingStyle" format="reference" />
+    -
+    <declare-styleable name="SocialViewStyle">
+        <attr name="socialViewStyle" format="reference" />
+    </declare-styleable>
+    -
+    <declare-styleable name="SocialView">
+        -
+        <attr name="socialFlags">
+            <flag name="hashtag" value="1" />
+            <flag name="mention" value="2" />
+            <flag name="hyperlink" value="4" />
+        </attr>
+        <attr name="hashtagColor" format="color" />
+        <attr name="mentionColor" format="color" />
+        <attr name="hyperlinkColor" format="color" />
+
+    </declare-styleable>
+    <declare-styleable name="Loading_view_size" />
+    <declare-styleable name="Loading_View_android_color">
+
+    </declare-styleable>
+    <declare-styleable name="LikeButton">
+        <attr name="dot_color_1" format="color" />
+        <attr name="dot_color_2" format="color" />
+        <attr name="circle_startColor" format="color" />
+        <attr name="circle_endColor" format="color" />
+        <attr name="like_icon" format="reference" />
+        <attr name="unlike_icon" format="reference" />
+        <attr name="liked" format="boolean" />
+        <attr name="dot_active" format="boolean" />
+        <attr name="circle_active" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="LoadingDots">
+        <attr name="LoadingDots_auto_play" format="boolean" />
+        <attr name="LoadingDots_dots_color" format="color" />
+        <attr name="LoadingDots_dots_count" format="integer" />
+        <attr name="LoadingDots_dots_size" format="dimension" />
+        <attr name="LoadingDots_dots_space" format="dimension" />
+        <attr name="LoadingDots_loop_duration" format="integer" />
+        <attr name="LoadingDots_loop_start_delay" format="integer" />
+        <attr name="LoadingDots_jump_duration" format="integer" />
+        <attr name="LoadingDots_jump_height" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="MovingButton">
+        <attr name="mb_move_direction">
+            <enum name="all" value="0" />
+            <enum name="horizontal_vertical" value="1" />
+            <enum name="horizontal" value="2" />
+            <enum name="vertical" value="3" />
+            <enum name="still" value="4" />
+        </attr>
+        <attr name="mb_movement" format="dimension" />
+        <attr name="mb_movement_left" format="dimension" />
+        <attr name="mb_movement_right" format="dimension" />
+        <attr name="mb_movement_top" format="dimension" />
+        <attr name="mb_movement_bottom" format="dimension" />
+        <attr name="mb_offset_inner" format="dimension" />
+        <attr name="mb_offset_outer" format="dimension" />
+        <attr name="mb_vibration_duration" format="integer" />
+        <attr name="mb_event_volume" format="integer" />
+    </declare-styleable>
+
+    <!--    ======================================-->
+    <attr name="centerInParent" format="boolean"></attr>
+    <attr name="image_height" format="dimension"></attr>
+    <attr name="image_width" format="dimension"></attr>
+    <attr name="push_deleteimage" format="reference"></attr>
+    <attr name="push_image" format="reference"></attr>
+    <attr name="push_image_height" format="dimension"></attr>
+    <attr name="push_image_width" format="dimension"></attr>
+    <attr name="image" format="reference"></attr>
+    <attr name="dividerWidth" format="dimension"></attr>
+    <attr name="top" format="dimension"></attr>
+    <attr name="left" format="dimension"></attr>
+    <attr name="colorForeground" format="color" />
+
+
+</resources>

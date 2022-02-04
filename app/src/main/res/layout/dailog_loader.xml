@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!--            android:background="@drawable/bg_white_corner_10"-->
+        <com.airbnb.lottie.LottieAnimationView
+
+            android:id="@+id/iv_parent"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/lottie_loader_medley" />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/iv_parent"-->
+        <!--            android:layout_width="@dimen/_50sdp"-->
+        <!--            android:layout_height="@dimen/_50sdp"-->
+        <!--            android:layout_centerInParent="true"-->
+        <!--            tools:ignore="ContentDescription" />-->
+        <!--        android:src="@drawable/messt_app"-->
+        <ImageView
+            android:id="@+id/iv_child"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/please_wait"
+            android:visibility="gone"
+            android:textColor="@color/new_action_color"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+</layout>

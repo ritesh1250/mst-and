@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr">
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/pink"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvViewerCount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/viewed_by_0"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:textSize="@dimen/_14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/deleteStory"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:src="@drawable/icon_delete_white"
+            android:contentDescription="TODO" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/icon_share_white"
+            android:backgroundTint="@color/white"
+            android:contentDescription="TODO" />
+
+
+    </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/mainLayout"
+            android:visibility="visible"
+            android:id="@+id/recyclerviewStoryViewer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10dp" />
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/noRecordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_below="@+id/mainLayout"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/No_views_yet"
+            android:textSize="@dimen/_12sp"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

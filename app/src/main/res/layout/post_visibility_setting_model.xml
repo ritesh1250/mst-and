@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layoutDirection="ltr">
+
+    <data>
+        <variable
+            name="postVisibilitySettingModel"
+            type="com.meest.social.socialViewModel.viewModel.postVisibilitySettingViewModel.PostVisibilitySettingViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/image_back"
+            android:layout_width="wrap_content"
+            android:layout_height="59dp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:src="@drawable/ic_full_back_arrow" />
+
+        <RadioGroup
+            android:id="@+id/vpvs_radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_back"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:checkedButton="@drawable/ic_check_icon"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/vpvs_public"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:drawableEnd="@drawable/ic_cheakbox_uncheak"
+                android:gravity="start|center_vertical"
+                android:text="@string/Public"
+                android:textColor="#151624"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/anybody_can_view"
+                android:textColor="#858595"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/vpvs_private"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:drawableEnd="@drawable/ic_cheakbox_uncheak"
+                android:gravity="start|center_vertical"
+                android:text="@string/Private"
+                android:textColor="#151624"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/only_friends_can_view"
+                android:textColor="#858595"
+                android:textSize="12sp" />
+
+            <!--        <RadioButton-->
+            <!--            android:id="@+id/vpvs_private"-->
+            <!--            android:background="@android:color/transparent"-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="start"-->
+            <!--            android:button="@null"-->
+            <!--            android:layout_marginTop="@dimen/_30sdp"-->
+            <!--            android:drawableEnd="@drawable/ic_cheakbox_uncheak"-->
+            <!--            android:gravity="start|center_vertical"-->
+            <!--            android:text="@string/Private"-->
+            <!--            android:visibility="gone"-->
+            <!--            android:textColor="#151624"-->
+            <!--            android:textSize="16sp" />-->
+            <!--        <TextView-->
+            <!--            android:layout_width="wrap_content"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:layout_gravity="start"-->
+            <!--            android:text="@string/only_you_can_view"-->
+            <!--            android:visibility="gone"-->
+            <!--            android:textColor="#858595"-->
+            <!--            android:textSize="12sp"/>-->
+        </RadioGroup>
+
+    </RelativeLayout>
+
+</layout>

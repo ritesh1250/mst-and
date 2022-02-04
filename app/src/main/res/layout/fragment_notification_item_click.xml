@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    android:background="@drawable/rectanglecurved"
+    android:padding="@dimen/_40sdp"
+    >
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/remove_this_notification"
+        android:textColor="@color/edit_line_red"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete_post"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/edit_line_red"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/block_user"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/edit_line_red"/>
+
+</LinearLayout>

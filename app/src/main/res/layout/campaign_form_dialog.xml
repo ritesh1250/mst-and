@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical"
+    android:layoutDirection="ltr"
+    android:padding="@dimen/_20sdp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/_20sdp">
+
+        <TextView
+            android:gravity="center"
+            android:textStyle="bold"
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:text="@string/ad_title"
+            android:padding="8dp"
+            android:textColor="#000"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edName"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_creat_post"
+            android:hint="@string/name"
+            android:padding="8dp"
+            android:textColorHint="#CCCCCC"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edEmail"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_creat_post"
+            android:hint="@string/email"
+            android:padding="8dp"
+            android:textColorHint="#CCCCCC"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edMobile"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_creat_post"
+            android:hint="@string/mobile"
+            android:padding="8dp"
+            android:inputType="number"
+            android:textColorHint="#CCCCCC"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/main_btn_bg"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/thankyou"
+        layout="@layout/camapign_thanku_screen"
+        android:visibility="gone" />
+
+</LinearLayout>

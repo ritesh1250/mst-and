@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layoutDirection="ltr"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/header_duplicat_campaign">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_full_back_arrow"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="32dp"/>
+
+        <TextView
+            android:id="@+id/txt_doublicate_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:visibility="gone"
+            android:textColor="#000000"
+            android:text="Duplicate Campaigns"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txt_draft_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:visibility="gone"
+            android:textColor="#000000"
+            android:text="Draft Campaigns"
+            android:layout_centerInParent="true"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:background="#33AAAAAA"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_draft_doublicate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_duplicat_campaign"
+        android:layout_marginTop="20dp">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_create_campaign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/img_create_new_campaign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_create_new_campaign_nonselect"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/txt_careateNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_create_new_campaign"
+                android:layout_marginTop="11dp"
+                android:text="CREATE NEW"
+                android:textColor="#CCAAAAAA"
+                android:layout_centerHorizontal="true"
+                android:textSize="10sp"/>
+            <View
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="1dp"
+                android:background="#3B5998"
+                android:layout_below="@+id/txt_careateNew"
+                android:layout_marginTop="12dp"/>
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/layout_dublicate_campaign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/img_dublicate_campaign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_duplicate_select"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/txt_dublicate"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="11dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_dublicate_campaign"
+                android:text="DUPLICATE"
+                android:textColor="#343170"
+                android:layout_centerHorizontal="true"
+                android:textSize="10sp"/>
+            <View
+                android:id="@+id/View_dublicate_Campaign"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:background="#3B5998"
+                android:layout_below="@+id/txt_dublicate"
+                android:layout_marginTop="12dp"/>
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/layout_draft_campaign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/img_draft_campaign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_draft_campain_icon"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/txt_draft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_draft_campaign"
+                android:text="DRAFTS"
+                android:layout_marginTop="11dp"
+                android:textColor="#CCAAAAAA"
+                android:layout_centerHorizontal="true"
+                android:textSize="10sp"/>
+            <View
+                android:id="@+id/View_draft_Campaign"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:background="#3B5998"
+                android:layout_below="@+id/txt_draft"
+                android:layout_marginTop="12dp"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/framlayout_doublicate_fraft_campaign"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_draft_doublicate"
+        android:layout_marginTop="19dp"/>
+
+
+</RelativeLayout>

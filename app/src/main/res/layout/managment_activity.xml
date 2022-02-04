@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layoutDirection="ltr"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/Manage_header"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/inmg_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back_arrow"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@+id/inmg_back"
+            android:text="@string/manage"
+            android:textColor="#1E2432"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:background="#33AAAAAA"
+            android:layout_alignParentBottom="true"/>
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_Manage_ads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/manage_ads"
+        android:textColor="#B2151624"
+        android:layout_below="@+id/Manage_header"
+        android:textSize="16sp"
+        android:layout_marginTop="41dp"
+        android:layout_marginStart="35dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txt_Boost_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Boost post"
+        android:textColor="#B2151624"
+        android:layout_below="@+id/txt_Manage_ads"
+        android:textSize="16sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="35dp"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txt_Manage_campaign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/manage_campaign"
+        android:textColor="#B2151624"
+        android:layout_below="@+id/txt_Boost_post"
+        android:textSize="16sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="35dp"
+        android:textStyle="bold"/>
+
+
+</RelativeLayout>
+

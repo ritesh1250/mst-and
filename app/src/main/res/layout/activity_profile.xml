@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr">
+
+    <data>
+        <import type="com.meest.videomvvmmodule.utils.Global" />
+
+        <import type="android.text.TextUtils" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.meest.videomvvmmodule.viewmodel.ProfileViewModel" />
+
+        <variable
+            name="user"
+            type="com.meest.videomvvmmodule.model.user.SearchUser.User" />
+
+    </data>
+
+    <!-- <androidx.coordinatorlayout.widget.CoordinatorLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:clickable="true"
+         android:focusable="true"
+         tools:context=".view.profile.ProfileFragment">
+
+         <com.google.android.material.appbar.AppBarLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@color/colorPrimaryDark"
+             android:fitsSystemWindows="true">
+
+             <com.google.android.material.appbar.CollapsingToolbarLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:fitsSystemWindows="true"
+                 app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                 <RelativeLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="50dp"
+                     android:fitsSystemWindows="true"
+                     app:layout_collapseMode="parallax">
+
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="1dp"
+                         android:gravity="center_horizontal"
+                         android:orientation="vertical"
+                         tools:ignore="UselessParent">
+
+
+                         <androidx.appcompat.widget.AppCompatImageView
+                             android:id="@+id/img_user"
+                             android:layout_width="120dp"
+                             android:layout_height="120dp"
+                             android:layout_marginTop="10dp"
+                             android:background="@drawable/dp_bg_user"
+                             android:contentDescription="@string/image"
+                             android:padding="20dp"
+                             app:profile_url="@{viewModel.user.Data.userProfile}" />
+
+                         <androidx.appcompat.widget.AppCompatTextView
+                             android:id="@+id/tv_profile_category"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_margin="3dp"
+                             android:background="@drawable/bg_white_corner_2"
+                             android:backgroundTint="@color/white"
+                             android:fontFamily="@font/popins_medium"
+                             android:paddingHorizontal="10dp"
+                             android:paddingTop="1dp"
+                             android:text="@{viewModel.user.Data.profileCategoryName}"
+                             android:textColor="@color/black"
+                             android:textSize="12sp"
+                             android:visibility="gone"
+                             tools:text="DANCER" />
+
+                         <androidx.appcompat.widget.AppCompatTextView
+                             android:id="@+id/user_FirstLastname"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="5dp"
+                             android:fontFamily="@font/popins_medium"
+                             android:text="@{viewModel.user.data.fullName}"
+                             android:textColor="@color/light_white"
+                             android:textSize="16sp"
+                             android:visibility="@{TextUtils.isEmpty(viewModel.user.data.fullName) ? View.GONE : View.VISIBLE}" />
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:gravity="center"
+                             android:orientation="horizontal"
+                             tools:ignore="UseCompoundDrawables">
+
+                             <androidx.appcompat.widget.AppCompatTextView
+                                 android:id="@+id/userName"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:fontFamily="@font/popins_medium"
+                                 android:text='@{"@"+viewModel.user.Data.userName}'
+                                 android:textColor="@color/color_text_light"
+                                 android:textSize="13sp" />
+
+                             <androidx.appcompat.widget.AppCompatImageView
+                                 android:layout_width="14dp"
+                                 android:layout_height="14dp"
+                                 android:layout_marginStart="5dp"
+                                 android:contentDescription="@string/image"
+                                 android:src="@drawable/ic_user_verified"
+                                 android:visibility="@{viewModel.user.data.isVerified ? View.VISIBLE : View.GONE}" />
+
+                         </LinearLayout>
+
+
+                         <LinearLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:layout_marginTop="10dp"
+                             android:gravity="center_vertical"
+                             android:orientation="horizontal">
+
+                             <androidx.appcompat.widget.AppCompatImageView
+                                 android:id="@+id/img_fb"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:contentDescription="@string/image"
+                                 android:onClick="@{()->viewModel.onSocialClick(1)}"
+                                 android:padding="10dp"
+                                 android:src="@drawable/ic_facebook"
+                                 app:tint="@color/white"
+                                 android:visibility="@{TextUtils.isEmpty(viewModel.user.data.fbUrl) ? View.GONE : View.VISIBLE}" />
+
+                             <androidx.appcompat.widget.AppCompatImageView
+                                 android:id="@+id/img_insta"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:contentDescription="@string/image"
+                                 android:onClick="@{()->viewModel.onSocialClick(2)}"
+                                 android:padding="10dp"
+                                 android:src="@drawable/ic_instagram"
+                                 app:tint="@color/white"
+                                 android:visibility="@{TextUtils.isEmpty(viewModel.user.data.instaUrl) ? View.GONE : View.VISIBLE}" />
+
+                             <androidx.appcompat.widget.AppCompatImageView
+                                 android:id="@+id/img_yt"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:contentDescription="@string/image"
+                                 android:onClick="@{()->viewModel.onSocialClick(3)}"
+                                 android:padding="10dp"
+                                 android:src="@drawable/ic_youtube"
+                                 app:tint="@color/white"
+                                 android:visibility="@{TextUtils.isEmpty(viewModel.user.data.youtubeUrl) ? View.GONE : View.VISIBLE}" />
+
+                         </LinearLayout>
+
+                         <androidx.appcompat.widget.AppCompatTextView
+                             android:id="@+id/tv_bio"
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginHorizontal="50dp"
+                             android:layout_marginTop="10dp"
+                             android:ellipsize="end"
+                             android:fontFamily="@font/popins_reguler"
+                             android:gravity="center"
+                             android:maxLines="3"
+                             android:text="@{viewModel.user.Data.bio}"
+                             android:textColor="@color/light_white"
+                             android:textSize="12sp"
+                             android:visibility="@{TextUtils.isEmpty(viewModel.user.data.bio) ? View.GONE : View.VISIBLE}" />
+
+                         <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_marginHorizontal="40dp"
+                             android:layout_marginTop="15dp"
+                             android:baselineAligned="false"
+                             android:orientation="horizontal"
+                             android:weightSum="3">
+
+                             <LinearLayout
+                                 android:layout_width="0dp"
+                                 android:layout_height="match_parent"
+                                 android:layout_weight="1"
+                                 android:orientation="vertical">
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+                                     android:id="@+id/tv_likeCount"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:fontFamily="@font/gilroy_medium"
+                                     android:gravity="center"
+                                     android:text="@{Global.prettyCount(viewModel.user.data.myPostLikes)}"
+                                     android:textColor="@color/light_white"
+                                     android:textSize="18sp"
+                                     android:textStyle="bold"
+
+                                     />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:fontFamily="@font/popins_reguler"
+                                     android:gravity="center"
+                                     android:text="@string/likes"
+                                     android:textColor="@color/color_text_light"
+                                     android:textSize="12sp" />
+
+                             </LinearLayout>
+
+                             <LinearLayout
+                                 android:layout_width="0dp"
+                                 android:layout_height="match_parent"
+                                 android:layout_weight="1"
+                                 android:onClick="@{()->viewModel.setOnItemClick(5)}"
+                                 android:orientation="vertical">
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+                                     android:id="@+id/tv_FansCount"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:fontFamily="@font/gilroy_medium"
+                                     android:gravity="center"
+                                     android:text="@{Global.prettyCount(viewModel.user.data.followersCount)}"
+                                     android:textColor="@color/light_white"
+                                     android:textSize="18sp"
+                                     android:textStyle="bold" />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:fontFamily="@font/popins_reguler"
+                                     android:gravity="center"
+                                     android:text="@string/followers"
+                                     android:textColor="@color/color_text_light"
+                                     android:textSize="12sp" />
+
+                             </LinearLayout>
+
+                             <LinearLayout
+                                 android:layout_width="0dp"
+                                 android:layout_height="match_parent"
+                                 android:layout_weight="1"
+                                 android:onClick="@{()->viewModel.setOnItemClick(6)}"
+                                 android:orientation="vertical">
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+                                     android:id="@+id/tv_FollowingCount"
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:fontFamily="@font/gilroy_medium"
+                                     android:gravity="center"
+                                     android:text="@{Global.prettyCount(viewModel.user.data.followingCount)}"
+                                     android:textColor="@color/light_white"
+                                     android:textSize="18sp"
+                                     android:textStyle="bold" />
+
+                                 <androidx.appcompat.widget.AppCompatTextView
+                                     android:layout_width="match_parent"
+                                     android:layout_height="wrap_content"
+                                     android:fontFamily="@font/popins_reguler"
+                                     android:gravity="center"
+                                     android:text="@string/following"
+                                     android:textColor="@color/color_text_light"
+                                     android:textSize="12sp" />
+
+                             </LinearLayout>
+
+                         </LinearLayout>
+
+                         <RelativeLayout
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content">
+
+
+                             <Button
+                                 android:id="@+id/btn_follow"
+                                 android:layout_width="140dp"
+                                 android:layout_height="40dp"
+                                 android:layout_marginTop="15dp"
+                                 android:layout_marginBottom="15dp"
+                                 android:background="@{viewModel.isMyAccount == 1 ? @drawable/bg_grey_corner_5 : (viewModel.isMyAccount == 2 ? @drawable/bg_gradient : @drawable/bg_strock_corner_5)}"
+                                 android:fontFamily="@font/popins_light"
+                                 android:letterSpacing="0.05"
+                                 android:onClick="@{()->viewModel.setOnItemClick(1)}"
+                                 android:text='@{viewModel.isMyAccount == 1 ? "Unfollow" : (viewModel.isMyAccount == 2 ? "Follow" : "Edit Profile")}'
+                                 android:textAllCaps="false"
+                                 android:textColor="@color/light_white"
+                                 android:textSize="13sp"
+                                 android:textStyle="bold"
+                                 android:visibility="@{viewModel.isFollowLoading ? View.GONE : View.VISIBLE}"
+                                 tools:text="Follow" />
+
+                             <ProgressBar
+                                 android:layout_width="30dp"
+                                 android:layout_height="30dp"
+                                 android:layout_centerInParent="true"
+                                 android:layout_marginTop="20dp"
+                                 android:layout_marginBottom="20dp"
+                                 android:visibility="@{viewModel.isFollowLoading ? View.VISIBLE : View.GONE}" />
+
+                         </RelativeLayout>
+
+
+                     </LinearLayout>
+
+
+
+
+                 </RelativeLayout>
+
+                 <androidx.appcompat.widget.Toolbar
+                     android:id="@+id/user_toolbar"
+                     android:layout_width="match_parent"
+                     android:layout_height="?attr/actionBarSize"
+                     android:background="@color/colorPrimaryDark"
+                     app:contentInsetStart="0dp"
+                     app:layout_collapseMode="pin"
+                     app:popupTheme="@style/AppTheme.PopUp">
+
+                     <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:gravity="center_vertical"
+                         android:orientation="horizontal">
+
+                         <androidx.appcompat.widget.AppCompatImageView
+                             android:layout_width="40dp"
+                             android:layout_height="match_parent"
+                             android:contentDescription="@string/image"
+                             android:onClick="@{()->viewModel.setOnItemClick(2)}"
+                             android:paddingVertical="4dp"
+                             android:paddingStart="10dp"
+                             android:paddingEnd="10dp"
+                             android:src="@drawable/ic_back"
+                             app:tint="@color/light_white"
+                             android:visibility="@{viewModel.isBackBtn ? View.VISIBLE : View.INVISIBLE}" />
+
+                         <androidx.appcompat.widget.AppCompatTextView
+                             android:id="@+id/tv_fullName"
+                             android:layout_width="0dp"
+                             android:layout_height="match_parent"
+                             android:layout_weight="1"
+                             android:gravity="center"
+                             android:text="@{viewModel.user.data.fullName}"
+                             android:textColor="@color/light_white" />
+
+
+                         <androidx.appcompat.widget.AppCompatImageView
+                             android:id="@+id/img_option"
+                             android:layout_width="20dp"
+                             android:layout_height="25dp"
+                             android:layout_marginEnd="10dp"
+                             android:contentDescription="@string/image"
+                             android:onClick="@{()->viewModel.setOnItemClick(0)}"
+                             android:src="@drawable/ic_menu"
+                             app:tint="@color/light_white" />
+
+                     </LinearLayout>
+
+                 </androidx.appcompat.widget.Toolbar>
+
+             </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="45dp"
+                 android:background="@color/colorPrimary"
+                 android:gravity="center"
+                 android:orientation="horizontal"
+                 android:paddingTop="5dp">
+
+                 <LinearLayout
+                     android:id="@+id/lout_AllVids"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:gravity="center"
+                     android:onClick="@{()->viewModel.setOnItemClick(3)}">
+
+                     <androidx.appcompat.widget.AppCompatImageView
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:contentDescription="@string/image"
+                         android:padding="3dp"
+                         android:src="@drawable/ic_vid_list"
+                         app:tint="@{viewModel.isLikedVideos ? @color/color_text_light : @color/light_white}" />
+                 </LinearLayout>
+
+                 <View
+                     android:layout_width="1dp"
+                     android:layout_height="wrap_content"
+                     android:layout_marginVertical="12dp"
+                     android:background="@color/light_white" />
+
+                 <LinearLayout
+                     android:id="@+id/lout_LikedVids"
+                     android:layout_width="0dp"
+                     android:layout_height="match_parent"
+                     android:layout_weight="1"
+                     android:gravity="center"
+                     android:onClick="@{()->viewModel.setOnItemClick(4)}">
+
+                     <androidx.appcompat.widget.AppCompatImageView
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:contentDescription="@string/image"
+                         android:padding="3dp"
+                         android:src="@drawable/ic_vid_liked"
+                         app:tint="@{viewModel.isLikedVideos ? @color/light_white : @color/color_text_light}" />
+                 </LinearLayout>
+
+
+             </LinearLayout>
+
+         </com.google.android.material.appbar.AppBarLayout>
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/colorPrimary"
+             app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+             <View
+                 android:id="@+id/view"
+                 android:layout_width="match_parent"
+                 android:layout_height=".5dp"
+                 android:background="@color/grey" />
+
+             <androidx.viewpager.widget.ViewPager
+                 android:id="@+id/view_pager"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_below="@id/view" />
+
+
+         </RelativeLayout>
+
+     </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        tools:context=".view.profile.ProfileFragment">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_gravity="top"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_collapseMode="pin"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:clickable="true"
+                android:contentDescription="@string/image"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:onClick="@{()->viewModel.setOnItemClick(2)}"
+                android:padding="18dp"
+                android:src="@drawable/back_arrow"
+                app:tint="@color/textGrey" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/profile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@{(viewModel.user.Data.getUserName())}"
+                android:textColor="@color/textGrey"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                tools:text="@string/user_profile" />
+
+            <!--            android:text="@{viewModel.isMyAccount == 0 ? @string/my_profile : @string/user_profile}"-->
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_option"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:clickable="true"
+                android:contentDescription="@string/image"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:onClick="@{()->viewModel.setOnItemClick(0)}"
+                android:padding="18dp"
+                android:src="@drawable/video_profile_menu"
+                android:visibility='@{viewModel.isMyAccount == 1 ? View.INVISIBLE : (viewModel.isMyAccount == 2 ? View.INVISIBLE : View.VISIBLE)}' />
+
+        </LinearLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?actionBarSize">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#e8e8e8"
+                android:orientation="vertical">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fitsSystemWindows="true"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <RelativeLayout
+                                android:id="@+id/relativeLayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                tools:ignore="MissingConstraints">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_bg_theme_profile"
+                                    tools:ignore="ContentDescription" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="vertical">
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/user_image_RL"
+                                        android:layout_width="108dp"
+                                        android:layout_height="108dp">
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="96dp"
+                                            android:layout_height="96dp"
+                                            android:layout_centerInParent="true"
+                                            app:cardCornerRadius="24dp"
+                                            tools:ignore="TooDeepLayout">
+
+                                            <!--<androidx.appcompat.widget.AppCompatImageView-->
+                                            <!--    android:id="@+id/img_user_1"-->
+                                            <!--    android:layout_width="match_parent"-->
+                                            <!--    android:layout_height="match_parent"-->
+                                            <!--    android:background="@drawable/edit_profile_img_profile"-->
+                                            <!--    android:contentDescription="@string/image"-->
+                                            <!--    android:scaleType="centerCrop"-->
+                                            <!--    android:visibility="gone" />-->
+
+                                            <androidx.appcompat.widget.AppCompatImageView
+                                                android:id="@+id/img_user"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:scaleType="centerCrop"
+                                                android:src="@drawable/ic_edit_profile_img"
+                                                app:profile_url="@{viewModel.user.Data.userProfile}"
+                                                tools:ignore="ContentDescription" />
+
+
+                                        </androidx.cardview.widget.CardView>
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="28dp"
+                                            android:layout_height="28dp"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_alignParentBottom="true"
+                                            android:background="@drawable/white_round"
+                                            android:elevation="20dp"
+                                            android:onClick="@{()->viewModel.setOnItemClick(1)}"
+                                            android:src="@drawable/ic_edit_profile_medley"
+                                            android:visibility='@{viewModel.isMyAccount == 1 ? View.GONE : (viewModel.isMyAccount == 2 ? View.GONE : View.VISIBLE )}'
+                                            tools:ignore="ContentDescription" />
+                                    </RelativeLayout>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/profile_user_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:paddingTop="16dp">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvUserName"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:includeFontPadding="false"
+                                            android:text='@{Global.capitalize(viewModel.user.Data.firstName+" "+viewModel.user.Data.lastName)}'
+                                            android:textColor="@color/white"
+                                            android:textSize="22sp"
+                                            android:textStyle="bold" />
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="14dp"
+                                            android:layout_height="14dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginStart="5dp"
+                                            android:contentDescription="@string/image"
+                                            android:src="@drawable/ic_user_verified"
+                                            android:visibility="gone" />
+                                        <!--                                        android:visibility="@{viewModel.user.data.isVerified ? View.VISIBLE : View.GONE}" />-->
+                                    </LinearLayout>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvBio"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="36dp"
+                                        android:layout_marginTop="4dp"
+                                        android:layout_marginEnd="36dp"
+                                        android:text="@{viewModel.user.Data.bio}"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp"
+                                        android:visibility="@{viewModel.user.Data.bio.length()>0 ? View.VISIBLE : View.GONE}"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <LinearLayout
+                                        android:id="@+id/layout_count"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="16dp"
+                                        android:background="@drawable/wihte_round_bg"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:paddingHorizontal="8dp">
+
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            style="@style/TextAppearance.AppCompat.Inverse"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawablePadding="8dp"
+                                            android:gravity="center_vertical"
+                                            android:includeFontPadding="false"
+                                            android:paddingHorizontal="16dp"
+                                            android:paddingVertical="3dp"
+                                            android:text="@{Global.prettyCount(viewModel.user.data.totalLikesCount)}"
+                                            android:textColor="@color/new_action_color"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:drawableStartCompat="@drawable/ic_medley_like_primary" />
+
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvViewCount"
+                                            style="@style/TextAppearance.AppCompat.Inverse"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginHorizontal="12dp"
+                                            android:drawablePadding="8dp"
+                                            android:gravity="center_vertical"
+                                            android:includeFontPadding="false"
+                                            android:paddingHorizontal="16dp"
+                                            android:paddingVertical="3dp"
+                                            android:text="@{Global.prettyCount(viewModel.user.data.totalViewCount)}"
+                                            android:textColor="@color/new_action_color"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:drawableStartCompat="@drawable/ic_medley_views_primary" />
+
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            style="@style/TextAppearance.AppCompat.Inverse"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:drawablePadding="8dp"
+                                            android:gravity="center_vertical"
+                                            android:includeFontPadding="false"
+                                            android:paddingHorizontal="16dp"
+                                            android:paddingVertical="3dp"
+                                            android:text="@{Global.prettyCount(viewModel.user.data.totalShareCount)}"
+                                            android:textColor="@color/new_action_color"
+                                            android:textSize="16sp"
+                                            android:textStyle="bold"
+                                            app:drawableStartCompat="@drawable/ic_medley_share_primary" />
+
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginVertical="16dp"
+                                        android:gravity="center"
+                                        android:orientation="horizontal"
+                                        android:visibility="@{viewModel.isMyAccount == 0 ? View.GONE : View.VISIBLE}">
+
+                                        <Button
+                                            android:id="@+id/btnEditVideoProfile"
+                                            android:layout_width="108dp"
+                                            android:layout_height="24dp"
+                                            android:background="@drawable/wihte_round_bg_border"
+                                            android:fontFamily="@font/popins_light"
+                                            android:includeFontPadding="false"
+                                            android:onClick="@{()->viewModel.setOnItemClick(1)}"
+                                            android:paddingHorizontal="16dp"
+                                            android:text='@{viewModel.isMyAccount == 1 ? @string/Unfollow :  @string/follow}'
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/white"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold"
+                                            tools:text="@string/follow" />
+
+                                        <View
+                                            android:layout_width="16dp"
+                                            android:layout_height="match_parent" />
+
+
+                                        <Button
+                                            android:id="@+id/share_profile_button"
+                                            android:layout_width="108dp"
+                                            android:layout_height="24dp"
+                                            android:background="@drawable/wihte_round_bg_border"
+                                            android:fontFamily="@font/popins_light"
+                                            android:includeFontPadding="false"
+                                            android:paddingHorizontal="16dp"
+                                            android:text="@string/share"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/white"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                app:layout_constraintBottom_toBottomOf="@id/relativeLayout"
+                                app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+                                app:layout_constraintStart_toStartOf="@+id/relativeLayout"
+                                app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginHorizontal="16dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginBottom="6dp"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="10dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/temp_layout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="8dp"
+                                        android:baselineAligned="false"
+                                        android:orientation="horizontal"
+                                        android:weightSum="3"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:clickable="true"
+                                            android:focusable="true"
+                                            android:foreground="?selectableItemBackground"
+                                            android:gravity="center"
+                                            android:onClick="@{()->viewModel.setOnItemClick(5)}"
+                                            android:orientation="vertical">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvFollowerTitle"
+                                                style="@style/TextAppearance.AppCompat.Inverse"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text='@{viewModel.user.data.followersCount.equals(0)||viewModel.user.data.followersCount.equals(1)? @string/Follower:@string/Followers}'
+                                                android:textColor="@color/grey_medley"
+                                                android:textSize="16sp" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tv_FansCount"
+                                                style="@style/TextAppearance.AppCompat.Inverse"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@{Global.prettyCount(viewModel.user.data.followersCount)}"
+                                                android:textColor="@color/chatgrey"
+                                                android:textSize="18sp"
+                                                android:textStyle="bold" />
+
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:clickable="true"
+                                            android:focusable="true"
+                                            android:foreground="?selectableItemBackground"
+                                            android:gravity="center"
+                                            android:onClick="@{()->viewModel.setOnItemClick(6)}"
+                                            android:orientation="vertical">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvFollowingTitle"
+                                                style="@style/TextAppearance.AppCompat.Inverse"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@string/following"
+                                                android:textColor="@color/grey_medley"
+                                                android:textSize="16sp" />
+                                            <!--                                            android:text='@{Global.getString("following")}'-->
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tv_FollowingCount"
+                                                style="@style/TextAppearance.AppCompat.Inverse"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@{Global.prettyCount(viewModel.user.data.followingCount)}"
+                                                android:textColor="@color/chatgrey"
+                                                android:textSize="18sp"
+                                                android:textStyle="bold" />
+
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1"
+                                            android:clickable="true"
+                                            android:focusable="true"
+                                            android:gravity="center"
+                                            android:orientation="vertical">
+                                            <!--                                android:foreground="?selectableItemBackground"-->
+
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvPostTitle"
+                                                style="@style/TextAppearance.AppCompat.Inverse"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text='@{viewModel.user.data.totalPost.equals(0)||viewModel.user.data.totalPost.equals(1)?@string/post:@string/posts}'
+                                                android:textColor="@color/grey_medley"
+                                                android:textSize="16sp" />
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvPostCount"
+                                                style="@style/TextAppearance.AppCompat.Inverse"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="@{Global.prettyCount(viewModel.user.data.totalPost)}"
+                                                android:textColor="@color/chatgrey"
+                                                android:textSize="18sp"
+                                                android:textStyle="bold" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </RelativeLayout>
+
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:background="@drawable/white_shape_round"
+                    android:baselineAligned="false"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/lout_AllVids"
+                        android:layout_width="0dp"
+                        android:layout_height="?android:attr/actionBarSize"
+                        android:layout_weight="1"
+                        android:onClick="@{()->viewModel.setOnItemClick(3)}"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/image"
+                            android:src="@{viewModel.isLikedVideos ?  @drawable/ic_grid_unselected :  @drawable/ic_grid_selected }" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/image"
+                            android:src="@drawable/shape_section_line"
+                            android:visibility="@{viewModel.isLikedVideos ?  View.INVISIBLE:View.VISIBLE}" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/image"
+                            android:src="@drawable/shape_section_line"
+                            android:visibility="@{viewModel.isLikedVideos ?  View.VISIBLE:View.INVISIBLE}"
+                            app:tint="@color/grey_line_color" />
+
+                    </RelativeLayout>
+
+                    <!--                    <View-->
+                    <!--                        android:layout_width="1dp"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:layout_marginVertical="12dp"-->
+                    <!--                        android:background="@color/light_white" />-->
+
+                    <RelativeLayout
+                        android:id="@+id/lout_LikedVids"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:onClick="@{()->viewModel.setOnItemClick(4)}"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/image"
+                            android:src="@{viewModel.isLikedVideos ?  @drawable/ic_selected_diamond : @drawable/ic_unselected_diamond}" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/image"
+                            android:src="@drawable/shape_section_line"
+                            android:visibility="@{viewModel.isLikedVideos ?  View.VISIBLE:View.INVISIBLE}" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_alignParentBottom="true"
+                            android:contentDescription="@string/image"
+                            android:src="@drawable/shape_section_line"
+                            android:visibility="@{viewModel.isLikedVideos ?  View.INVISIBLE:View.VISIBLE}"
+                            app:tint="@color/grey_line_color" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <!--                <View-->
+                <!--                    android:id="@+id/view"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height=".5dp"-->
+                <!--                    android:background="@color/grey" />-->
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </RelativeLayout>
+</layout>

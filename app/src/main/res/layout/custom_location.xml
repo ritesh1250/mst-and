@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layoutDirection="ltr"
+    android:background="@drawable/red_border_line">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|center"
+        android:id="@+id/chooseLocation">
+
+        <TextView
+            android:id="@+id/make_the_most_of"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_10sp"
+            android:text="@string/make_the_most_of_meest"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_23sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_user_meest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sp"
+            android:layout_toRightOf="@id/chooseLocation"
+            android:padding="@dimen/_10sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chooseLocation"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"
+        android:text="@string/enhance_your_user_experience_by_providing_camera_storage_microphone_amp_location_permission_this_permission_access_allows_user_to_create_share_connect_and_explore_with_the_most_relevant_audience_and_get_a_better_reach_allowing_location_permission_in_the_background_enables_us_to_be_sure_of_user_fidelity_in_terms_of_content_a_user_posts_this_further_helps_us_in_making_our_meest_community_a_more_safe_and_perfectly_secure_platform"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sp" />
+    <TextView
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_1"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_10sp"
+        android:text="@string/allowing_location_permission_enables_us_to_be_sure_of_user_fidelity_in_terms_of_content_a_user_posts_this_further_helps_us_in_making_our_meest_community_a_more_safe_and_perfectly_secure_platform"
+        android:textColor="@color/white"
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/enableLocation"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/line_2"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sp"
+        android:background="@drawable/button_back"
+        android:padding="@dimen/_10sp"
+        android:text="@string/ok"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</LinearLayout>

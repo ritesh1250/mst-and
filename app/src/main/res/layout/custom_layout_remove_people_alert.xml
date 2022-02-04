@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="@dimen/_240sdp"
+    android:layout_height="@dimen/_210sdp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layoutDirection="ltr"
+    android:background="@drawable/gray_border_wo_padding">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/you_want_to_unfollow"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/social_background_blue"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_30sdp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivPeople"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/image_placeholder"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/tvNamePeople"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lisandra"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tvPeopleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lisandra"
+                android:layout_marginTop="5sp"
+                android:textSize="13sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="@dimen/_30sdp">
+        <TextView
+            android:id="@+id/tvYes"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:text="@string/yes"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/main_btn_blue_bg"/>
+
+        <TextView
+            android:id="@+id/tvNo"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:text="@string/no"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:background="@drawable/main_btn_blue_bg"/>
+    </LinearLayout>
+
+</LinearLayout>

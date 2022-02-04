@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:keepScreenOn="true"
+    android:layoutDirection="ltr">
+
+    <data>
+        <import type="android.view.View" />
+
+        <import type="com.meest.videomvvmmodule.utils.Global" />
+
+        <variable
+            name="model"
+            type="com.meest.videomvvmmodule.model.videos.Video.Data" />
+
+        <variable
+            name="user"
+            type="com.meest.videomvvmmodule.model.user.SearchUser.User" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/parent_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="?android:actionBarSize"
+            android:elevation="5dp"
+            android:paddingTop="36dp"
+            android:src="@drawable/medley_logo"
+            tools:ignore="ContentDescription" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_thumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription" />
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/player_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:clickable="false"
+            app:controller_layout_id="@layout/item_player_controler"
+            app:played_color="@color/transparent"
+            app:scrubber_color="@color/transparent"
+            app:show_timeout="1000"
+            app:shutter_background_color="@color/transparent"
+            app:surface_type="texture_view"
+            app:unplayed_color="@color/transparent">
+
+            <RelativeLayout
+                android:id="@+id/rtl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:visibility="visible" />
+        </com.google.android.exoplayer2.ui.PlayerView>
+
+        <RelativeLayout
+            android:id="@+id/top_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <!--        don't delete this section-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_gradient_opicity" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_gradient_opicity_top" />
+        <!--        don't delete this section-->
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:indeterminate="true"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@color/white"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_3sdp"
+            tools:ignore="DisableBaselineAlignment">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="8dp">
+
+                <!--     <de.hdodenhof.circleimageview.CircleImageView
+                         android:layout_width="@dimen/_50sdp"
+                         android:layout_height="@dimen/_50sdp"
+                         android:background="@drawable/dp_bg_user"
+                         android:visibility="visible"
+                         tools:ignore="ContentDescription" />-->
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_profile_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="3dp"
+                    android:background="@drawable/bg_white_corner_2"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/popins_medium"
+                    android:paddingHorizontal="10dp"
+                    android:paddingTop="1dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    tools:text="DANCER" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/duo_open"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="@dimen/_9sdp"
+                    android:src="@drawable/ic_duet_medley"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/_5sp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <com.meest.utils.RoundedView
+                            android:layout_width="@dimen/size_25dp"
+                            android:layout_height="@dimen/size_25dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="@dimen/_2sp"
+                            app:bottomLeftCornerRadius="@dimen/_5sp"
+                            app:bottomRightCornerRadius="@dimen/_5sp"
+                            app:cardBackgroundColor="#F6F6F6"
+                            app:cardElevation="0dp"
+                            app:topLeftCornerRadius="@dimen/_5sp"
+                            app:topRightCornerRadius="@dimen/_5sp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/img_user"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/ic_edit_profile_img"
+                                    android:scaleType="centerCrop"
+                                    app:profile_url="@{model.userProfile}"
+                                    tools:ignore="ContentDescription"
+                                    tools:src="@drawable/ic_edit_profile_img" />
+                            </LinearLayout>
+                        </com.meest.utils.RoundedView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--<FrameLayout
+                        android:id="@+id/fab_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:clipToPadding="false"
+                        android:gravity="center_horizontal"
+                        app:layout_behavior="com.meest.meest4bharat.videomvvmmodule.utils.MovingUpwardBehaviorAnimation">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:background="@drawable/profile_box"
+                            android:padding="2dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:cardCornerRadius="10dp">
+
+                                <ImageView
+                                    android:id="@+id/img_user"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ic_edit_profile_img"
+                                    tools:ignore="ContentDescription" />
+
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+
+                        &lt;!&ndash;  <com.google.android.material.floatingactionbutton.FloatingActionButton
+                              android:id="@+id/fab_button"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="bottom|end|center_horizontal"
+                              android:contentDescription="todo"
+                              android:gravity="center"
+                              android:src="@drawable/circleimg"
+                              app:backgroundTint="@android:color/transparent"
+                              app:borderWidth="10dp"
+                              app:fabCustomSize="70dp"
+                              app:fabSize="mini"
+                              app:maxImageSize="70dp"
+                              app:tint="@null"
+                              app:useCompatPadding="false" />&ndash;&gt;
+                    </FrameLayout>-->
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/lout_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toEndOf="@id/cardView2"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/popins_medium"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:text='@{model.userName}'
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        tools:text="sandeep_khandel" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginStart="3dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_user_verified"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription" />
+                    <!--                    android:visibility="@{model.verified ? View.VISIBLE : View.GONE}"-->
+
+                    <FrameLayout
+                        android:id="@+id/fl_follow_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_toEndOf="@id/lout_user"
+                        android:background="@drawable/bg_custom_video">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_follow_unfollow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:maxLines="1"
+                            android:paddingHorizontal="@dimen/_10sdp"
+                            android:text="@string/follow"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:visibility="@{model.userId.equals(Global.userId)?View.GONE:View.VISIBLE}" />
+                    </FrameLayout>
+
+                    <!--                    android:text='@{Global.getFollowOrNot(model)? @string/Following : @string/follow}'-->
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/ic_user_verified"
+                        android:visibility="gone"
+                        tools:ignore="ContentDescription" />
+
+                </RelativeLayout>
+
+                <!--                <com.meest.videomvvmmodule.customview.socialview.SocialTextView-->
+                <!--                    android:id="@+id/tv_descreption"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:fontFamily="@font/popins_light"-->
+                <!--                    android:maxWidth="250dp"-->
+                <!--                    android:maxLength="180"-->
+                <!--                    android:text="@{model.postHashTag}"-->
+                <!--                    android:textColor="@color/white"-->
+                <!--                    android:textSize="13sp"-->
+                <!--                    android:visibility="gone"-->
+                <!--                    app:animation_duration="500" />-->
+
+                <LinearLayout
+                    android:id="@+id/ll_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:elevation="3dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_sound_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:fontFamily="@font/poppins_regular"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@{model.postDescription}"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_sound"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:elevation="3dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/soundIcon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_music_icon_1"
+                        android:visibility="visible"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_sound_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/size_5dp"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:text="@{model.soundTitle}"
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_views"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:elevation="3dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_watch_views"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:drawablePadding="8dp"
+                        android:ellipsize="marquee"
+                        android:focusable="true"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:singleLine="true"
+                        android:text="@{Global.prettyCount(model.postViewCount)}"
+                        android:textColor="@color/white"
+                        android:textSize="13sp"
+                        app:drawableStartCompat="@drawable/view_white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fab_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/transparent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingTop="5dp"
+                android:paddingEnd="@dimen/_5sdp">
+                <!-- android:background="@drawable/bg_custom_video"-->
+                <LinearLayout
+                    android:id="@+id/rectcurve_fab"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:background="@color/transparent"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_14sdp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/view_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginBottom="@dimen/_6sdp"
+                        android:clipToPadding="false"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        app:layout_behavior="com.meest.meest4bharat.videomvvmmodule.utils.MovingUpwardBehaviorAnimation">
+
+                        <!--                        <com.like.LikeButton-->
+                        <!--                            android:id="@+id/likebtn"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_gravity="center"-->
+                        <!--                            android:contentDescription="todo"-->
+                        <!--                            app:anim_scale_factor="2"-->
+                        <!--                            app:circle_end_color="@color/colorTheme"-->
+                        <!--                            app:circle_start_color="@color/colorPrimary"-->
+                        <!--                            app:dots_primary_color="@color/white"-->
+                        <!--                            app:dots_secondary_color="@color/Sanddtorm"-->
+                        <!--                            app:fabSize="normal"-->
+                        <!--                            app:icon_size="30dp"-->
+                        <!--                            app:icon_type="diamond"-->
+                        <!--                            app:like_drawable="@drawable/diamond_filled"-->
+                        <!--                            app:liked="@{model.getVideoIsLiked}"-->
+                        <!--                            app:srcCompat="@drawable/diamond"-->
+                        <!--                            app:tint="@null"-->
+                        <!--                            app:unlike_drawable="@drawable/diamond"-->
+                        <!--                            tools:ignore="RtlHardcoded" />-->
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/likebtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:alpha="0.75"
+                            app:fabSize="normal"
+                            app:tint="@null"
+                            tools:ignore="ContentDescription" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_likeCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/gilroy_medium"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="@dimen/_2sdp"
+                            android:textColor="@color/light_white"
+                            android:textSize="14sp"
+                            android:visibility="visible"
+                            tools:ignore="RtlHardcoded"
+                            tools:text="0" />
+                        <!--                        android:layout_marginTop="-8dp"-->
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:layout_marginBottom="@dimen/_6sdp"
+                        android:clipToPadding="false"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        app:layout_behavior="com.meest.meest4bharat.videomvvmmodule.utils.MovingUpwardBehaviorAnimation">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:alpha="0.75"
+                            app:fabSize="normal"
+                            app:srcCompat="@drawable/comment"
+                            app:tint="@null"
+                            tools:ignore="ContentDescription" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_comment_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/gilroy_medium"
+                            android:paddingTop="@dimen/_2sdp"
+                            android:textColor="@color/light_white"
+                            android:textSize="14sp"
+                            android:visibility="visible"
+                            tools:text="0" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:clipToPadding="false"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        app:layout_behavior="com.meest.meest4bharat.videomvvmmodule.utils.MovingUpwardBehaviorAnimation">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_share"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:alpha="0.75"
+                            app:fabSize="mini"
+                            app:srcCompat="@drawable/share"
+                            app:tint="@null"
+                            tools:ignore="ContentDescription" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_share_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/gilroy_medium"
+                            android:paddingTop="@dimen/_2sdp"
+                            android:textColor="@color/light_white"
+                            android:textSize="14sp"
+                            android:visibility="visible"
+                            tools:text="0" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view_gift"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:clipToPadding="false"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_behavior="com.meest.meest4bharat.videomvvmmodule.utils.MovingUpwardBehaviorAnimation">
+
+                        <!--                        <ImageView-->
+                        <!--                            android:id="@+id/img_report"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_gravity="center"-->
+                        <!--                            android:alpha="0.75"-->
+                        <!--                            android:visibility="@{model.userId.equals(Global.userId)?View.GONE:View.VISIBLE}"-->
+                        <!--                            app:fabSize="normal"-->
+                        <!--                            app:srcCompat="@drawable/report"-->
+                        <!--                            app:tint="@null"-->
+                        <!--                            tools:ignore="ContentDescription" />-->
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/img_sendBubble"
+                            android:layout_width="30dp"
+                            android:layout_height="32dp"
+                            android:layout_marginBottom="@dimen/_9sdp"
+                            android:src="@drawable/ic_diamond_gift"
+                            tools:ignore="ContentDescription" />
+
+                        <!--    <TextView
+                                android:id="@+id/tv_comment_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:visibility="visible"
+                                android:fontFamily="@font/gilroy_medium"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:textColor="@color/light_white"
+                                android:textSize="14sp" />-->
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--<FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_behavior="com.meest.meest4bharat.videomvvmmodule.utils.MovingUpwardBehaviorAnimation">
+
+                    <View
+                        android:id="@+id/fab_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/color_false"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_290sdp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:visibility="visible">
+
+                        <View
+                            android:id="@+id/rectcurve_fab1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_custom_video"
+                            android:visibility="invisible"
+                            app:cornerRadius="83dp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:clipToPadding="false"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:visibility="invisible"
+                        app:layout_behavior="com.meest.meest4bharat.videomvvmmodule.utils.MovingUpwardBehaviorAnimation">
+
+                        &lt;!&ndash;                        <com.like.LikeButton&ndash;&gt;
+                        &lt;!&ndash;                            android:id="@+id/likebtn"&ndash;&gt;
+                        &lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;
+                        &lt;!&ndash;                            android:layout_height="wrap_content"&ndash;&gt;
+                        &lt;!&ndash;                            android:layout_gravity="center"&ndash;&gt;
+                        &lt;!&ndash;                            android:contentDescription="todo"&ndash;&gt;
+                        &lt;!&ndash;                            app:anim_scale_factor="2"&ndash;&gt;
+                        &lt;!&ndash;                            app:circle_end_color="@color/colorTheme"&ndash;&gt;
+                        &lt;!&ndash;                            app:circle_start_color="@color/colorPrimary"&ndash;&gt;
+                        &lt;!&ndash;                            app:dots_primary_color="@color/white"&ndash;&gt;
+                        &lt;!&ndash;                            app:dots_secondary_color="@color/Sanddtorm"&ndash;&gt;
+                        &lt;!&ndash;                            app:fabSize="normal"&ndash;&gt;
+                        &lt;!&ndash;                            app:icon_size="30dp"&ndash;&gt;
+                        &lt;!&ndash;                            app:icon_type="diamond"&ndash;&gt;
+                        &lt;!&ndash;                            app:like_drawable="@drawable/diamond_filled"&ndash;&gt;
+                        &lt;!&ndash;                            app:liked="@{model.getVideoIsLiked}"&ndash;&gt;
+                        &lt;!&ndash;                            app:srcCompat="@drawable/diamond"&ndash;&gt;
+                        &lt;!&ndash;                            app:tint="@null"&ndash;&gt;
+                        &lt;!&ndash;                            app:unlike_drawable="@drawable/diamond"&ndash;&gt;
+                        &lt;!&ndash;                            tools:ignore="RtlHardcoded" />&ndash;&gt;
+
+                        <ImageView
+                            android:id="@+id/likebtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:contentDescription="todo"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:src="@drawable/diamond"
+                            app:fabSize="normal"
+                            app:tint="@null" />
+
+                        <TextView
+                            android:id="@+id/tv_likeCount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/gilroy_medium"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:textColor="@color/light_white"
+                            android:textSize="14sp"
+                            android:visibility="visible"
+                            tools:ignore="RtlHardcoded" />
+                        &lt;!&ndash;                        android:layout_marginTop="-8dp"&ndash;&gt;
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view_comment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="@dimen/_7sdp"
+                        android:clipToPadding="false"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:visibility="invisible"
+                        app:layout_behavior="com.meest.meest4bharat.videomvvmmodule.utils.MovingUpwardBehaviorAnimation">
+
+                        <ImageView
+                            android:id="@+id/img_comment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:contentDescription="todo"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            app:fabSize="normal"
+                            app:srcCompat="@drawable/comment"
+                            app:tint="@null" />
+
+                        <TextView
+                            android:id="@+id/tv_comment_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/gilroy_medium"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:textColor="@color/light_white"
+                            android:textSize="14sp"
+                            android:visibility="visible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:clipToPadding="false"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:visibility="invisible"
+                        app:layout_behavior="com.meest.meest4bharat.videomvvmmodule.utils.MovingUpwardBehaviorAnimation">
+
+                        <ImageView
+                            android:id="@+id/img_share"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:contentDescription="todo"
+                            android:paddingStart="5dp"
+                            android:paddingEnd="5dp"
+                            app:fabSize="mini"
+                            app:srcCompat="@drawable/share"
+                            app:tint="@null" />
+
+                        <TextView
+                            android:id="@+id/tv_share_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/gilroy_medium"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:textColor="@color/light_white"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/view_report"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:clipToPadding="false"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:visibility="invisible"
+                        app:layout_behavior="com.meest.meest4bharat.videomvvmmodule.utils.MovingUpwardBehaviorAnimation">
+
+                        <ImageView
+                            android:id="@+id/img_report"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:contentDescription="todo"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            app:fabSize="normal"
+                            app:srcCompat="@drawable/report"
+                            app:tint="@null" />
+
+                        &lt;!&ndash;    <TextView
+                                android:id="@+id/tv_comment_count"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:visibility="visible"
+                                android:fontFamily="@font/gilroy_medium"
+                                android:paddingTop="@dimen/_5sdp"
+                                android:textColor="@color/light_white"
+                                android:textSize="14sp" />&ndash;&gt;
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/fab_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:clipToPadding="false"
+                        android:gravity="center_horizontal"
+                        app:layout_behavior="com.meest.meest4bharat.videomvvmmodule.utils.MovingUpwardBehaviorAnimation">
+
+                        <ImageView
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:src="@drawable/circle" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_user"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"
+                            android:padding="4dp"
+                            android:src="@drawable/dp_bg_user"
+                            tools:ignore="ContentDescription" />
+
+                        &lt;!&ndash;  <com.google.android.material.floatingactionbutton.FloatingActionButton
+                              android:id="@+id/fab_button"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_gravity="bottom|end|center_horizontal"
+                              android:contentDescription="todo"
+                              android:gravity="center"
+                              android:src="@drawable/circleimg"
+                              app:backgroundTint="@android:color/transparent"
+                              app:borderWidth="10dp"
+                              app:fabCustomSize="70dp"
+                              app:fabSize="mini"
+                              app:maxImageSize="70dp"
+                              app:tint="@null"
+                              app:useCompatPadding="false" />&ndash;&gt;
+                    </FrameLayout>
+
+                </FrameLayout>-->
+
+                <RelativeLayout
+                    android:id="@+id/img_sound"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/placeholder"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:visibility="gone"
+                    tools:src="@drawable/meest_logo">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="5dp"
+                        android:background="@drawable/bg_gradient_round"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_music_videolist"
+                        app:tint="@color/white"
+                        tools:ignore="ContentDescription" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="1dp"
+                        tools:ignore="ContentDescription" />
+                    <!--                    app:profile_url="@{model.user.displayPicture}"-->
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fl_option"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="36dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_options"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:padding="18dp"
+                android:src="@drawable/ic_more_option_icon"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_pause"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_play"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_unmute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_mute_off_icon_medley"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+    </RelativeLayout>
+</layout>

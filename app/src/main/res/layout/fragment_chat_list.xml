@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.meest.videomvvmmodule.utils.Global" />
+
+        <variable
+            name="chatListAdapter"
+            type="com.meest.metme.adapter.ChatListAdapter" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="ltr">
+
+
+        <LinearLayout
+
+            android:id="@+id/layout_nochats"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <include
+                layout="@layout/no_chat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adapter="@{chatListAdapter}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+            </LinearLayout>
+
+            <!--  <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                  android:id="@+id/layout_swipe"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+                      <androidx.recyclerview.widget.RecyclerView
+                          android:id="@+id/recyclerView"
+                          android:layout_width="match_parent"
+                          android:layout_height="match_parent" />
+
+
+                  </LinearLayout>
+
+              </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>-->
+
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loading"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/unSelect"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_weight="1"
+                android:background="@drawable/select_button"
+                android:text="@string/unselect_all"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize_bind='@{Global.size2}'
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="1dp" />
+
+            <Button
+                android:id="@+id/selectAll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_weight="1"
+                android:background="@drawable/un_select_button"
+                android:text="@string/select_all"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize_bind='@{Global.size2}'
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

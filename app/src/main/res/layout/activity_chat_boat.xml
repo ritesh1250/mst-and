@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.meest.videomvvmmodule.utils.Global" />
+
+        <variable
+            name="chatBoatViewModel"
+            type="com.meest.metme.viewmodels.ChatBoatViewModel" />
+
+        <variable
+            name="messageAdapter"
+            type="com.meest.metme.adapter.MessageAdapter" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/MainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/chat_head"
+        tools:context="com.meest.metme.ChatBoatActivity">
+
+        <LinearLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimen_1dp">
+
+
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="@dimen/size_50dp"
+                android:layout_height="@dimen/size_50dp"
+                android:layout_margin="@dimen/size_2dp"
+                android:foreground="?selectableItemBackground"
+                android:padding="@dimen/dimen_16dp"
+                android:src="@drawable/chat_back_arrow"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/ll_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center_vertical|end"
+                android:padding="@dimen/size_5dp"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/copy_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_copy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/copy_chatt"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lobster_two_regular"
+                        android:text="@string/copy"
+                        android:textColor="@color/white"
+                        android:textSize_bind='@{Global.size2}' />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/reply_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_reply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/reply_chat"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lobster_two_regular"
+                        android:text="@string/reply"
+                        android:textColor="@color/white"
+                        android:textSize_bind="@{Global.size2}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/delete_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/delete_chatt"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lobster_two_regular"
+                        android:text="@string/delete"
+                        android:textColor="@color/white"
+                        android:textSize_bind='@{Global.size2}' />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/forward_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_forward"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/forward_chat"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/lobster_two_regular"
+                        android:text="@string/forward"
+                        android:textColor="@color/white"
+                        android:textSize_bind='@{Global.size2}' />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mainMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/size_2dp"
+                android:gravity="center_vertical">
+
+                <RelativeLayout
+                    android:id="@+id/layout_images"
+                    android:layout_width="@dimen/size_50dp"
+                    android:layout_height="@dimen/size_50dp"
+                    android:background="@drawable/profile_image_bg"
+                    android:onClick="@{()->chatBoatViewModel.onPersonalChatInfoClick()}"
+                    android:splitMotionEvents="false">
+
+                    <com.meest.RoundedView
+                        android:id="@+id/cardView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:bottomLeftCornerRadius="@dimen/size_10dp"
+                        app:bottomRightCornerRadius="@dimen/size_10dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/size_10dp"
+                        app:topLeftCornerRadius="@dimen/size_10dp"
+                        app:topRightCornerRadius="@dimen/size_10dp">
+
+                        <com.meest.RoundedView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="2dp"
+                            app:bottomLeftCornerRadius="@dimen/dimen_12dp"
+                            app:bottomRightCornerRadius="@dimen/dimen_12dp"
+                            app:cardBackgroundColor="@color/white"
+                            app:cardCornerRadius="@dimen/size_10dp"
+                            app:topLeftCornerRadius="@dimen/dimen_12dp"
+                            app:topRightCornerRadius="@dimen/dimen_12dp">
+
+                            <ImageView
+                                android:id="@+id/img_profile"
+                                bindChatMainProfile="@{chatBoatViewModel.image}"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_edit_metme"
+                                tools:ignore="ContentDescription" />
+
+                        </com.meest.RoundedView>
+                    </com.meest.RoundedView>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:foreground="?selectableItemBackground"
+                    android:onClick="@{()->chatBoatViewModel.onPersonalChatInfoClick()}">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_50dp"
+                        android:fontFamily="@font/lobster_two_regular"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/size_5dp"
+                        android:singleLine="true"
+                        android:text="@{chatBoatViewModel.name}"
+                        android:textColor="@color/white"
+                        android:textSize_bind='@{Global.size1}'
+                        android:textStyle="bold"
+                        app:setFont="@{chatBoatViewModel.fontName}"
+                        tools:text="" />
+<!--                    app:setFont="@{chatBoatViewModel.fontName}"-->
+                </LinearLayout>
+                <!--                android:textSize="@{chatBoatViewModel.size}"-->
+                <ImageView
+                    android:id="@+id/img_search"
+                    android:layout_width="@dimen/size_50dp"
+                    android:layout_height="@dimen/size_50dp"
+                    android:layout_gravity="center_vertical"
+                    android:foreground="?selectableItemBackground"
+                    android:onClick="@{()->chatBoatViewModel.onSearchClick()}"
+                    android:padding="17dp"
+                    android:src="@drawable/search_icon"
+                    android:visibility="gone"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/img_call"
+                    android:layout_width="@dimen/size_50dp"
+                    android:layout_height="@dimen/size_50dp"
+                    android:layout_gravity="center_vertical"
+                    android:foreground="?selectableItemBackground"
+                    android:onClick="@{()->chatBoatViewModel.onCallClick()}"
+                    android:padding="15dp"
+                    android:visibility="invisible"
+                    android:src="@drawable/ic_call"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+
+                    android:layout_width="@dimen/size_50dp"
+                    android:layout_height="@dimen/size_50dp"
+                    android:layout_gravity="center_vertical"
+                    android:foreground="?selectableItemBackground"
+                    android:onClick="@{()->chatBoatViewModel.onVideoCallClick()}"
+                    android:padding="15dp"
+                    android:visibility="invisible"
+                    android:src="@drawable/ic_video_call"
+                    tools:ignore="ContentDescription" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/go_to_top"-->
+<!--                    android:layout_width="@dimen/size_50dp"-->
+<!--                    android:layout_height="@dimen/size_50dp"-->
+<!--                    android:layout_gravity="center_vertical"-->
+<!--                    android:foreground="?selectableItemBackground"-->
+<!--                    android:padding="15dp"-->
+<!--                    android:src="@drawable/camera_button"-->
+<!--                    tools:ignore="ContentDescription" />-->
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.meest.RoundedView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appbar"
+            app:topLeftCornerRadius="@dimen/dimen_15dp"
+            app:topRightCornerRadius="@dimen/dimen_15dp">
+
+
+            <LinearLayout
+                android:id="@+id/round_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f4f4f4"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_2sdp"
+                android:paddingTop="@dimen/_2sdp">
+
+
+                <ProgressBar
+                    android:id="@+id/loadmoremsg"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mMessagesView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adapter="@{messageAdapter}" />
+
+
+                    <TextView
+                        android:id="@+id/chat_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:paddingHorizontal="@dimen/dimen_10dp"
+                        android:background="@drawable/chat_date_bg"
+                        android:includeFontPadding="false"
+                        android:paddingVertical="@dimen/size_5dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible"
+                        tools:text="21:00:2021(wednesday)" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/root_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:splitMotionEvents="false">
+
+                    <LinearLayout
+                        android:id="@+id/reply_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/profile_image_bg"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_5sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:visibility="@{chatBoatViewModel.reply_layout?View.VISIBLE:View.GONE}">
+
+                        <LinearLayout
+                            android:id="@+id/username_chat"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/reply_username"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:includeFontPadding="false"
+                                android:maxLines="1"
+                                android:textColor="@color/black"
+                                android:textSize_bind='@{Global.size4}'
+                                tools:text="sdnjgsdgsdhgd" />
+
+                            <TextView
+                                android:id="@+id/replymsg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:includeFontPadding="false"
+                                android:maxLines="2"
+                                android:textSize_bind='@{Global.size3}'
+                                tools:text="fahsgdgdsfhshfdsdfsfdsdfdffddfdfsssdfddffdfdfdfdfdsfdsfddsfsfdssdfsfjkdhsfdhjhjhsdhshsjdhjh" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/reply_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:scaleType="fitXY" />
+
+                            <ImageView
+                                android:id="@+id/cancel_reply_chat_image"
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_12sdp"
+                                android:layout_alignParentEnd="true"
+                                android:padding="@dimen/_1sdp"
+                                android:src="@drawable/close_icon" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/reply_layout"
+                        android:gravity="bottom">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="37dp"
+                            android:layout_height="37dp"
+                            android:layout_margin="5dp"
+                            android:foreground="?selectableItemBackground"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="5dp">
+
+                            <ImageView
+                                android:id="@+id/fab_layout_camera"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:onClick="@{()->chatBoatViewModel.onCameraClick()}"
+                                android:padding="@dimen/size_5dp"
+                                android:src="@drawable/ic_camera_btn"
+                                tools:ignore="ContentDescription" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <com.meest.RoundedView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            app:bottomLeftCornerRadius="@dimen/dimen_6dp"
+                            app:bottomRightCornerRadius="@dimen/dimen_6dp"
+                            app:cardCornerRadius="6dp"
+                            app:cardElevation="2dp"
+                            app:topLeftCornerRadius="@dimen/dimen_6dp"
+                            app:topRightCornerRadius="@dimen/dimen_6dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <EditText
+                                        android:id="@+id/message_input"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toRightOf="@+id/fab_layout_camera"
+                                        android:layout_weight="1"
+                                        android:afterTextChanged="@{chatBoatViewModel.afterTextChanged}"
+                                        android:background="@color/chat_edittext"
+                                        android:hint="@string/type_here"
+                                        android:importantForAutofill="no"
+                                        android:inputType="textMultiLine"
+                                        android:isScrollContainer="true"
+                                        android:maxHeight="@dimen/_110sdp"
+                                        android:maxLines="5"
+                                        android:minHeight="38dp"
+                                        android:onTextChanged="@{chatBoatViewModel.onTextChanged}"
+                                        android:padding="@dimen/_5sdp"
+                                        android:scrollbars="vertical"
+                                        android:text="@={chatBoatViewModel.enteredMsg}"
+                                        android:textColor="@color/black"
+                                        android:textColorHint="@color/tab_gray"
+                                        android:textSize_bind='@{Global.size3}'
+                                        app:autoSizeTextType="uniform"
+                                        app:setFont="@{chatBoatViewModel.fontName}" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </com.meest.RoundedView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="37dp"
+                            android:layout_height="37dp"
+                            android:layout_margin="5dp"
+                            android:foreground="?selectableItemBackground"
+                            android:visibility="@{chatBoatViewModel.micro_gallery? View.VISIBLE:View.GONE}"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="2dp">
+
+
+                            <ImageView
+                                android:id="@+id/micro"
+                                android:layout_width="37dp"
+                                android:layout_height="37dp"
+                                android:layout_gravity="bottom"
+                                android:padding="@dimen/size_5dp"
+                                android:src="@drawable/ic_record_btn" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="37dp"
+                            android:layout_height="37dp"
+                            android:layout_margin="5dp"
+                            android:foreground="?selectableItemBackground"
+                            android:visibility="@{chatBoatViewModel.micro_gallery? View.VISIBLE:View.GONE}"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="2dp">
+
+                            <ImageView
+                                android:id="@+id/gallery"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:layout_toEndOf="@+id/micro"
+                                android:onClick="@{()->chatBoatViewModel.onGalleryClick()}"
+                                android:padding="@dimen/size_5dp"
+                                android:src="@drawable/ic_image"
+                                tools:ignore="ContentDescription" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="37dp"
+                            android:layout_height="37dp"
+                            android:layout_margin="5dp"
+                            android:foreground="?selectableItemBackground"
+                            android:visibility="@{chatBoatViewModel.micro_gallery? View.GONE:View.VISIBLE}"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="2dp">
+
+                            <ImageView
+                                android:id="@+id/send"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:onClick="@{()->chatBoatViewModel.onSendButtonClick()}"
+                                android:padding="@dimen/size_5dp"
+                                android:src="@drawable/ic_send"
+                                tools:ignore="ContentDescription" />
+                        </androidx.cardview.widget.CardView>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/ll_block_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:includeFontPadding="false"
+                        android:text="@string/you_blocked_this_account"
+                        android:textColor="@color/black"
+                        android:textSize_bind='@{Global.size3}' />
+
+                    <TextView
+                        android:id="@+id/tv_block_mst"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:includeFontPadding="false"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:textSize_bind='@{Global.size3}'
+                        tools:text="fhh" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+        </com.meest.RoundedView>
+    </RelativeLayout>
+
+</layout>

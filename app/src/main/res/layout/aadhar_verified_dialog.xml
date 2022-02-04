@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:src="@drawable/ic_verified_icon"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#6FBB55"
+        android:textSize="22sp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textAlignment="center"
+        android:text="@string/your_account_verified_nsuccesfully"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/green_btn"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/txt_login"
+        android:text="@string/okay"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:layout_centerVertical="true"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_above="@+id/img_bottom_line_black"/>
+
+
+
+</LinearLayout>

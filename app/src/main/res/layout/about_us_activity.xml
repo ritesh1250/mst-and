@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layoutDirection="ltr"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/About_us_header"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/inmg_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_full_back_arrow"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@+id/inmg_back"
+            android:text="About Us"
+            android:textColor="#1E2432"
+            android:textSize="19sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:background="#33AAAAAA"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/About_us_header"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/help_header"
+                android:layout_marginTop="23dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="40dp"
+                android:textSize="14sp"
+                android:textAlignment="textStart"
+                android:textColor="#000000"
+                android:text="Nulla cursus vitae nisi sed venenatis. Fusce purus eros, imperdiet at mattis vel, fringilla a odio. Vestibulum luctus in lorem a mattis. Sed euismod tincidunt orci, vitae faucibus ligula scelerisque nec. Sed a orci quis lorem maximus accumsan lacinia in nisi. \n\n
+Cras blandit consequat sapien ut cursus. Duis in mollis magna. Sed sit amet faucibus nulla. Pellentesque non ex velit. \n\n\n
+Nam a nisi eu arcu dictum mattis. Aenean varius justo a sollicitudin tincidunt. Nullam congue sed dolor ut vehicula. Sed lobortis et nisl id auctor. Nulla cursus vitae nisi sed venenatis. Fusce purus eros, imperdiet at mattis vel, fringilla a odio.  Vestibulum luctus in lorem a mattis. Sed euismod tincidunt orci, vitae faucibus ligula scelerisque nec. Sed a orci quis lorem maximus accumsan lacinia in nisi.\n\n
+Cras blandit consequat sapien ut cursus. Duis in mollis magna. Sed sit amet faucibus nulla. Pellentesque non ex velit. \n\n
+Nam a nisi eu arcu dictum mattis. Aenean varius justo a sollicitudin tincidunt. Nullam congue sed dolor ut vehicula. Sed lobortis et nisl id auctor" />
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+

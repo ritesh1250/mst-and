@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/selected_home"
+        android:title="" />
+    <item
+        android:id="@+id/navigation_trend"
+        android:icon="@drawable/unselected_hashtag"
+        android:title="" />
+
+    <item
+        android:id="@+id/dummy"
+        android:icon="@drawable/album_gridimage_frame"
+        android:title="" />
+
+    <item
+        android:id="@+id/navigation_notification"
+        android:icon="@drawable/unselected_notification"
+        android:title="" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/unselected_profile"
+        android:title="" />
+</menu>

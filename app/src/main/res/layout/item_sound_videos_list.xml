@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"  android:layoutDirection="ltr">
+
+    <data>
+
+        <import type="com.meest.videomvvmmodule.utils.Global" />
+
+        <variable
+            name="model"
+            type="com.meest.videomvvmmodule.model.videos.Video.Data" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <!--        <androidx.cardview.widget.CardView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            app:cardCornerRadius="5dp"-->
+        <!--            app:cardUseCompatPadding="true">-->
+        <com.meest.RoundedView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/size_1dp"
+            app:bottomLeftCornerRadius="0dp"
+            app:bottomRightCornerRadius="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:topLeftCornerRadius="0dp"
+            app:topRightCornerRadius="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_thumb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible"
+                    app:image_url="@{model.thumbnail_image}"
+                    tools:ignore="ContentDescription"
+                    android:src="@drawable/video_loader" />
+
+            </RelativeLayout>
+        </com.meest.RoundedView>
+        <!--        </androidx.cardview.widget.CardView>-->
+
+    </RelativeLayout>
+</layout>

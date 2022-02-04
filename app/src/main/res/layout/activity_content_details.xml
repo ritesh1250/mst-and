@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/Insights_header"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/img_back_insights"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_full_back_arrow"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@+id/img_back_insights"
+            android:text="@string/insights"
+            android:textColor="#1E2432"
+            android:textSize="19sp"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imv_detail"
+        android:layout_width="112dp"
+        android:layout_height="76dp"
+        android:src="@drawable/image_placeholder"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/Insights_header"/>
+
+    <hani.momanii.supernova_emoji_library.Helper.EmojiconTextView
+        android:id="@+id/txt_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fun with friends and explore new places"
+        android:layout_toRightOf="@+id/imv_detail"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/Insights_header"
+        android:textSize="17dp"
+        android:layout_marginEnd="10dp"
+        android:textStyle="normal"
+        />
+
+    <TextView
+        android:id="@+id/txt_date_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_details"
+        android:layout_toRightOf="@+id/imv_detail"
+        android:text="15-Aug-2020"
+        android:layout_marginTop="12dp"
+        android:textSize="16dp"
+        android:textStyle="normal"/>
+
+    <TextView
+        android:id="@+id/txt_engagement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/engagement"
+        android:textSize="17dp"
+        android:textStyle="normal"
+        android:textFontWeight="2"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/imv_detail"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/seekBarOne_details"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:minWidth="400dp"
+        android:max="100"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/txt_engagement"
+        android:indeterminate="false"
+        android:progress="70" />
+
+
+    <ProgressBar
+        android:id="@+id/seekBartwo_details"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:minWidth="400dp"
+        android:max="100"
+        android:layout_below="@+id/seekBarOne_details"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:indeterminate="false"
+        android:progress="70" />
+
+    <TextView
+        android:id="@+id/txt_numberOne_details"
+        android:layout_width="27dp"
+        android:layout_height="19dp"
+        android:layout_alignTop="@+id/seekBarOne_details"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="32dp"
+        android:layout_toRightOf="@+id/seekBarOne_details"
+        android:gravity="right"
+        android:text="112"
+        android:textSize="14dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/txt_numberTwo_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="112"
+        android:layout_marginRight="32dp"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:textSize="14dp"
+        android:textStyle="normal"
+        android:layout_below="@+id/txt_numberOne_details"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@+id/seekBartwo_details"
+        />
+
+
+    <TextView
+        android:id="@+id/txtPeople_details"
+        android:layout_width="146dp"
+        android:layout_height="22dp"
+        android:text="@string/people_reached"
+        android:textSize="16dp"
+        android:layout_below="@+id/seekBartwo_details"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="33dp"
+        />
+
+
+    <TextView
+        android:id="@+id/txt_514"
+        android:layout_width="74dp"
+        android:layout_height="22dp"
+        android:text="514"
+        android:layout_toRightOf="@id/txtPeople_details"
+        android:layout_below="@+id/txt_numberTwo_details"
+        android:layout_marginTop="28dp"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:textSize="16dp"
+        android:paddingRight="32dp"/>
+
+
+    <TextView
+        android:id="@+id/txtPost"
+        android:layout_width="165dp"
+        android:layout_height="22dp"
+        android:text="@string/post_engagement"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        android:layout_below="@+id/txtPeople_details"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_224"
+        android:layout_width="74dp"
+        android:layout_height="22dp"
+        android:text="224"
+        android:layout_toRightOf="@id/txtPost"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/txt_514"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:paddingRight="32dp"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:id="@+id/txtPost_view"
+        android:layout_width="123dp"
+        android:layout_height="22dp"
+        android:text="@string/view"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        android:layout_below="@+id/txtPost"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_214"
+        android:layout_width="74dp"
+        android:layout_height="22dp"
+        android:text="214"
+        android:layout_toRightOf="@id/txtPost_view"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:paddingRight="32dp"
+        android:textSize="16dp"
+        android:layout_below="@+id/txt_224"
+        />
+
+    <TextView
+        android:id="@+id/txtPost_share"
+        android:layout_width="107dp"
+        android:layout_height="22dp"
+        android:text="@string/post_share"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        android:layout_below="@+id/txtPost_view"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_5"
+        android:layout_width="74dp"
+        android:layout_height="22dp"
+        android:text="5"
+        android:layout_toRightOf="@id/txtPost_share"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txt_214"
+        android:gravity="right"
+        android:paddingRight="32dp"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:id="@+id/txtPost_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/post_comments"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        android:layout_below="@+id/txtPost_share"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_12"
+        android:layout_width="74dp"
+        android:layout_height="22dp"
+        android:text="12"
+        android:layout_toRightOf="@id/txtPost_comment"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/txt_5"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:paddingRight="32dp"
+        android:textSize="16dp"
+        />
+
+    <TextView
+        android:id="@+id/txt_watchTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Watch Time"
+        android:layout_below="@+id/txtPost_comment"
+        android:textSize="16dp"
+        android:layout_marginLeft="18dp"
+        android:visibility="gone"
+        android:layout_marginTop="18dp"/>
+
+    <TextView
+        android:id="@+id/txt_200_min"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="200 min"
+        android:layout_toRightOf="@+id/txt_watchTime"
+        android:layout_below="@+id/txt_12"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentRight="true"
+        android:paddingRight="32dp"
+        android:gravity="right"
+        android:textSize="16dp"
+        />
+
+</RelativeLayout>
+

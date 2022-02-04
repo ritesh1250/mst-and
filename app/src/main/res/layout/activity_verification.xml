@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.meest.videomvvmmodule.viewmodel.VerificationViewModel" />
+
+        <variable
+            name="OnCaptureClick"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="OnAttachClick"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.profile.VerificationActivity">
+
+        <RelativeLayout
+            android:id="@+id/lout_header"
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/popins_medium"
+                android:text="@string/request_verification"
+                android:textColor="@color/textGrey"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:contentDescription="@string/back_online"
+                android:padding="3dp"
+                android:src="@drawable/ic_back"
+                app:tint="@color/textGrey" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimary" />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lout_header"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="50dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/linear_bg"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/your_photo_holding_your_id_card"
+                        android:textColor="@color/textGrey"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/_115sdp"
+                        android:layout_height="@dimen/_115sdp"
+                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
+                        app:cardBackgroundColor="@color/black"
+                        app:cardCornerRadius="90dp">
+
+                        <ImageView
+                            android:id="@+id/round_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_group_2419"
+                            android:contentDescription="@string/image" />
+                    </androidx.cardview.widget.CardView>
+
+
+                    <Button
+                        android:id="@+id/tv_add_image"
+                        android:layout_width="150dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/button_border"
+                        android:fontFamily="@font/poppins_regular"
+                        android:onClick="@{OnCaptureClick}"
+                        android:text="@string/capture"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorTheme"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sp"
+                    android:background="@drawable/linear_bg_1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/photo_of_id_clear_photo"
+                        android:textColor="@color/textGrey" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="170dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
+                        app:cardBackgroundColor="@color/black"
+                        app:cardCornerRadius="20dp">
+
+                        <ImageView
+                            android:id="@+id/iv_proof"
+                            android:layout_width="170dp"
+                            android:layout_height="100dp"
+                            android:background="@drawable/ic_group_2420"
+                            android:contentDescription="@string/imagePickerEmpty"
+                            android:scaleType="centerCrop" />
+                    </androidx.cardview.widget.CardView>
+
+                    <Button
+                        android:layout_width="150dp"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/button_border"
+                        android:fontFamily="@font/poppins_regular"
+                        android:onClick="@{OnAttachClick}"
+                        android:text="@string/attach"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorTheme"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/id_number"
+                        android:textColor="@color/textGrey"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:afterTextChanged="@{(editable)->viewModel.afterTextChanged(editable,0)}"
+                        android:background="@drawable/linear_bg_1"
+                        android:hint="@string/xxx_xx_xxxxxx_xx"
+                        android:importantForAutofill="no"
+                        android:inputType="text"
+                        android:maxLength="12"
+                        android:paddingHorizontal="15dp"
+                        android:textColor="@color/textGrey"
+                        android:textColorHint="@color/textGrey"
+                        android:textCursorDrawable="@xml/cursor"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/name_on_id"
+                    android:textColor="@color/textGrey"
+                    android:maxLength="40"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/linear_bg_1"
+                    android:hint="@string/same_as_id"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:id="@+id/id_name"
+                    android:paddingHorizontal="15dp"
+                    android:textColor="@color/textGrey"
+                    android:textColorHint="@color/textGrey"
+                    android:textCursorDrawable="@xml/cursor"
+                    android:textSize="16sp"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/full_address"
+                    android:textColor="@color/textGrey"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:layout_marginTop="5dp"
+                    android:afterTextChanged="@{(editable)->viewModel.afterTextChanged(editable,2)}"
+                    android:background="@drawable/linear_bg_1"
+                    android:gravity="top"
+                    android:hint="@string/same_as_id"
+                    android:inputType="text"
+                    android:nestedScrollingEnabled="true"
+                    android:paddingHorizontal="15dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/textGrey"
+                    android:textColorHint="@color/textGrey"
+                    android:textCursorDrawable="@xml/cursor"
+                    android:textSize="16sp"
+                    tools:ignore="Autofill" />
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/linear_bg_1"
+                    android:backgroundTint="@color/Button_Red"
+                    android:fontFamily="@font/popins_medium"
+                    android:onClick="@{()->viewModel.requestVerify()}"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+                <!--                android:background="@{viewModel.isEnabled ? @drawable/bg_gradient : @drawable/bg_grey_corner_5}"-->
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+</layout>

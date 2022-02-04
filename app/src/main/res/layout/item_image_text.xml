@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.meest.videomvvmmodule.utils.Global" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="imageTextViewModel"
+            type="com.meest.metme.viewmodels.ImageTextViewModel" />
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/videos_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_play_arrow"
+            android:visibility="@{imageTextViewModel.isVideo?View.VISIBLE:View.GONE}" />
+        <!--    android:visibility="@{imageTextViewModel.isVideo?View.VISIBLE:View.GONE}"-->
+        <ImageView
+            bindImageText="@{imageTextViewModel.image}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="@{imageTextViewModel.isVideo?View.GONE:View.VISIBLE}" />
+        <!--    android:visibility="@{imageTextViewModel.isVideo?View.GONE:View.VISIBLE}"-->
+        <VideoView
+            android:id="@+id/svid"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:visibility="@{imageTextViewModel.isVideo?View.VISIBLE:View.GONE}" />
+        <!--   -->
+        <RelativeLayout
+            android:id="@+id/root_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_5sp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:splitMotionEvents="false">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/message_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_toRightOf="@+id/fab_layout_camera"
+                    android:layout_weight="1"
+                    android:afterTextChanged="@{imageTextViewModel.afterTextChanged}"
+                    android:background="@drawable/chat_edittext"
+                    android:hint="@string/type_here"
+                    android:importantForAutofill="no"
+                    android:inputType="textMultiLine"
+                    android:isScrollContainer="true"
+                    android:maxHeight="@dimen/_110sdp"
+                    android:maxLines="5"
+                    android:onTextChanged="@{imageTextViewModel.onTextChanged}"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:scrollbars="vertical"
+                    android:text="@={imageTextViewModel.galleryPhotoModel.imageText}"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/tab_gray"
+                    android:textSize_bind="@{Global.size3}"
+                    app:autoSizeTextType="uniform" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp">
+
+                    <ImageView
+                        android:id="@+id/send"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:onClick="@{()->imageTextViewModel.onSendButtonClick()}"
+                        android:padding="@dimen/size_5dp"
+                        android:src="@drawable/ic_send"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

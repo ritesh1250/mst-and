@@ -1,0 +1,29 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5sdp"
+    android:layoutDirection="ltr"
+    android:layout_margin="5dp">
+    <ImageView
+        android:id="@+id/hashtag_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/placeholder"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+    <TextView
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:id="@+id/hashtag_title"
+        android:textAlignment="center"
+        android:hint="#Electronics"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:background="@drawable/hashtaground"
+        android:layout_height="wrap_content" />
+</LinearLayout>

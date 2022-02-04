@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr">
+
+    <data>
+
+        <variable
+            name="plan"
+            type="com.meest.videomvvmmodule.model.wallet.CoinPlan.Data" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp">
+            <!--            android:background="@drawable/bg_stroke"-->
+            <RelativeLayout
+                android:id="@+id/lout_coin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40dp"
+                android:background="@drawable/bg_white_mayank"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/diamond"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:src="@drawable/ic_diamond_new"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/diamond"
+                    android:layout_weight="1"
+                    android:text='@{plan.coinAmount+" "+@string/Diamonds}'
+                    android:textColor="@color/first_color"
+                    android:textSize="15sp"
+                    tools:text="5000 Diamonds" />
+
+                <Button
+                    android:id="@+id/btn_buy"
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/new_medley_bg"
+                    android:fontFamily="@font/gilroy_medium"
+                    android:text='@{"₹ "+plan.coinPlanPrice}'
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    tools:text="₹ 100" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <!--        <View-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="1dp"-->
+        <!--            android:layout_below="@+id/lout_coin"-->
+        <!--            android:background="@color/colorPrimary" />-->
+
+    </RelativeLayout>
+</layout>

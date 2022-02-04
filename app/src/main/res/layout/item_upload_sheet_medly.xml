@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:keepScreenOn="true"
+    android:layoutDirection="ltr">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.meest.medley_camera2.camera2.viewmodels.PreviewVideoViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_bottom_sheet"
+        android:backgroundTint="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/lout_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_comment_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/uploadvideo"
+                android:textColor="#ACACAC"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_close_"
+                app:tint="#818181"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lout_head"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:cardCornerRadius="5dp"
+                    app:cardUseCompatPadding="true">
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/describe"
+                        android:textColor="@color/color_dark_grey"
+                        android:textSize="20sp" />
+
+                    <com.meest.videomvvmmodule.customview.socialview.SocialEditText
+                        android:id="@+id/edt_des"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="8dp"
+                        android:afterTextChanged="@{(editable)->viewModel.onDescriptionTextChanged(editable)}"
+                        android:background="@drawable/bg_grey"
+                        android:cursorVisible="true"
+                        android:fontFamily="@font/poppins_regular"
+                        android:gravity="top"
+                        android:hint="@string/awesomecaption"
+                        android:maxLength="375"
+                        android:padding="10dp"
+                        android:textColor="@color/color_dark_grey"
+                        android:textColorHint="@color/color_dark_grey"
+                        android:textCursorDrawable="@xml/cursor"
+                        android:textSize="16sp"
+                        app:hashtagColor="@color/black"
+                        app:socialFlags="hashtag" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="3dp"
+                android:gravity="end"
+                android:text='@{viewModel.position+"/375"}'
+                android:textColor="@color/color_dark_grey" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:text='@string/postsettings'
+                android:textColor="@color/color_dark_grey"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Switch
+                    android:id="@+id/switch_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:checked="true"
+                    android:thumbTint="@color/white"
+                    android:trackTint="@color/colorTheme" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="end"
+                    android:text='@string/postsettings'
+                    android:textColor="@color/color_text_light"
+                    android:thumbTint="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <Switch
+                    android:id="@+id/switch_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:checked="true"
+                    android:switchMinWidth="@dimen/_40sdp"
+                    android:thumbTint="@color/white"
+                    android:track="@drawable/bg_switch_states" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="end"
+                    android:text='@string/allowsavetophone'
+                    android:textColor="@color/color_dark_grey"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <Switch
+                    android:id="@+id/switch_duet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:checked="true"
+                    android:switchMinWidth="@dimen/_40sdp"
+                    android:thumbTint="@color/white"
+                    android:track="@drawable/bg_switch_states" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="1dp"
+                    android:gravity="end"
+                    android:text='@string/allowduet'
+                    android:textColor="@color/color_dark_grey"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_publish"
+                android:layout_width="150dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:background="@drawable/bg_color_theme_gradient"
+                android:fontFamily="@font/popins_medium"
+                android:includeFontPadding="false"
+                android:letterSpacing="0.1"
+                android:text="@string/publish"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <!--            android:onClick="@{()->viewModel.fetchVideoUrl()}"-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:text="@string/by_continuing_you_agree_to_bubbletok_s_terms_of_use_nand_confirm_that_you_have_read_our_privacy_polic"
+                android:textColor="@color/color_text_light"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_privacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center"
+                android:paddingHorizontal="25dp"
+                android:text="@string/policy_center"
+                android:textColor="@color/color_dark_grey"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

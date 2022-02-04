@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_newly_downloaded_media_nfrom_this_chat_in_your_phone_s_ngallery"
+        android:layout_gravity="center"
+        android:textColor="#0A1F44"
+        android:textSize="22sp"
+        android:layout_marginTop="34dp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_marginTop="38dp"
+        android:layout_marginStart="22dp"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/default_yes"
+            android:paddingStart="50dp"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yes"
+            android:layout_marginTop="30dp"
+            android:paddingStart="50dp"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no"
+            android:layout_marginTop="30dp"
+            android:paddingStart="50dp"
+            android:layout_weight="1"/>
+    </RadioGroup>
+
+</LinearLayout>

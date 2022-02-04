@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr"
+    tools:context="com.meest.Fragments.CampaignCompletedFragment"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recyclerViewCompleted"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loading"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/_10sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:visibility="gone"
+        />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/noAdsCreateComplete"
+   >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/no_campaign_create_yet"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Ads Created Yet"
+        android:textSize="18dp"
+        android:textColor="#999999"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_a_new_ads_to_reach_more_people"
+        android:textSize="10dp"
+        android:gravity="center"
+        android:textColor="#CCCCCC"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_30sdp"/>
+
+</LinearLayout>
+
+
+
+</LinearLayout>

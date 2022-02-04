@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.meest.videomvvmmodule.utils.Global"/>
+        <import type="android.view.View" />
+
+        <variable
+            name="chatTextViewModel"
+            type="com.meest.metme.viewmodels.ChatTextViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dimen_3dp"
+        bindSelectedColor="@{chatTextViewModel}"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rel_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/rounded_corner_chat_box_purple"
+                android:minWidth="@dimen/_100sdp">
+
+                <RelativeLayout
+                    android:id="@+id/rl_other_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:visibility="visible">
+
+                    <TextView
+                        app:setFont="@{chatTextViewModel.fontName}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:fontFamily="@font/lobster_two_regular"
+                        android:gravity="start"
+                        android:includeFontPadding="false"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:text="@{chatTextViewModel.replyText}"
+                        android:textColor="@color/black"
+                        android:textColorLink="@color/color_purple"
+                        android:textSize_bind='@{Global.size3}'
+                        android:textStyle="bold"
+                        android:visibility='@{chatTextViewModel.attachmentType.equalsIgnoreCase("Message")?View.VISIBLE:View.GONE,default= gone}'
+                        tools:text="fdasdas" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_other_audio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:visibility='@{chatTextViewModel.attachmentType.equalsIgnoreCase("Audio")?View.VISIBLE:View.GONE,default= gone}'>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corner_chat_box_purple"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_red_circle"
+                            android:backgroundTint="@color/white">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_record_btn" />
+
+
+                            <ProgressBar
+                                android:id="@+id/progressBarAudioOther"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:layoutDirection="rtl"
+                                android:progressDrawable="@drawable/gradient_circular_progress"
+                                android:rotation="90"
+                                android:visibility="visible" />
+
+                            <ProgressBar
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_centerInParent="true"
+                                android:progressDrawable="@drawable/bg_white_circle"
+                                android:visibility="visible" />
+
+                        </FrameLayout>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                app:setFont="@{chatTextViewModel.fontName}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/lobster_two_regular"
+                                android:paddingStart="@dimen/_5sdp"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:text="@{chatTextViewModel.username}"
+                                android:textColor="@color/black"
+                                android:textSize_bind='@{Global.size2}'/>
+
+                            <TextView
+                                app:setFont="@{chatTextViewModel.fontName}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/marko_one_regular"
+                                android:paddingStart="@dimen/_5sdp"
+                                android:paddingEnd="@dimen/_5sdp"
+                                android:text="@{chatTextViewModel.replyAudioName}"
+                                android:textColor="@color/black"
+                                android:textSize_bind='@{Global.size4}'/>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_other_image_video"
+                    android:layout_width="wrap_content"
+
+
+                    android:layout_height="@dimen/_200sdp"
+                    android:visibility='@{chatTextViewModel.attachmentType.equalsIgnoreCase("Image")||chatTextViewModel.attachmentType.equalsIgnoreCase("Video")?View.VISIBLE:View.GONE,default= gone}'>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_image_layout"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:background="@drawable/rounded_corner_chat_box_purple"
+                        android:padding="@dimen/_5sdp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:padding="@dimen/_2sdp"
+                            android:src="@drawable/user_pro_chat"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/userName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:fontFamily="@font/lobster_two_regular"
+                            android:gravity="center_vertical"
+                            android:text="Name"
+                            android:textColor="@color/white"
+                            android:textSize_bind='@{Global.size1}'
+                            android:textStyle="bold"
+                            android:visibility="gone" />
+
+                        <com.meest.RoundedView
+                            android:id="@+id/id_round"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            app:bottomLeftCornerRadius="@dimen/size_10dp"
+                            app:bottomRightCornerRadius="@dimen/size_10dp"
+                            app:topLeftCornerRadius="@dimen/size_10dp"
+                            app:topRightCornerRadius="@dimen/size_10dp">
+                            <!--casting-->
+                            <ImageView
+                                android:id="@+id/iv_round_video"
+                                bindChat="@{chatTextViewModel.replyImage}"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop" />
+                        </com.meest.RoundedView>
+
+                        <ImageView
+                            android:id="@+id/iv_video_play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/id_round"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="92dp"
+                            android:layout_marginEnd="101dp"
+                            android:src="@drawable/ic_play_circle_outline"
+                            android:visibility='@{chatTextViewModel.attachmentType.equalsIgnoreCase("Image")?View.GONE:View.VISIBLE,default= gone}'
+                            app:tint="@color/first_color" />
+
+                        <ProgressBar
+                            android:id="@+id/progressbar_chat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp">
+
+                            <TextView
+                                android:id="@+id/imageText"
+                                app:setFont="@{chatTextViewModel.fontName}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_5sp"
+                                android:layout_marginLeft="@dimen/_5sp"
+                                android:fontFamily="@font/lobster_two_regular"
+                                android:text="@{chatTextViewModel.imageText.trim()}"
+                                android:textColor="@color/white"
+                                android:textSize_bind='@{Global.size2}'/>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@id/rl_main_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="-8dp"
+                android:background="@drawable/rounded_corner_chat_box_one_bg"
+                android:padding="@dimen/_5sdp"
+                android:visibility='@{chatTextViewModel.attachmentTypeMy.equalsIgnoreCase("Message")?View.VISIBLE:View.GONE,default= gone}'>
+                <!--                android:visibility='@{chatTextViewModel.attachmentTypeMy.equalsIgnoreCase("Message")?View.VISIBLE:View.GONE}'>-->
+
+                <FrameLayout
+                    android:id="@+id/rel_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <TextView
+                        android:id="@+id/message"
+                        app:setFont="@{chatTextViewModel.fontName}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:fontFamily="@font/lobster_two_regular"
+                        android:includeFontPadding="false"
+                        android:paddingEnd="@dimen/_38sdp"
+                        android:text='@{chatTextViewModel.message}'
+                        android:textColor="@color/white"
+                        android:textSize_bind='@{Global.size3}'
+                        android:textStyle="bold"
+                        tools:text="higvkjhda" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|bottom"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_message_read_status"
+                            readCheck="@{chatTextViewModel.read}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_3sdp"
+                            android:src="@drawable/ic_chat_read_outside"/>
+
+                        <TextView
+                            android:id="@+id/tv_message_date_time"
+                            app:setFont="@{chatTextViewModel.fontName}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lobster_two_regular"
+                            android:gravity="bottom|end"
+                            android:includeFontPadding="false"
+                            android:text="@{chatTextViewModel.time}"
+                            android:textColor="@color/white"
+                            android:textSize_bind='@{Global.size5}'
+                            tools:text="01:00 am" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/ll_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="-10dp"
+                android:background="@drawable/rounded_corner_chat_box_one_bg"
+                android:layoutDirection="ltr"
+                android:onClick="@{()->chatTextViewModel.onAudioImageClick()}"
+                android:orientation="horizontal"
+                android:visibility='@{chatTextViewModel.attachmentTypeMy.equalsIgnoreCase("Audio")?View.VISIBLE:View.GONE,default= gone}'>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/bg_red_circle"
+                    android:backgroundTint="@color/white">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_record_btn" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarAudioMy"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_centerInParent="true"
+                        android:layoutDirection="rtl"
+                        android:progressDrawable="@drawable/gradient_circular_progress"
+                        android:rotation="90"
+                        android:visibility="visible" />
+
+                    <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_centerInParent="true"
+                        android:progressDrawable="@drawable/bg_white_circle"
+                        android:visibility="visible" />
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linear1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            app:setFont="@{chatTextViewModel.fontName}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:fontFamily="@font/lobster_two_regular"
+                            android:text="@{chatTextViewModel.audioName}"
+                            android:textColor="@color/white"
+                            android:textSize_bind='@{Global.size3}'
+                            tools:text="bnsfdbbfdbs" />
+
+                        <TextView
+                            app:setFont="@{chatTextViewModel.fontName}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lobster_two_regular"
+                            android:text="@{chatTextViewModel.audioDuration}"
+                            android:textColor="@color/white"
+                            android:textSize_bind='@{Global.size4}'/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linear1"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/time"
+                            app:setFont="@{chatTextViewModel.fontName}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lobster_two_regular"
+                            android:text="@{chatTextViewModel.time}"
+                            android:textColor="@color/white"
+                            android:textSize_bind='@{Global.size5}'/>
+
+                        <ImageView
+                            android:id="@+id/iv_message_read_status_2"
+                            readCheck="@{chatTextViewModel.read}"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_delivered"/>
+                    </LinearLayout>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <RelativeLayout
+                android:id="@+id/rl_audio_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:visibility='@{chatTextViewModel.attachmentTypeMy.equalsIgnoreCase("Image")||chatTextViewModel.attachmentTypeMy.equalsIgnoreCase("Video")?View.VISIBLE:View.GONE,default= gone}'>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_image_layout_3"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="@dimen/size_5dp"
+                        android:background="@drawable/rounded_corner_chat_box_one_bg"
+                        android:padding="@dimen/_5sdp">
+
+                        <RelativeLayout
+                            android:id="@+id/rel1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.meest.RoundedView
+                                android:id="@+id/id_round_3"
+                                android:layout_width="@dimen/_200sdp"
+                                android:layout_height="@dimen/_200sdp"
+                                android:layout_alignParentEnd="true"
+                                app:bottomLeftCornerRadius="@dimen/size_10dp"
+                                app:bottomRightCornerRadius="@dimen/size_10dp"
+                                app:topLeftCornerRadius="@dimen/size_10dp"
+                                app:topRightCornerRadius="@dimen/size_10dp">
+                                <!--                castilng-->
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/iv_round_video_3"
+                                        bindImageChat="@{chatTextViewModel}"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="90dp"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerInParent="true"
+                                        android:scaleType="centerCrop" />
+
+
+                                    <ImageView
+                                        android:id="@+id/iv_video_play_3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:src="@drawable/ic_play_circle_outline"
+                                        android:visibility='@{chatTextViewModel.attachmentTypeMy.equalsIgnoreCase("Image")?View.GONE:View.VISIBLE,default= gone}'
+                                        app:tint="@color/white" />
+
+                                    <ProgressBar
+                                        android:id="@+id/progressbar_chat_3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:visibility="gone" />
+                                </RelativeLayout>
+                            </com.meest.RoundedView>
+
+
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/rel1"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp">
+
+                            <TextView
+                                android:id="@+id/imageText_3"
+                                app:setFont="@{chatTextViewModel.fontName}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/_5sp"
+                                android:layout_marginLeft="@dimen/_5sp"
+                                android:fontFamily="@font/lobster_two_regular"
+                                android:text="@{chatTextViewModel.imageText.trim()}"
+                                android:textColor="@color/white"
+                                android:textSize_bind='@{Global.size2}'
+                                tools:text="sfasf" />
+
+
+                            <ImageView
+                                android:id="@+id/iv_message_read_status_3"
+                                readCheck="@{chatTextViewModel.read}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:src="@drawable/ic_delivered"
+                                android:viewportWidth="15"
+                                android:viewportHeight="11.44"/>
+
+                            <TextView
+                                android:id="@+id/tv_date_time_image"
+                                app:setFont="@{chatTextViewModel.fontName}"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/iv_message_read_status_3"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:fontFamily="@font/lobster_two_regular"
+                                android:text="@{chatTextViewModel.time}"
+                                android:textColor="@color/white"
+                                android:textSize_bind='@{Global.size2}'
+                                tools:text="12sds" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/cover_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+        <!--            android:background="#70A019A2"-->
+    </RelativeLayout>
+</layout>

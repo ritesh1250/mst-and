@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="fragment"
+            type="com.meest.videomvvmmodule.view.search.SearchItemFragment" />
+
+        <variable
+            name="viewmodel"
+            type="com.meest.videomvvmmodule.viewmodel.SearchActivityViewModel" />
+        <!--         <variable
+                     name="viewmodel"
+                     type="com.meest.meest4bharat.videomvvmmodule.viewmodel.SearchFragmentViewModelNew" />-->
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.search.SearchItemFragment">
+
+        <LinearLayout
+            android:id="@+id/l_hash_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello Bye"
+                android:textColor="@color/colorOrange"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_hash_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                android:visibility="@{fragment.searchType == 1 ?  View.VISIBLE : View.GONE}"
+                app:adapter="@{viewmodel.adapter}" />
+        </LinearLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshlout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/l_hash_tag"
+            android:visibility="@{fragment.searchType == 1 ? (viewmodel.noUserData ? View.GONE : View.VISIBLE) : (viewmodel.noVideoData ? View.GONE : View.VISIBLE)}"
+            tools:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="15dp"
+                android:visibility="visible"
+                app:adapter="@{fragment.searchType == 1 ? viewmodel.exploreHagTagAdapter : fragment.searchType == 2 ? viewmodel.videoListAdapter:viewmodel.searchUseradapter}"
+                app:spanCount="2"
+                tools:listitem="@layout/item_search_user" />
+
+            <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/lout_nothing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="@{fragment.searchType == 1 ? (viewmodel.noUserData ? View.VISIBLE : View.GONE) : (viewmodel.noVideoData ? View.VISIBLE : View.GONE)}">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="70dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="@string/appnamen"
+                android:textColor="@color/colorTheme"
+                android:textSize="35sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/popins_medium"
+                android:text="@string/oops"
+                android:textColor="@color/light_white"
+                android:textSize="25sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/popins_medium"
+                android:text="@string/nothingtoshow"
+                android:textColor="@color/color_text_light"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

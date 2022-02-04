@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:keepScreenOn="true"
+    android:layoutDirection="ltr"
+    tools:context=".view.recordvideo.CameraActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="onClickFlash"
+            type="android.view.View.OnClickListener" />
+
+        <variable
+            name="viewModel"
+            type="com.meest.videomvvmmodule.viewmodel.CameraViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <!--        <TextureView-->
+        <!--            android:id="@+id/viewFinder"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:layout_alignParentStart="true"-->
+        <!--            android:layout_alignParentTop="true"-->
+        <!--            android:layout_alignParentEnd="true"-->
+        <!--            android:layout_alignParentBottom="true" />-->
+
+
+        <RelativeLayout
+            android:id="@+id/rtl_aspect_ratio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:lottie_rawRes="@raw/timer" />
+
+            <TextureView
+                android:id="@+id/viewFinder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha=".5"
+                android:visibility="@{viewModel.showGrid ? View.VISIBLE : View.GONE}">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/white" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/tv_select"
+            android:layout_width="37.295dp"
+            android:layout_height="37.295dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="@dimen/_60sdp"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:src="@drawable/ic_gallery_medley"
+            android:visibility="@{viewModel.isRecording ? View.GONE :(viewModel.isStartRecording ? View.GONE : View.VISIBLE)}"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:id="@+id/ll_video_timing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/rtl1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:background="@color/transparent">
+            <!--            android:visibility="@{viewModel.isRecording ? View.GONE :(viewModel.isStartRecording ? View.GONE : View.VISIBLE)}"-->
+            <!--            android:visibility="@{viewModel.isRecording ? View.GONE : View.VISIBLE}"-->
+            <TextView
+                android:id="@+id/tv_15"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_black_corner_5"
+                android:fontFamily="@font/popins_light"
+                android:gravity="center"
+                android:onClick="@{()->viewModel.setOnItemClick(2)}"
+                android:padding="2dp"
+                android:text="@string/_15s"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+            <!-- android:backgroundTint="@{viewModel.is15sSelect ? @color/white_55 : @color/black_55}"
+             android:onClick="@{()->viewModel.setOnItemClick(2)}"
+             android:textColor="@{viewModel.is15sSelect ? @color/black : @color/white}"-->
+            <TextView
+                android:id="@+id/tv_30"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/bg_white_corner_5"
+                android:fontFamily="@font/popins_light"
+                android:gravity="center"
+                android:onClick="@{()->viewModel.setOnItemClick(3)}"
+                android:padding="2dp"
+                android:text="@string/_30s"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_45"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/bg_white_corner_5"
+                android:fontFamily="@font/popins_light"
+                android:gravity="center"
+                android:onClick="@{()->viewModel.setOnItemClick(4)}"
+                android:padding="2dp"
+                android:text="@string/_45s"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_60"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/bg_white_corner_5"
+                android:fontFamily="@font/popins_light"
+                android:gravity="center"
+                android:onClick="@{()->viewModel.setOnItemClick(5)}"
+                android:padding="2dp"
+                android:text="@string/_60s"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rtl1"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:background="@drawable/ic_record_start_"
+            android:foreground="?selectableItemBackground"
+            android:padding="@dimen/_4sdp">
+
+            <ImageView
+                android:id="@+id/btn_capture"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:contentDescription="@string/record"
+                android:src="@{viewModel.isRecording ? @drawable/ic_record_start:@drawable/ic_record_stop_}"
+                tools:src="@drawable/ic_record_stop" />
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/image"
+                android:elevation="50dp"
+                app:tint="@color/new_action_color" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/recording_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/card"
+            android:layout_marginHorizontal="10dp"
+            android:fontFamily="@font/popins_medium"
+            android:gravity="end"
+            android:onClick="@{()->viewModel.setOnItemClick(1)}"
+            android:singleLine="true"
+            android:textColor="@color/light_white"
+            android:textSize="14sp"
+            android:visibility="@{viewModel.isRecording ? View.VISIBLE : View.GONE}"
+            tools:text="00:00"
+            tools:visibility="visible" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_above="@id/rtl1"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:elevation="2dp"
+            app:cardCornerRadius="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.meest.videomvvmmodule.customview.progressbar.SegmentedProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:progressDrawable="@drawable/gradient_progress" />
+
+                <FrameLayout
+                    android:id="@+id/divider_15"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_90sdp"
+                    android:background="@color/red"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/divider_30"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_90sdp"
+                    android:background="@color/red"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/divider_45"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_90sdp"
+                    android:background="@color/red"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/divider_60"
+                    android:layout_width="3dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_90sdp"
+                    android:background="@color/red"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/lnr1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="32dp"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <!--            <LinearLayout-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="@dimen/_5sdp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:gravity="center_vertical">-->
+
+            <!--              -->
+            <!--                &lt;!&ndash;                android:onClick="@{()->viewModel.setOnItemClick(2)}"&ndash;&gt;-->
+            <!--                &lt;!&ndash;                android:src="@drawable/ic_music_videolist"&ndash;&gt;-->
+            <!--            </LinearLayout>-->
+
+            <ImageView
+                android:id="@+id/iv_flash"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:clickable="true"
+                android:contentDescription="@string/flash"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:onClick="@{()->viewModel.onClickFlash()}"
+                android:padding="16dp"
+                android:src="@{viewModel.isFlashOn ? @drawable/ic_flash : @drawable/ic_flash_off}"
+                tools:src="@drawable/ic_flash_off" />
+
+            <ImageView
+                android:id="@+id/btn_flip"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:clickable="true"
+                android:contentDescription="@string/flip"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:padding="16dp"
+                android:src="@drawable/ic_rotate_camera"
+                android:visibility="@{viewModel.isRecording ? View.GONE : View.VISIBLE}" />
+
+            <ImageView
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:clickable="true"
+                android:contentDescription="@string/music"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:onClick="@{()->viewModel.setOnItemClick(1)}"
+                android:padding="16dp"
+                android:src="@drawable/ic_video_sound"
+                android:visibility="@{viewModel.isRecording ? View.GONE : View.VISIBLE}"
+                app:tint="@color/white" />
+
+            <ImageView
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:clickable="true"
+                android:contentDescription="@string/music"
+                android:focusable="true"
+                android:foreground="?selectableItemBackground"
+                android:onClick="@{()->viewModel.hideOrShowGrid()}"
+                android:padding="16dp"
+                android:src="@{viewModel.showGrid ? @drawable/ic_grid_selected : @drawable/ic_grid}"
+                app:tint="@color/white" />
+
+<!--            <ImageView-->
+<!--                android:id="@+id/tvOpenAr"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="?android:attr/actionBarSize"-->
+<!--                android:clickable="true"-->
+<!--                android:focusable="true"-->
+<!--                android:foreground="?selectableItemBackground"-->
+<!--                android:padding="16dp"-->
+<!--                android:src="@drawable/ic_ar"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:visibility="gone"-->
+<!--                tools:ignore="ContentDescription" />-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="?android:attr/actionBarSize"
+                android:gravity="center_vertical"
+                android:visibility="@{viewModel.isRecording ? View.GONE : viewModel.isExpanded ? View.VISIBLE : View.GONE}">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{viewModel.isTimerExpanded ? View.VISIBLE : View.GONE}">
+
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="36dp"
+                        android:alpha=".3"
+                        android:background="@drawable/shape_round_grey"
+                        android:visibility="@{viewModel.isTimerExpanded ? View.VISIBLE : View.GONE}"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="8dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="wrap_content"
+                            android:foreground="?selectableItemBackground"
+                            android:onClick="@{()->viewModel.updateCountDownTime(0)}"
+                            android:paddingVertical="6dp"
+                            android:src="@drawable/ic_timer_cross"
+                            android:visibility="@{viewModel.isTimerExpanded ? View.VISIBLE : View.GONE}"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="wrap_content"
+                            android:foreground="?selectableItemBackground"
+                            android:onClick="@{()->viewModel.updateCountDownTime(3)}"
+                            android:paddingVertical="6dp"
+                            android:src="@drawable/ic_icon_3"
+                            android:visibility="@{viewModel.isTimerExpanded ? View.VISIBLE : View.GONE}"
+                            tools:ignore="ContentDescription" />
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="wrap_content"
+                            android:foreground="?selectableItemBackground"
+                            android:onClick="@{()->viewModel.updateCountDownTime(10)}"
+                            android:paddingVertical="6dp"
+                            android:src="@drawable/ic_icon_5"
+                            android:visibility="@{viewModel.isTimerExpanded ? View.VISIBLE : View.GONE}"
+                            tools:ignore="ContentDescription" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/tvSetCountDownTimer"
+                    android:layout_width="?android:attr/actionBarSize"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?selectableItemBackground"
+                    android:onClick="@{()->viewModel.expandOrCollapseTimerView()}"
+                    android:padding="16dp"
+                    android:src="@{viewModel.countdownTimer==0 ? @drawable/ic_timer_cross :viewModel.countdownTimer==3 ? @drawable/ic_icon_3 : @drawable/ic_icon_5}"
+                    android:textColor="@color/white"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+
+            <!--            <Button-->
+            <!--                android:id="@+id/editVideo"-->
+            <!--                android:layout_width="@dimen/size_80dp"-->
+            <!--                android:layout_height="@dimen/size_40dp"-->
+            <!--                android:layout_marginHorizontal="@dimen/_25sp"-->
+            <!--                android:background="@drawable/upload_gray_btn"-->
+            <!--                android:backgroundTint="@color/white"-->
+            <!--                android:clickable="true"-->
+            <!--                android:focusable="true"-->
+            <!--                android:foreground="?selectableItemBackground"-->
+            <!--                android:gravity="center"-->
+            <!--                android:text="@string/Edit"-->
+            <!--                android:textAllCaps="false"-->
+            <!--                android:textColor="@color/colorTheme"-->
+            <!--                android:textSize="@dimen/_20sdp"-->
+            <!--                android:visibility="gone" />-->
+
+            <!--            <View-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:layout_weight="1" />-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="?android:attr/actionBarSize"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="@{viewModel.isRecording ? View.GONE : viewModel.isExpanded ? View.VISIBLE : View.GONE}">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="@{viewModel.isAspectRationExpanded ? View.VISIBLE : View.GONE}">
+
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="36dp"
+                        android:alpha=".3"
+                        android:background="@drawable/shape_round_grey"
+                        android:visibility="@{viewModel.isAspectRationExpanded ? View.VISIBLE : View.GONE}"
+                        tools:ignore="ContentDescription" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="8dp">
+
+                        <ImageView
+                            android:id="@+id/tv_select_16_9"
+                            android:layout_width="48dp"
+                            android:layout_height="wrap_content"
+                            android:foreground="?selectableItemBackground"
+                            android:paddingVertical="6dp"
+                            android:src="@drawable/ic_16_9"
+                            android:visibility="@{viewModel.isAspectRationExpanded ? View.VISIBLE : View.GONE}"
+                            tools:ignore="ContentDescription">
+
+                        </ImageView>
+
+                        <ImageView
+                            android:id="@+id/tv_select_4_3"
+                            android:layout_width="48dp"
+                            android:layout_height="wrap_content"
+                            android:foreground="?selectableItemBackground"
+                            android:paddingVertical="6dp"
+                            android:src="@drawable/ic_4_3"
+                            android:visibility="@{viewModel.isAspectRationExpanded ? View.VISIBLE : View.GONE}"
+                            tools:ignore="ContentDescription">
+
+                        </ImageView>
+
+                        <ImageView
+                            android:id="@+id/tv_select_1_1"
+                            android:layout_width="48dp"
+                            android:layout_height="wrap_content"
+                            android:foreground="?selectableItemBackground"
+                            android:paddingVertical="6dp"
+                            android:src="@drawable/ic_1_1"
+                            android:visibility="@{viewModel.isAspectRationExpanded ? View.VISIBLE : View.GONE}"
+                            tools:ignore="ContentDescription">
+
+                        </ImageView>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/iv_aspect_ratio"
+                    android:layout_width="?android:attr/actionBarSize"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="@{()->viewModel.expandOrCollapseAspectView()}"
+                    android:padding="16dp"
+                    android:src="@{viewModel.aspectRatio==0 ? @drawable/ic_16_9 :viewModel.aspectRatio==1 ? @drawable/ic_4_3 : @drawable/ic_1_1 }"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/arrow_up_down"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:clickable="true"
+                android:focusable="true"
+                android:onClick="@{()->viewModel.expandOrCollapseView()}"
+                android:padding="16dp"
+                android:src="@{viewModel.isExpanded ? @drawable/ic_arrow_up : @drawable/ic_arrow_down_white}"
+                android:visibility="@{viewModel.isRecording ? View.GONE : viewModel.hideArrowPermanently ? View.GONE : View.VISIBLE}"
+                tools:ignore="ContentDescription" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_sound_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lnr1"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/popins_medium"
+            android:gravity="center"
+            android:onClick="@{()->viewModel.setOnItemClick(1)}"
+            android:paddingHorizontal="5dp"
+            android:singleLine="true"
+            android:textColor="@color/light_white"
+            android:textSize="12sp"
+            android:visibility="@{viewModel.soundTextVisibility}"
+            tools:text="@tools:sample/full_names"
+            tools:visibility="visible" />
+
+
+        <ImageView
+            android:id="@+id/iv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="@dimen/_60sdp"
+            android:foreground="?selectableItemBackground"
+            android:src="@drawable/ic_done"
+            android:visibility="@{viewModel.isRecording ? View.GONE : View.VISIBLE}"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="?android:attr/actionBarSize"
+            android:layout_height="?android:attr/actionBarSize"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/close"
+            android:foreground="?selectableItemBackground"
+            android:padding="16dp"
+            android:src="@drawable/ic_close_"
+            android:visibility="@{viewModel.isRecording ? View.INVISIBLE : View.VISIBLE}"
+            app:tint="@color/white" />
+
+    </RelativeLayout>
+</layout>

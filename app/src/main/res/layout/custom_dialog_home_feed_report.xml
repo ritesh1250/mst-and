@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+     android:layoutDirection="ltr"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_report"
+        android:textColor="#0A1F44"
+        android:textSize="20sp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/Report"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_10sdp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#0A1F44"
+        android:textSize="17sp"
+        android:id="@+id/txt_spamAbuse"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/report_spam_or_abuse"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#0A1F44"
+        android:textSize="17sp"
+        android:id="@+id/txt_sendFeedback"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/send_feedback"
+        android:layout_marginBottom="@dimen/_20sdp"/>
+
+
+
+
+
+</LinearLayout>
